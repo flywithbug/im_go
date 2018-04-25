@@ -1,0 +1,49 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "+1LsRRZKa06yTFg/Tu5NCsyHxOA=",
+			"path": "github.com/gorilla/websocket",
+			"revision": "eb925808374e5ca90c83401a40d711dc08c0c0f6",
+			"revisionTime": "2018-03-06T18:15:48Z"
+		},
+		{
+			"checksumSHA1": "ydE0SJLyrkN5y2R2zBtjs7AeeQo=",
+			"path": "github.com/thinkboy/log4go",
+			"revision": "f91a411e4a181d8156571e4d02a376d1e36b89e4",
+			"revisionTime": "2016-03-03T04:50:50Z"
+		},
+		{
+			"checksumSHA1": "YZmB+zIJnfwWvFtWa64L46gtDng=",
+			"path": "goim/libs/bufio",
+			"revision": "2b30333a76e8b7ba9bcc84d821bffc0733ffa2cd",
+			"revisionTime": "2016-12-08T02:49:06Z"
+		},
+		{
+			"checksumSHA1": "tkVXGuHgsBxnWIBeMSjuko+CO4U=",
+			"path": "goim/libs/bytes",
+			"revision": "2b30333a76e8b7ba9bcc84d821bffc0733ffa2cd",
+			"revisionTime": "2016-12-08T02:49:06Z"
+		},
+		{
+			"checksumSHA1": "62k8dQf/ack/KyuPo3YgdR7WJw4=",
+			"path": "goim/libs/define",
+			"revision": "2b30333a76e8b7ba9bcc84d821bffc0733ffa2cd",
+			"revisionTime": "2016-12-08T02:49:06Z"
+		},
+		{
+			"checksumSHA1": "Khwd6Rn0I/ci2WaHWIlbEo+wmgY=",
+			"path": "goim/libs/encoding/binary",
+			"revision": "2b30333a76e8b7ba9bcc84d821bffc0733ffa2cd",
+			"revisionTime": "2016-12-08T02:49:06Z"
+		},
+		{
+			"checksumSHA1": "pHZEXfP3f7brNLX4hiBJX+qaGX8=",
+			"path": "goim/libs/proto",
+			"revision": "2b30333a76e8b7ba9bcc84d821bffc0733ffa2cd",
+			"revisionTime": "2016-12-08T02:49:06Z"
+		}
+	],
+	"rootPath": "im_go"
+}

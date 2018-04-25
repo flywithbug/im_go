@@ -1,0 +1,17 @@
+{
+  "http_port": 1564,
+  "im_port": 1566,
+  "max_clients": 100000,
+  "db_config": {
+    "host": "127.0.0.1:3306",
+    "username": "root",
+    "password": "root",
+    "name": "im",
+    "max_idle_conns": 10,
+    "max_open_conns": 50
+  },
+  "router_prefix":[
+    "api"
+  ],
+  "log":"./log.xml"
+}
