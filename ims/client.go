@@ -6,6 +6,7 @@ import (
 	"im_go/libs/proto"
 	"fmt"
 	"io"
+	"time"
 )
 
 type Client struct {
@@ -15,9 +16,14 @@ type Client struct {
 	reader 	*bufio.Reader	//读取
 	writer 	*bufio.Writer	//输出
 	proto   *proto.Proto
-
 							//补充连接信息
 }
+
+
+/*
+ 客户端列表
+ */
+type ClientTable map[string]*Client
 
 func NewClient(key string,conn *net.TCPConn)*Client  {
 	reader := bufio.NewReaderSize(conn,int(proto.MaxPackSize))
@@ -35,27 +41,32 @@ func NewClient(key string,conn *net.TCPConn)*Client  {
 }
 
 func (client *Client)read()  {
+
 	for{
-		if err := client.proto.ReadTCP(client.reader);err == nil {
-			fmt.Println(client.proto,string(client.proto.Body),"\n",err)
-		}else {
+		if err := client.proto.ReadTCP(client.reader);err != nil {
 			if err == io.EOF {
+				client.close()
 				fmt.Println("error",err)
 				break
 			}
-			//client.Conn.Close()
 			fmt.Println("else",err)
+		}else {
+			fmt.Println(client.proto,string(client.proto.Body),client.proto.Operation)
 		}
-	 }
+
+	}
 }
+
+//client 长链失败，关闭连接，处理数据保存事宜
+func (client *Client)close()  {
+	client.Conn.Close()
+}
+
+
+
 
 func (client *Client)Listen()  {
 	go client.read()
-
-	//rr := bufio.NewReaderSize(client.Conn,int(proto.MaxBodySize))
-	//p := new(proto.Proto)
-	//err := p.ReadTCP(rr)
-	//fmt.Println(string(p.Body),"\n",err)
 
 }
 

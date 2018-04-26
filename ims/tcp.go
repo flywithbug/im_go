@@ -5,6 +5,7 @@ import (
 	"net"
 )
 
+
 var clientTables map[string]Client
 
 func Listen(port int)  {
@@ -21,6 +22,7 @@ func Listen(port int)  {
 		if err != nil {
 			return
 		}
+		fmt.Printf("新连接地址为:[%s]", conn.RemoteAddr())
 		go handleConnection(conn)
 	}
 }
