@@ -39,9 +39,11 @@ func main()  {
 		}
 	}
 }
+
 func sendRandom(conn *net.TCPConn)  {
 	send(conn,[]byte(RandString(1024)))
 }
+
 func send(conn *net.TCPConn,data []byte)  {
 	fmt.Println("input:",string(data))
 	p := new(proto.Proto)

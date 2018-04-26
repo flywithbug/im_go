@@ -5,6 +5,13 @@ import (
 	"net"
 )
 
+type Server struct {
+	listener *net.TCPConn
+	clients  ClientTable  //在线的客户端列表
+
+}
+
+
 
 var clientTables map[string]Client
 
