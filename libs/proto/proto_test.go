@@ -23,7 +23,14 @@ func TestProto_WriteTo(t *testing.T) {
 	p.WriteTo(&w)
 	buf := w.Buffer()
 	fmt.Println(buf,w.Size(),string(buf))
+
+
+
 	var p1 Proto
+
+
+
+
 
 	packLen := binary.BigEndian.Int32(buf[PackOffset:HeaderOffset])
 	headerLen := binary.BigEndian.Int16(buf[HeaderOffset:VerOffset])

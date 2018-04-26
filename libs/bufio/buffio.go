@@ -9,7 +9,6 @@ const  (
 	defaultBufSize = 4096
 )
 
-
 var (
 	ErrInvalidUnreadByte = errors.New("bufio: invalid use of UnreadByte")
 	ErrInvalidUnreadRune = errors.New("bufio: invalid use of UnreadRune")

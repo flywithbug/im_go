@@ -13,7 +13,7 @@ import (
 
 // for tcp
 const (
-	MaxBodySize = int32(1 << 10)  //数据最大长度1kb
+	MaxBodySize = int32(10 << 10)  //数据最大长度10kb
 )
 
 const (
@@ -78,6 +78,8 @@ func (p* Proto)WriteTo(b *bytes.Writer)  {
 	binary.BigEndian.PutInt16(buf[VerOffset:],p.Ver)
 	binary.BigEndian.PutInt32(buf[OperationOffset:],p.Operation)
 	binary.BigEndian.PutInt32(buf[SeqIdOffset:],p.SeqId)
+	fmt.Println("WriteTo",packLen,string(buf),string(p.Body))
+
 	if p.Body != nil {
 		b.Write(p.Body)
 	}
@@ -99,7 +101,6 @@ func (p *Proto)ReadTCP(rr *bufio.Reader)(err error)  {
 	p.Ver = binary.BigEndian.Int16(buf[VerOffset:OperationOffset])
 	p.Operation = binary.BigEndian.Int32(buf[OperationOffset:SeqIdOffset])
 	p.SeqId = binary.BigEndian.Int32(buf[SeqIdOffset:])
-
 	if packLen > MaxPackSize{
 		return ErrProtoPackLen
 	}
