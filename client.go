@@ -4,9 +4,8 @@ import (
 	"net"
 	"fmt"
 	"os"
-
 	"math/rand"
-
+	gbufio "bufio"
 	"strconv"
 	"strings"
 	"time"
@@ -29,29 +28,46 @@ func main()  {
 		os.Exit(1)
 	}
 
-	defer conn.Close()
-
-	//in := gbufio.NewReader(os.Stdin)
-	//
-	//
-	//buffer := make([]byte, 1024)
+	in := gbufio.NewReader(os.Stdin)
+	for  {
+		line, _, _ := in.ReadLine()
+		fmt.Println("line",string(line))
+		if string(line) == "random" {
+			go sendRandom(conn)
+		}else {
+			go send(conn,line)
+		}
+	}
+}
+func sendRandom(conn *net.TCPConn)  {
+	send(conn,[]byte(RandString(1024)))
+}
+func send(conn *net.TCPConn,data []byte)  {
+	fmt.Println("input:",string(data))
 	p := new(proto.Proto)
 	p.Ver = 1
 	p.Operation = define.OP_AUTH
 	p.SeqId = int32(0)
-	p.Body = []byte("test")
+	p.Body = []byte(data)
+	//判断发送字符长度，过长提示
 	wr := bufio.NewWriterSize(conn,len(p.Body)+50)
-	b := bytes.NewWriterSize(1024*10)
+	b := bytes.NewWriterSize(len(p.Body)+50)
 	p.WriteTo(b)
-	wr.Write(b.Buffer())
-	//for {
-	//	line, _, _ := in.ReadLine()
-	//	fmt.Println(line)
-	//	conn.Write(line)
-	//	readLen, _ := conn.Read(buffer)
-	//	fmt.Println(readLen,string(buffer))
-	//}
+	_,err := wr.Write(b.Buffer())
+
+
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+
+	//fmt.Println(nn)
+	wr.Flush()
+
+
 }
+
+
 
 /**
 *生成随机字符
