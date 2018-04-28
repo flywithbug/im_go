@@ -12,16 +12,16 @@ import (
 type Client struct {
 	Connection
 	// 连接信息
-
-	reader 	*bufio.Reader	//读取
-	writer 	*bufio.Writer	//输出
+	Key    	string        	//客户端连接的唯标志
+	//reader 	*bufio.Reader	//读取
+	//writer 	*bufio.Writer	//输出
 	pro   	*proto.Proto
 }
 
 
-//初始化client
 func NewClient(conn *net.TCPConn)(client *Client)  {
 	client = new(Client)
+	client.bufPrepare()
 	reader := bufio.NewReaderSize(conn,int(proto.MaxPackSize))
 	writer := bufio.NewWriter(conn)
 	p := new(proto.Proto)
@@ -32,33 +32,35 @@ func NewClient(conn *net.TCPConn)(client *Client)  {
 	return client
 }
 
-func (client *Client)read() {
+func (client *Client)Read() {
 	for{
-		if err := client.pro.ReadTCP(client.reader);err != nil {
+		if msg,err := client.read();err != nil{
 			if err == io.EOF {
-				fmt.Println("error",err)
+				fmt.Println("close:",err)
 				break
 			}
 			fmt.Println("else",err)
 		}else {
-			client.handleMessage(*client.pro)
+			go client.handleMessage(msg)
 		}
-		client.pro.Reset()
 	}
 	client.close()
 }
 
-func (client *Client)write() {
+func (client *Client)Write() {
+
+
 
 }
 
 
 //消息处理
-func (client *Client)handleMessage(pro proto.Proto)  {
-	fmt.Println("操作类型",pro.Operation)
+func (client *Client)handleMessage(pro *Message)  {
+	fmt.Println("操作类型",pro.Operation,string(pro.Body))
 	switch pro.Operation {
 	case define.OP_AUTH:
-		fmt.Println(pro,string(pro.Body),pro.Operation)
+		//fmt.Println(pro,string(pro.Body),pro.Operation)
+
 	}
 }
 
@@ -93,8 +95,8 @@ func (client *Client)close()  {
 
 
 func (client *Client)Listen()  {
-	go client.read()
-	go client.write()
+	go client.Read()
+	go client.Write()
 }
 
 

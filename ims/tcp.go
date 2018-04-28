@@ -3,7 +3,6 @@ package ims
 import (
 	"fmt"
 	"net"
-	"github.com/pborman/uuid"
 )
 
 var appRoute *AppRoute
@@ -31,8 +30,7 @@ func Listen(port int)  {
 }
 
 func handleConnection(conn *net.TCPConn)  {
-	uid := uuid.New()
-	client := NewClient(uid,conn)
+	client := NewClient(conn)
 	client.Listen()
 }
 

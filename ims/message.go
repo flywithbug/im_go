@@ -10,8 +10,6 @@ import (
 var message_descriptions map[int]string = make(map[int]string)
 
 
-
-
 type Command int
 func (cmd Command) String() string {
 	c := int(cmd)

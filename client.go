@@ -38,17 +38,28 @@ func main()  {
 			go send(conn,line)
 		}
 	}
+
+
 }
 
 func sendRandom(conn *net.TCPConn)  {
-	send(conn,[]byte(RandString(1024)))
+	string := RandString(1024*10)
+	count := 0
+	for {
+		go send(conn,[]byte(string))
+		count++
+		if count == 100{
+			break
+		}
+	}
+
 }
 
 func send(conn *net.TCPConn,data []byte)  {
 	fmt.Println("input:",string(data))
 	p := new(proto.Proto)
 	p.Ver = 1
-	p.Operation = define.OP_HANDSHAKE
+	p.Operation = define.OP_AUTH
 	p.SeqId = int32(0)
 	p.Body = []byte(data)
 	//判断发送字符长度，过长提示
