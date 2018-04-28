@@ -9,7 +9,8 @@ import (
 用户对象
 */
 type User struct {
-	Id       	string    `json:"id"`        //id
+	Id       	string    `json:"id"`        //id 数据库Id
+	UserId 		string	  `json:"user_id"`   //用户Id
 	Nick     	string    `json:"nick"`      //昵称
 	Status   	string    `json:"status"`    //状态 0离线,1在线
 	Sign     	string    `json:"sign"`      //个性签名
