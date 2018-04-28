@@ -32,11 +32,16 @@ const (
 	OP_PROTO_FINISH = int32(14)
 
 
-
-
-
 	// for test
 	OP_TEST       = int32(254)
 	OP_TEST_REPLY = int32(255)
 
 )
+
+func OperationMsg(operation int32)string  {
+	switch operation {
+	case OP_AUTH:
+		return "初次连接授权"
+	}
+	return ""
+}

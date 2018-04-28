@@ -3,17 +3,14 @@ package ims
 import (
 	"fmt"
 	"net"
+	"github.com/pborman/uuid"
 )
 
-type Server struct {
-	listener *net.TCPConn
-	clients  ClientTable  //在线的客户端列表
+var appRoute *AppRoute
 
+func init()  {
+	appRoute = NewAppRoute()
 }
-
-
-
-var clientTables map[string]Client
 
 func Listen(port int)  {
 	address := fmt.Sprintf("0.0.0.0:%d", port)
@@ -23,7 +20,6 @@ func Listen(port int)  {
 		fmt.Println("初始化失败", err.Error())
 		return
 	}
-
 	for {
 		conn, err := listen.AcceptTCP()
 		if err != nil {
@@ -35,7 +31,8 @@ func Listen(port int)  {
 }
 
 func handleConnection(conn *net.TCPConn)  {
-	client := NewClient("",conn)
+	uid := uuid.New()
+	client := NewClient(uid,conn)
 	client.Listen()
 }
 

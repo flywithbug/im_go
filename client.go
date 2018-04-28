@@ -48,7 +48,7 @@ func send(conn *net.TCPConn,data []byte)  {
 	fmt.Println("input:",string(data))
 	p := new(proto.Proto)
 	p.Ver = 1
-	p.Operation = define.OP_AUTH
+	p.Operation = define.OP_HANDSHAKE
 	p.SeqId = int32(0)
 	p.Body = []byte(data)
 	//判断发送字符长度，过长提示
