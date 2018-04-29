@@ -35,8 +35,6 @@ type AuthenticationToken struct {
 	deviceId   string
 }
 
-
-
 func (auth *AuthenticationToken) ToData() []byte {
 	var l int8
 	buffer := new(bytes.Buffer)
@@ -57,8 +55,6 @@ func (auth *AuthenticationToken) FromData(buff []byte) bool {
 		return false
 	}
 	platformId := int8(buff[0])
-
-
 	buffer := bytes.NewBuffer(buff[1:])
 	binary.Read(buffer,binary.BigEndian,&l)
 	if int(l) > buffer.Len() || int(l) < 0 {
@@ -66,17 +62,12 @@ func (auth *AuthenticationToken) FromData(buff []byte) bool {
 	}
 	token := make([]byte,l)
 	buffer.Read(token)
-
-
 	binary.Read(buffer,binary.BigEndian,&l)
 	deviceId := make([]byte,l)
 	buffer.Read(deviceId)
-
-
 	auth.platformId = platformId
 	auth.token = string(token)
 	auth.deviceId = string(deviceId)
-
 	return true
 }
 

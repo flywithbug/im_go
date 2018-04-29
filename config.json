@@ -1,7 +1,7 @@
 {
   "http_port": 1564,
   "im_port": 1566,
-  "max_clients": 100000,
+  "pprof_bind":"localhost:6971",
   "db_config": {
     "host": "127.0.0.1:3306",
     "username": "root",

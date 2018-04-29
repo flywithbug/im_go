@@ -3,10 +3,46 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "JXVlDIoOSmyi1QAgDI455Wsr/gY=",
+			"path": "github.com/go-sql-driver/mysql",
+			"revision": "3287d94d4c6a48a63e16fffaabf27ab20203af2a",
+			"revisionTime": "2018-04-13T18:15:57Z"
+		},
+		{
+			"checksumSHA1": "HmbftipkadrLlCfzzVQ+iFHbl6g=",
+			"path": "github.com/golang/glog",
+			"revision": "23def4e6c14b4da8ac2ed8007337bc5eb5007998",
+			"revisionTime": "2016-01-25T20:49:56Z"
+		},
+		{
 			"checksumSHA1": "+1LsRRZKa06yTFg/Tu5NCsyHxOA=",
 			"path": "github.com/gorilla/websocket",
 			"revision": "eb925808374e5ca90c83401a40d711dc08c0c0f6",
 			"revisionTime": "2018-03-06T18:15:48Z"
+		},
+		{
+			"checksumSHA1": "As1PSFJop3xi3W8tAYSm/8YesAQ=",
+			"path": "github.com/pborman/uuid",
+			"revision": "c65b2f87fee37d1c7854c9164a450713c28d50cd",
+			"revisionTime": "2018-01-22T19:00:07Z"
+		},
+		{
+			"checksumSHA1": "q14d3C3xvWevU3dSv4P5K0+OSD0=",
+			"path": "github.com/shirou/gopsutil/cpu",
+			"revision": "a5c2888e464b14fa882c2a059e0f95716bd45cf1",
+			"revisionTime": "2018-04-13T13:54:31Z"
+		},
+		{
+			"checksumSHA1": "ElneFnzdyg/mWfMFukLUHdy9DHY=",
+			"path": "github.com/shirou/gopsutil/internal/common",
+			"revision": "a5c2888e464b14fa882c2a059e0f95716bd45cf1",
+			"revisionTime": "2018-04-13T13:54:31Z"
+		},
+		{
+			"checksumSHA1": "PyQDrmW1XKHmOkSNcD8qQYV7uxo=",
+			"path": "github.com/shirou/gopsutil/mem",
+			"revision": "a5c2888e464b14fa882c2a059e0f95716bd45cf1",
+			"revisionTime": "2018-04-13T13:54:31Z"
 		},
 		{
 			"checksumSHA1": "ydE0SJLyrkN5y2R2zBtjs7AeeQo=",
@@ -15,34 +51,16 @@
 			"revisionTime": "2016-03-03T04:50:50Z"
 		},
 		{
-			"checksumSHA1": "YZmB+zIJnfwWvFtWa64L46gtDng=",
-			"path": "goim/libs/bufio",
-			"revision": "2b30333a76e8b7ba9bcc84d821bffc0733ffa2cd",
-			"revisionTime": "2016-12-08T02:49:06Z"
+			"checksumSHA1": "pKXJRU/9qHCRo+GYpqW87E2djHE=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "378d26f46672a356c46195c28f61bdb4c0a781dd",
+			"revisionTime": "2018-03-29T12:30:35Z"
 		},
 		{
-			"checksumSHA1": "tkVXGuHgsBxnWIBeMSjuko+CO4U=",
-			"path": "goim/libs/bytes",
-			"revision": "2b30333a76e8b7ba9bcc84d821bffc0733ffa2cd",
-			"revisionTime": "2016-12-08T02:49:06Z"
-		},
-		{
-			"checksumSHA1": "62k8dQf/ack/KyuPo3YgdR7WJw4=",
-			"path": "goim/libs/define",
-			"revision": "2b30333a76e8b7ba9bcc84d821bffc0733ffa2cd",
-			"revisionTime": "2016-12-08T02:49:06Z"
-		},
-		{
-			"checksumSHA1": "Khwd6Rn0I/ci2WaHWIlbEo+wmgY=",
-			"path": "goim/libs/encoding/binary",
-			"revision": "2b30333a76e8b7ba9bcc84d821bffc0733ffa2cd",
-			"revisionTime": "2016-12-08T02:49:06Z"
-		},
-		{
-			"checksumSHA1": "pHZEXfP3f7brNLX4hiBJX+qaGX8=",
-			"path": "goim/libs/proto",
-			"revision": "2b30333a76e8b7ba9bcc84d821bffc0733ffa2cd",
-			"revisionTime": "2016-12-08T02:49:06Z"
+			"checksumSHA1": "Dfz4tGItokMvHZENCsBmPPB8FGQ=",
+			"path": "golang.org/x/sys/windows",
+			"revision": "378d26f46672a356c46195c28f61bdb4c0a781dd",
+			"revisionTime": "2018-03-29T12:30:35Z"
 		}
 	],
 	"rootPath": "im_go"

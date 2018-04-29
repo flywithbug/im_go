@@ -13,7 +13,6 @@ type Client struct {
 	// 连接信息
 	Key    	string        	//客户端连接的唯标志
 	publicIp int32
-
 }
 
 
@@ -45,6 +44,9 @@ func (client *Client)Read() {
 	client.HandleClientClosed()
 }
 
+
+
+
 func (client *Client)Write() {
 
 
@@ -54,6 +56,7 @@ func (client *Client)Write() {
 
 //消息处理
 func (client *Client)handleMessage(msg *Message)  {
+	//time.Sleep(time.Microsecond*20)
 	client.count++
 	fmt.Println("count",client.count,"操作类型",msg.Operation,string(msg.Body))
 	switch msg.Operation {
@@ -68,7 +71,8 @@ func (client *Client)handleMessage(msg *Message)  {
 }
 
 func (client *Client)HandleAuthToken(login *AuthenticationToken,version int16)  {
-	fmt.Println("auth",login)
+	//fmt.Println("auth",login)
+
 }
 
 
@@ -115,7 +119,6 @@ func (client *Client) RemoveClient() {
 	}
 	route.RemoveClient(client)
 }
-
 
 
 
