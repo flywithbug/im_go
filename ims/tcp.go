@@ -7,8 +7,14 @@ import (
 
 var appRoute *AppRoute
 
+var serverSummary *ServerSummary
+
+
+
 func init()  {
 	appRoute = NewAppRoute()
+	serverSummary = NewServerSummary()
+
 }
 
 func Listen(port int)  {
@@ -27,6 +33,7 @@ func Listen(port int)  {
 		fmt.Printf("新连接地址为:[%s]", conn.RemoteAddr())
 		go handleConnection(conn)
 	}
+
 }
 
 func handleConnection(conn *net.TCPConn)  {

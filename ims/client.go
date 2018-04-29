@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"io"
 	"im_go/libs/define"
+	"sync/atomic"
 )
 
 type Client struct {
@@ -29,22 +30,25 @@ func NewClient(conn *net.TCPConn)(client *Client)  {
 	client.pro = p
 	client.reader = reader
 	client.writer = writer
+	atomic.AddInt64(&serverSummary.nConnections, 1)
+
 	return client
 }
 
 func (client *Client)Read() {
+	defer client.conn.Close()
 	for{
 		if msg,err := client.read();err != nil{
 			if err == io.EOF {
 				fmt.Println("close:",err)
-				break
 			}
-			fmt.Println("else",err)
+			fmt.Println("else:",err)
+			break
 		}else {
 			go client.handleMessage(msg)
 		}
 	}
-	client.close()
+	client.HandleClientClosed()
 }
 
 func (client *Client)Write() {
@@ -56,14 +60,24 @@ func (client *Client)Write() {
 
 //消息处理
 func (client *Client)handleMessage(pro *Message)  {
-	fmt.Println("操作类型",pro.Operation,string(pro.Body))
+	client.count++
+	fmt.Println("count",client.count,"操作类型",pro.Operation,string(pro.Body))
 	switch pro.Operation {
 	case define.OP_AUTH:
 		//fmt.Println(pro,string(pro.Body),pro.Operation)
+	case define.OP_PROTO_FINISH:
+		client.HandleClientClosed()
 
 	}
 }
 
+//client 长链失败，关闭连接，处理数据保存事宜
+func (client *Client)HandleClientClosed()  {
+	fmt.Println("client close",client.Key)
+	atomic.AddInt64(&serverSummary.nConnections, -1)
+	client.close()
+
+}
 
 func (client *Client) AddClient() {
 	route := appRoute.FindOrAddRoute(client.appId)
@@ -77,20 +91,9 @@ func (client *Client) RemoveClient() {
 		return
 	}
 	route.RemoveClient(client)
-
-	//if client.room_id > 0 {
-	//	route.RemoveRoomClient(client.room_id, client)
-	//}
 }
 
-//client 长链失败，关闭连接，处理数据保存事宜
-func (client *Client)close()  {
-	fmt.Println("client close",client.Key)
-	client.pro = nil
-	client.writer = nil
-	client.reader = nil
-	client.conn.Close()
-}
+
 
 
 
