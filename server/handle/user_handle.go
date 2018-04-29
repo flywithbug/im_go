@@ -64,6 +64,35 @@ func handleLogout(resp http.ResponseWriter,req*http.Request)  {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 登录主方法
 func login(resp http.ResponseWriter, account string, password string, ip string) {
 	if account == "" {
@@ -112,8 +141,6 @@ func logout(resp http.ResponseWriter,token string)  {
 		}
 	}
 }
-
-
 
 /*
  用户注册
