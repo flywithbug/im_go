@@ -65,11 +65,11 @@ func Logout(token string)(int64,error) {
 	}
 	res ,err := updateStmt.Exec(0,token)
 	if err != nil {
-		return -1, &DatabaseError{"退出登录失败"}
+		return -1, &DatabaseError{"服务出错"}
 	}
 	num, err := res.RowsAffected()
-	if err != nil{
-		return -1, &DatabaseError{"服务出错"}
+	if err != nil || num <= 0{
+		return -1, &DatabaseError{"token已失效"}
 	}
 	return num,nil
 }

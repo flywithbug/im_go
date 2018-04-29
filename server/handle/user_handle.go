@@ -105,7 +105,8 @@ func logout(resp http.ResponseWriter,token string)  {
 	}else {
 		num ,err := model.Logout(token)
 		if num <= 0 || err != nil{
-			resp.Write(model.NewIMResponseSimple(500, "退出登录失败", "").Encode())
+			errStr := err.Error()
+			resp.Write(model.NewIMResponseSimple(500, errStr, "").Encode())
 		}else {
 			resp.Write(model.NewIMResponseData(common.SaveMapData("msg","success"),"").Encode())
 		}
