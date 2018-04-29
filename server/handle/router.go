@@ -8,7 +8,7 @@ var routers = map[string]RouterHandler{
 
 	"/register": handleRegister, //注册
 	"/login": handleLogin,
-
+	"/logout":handleLogout,
 	//"/query": handleQuery,
 	//"/users/relation/add": handleUserRelationAdd,
 	//"/users/relation/del": handleUserRelationDel,

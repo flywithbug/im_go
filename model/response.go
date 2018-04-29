@@ -30,7 +30,7 @@ func NewIMResponseSimple(status int, msg string, refer string) *IMResponse {
 成功消息构造方法
 */
 func NewIMResponseData(data interface{}, refer string) *IMResponse {
-	return &IMResponse{0, "", data, refer}
+	return &IMResponse{200, "", data, refer}
 }
 
 /*

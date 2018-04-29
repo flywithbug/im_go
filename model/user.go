@@ -52,7 +52,6 @@ func CheckAccount(account string) (int, error) {
 		rows.Scan(&num)
 	}
 	return num, nil
-
 }
 
 /*
