@@ -3,6 +3,8 @@ package model
 import (
 	"github.com/pborman/uuid"
 	"time"
+	_ "database/sql"
+	"fmt"
 )
 
 type Login struct {
@@ -27,6 +29,8 @@ func GetLoginByToken(token string) (*Login, error) {
 	return &login, nil
 }
 
+
+
 /*
  保存登录状态
  */
@@ -42,4 +46,27 @@ func SaveLogin(userId string, token string, ip string) (*string, error) {
 		return nil, &DatabaseError{"保存用户登录记录错误"}
 	}
 	return &id, nil
+}
+
+
+
+/*
+	退出登录
+*/
+func Logout(token string)(int64,error) {
+	updateStmt,err := Database.Prepare("UPDATE im_login SET 'token' = ? WHERE token=?")
+	defer updateStmt.Close()
+	if err != nil {
+		fmt.Println(err)
+		return -1, &DatabaseError{"数据库处理失败"}
+	}
+	res ,err := updateStmt.Exec("",token)
+	if err != nil {
+		return -1, &DatabaseError{"更新token失败"}
+	}
+	num, err := res.RowsAffected()
+	if err != nil {
+		return -1, &DatabaseError{"读取token更新影响行数错误"}
+	}
+	return num,nil
 }

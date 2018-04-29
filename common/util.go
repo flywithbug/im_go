@@ -1,4 +1,4 @@
-package util
+package common
 
 import (
 	"database/sql"
@@ -23,7 +23,7 @@ func GetIp(r *http.Request) string {
 组合数据 原转JSON(已修正不需要转JSON)
 */
 //FIXME 此处方法名需要重新命名 否则会产生干扰
-func SetData(key string, data interface{}) interface{} {
+func SaveMapData(key string, data interface{}) interface{} {
 	dataMap := make(map[string]interface{})
 	dataMap[key] = data
 	return dataMap

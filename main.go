@@ -38,12 +38,10 @@ func main()  {
 	go func() {
 		err := server.StartHttpServer(*conf)
 		log.Fatalln("Http Server", err)
-
 	}()
 
-	perf.Init("localhost:6971")
-	//初始化model包下全局变量值
-	//model.Config =
-	ims.Listen(9000)
 
+	perf.Init(conf.PprofBind)
+	//初始化model包下全局变量值
+	ims.Listen(conf.IMPort)
 }

@@ -1,12 +1,14 @@
-package handler
+package handle
 
 import "net/http"
 
 type RouterHandler func(resp http.ResponseWriter, req *http.Request)
 var routers = map[string]RouterHandler{
 	"/system": handleSystem, //系统状态
-	//"/register": handleRegister, //注册
-	//"/login": handleLogin,
+
+	"/register": handleRegister, //注册
+	"/login": handleLogin,
+
 	//"/query": handleQuery,
 	//"/users/relation/add": handleUserRelationAdd,
 	//"/users/relation/del": handleUserRelationDel,

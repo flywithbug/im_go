@@ -24,13 +24,11 @@ func main()  {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
 		os.Exit(1)
 	}
-
 	conn ,err := net.DialTCP("tcp",nil,tcpAddr)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
 		os.Exit(1)
 	}
-
 	in := gbufio.NewReader(os.Stdin)
 	for  {
 		line, _, _ := in.ReadLine()

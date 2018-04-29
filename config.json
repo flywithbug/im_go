@@ -1,12 +1,12 @@
 {
-  "http_port": 1564,
-  "im_port": 1566,
-  "pprof_bind":"localhost:6971",
+  "im_port": 9000,
+  "http_port": 9001,
+  "pprof_bind":"localhost:9002",
   "db_config": {
     "host": "127.0.0.1:3306",
     "username": "root",
     "password": "root",
-    "name": "im",
+    "name": "gim",
     "max_idle_conns": 10,
     "max_open_conns": 50
   },
