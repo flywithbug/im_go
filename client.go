@@ -13,6 +13,9 @@ import (
 	"im_go/libs/define"
 	"im_go/libs/bytes"
 	"im_go/libs/bufio"
+	"encoding/binary"
+	gbytes "bytes"
+
 )
 
 func main()  {
@@ -34,7 +37,9 @@ func main()  {
 		fmt.Println("line",string(line))
 		if string(line) == "random" {
 			go sendRandom(conn)
-		}else {
+		}else if string(line) == "auth"{
+			Auth(conn)
+		} else {
 			go send(conn,line)
 		}
 	}
@@ -52,14 +57,16 @@ func sendRandom(conn *net.TCPConn)  {
 			break
 		}
 	}
-
 }
+
+
+
 
 func send(conn *net.TCPConn,data []byte)  {
 	fmt.Println("input:",string(data))
 	p := new(proto.Proto)
 	p.Ver = 1
-	p.Operation = define.OP_PROTO_FINISH
+	p.Operation = define.OP_AUTH
 	p.SeqId = int32(0)
 	p.Body = []byte(data)
 	//判断发送字符长度，过长提示
@@ -82,6 +89,16 @@ func send(conn *net.TCPConn,data []byte)  {
 
 
 
+
+func Auth(conn *net.TCPConn)  {
+	auth := new(authenticationToken)
+	auth.token = "token"
+	auth.deviceId = "deviceId"
+	auth.platformId = 1
+
+	send(conn,auth.ToData())
+}
+
 /**
 *生成随机字符
 **/
@@ -99,4 +116,60 @@ func RandString(length int) string {
 		}
 	}
 	return strings.Join(rs, "")
+}
+
+
+
+
+//登录授权
+type authenticationToken struct {
+	token       string
+	platformId int8
+	deviceId   string
+}
+
+
+
+func (auth *authenticationToken) ToData() []byte {
+	var l int8
+	buffer := new(gbytes.Buffer)
+	binary.Write(buffer,binary.BigEndian,auth.platformId)
+	l = int8(len(auth.token))
+	binary.Write(buffer,binary.BigEndian,l)
+	buffer.Write([]byte(auth.token))
+	l = int8(len(auth.deviceId))
+	binary.Write(buffer,binary.BigEndian,l)
+	buffer.Write([]byte(auth.deviceId))
+	buf := buffer.Bytes()
+	return buf
+}
+
+
+
+func (auth *authenticationToken) FromData(buff []byte) bool {
+	var l int8
+	if (len(buff)< 3) {
+		return false
+	}
+	platformId := int8(buff[0])
+
+	buffer := gbytes.NewBuffer(buff[1:])
+	binary.Read(buffer,binary.BigEndian,&l)
+	if int(l) > buffer.Len() || int(l) < 0 {
+		return false
+	}
+	token := make([]byte,l)
+	buffer.Read(token)
+
+
+	binary.Read(buffer,binary.BigEndian,&l)
+	deviceId := make([]byte,l)
+	buffer.Read(deviceId)
+
+
+	auth.platformId = platformId
+	auth.token = string(token)
+	auth.deviceId = string(deviceId)
+
+	return true
 }

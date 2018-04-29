@@ -78,8 +78,6 @@ func (p* Proto)WriteTo(b *bytes.Writer)  {
 	binary.BigEndian.PutInt16(buf[VerOffset:],p.Ver)
 	binary.BigEndian.PutInt32(buf[OperationOffset:],p.Operation)
 	binary.BigEndian.PutInt32(buf[SeqIdOffset:],p.SeqId)
-	fmt.Println("WriteTo",packLen,string(buf),string(p.Body))
-
 	if p.Body != nil {
 		b.Write(p.Body)
 	}

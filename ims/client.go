@@ -2,8 +2,6 @@ package ims
 
 import (
 	"net"
-	"im_go/libs/bufio"
-	"im_go/libs/proto"
 	"fmt"
 	"io"
 	"im_go/libs/define"
@@ -14,29 +12,25 @@ type Client struct {
 	Connection
 	// 连接信息
 	Key    	string        	//客户端连接的唯标志
-	//reader 	*bufio.Reader	//读取
-	//writer 	*bufio.Writer	//输出
-	pro   	*proto.Proto
+	publicIp int32
+
 }
 
 
 func NewClient(conn *net.TCPConn)(client *Client)  {
 	client = new(Client)
-	client.bufPrepare()
-	reader := bufio.NewReaderSize(conn,int(proto.MaxPackSize))
-	writer := bufio.NewWriter(conn)
-	p := new(proto.Proto)
-	client.conn = conn
-	client.pro = p
-	client.reader = reader
-	client.writer = writer
+	client.bufPrepare(conn)
+	conn.LocalAddr()
+	addr := conn.LocalAddr()
+	if ad, ok := addr.(*net.TCPAddr); ok {
+		ip4 := ad.IP.To4()
+		client.publicIp = int32(ip4[0]) << 24 | int32(ip4[1]) << 16 | int32(ip4[2]) << 8 | int32(ip4[3])
+	}
 	atomic.AddInt64(&serverSummary.nConnections, 1)
-
 	return client
 }
 
 func (client *Client)Read() {
-	defer client.conn.Close()
 	for{
 		if msg,err := client.read();err != nil{
 			if err == io.EOF {
@@ -59,17 +53,46 @@ func (client *Client)Write() {
 
 
 //消息处理
-func (client *Client)handleMessage(pro *Message)  {
+func (client *Client)handleMessage(msg *Message)  {
 	client.count++
-	fmt.Println("count",client.count,"操作类型",pro.Operation,string(pro.Body))
-	switch pro.Operation {
+	fmt.Println("count",client.count,"操作类型",msg.Operation,string(msg.Body))
+	switch msg.Operation {
 	case define.OP_AUTH:
-		//fmt.Println(pro,string(pro.Body),pro.Operation)
+		auth := new(AuthenticationToken)
+		auth.FromData(msg.Body)
+		client.HandleAuthToken(auth,msg.Ver)
 	case define.OP_PROTO_FINISH:
 		client.HandleClientClosed()
 
 	}
 }
+
+func (client *Client)HandleAuthToken(login *AuthenticationToken,version int16)  {
+	fmt.Println("auth",login)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //client 长链失败，关闭连接，处理数据保存事宜
 func (client *Client)HandleClientClosed()  {

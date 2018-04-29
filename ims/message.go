@@ -35,6 +35,8 @@ type AuthenticationToken struct {
 	deviceId   string
 }
 
+
+
 func (auth *AuthenticationToken) ToData() []byte {
 	var l int8
 	buffer := new(bytes.Buffer)
