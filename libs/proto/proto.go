@@ -114,6 +114,7 @@ func (p *Proto)ReadTCP(rr *bufio.Reader)(err error)  {
 }
 
 func (p *Proto)WriteTCP(wr *bufio.Writer)(err error)  {
+
 	var (
 		buf []byte
 		packLen int32
@@ -136,6 +137,7 @@ func (p *Proto)WriteTCP(wr *bufio.Writer)(err error)  {
 	if p.Body != nil {
 		_, err = wr.Write(p.Body)
 	}
+
 	return
 }
 

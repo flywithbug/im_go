@@ -36,8 +36,6 @@ func NewClient(conn *net.TCPConn)(client *Client)  {
 	writer := bufio.NewWriter(conn)
 	client.reader =reader
 	client.writer = writer
-	fmt.Println("new client ",client)
-
 	return client
 }
 
@@ -57,14 +55,16 @@ func (client *Client)send(msg *proto.Proto)error  {
 
 func (client *Client)Read()  {
 	for{
+
 		if msg,err := client.read();err != nil{
 			if err == io.EOF {
 				fmt.Println("close:",err)
+				break
 			}
 			fmt.Println("else:",err)
-			break
+
 		}else {
-			fmt.Println(msg)
+			fmt.Println("receiveMsg",msg)
 		}
 	}
 }

@@ -45,12 +45,28 @@ func (client *Client)Read() {
 			fmt.Println("else:",err)
 			break
 		}else {
+			fmt.Println("receiveMsg",msg)
 			go client.handleMessage(msg)
 		}
 	}
 	client.HandleClientClosed()
 }
 
+func (client *Client)sendMsg(msg *Message)  {
+	fmt.Println("sendMSg",msg)
+	vMsg := new(Message)
+	vMsg.Ver = msg.Ver
+	vMsg.Operation = msg.Operation
+	vMsg.SeqId = int32(0)
+	vMsg.Body = msg.Body
+	//err := vMsg.WriteTCP(client.writer)
+	msg.Reset()
+	err :=client.send(vMsg)
+	if err != nil {
+		fmt.Println(err)
+	}
+	vMsg.Reset()
+}
 
 func (client *Client)Write() {
 	seq := 0
@@ -76,15 +92,9 @@ func (client *Client)Write() {
 				atomic.AddInt64(&serverSummary.outMessageCount, 1)
 			}
 			seq++
-			vMsg := new(Message)
-			vMsg.Ver = msg.Ver
-			vMsg.Operation = msg.Operation
-			vMsg.SeqId = int32(seq)
-			vMsg.Body = msg.Body
-			err :=client.send(msg)
-			if err != nil {
-				fmt.Println(err)
-			}
+			go client.sendMsg(msg)
+
+
 		}
 
 	}
@@ -120,7 +130,11 @@ func (client *Client)handleMessage(msg *Message)  {
 		client.HandleClientClosed()
 	default:
 		fmt.Println("count",client.count,"操作类型",msg.Operation,string(msg.Body))
+		client.EnqueueMessage(msg)
 	}
+}
+
+func (client *Client)handleMsg(msg *Message)  {
 }
 
 func (client *Client)HandleAuthToken(auth *AuthenticationToken,version int16)  {

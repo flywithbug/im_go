@@ -13,6 +13,7 @@ import (
 	gbytes "bytes"
 	"encoding/binary"
 
+	"github.com/pborman/uuid"
 )
 
 
@@ -50,9 +51,9 @@ func main()  {
 func AuthData(conn *net.TCPConn)  {
 	auth := new(authenticationToken2)
 	auth.token = "c1428fb6-eb62-4360-ad01-ef6c84d7faa9"
-	auth.deviceId = "deviceId"
+	auth.deviceId = uuid.New()
 	auth.platformId = 1
-
+	fmt.Println("sendMSG",auth)
 	sendData(conn,auth.ToData(),define.OP_AUTH)
 }
 func sendData(conn *net.TCPConn,data []byte,operation int32)  {
