@@ -8,6 +8,10 @@ import (
 	"im_go/server/handle"
 )
 
+
+
+//TODO 路由中间件 auth校验
+
 func StartHttpServer(conf config.IMConfig)error  {
 	log.Printf("Http服务器启动中...")
 	// 设置请求映射地址及对应处理方法

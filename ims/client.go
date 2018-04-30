@@ -6,6 +6,9 @@ import (
 	"io"
 	"im_go/libs/define"
 	"sync/atomic"
+	"im_go/model"
+	"github.com/golang/glog"
+	"time"
 )
 
 type Client struct {
@@ -25,7 +28,11 @@ func NewClient(conn *net.TCPConn)(client *Client)  {
 		ip4 := ad.IP.To4()
 		client.publicIp = int32(ip4[0]) << 24 | int32(ip4[1]) << 16 | int32(ip4[2]) << 8 | int32(ip4[3])
 	}
+
 	atomic.AddInt64(&serverSummary.nConnections, 1)
+	client.wt = make(chan *Message,100)
+	fmt.Println("new client ",client.publicIp)
+
 	return client
 }
 
@@ -45,9 +52,60 @@ func (client *Client)Read() {
 }
 
 
-
-
 func (client *Client)Write() {
+	seq := 0
+	running := true
+	//loaded := false
+	//for running && !loaded{
+	//	//select {
+	//	//
+	//	//}
+	//	loaded = true
+	//}
+
+	for running {
+		select {
+		case msg := <- client.wt:
+			if msg == nil {
+				client.close()
+				running = false
+				glog.Infof("client:%d socket closed", client.uId)
+				break
+			}
+			if msg.Operation ==define.OP_SEND_MSG {
+				atomic.AddInt64(&serverSummary.outMessageCount, 1)
+			}
+			seq++
+			vMsg := new(Message)
+			vMsg.Ver = msg.Ver
+			vMsg.Operation = msg.Operation
+			vMsg.SeqId = int32(seq)
+			vMsg.Body = msg.Body
+			err :=client.send(msg)
+			if err != nil {
+				fmt.Println(err)
+			}
+		}
+
+	}
+
+	//等待200ms,避免发送者阻塞
+	t := time.After(200 *time.Millisecond)
+	running = true
+	for running {
+		select {
+		case <- t:
+			running = false
+		case <- client.wt:
+			glog.Warning("msg is dropped")
+		//case <- client.ewt:
+		//	log.Warning("emsg is dropped")
+		}
+	}
+
+
+
+
 
 
 
@@ -58,7 +116,6 @@ func (client *Client)Write() {
 func (client *Client)handleMessage(msg *Message)  {
 	//time.Sleep(time.Microsecond*20)
 	client.count++
-	fmt.Println("count",client.count,"操作类型",msg.Operation,string(msg.Body))
 	switch msg.Operation {
 	case define.OP_AUTH:
 		auth := new(AuthenticationToken)
@@ -66,28 +123,30 @@ func (client *Client)handleMessage(msg *Message)  {
 		client.HandleAuthToken(auth,msg.Ver)
 	case define.OP_PROTO_FINISH:
 		client.HandleClientClosed()
-
+	default:
+		fmt.Println("count",client.count,"操作类型",msg.Operation,string(msg.Body))
 	}
 }
 
-func (client *Client)HandleAuthToken(login *AuthenticationToken,version int16)  {
-	//fmt.Println("auth",login)
+func (client *Client)HandleAuthToken(auth *AuthenticationToken,version int16)  {
+	login,err   := model.GetLoginByToken(auth.token,model.STATUS_LOGIN)
+	if err != nil{
+		fmt.Println("auth",err)
+		msg := new(Message)
+		msg.Reset()
+		msg.Operation = define.OP_AUTH_REPLY
+		msg.Ver = version
+		authStatus := AuthenticationStatus{-1,0}//授权失败
+		msg.Body = authStatus.ToData(version)
+		client.EnqueueMessage(msg)
+		return
+	}else {
+		fmt.Println(login)
+	}
+
+
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

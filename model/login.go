@@ -7,28 +7,33 @@ import (
 	"fmt"
 )
 
+const (
+	STATUS_LOGIN  = 	int8(1)
+	STATUS_LOGOUT  = 	int8(2)
+)
+
 type Login struct {
 	Id        string    `json:"id"`         // id
 	UserId    string    `json:"user_id"`    // 用户ID
 	Token     string    `json:"token"`      // 用户TOKEN
 	LoginAt   time.Time `json:"login_at"`   // 登录日期
 	LoginIp   string    `json:"login_ip"`   // 登录IP
+	Status 	  int8		`json:"status"`		//status 1 已登录，0表示退出登录
 }
 
 
 /*
- 根据token获取用户登录
+ 根据token和用户登录状态获取用户登录
  */
-func GetLoginByToken(token string) (*Login, error) {
+func GetLoginByToken(token string,status int8) (*Login, error) {
 	var login Login
-	row := Database.QueryRow("select id, user_id, token, login_at, login_ip from im_login where token=?", token)
+	row := Database.QueryRow("select id, user_id, token, login_at, login_ip  from im_login where token=? AND status = ?", token,status)
 	err := row.Scan(&login.Id, &login.UserId, &login.Token, &login.LoginAt, &login.LoginIp)
 	if err != nil {
 		return nil, &DatabaseError{"根据Token获取用户登录错误"}
 	}
 	return &login, nil
 }
-
 
 
 /*

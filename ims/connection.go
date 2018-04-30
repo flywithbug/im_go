@@ -5,6 +5,10 @@ import (
 	"im_go/libs/proto"
 	"net"
 	"sync/atomic"
+	"github.com/golang/glog"
+	"time"
+	"fmt"
+	"errors"
 )
 
 type Connection struct {
@@ -19,6 +23,11 @@ type Connection struct {
 
 	tc     		int32 //write channel timeout count
 
+
+	//客户端协议版本号
+	version 	int16
+
+	wt 			chan *Message
 
 	appId     	int64
 	uId       	int64
@@ -43,6 +52,41 @@ func (client *Connection)read()(*Message,error)  {
 	err := client.msg.ReadTCP(client.reader)
 	return client.msg,err
 }
+
+func (client *Connection)send(msg *Message)error  {
+	tc := atomic.LoadInt32(&client.tc)
+	if tc > 0 {
+		glog.Info("can't write data to blocked socket")
+		return errors.New("can't write data to blocked socket")
+	}
+	return msg.WriteTCP(client.writer)
+}
+
+func (client *Connection)EnqueueMessage(msg *Message) bool {
+	fmt.Println("EnqueueMessage",msg)
+	closed := atomic.LoadInt32(&client.closed)
+	if closed > 0{
+		glog.Infof("can't send message to closed connection:%d", client.uId)
+		return false
+	}
+	tc := atomic.LoadInt32(&client.tc)
+	if tc > 0 {
+		glog.Infof("can't send message to blocked connection:%d", client.uId)
+		atomic.AddInt32(&client.tc, 1)
+		return false
+	}
+	select {
+	case client.wt <- msg:
+		return true
+	case <- time.After(60*time.Second):
+		atomic.AddInt32(&client.tc, 1)
+		glog.Infof("send message to wt timed out:%d", client.uId)
+		return false
+	}
+}
+
+
+
 
 func (client *Connection)close()  {
 	atomic.StoreInt32(&client.closed, 1)

@@ -16,6 +16,7 @@ import (
 	"encoding/binary"
 	gbytes "bytes"
 
+	"im_go/ims"
 )
 
 func main()  {
@@ -29,6 +30,8 @@ func main()  {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
 		os.Exit(1)
 	}
+
+	go read(conn)
 	in := gbufio.NewReader(os.Stdin)
 	for  {
 		line, _, _ := in.ReadLine()
@@ -38,18 +41,33 @@ func main()  {
 		}else if string(line) == "auth"{
 			Auth(conn)
 		} else {
-			go send(conn,line)
+			go send(conn,line,define.OP_SEND_MSG)
 		}
 	}
-
-
 }
+
+func read(conn *net.TCPConn)  {
+	reader := bufio.NewReaderSize(conn,int(proto.MaxPackSize))
+	msg := new(ims.Message)
+	for {
+		err := msg.ReadTCP(reader)
+		if err != nil {
+			fmt.Println(err)
+			break
+		}
+		var auth  ims.AuthenticationStatus
+		auth.FromData(int(msg.Ver),msg.Body)
+		fmt.Println(msg,auth)
+	}
+}
+
+
 
 func sendRandom(conn *net.TCPConn)  {
 	string := RandString(1024*10)
 	count := 0
 	for {
-		go send(conn,[]byte(string))
+		go send(conn,[]byte(string),define.OP_SEND_MSG)
 		count++
 		if count == 1000{
 			break
@@ -60,11 +78,11 @@ func sendRandom(conn *net.TCPConn)  {
 
 
 
-func send(conn *net.TCPConn,data []byte)  {
+func send(conn *net.TCPConn,data []byte,operation int32)  {
 	fmt.Println("input:",string(data))
 	p := new(proto.Proto)
 	p.Ver = 1
-	p.Operation = define.OP_AUTH
+	p.Operation = operation
 	p.SeqId = int32(0)
 	p.Body = []byte(data)
 	//判断发送字符长度，过长提示
@@ -90,11 +108,11 @@ func send(conn *net.TCPConn,data []byte)  {
 
 func Auth(conn *net.TCPConn)  {
 	auth := new(authenticationToken)
-	auth.token = "token"
+	auth.token = "c1428fb6-eb62-4360-ad01-ef6c84d7faa9"
 	auth.deviceId = "deviceId"
 	auth.platformId = 1
 
-	send(conn,auth.ToData())
+	send(conn,auth.ToData(),define.OP_AUTH)
 }
 
 /**
