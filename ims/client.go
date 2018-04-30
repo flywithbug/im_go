@@ -104,11 +104,6 @@ func (client *Client)Write() {
 	}
 
 
-
-
-
-
-
 }
 
 
@@ -131,7 +126,7 @@ func (client *Client)handleMessage(msg *Message)  {
 func (client *Client)HandleAuthToken(auth *AuthenticationToken,version int16)  {
 	login,err   := model.GetLoginByToken(auth.token,model.STATUS_LOGIN)
 	if err != nil{
-		fmt.Println("auth",err)
+		fmt.Println("auth",err,login)
 		msg := new(Message)
 		msg.Reset()
 		msg.Operation = define.OP_AUTH_REPLY
@@ -139,8 +134,9 @@ func (client *Client)HandleAuthToken(auth *AuthenticationToken,version int16)  {
 		authStatus := AuthenticationStatus{-1,0}//授权失败
 		msg.Body = authStatus.ToData(version)
 		client.EnqueueMessage(msg)
+		client.EnqueueMessage(msg)
 		return
-	}else {
+	}else{
 		fmt.Println(login)
 	}
 

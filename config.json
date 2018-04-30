@@ -7,8 +7,8 @@
     "username": "root",
     "password": "root",
     "name": "gim",
-    "max_idle_conns": 10,
-    "max_open_conns": 50
+    "max_idle_conns": 40,
+    "max_open_conns": 200
   },
   "router_prefix":[
     "api"
