@@ -4,22 +4,20 @@ import (
 	"net"
 	"fmt"
 	"os"
-	"math/rand"
-	gbufio "bufio"
-	"strconv"
-	"strings"
-	"time"
+	"im_go/imc"
+	"bufio"
+	"log"
 	"im_go/libs/proto"
-	"im_go/libs/define"
 	"im_go/libs/bytes"
-	"im_go/libs/bufio"
-	"encoding/binary"
+	"im_go/libs/define"
 	gbytes "bytes"
+	"encoding/binary"
 
-	"im_go/ims"
 )
 
+
 func main()  {
+
 	tcpAddr, err := net.ResolveTCPAddr("tcp","0.0.0.0:9000")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
@@ -30,60 +28,39 @@ func main()  {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
 		os.Exit(1)
 	}
+	c := imc.NewClient(conn)
+	c.Listen()
 
-	go read(conn)
-	in := gbufio.NewReader(os.Stdin)
+
+
+	in := bufio.NewReader(os.Stdin)
 	for  {
 		line, _, _ := in.ReadLine()
-		fmt.Println("line",string(line))
-		if string(line) == "random" {
-			go sendRandom(conn)
-		}else if string(line) == "auth"{
-			Auth(conn)
-		} else {
-			go send(conn,line,define.OP_SEND_MSG)
+		log.Println("readLine:",string(line))
+		if string(line)== "auth" {
+			AuthData(conn)
+		}else {
+			sendData(conn,line,define.OP_SEND_MSG)
 		}
 	}
+
+
 }
 
-func read(conn *net.TCPConn)  {
-	reader := bufio.NewReaderSize(conn,int(proto.MaxPackSize))
-	msg := new(ims.Message)
-	for {
-		err := msg.ReadTCP(reader)
-		if err != nil {
-			fmt.Println(err)
-			break
-		}
-		var auth  ims.AuthenticationStatus
-		auth.FromData(int(msg.Ver),msg.Body)
-		fmt.Println(msg,auth)
-	}
+func AuthData(conn *net.TCPConn)  {
+	auth := new(authenticationToken2)
+	auth.token = "c1428fb6-eb62-4360-ad01-ef6c84d7faa9"
+	auth.deviceId = "deviceId"
+	auth.platformId = 1
+
+	sendData(conn,auth.ToData(),define.OP_AUTH)
 }
-
-
-
-func sendRandom(conn *net.TCPConn)  {
-	string := RandString(1024*10)
-	count := 0
-	for {
-		go send(conn,[]byte(string),define.OP_SEND_MSG)
-		count++
-		if count == 1000{
-			break
-		}
-	}
-}
-
-
-
-
-func send(conn *net.TCPConn,data []byte,operation int32)  {
+func sendData(conn *net.TCPConn,data []byte,operation int32)  {
 	fmt.Println("input:",string(data))
 	p := new(proto.Proto)
-	p.Ver = 1
+	//p.Ver = 1
 	p.Operation = operation
-	p.SeqId = int32(0)
+	//p.SeqId = int32(1)
 	p.Body = []byte(data)
 	//判断发送字符长度，过长提示
 	wr := bufio.NewWriterSize(conn,len(p.Body)+50)
@@ -91,54 +68,18 @@ func send(conn *net.TCPConn,data []byte,operation int32)  {
 	p.WriteTo(b)
 	_,err := wr.Write(b.Buffer())
 
-
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-
 	//fmt.Println(nn)
 	wr.Flush()
-
-
 }
-
-
-
-
-func Auth(conn *net.TCPConn)  {
-	auth := new(authenticationToken)
-	auth.token = "c1428fb6-eb62-4360-ad01-ef6c84d7faa9"
-	auth.deviceId = "deviceId"
-	auth.platformId = 1
-
-	send(conn,auth.ToData(),define.OP_AUTH)
-}
-
-/**
-*生成随机字符
-**/
-func RandString(length int) string {
-	rand.Seed(time.Now().UnixNano())
-	rs := make([]string, length)
-	for start := 0; start < length; start++ {
-		t := rand.Intn(3)
-		if t == 0 {
-			rs = append(rs, strconv.Itoa(rand.Intn(10)))
-		} else if t == 1 {
-			rs = append(rs, string(rand.Intn(26)+65))
-		} else {
-			rs = append(rs, string(rand.Intn(26)+97))
-		}
-	}
-	return strings.Join(rs, "")
-}
-
 
 
 
 //登录授权
-type authenticationToken struct {
+type authenticationToken2 struct {
 	token       string
 	platformId int8
 	deviceId   string
@@ -146,7 +87,7 @@ type authenticationToken struct {
 
 
 
-func (auth *authenticationToken) ToData() []byte {
+func (auth *authenticationToken2) ToData() []byte {
 	var l int8
 	buffer := new(gbytes.Buffer)
 	binary.Write(buffer,binary.BigEndian,auth.platformId)
@@ -162,7 +103,7 @@ func (auth *authenticationToken) ToData() []byte {
 
 
 
-func (auth *authenticationToken) FromData(buff []byte) bool {
+func (auth *authenticationToken2) FromData(buff []byte) bool {
 	var l int8
 	if (len(buff)< 3) {
 		return false

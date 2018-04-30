@@ -22,13 +22,13 @@ type Client struct {
 func NewClient(conn *net.TCPConn)(client *Client)  {
 	client = new(Client)
 	client.bufPrepare(conn)
-	conn.LocalAddr()
 	addr := conn.LocalAddr()
 	if ad, ok := addr.(*net.TCPAddr); ok {
 		ip4 := ad.IP.To4()
-		client.publicIp = int32(ip4[0]) << 24 | int32(ip4[1]) << 16 | int32(ip4[2]) << 8 | int32(ip4[3])
+		if len(ip4)>4 {
+			client.publicIp = int32(ip4[0]) << 24 | int32(ip4[1]) << 16 | int32(ip4[2]) << 8 | int32(ip4[3])
+		}
 	}
-
 	atomic.AddInt64(&serverSummary.nConnections, 1)
 	client.wt = make(chan *Message,100)
 	fmt.Println("new client ",client.publicIp)
@@ -133,7 +133,6 @@ func (client *Client)HandleAuthToken(auth *AuthenticationToken,version int16)  {
 		msg.Ver = version
 		authStatus := AuthenticationStatus{-1,0}//授权失败
 		msg.Body = authStatus.ToData(version)
-		client.EnqueueMessage(msg)
 		client.EnqueueMessage(msg)
 		return
 	}else{
