@@ -79,7 +79,7 @@ func (client *Client)Write()  {
 		select {
 		case pro := <- client.out:
 			if pro != nil{
-				fmt.Println("chan out msg",pro)
+				fmt.Println("chan out msg",string(pro.Body))
 				client.send(pro)
 			}
 		}

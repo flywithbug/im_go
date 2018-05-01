@@ -25,7 +25,7 @@ func StartClient(port int) {
 			if msg == nil{
 				break
 			}
-			fmt.Println("receive Msg",msg)
+			fmt.Println("receive Msg",string(msg.Body))
 		}
 	}()
 
@@ -41,6 +41,6 @@ func StartClient(port int) {
 		if err != nil {
 			break
 		}
-		fmt.Println("send Msg",p,err)
+		fmt.Println("send Msg",string(p.Body),err)
 	}
 }
