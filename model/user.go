@@ -14,6 +14,7 @@ import (
 type User struct {
 	id       	int64     	`json:"id"`        //id
 	appId    	int64	   	`json:"app_id"`
+
 	UserId 	 	string	   	`json:"user_id"`   //uuid生成
 	Nick     	string    	`json:"nick"`      //昵称
 	Status   	string    	`json:"status"`    //状态 0离线,1在线
@@ -28,6 +29,7 @@ type User struct {
 func (user *User)Id()int64  {
 	return user.id
 }
+
 func (user *User)AppId()int64  {
 	return user.appId
 }
@@ -113,13 +115,13 @@ func GetBuddiesByCategories(categories []Category) ([]Category, error) {
 */
 func LoginUser(account string, password string) (*User, error) {
 	var user User
-	rows, err := Database.Query("select  user_id, nick, status, sign, avatar, create_at, update_at,forbidden from im_user where account=? and password=? ", account, password)
+	rows, err := Database.Query("select app_id, id , user_id, nick, status, sign, avatar, create_at, update_at,forbidden from im_user where account=? and password=? ", account, password)
 	if err != nil {
 		return nil, &DatabaseError{"根据账号及密码查询用户错误"}
 	}
 	defer rows.Close()
 	for rows.Next() {
-		err := rows.Scan(&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt,&user.Forbidden)
+		err := rows.Scan(&user.appId,&user.id ,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt,&user.Forbidden)
 		if err != nil {
 			return nil, &DatabaseError{"根据账号及密码查询结果映射至对象错误"}
 		}
