@@ -31,7 +31,6 @@ func StartClient(port int) {
 
 	for {
 		line, _, _ := in.ReadLine()
-
 		p := new(Proto)
 		p.Ver = 1
 		p.Body = line

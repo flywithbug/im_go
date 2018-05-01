@@ -78,14 +78,14 @@ func (client *Client)Write()  {
 	for{
 		select {
 		case pro := <- client.out:
-			if pro != nil{
-				fmt.Println("chan out msg",string(pro.Body))
-				client.send(pro)
+			if pro == nil{
+				client.HandleClientClosed()
+				break
 			}
+			client.send(pro)
+
 		}
 	}
-
-
 
 
 }
