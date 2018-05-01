@@ -4,9 +4,10 @@ import (
 	"net"
 	"sync/atomic"
 	"fmt"
+	log "github.com/golang/glog"
+	"time"
 )
 
-var clients map[string]*Client
 type Client struct {
 	Connection
 	publicIp int32
@@ -25,43 +26,45 @@ func NewClient(conn *net.TCPConn)*Client  {
 		}
 	}
 	atomic.AddInt64(&serverSummary.nconnections, 1)
-	clients["a"] = client
+
+
+
 	return client
 }
 
 
 func (client *Client)Read()  {
-	fmt.Println("Lisetn Read")
 	for {
-		//tc := atomic.LoadInt32(&client.tc)
-		//if tc > 0 {
-		//	log.Infof("quit read goroutine, client:%d write goroutine blocked", client.uid)
-		//	client.HandleClientClosed()
-		//	break
-		//}
-		//t1 := time.Now().Unix()
-		fmt.Println("read")
+		tc := atomic.LoadInt32(&client.tc)
+		if tc > 0 {
+			log.Infof("quit read goroutine, client:%d write goroutine blocked", client.uid)
+			client.HandleClientClosed()
+			break
+		}
+		t1 := time.Now().Unix()
 		msg := client.read()
-		fmt.Println("receiveMSg",msg)
-		//t2 := time.Now().Unix()
-		//if t2 - t1 > 6*60 {
-		//	log.Infof("client:%d socket read timeout:%d %d", client.uid, t1, t2)
-		//}
+		t2 := time.Now().Unix()
+		if t2 - t1 > 6*60 {
+			log.Infof("client:%d socket read timeout:%d %d", client.uid, t1, t2)
+		}
 		if msg == nil {
 			client.HandleClientClosed()
 			break
 		}
 		client.handleMessage(msg)
-		//t3 := time.Now().Unix()
-		//if t3 - t2 > 2 {
-		//	log.Infof("client:%d handle message is too slow:%d %d", client.uid, t2, t3)
-		//}
+		t3 := time.Now().Unix()
+		if t3 - t2 > 2 {
+			log.Infof("client:%d handle message is too slow:%d %d", client.uid, t2, t3)
+		}
 
 	}
 }
 
 func (client *Client)handleMessage(pro *Proto)  {
-	fmt.Println("msg Operation",pro.Operation,OperationMsg(pro.Operation))
+	fmt.Println("receiveMSg:",string(pro.Body),len(pro.Body),pro.Operation)
+
+
+
 }
 
 
@@ -71,6 +74,13 @@ func (client *Client)handleMessage(pro *Proto)  {
 
 
 func (client *Client)Write()  {
+
+	for{
+
+	}
+
+
+
 
 }
 

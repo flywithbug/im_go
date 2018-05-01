@@ -103,7 +103,6 @@ func ReadHeader(buff []byte)(*protoHeader,error)  {
 }
 
 
-
 func WriteMessage(w *bytes.Buffer, p *Proto)  {
 	var ph protoHeader
 	ph.bodyLen = int32(len(p.Body))
@@ -114,7 +113,6 @@ func WriteMessage(w *bytes.Buffer, p *Proto)  {
 	WriteHeader(ph,w)
 	w.Write(p.Body)
 }
-
 
 func SendMessage(conn io.Writer,pro *Proto)error  {
 	buffer := new(bytes.Buffer)

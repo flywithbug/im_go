@@ -15,7 +15,7 @@ const CLIENT_TIMEOUT = (60 * 6)
 type Connection struct {
 	conn  	*net.TCPConn
 	tc     int32 //write channel timeout count
-
+	outMsg	chan *Proto
 
 	tm     time.Time
 
@@ -34,7 +34,9 @@ func (client *Connection)read()*Proto  {
 	return ReceiveMessage(client.conn)
 }
 
-func (client *Connection)write(pro *Proto)  {
+
+
+func (client *Connection)send(pro *Proto)  {
 	tc := atomic.LoadInt32(&client.tc)
 	if tc > 0 {
 		log.Infof("can't write data to blocked socket")

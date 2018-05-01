@@ -7,7 +7,6 @@ import (
 
 func init()  {
 	serverSummary = NewServerSummary()
-	clients = make(map[string]*Client,10)
 }
 
 func Listen(port int)  {
@@ -23,7 +22,7 @@ func Listen(port int)  {
 		if err != nil {
 			return
 		}
-		fmt.Printf("新连接地址为:[%s]", conn.RemoteAddr())
+		fmt.Printf("新连接地址为:[%s] \n", conn.RemoteAddr())
 		go handleConnection(conn)
 	}
 }

@@ -136,7 +136,6 @@ func SendMessage(conn io.Writer,pro *Proto)error  {
 func ReceiveLimitMessage(conn io.Reader,limitSize int)(pro *Proto)  {
 	buff := make([]byte,RawHeaderSize)
 	_,err := io.ReadFull(conn,buff)
-	log.Info("receive header",buff)
 	if err != nil {
 		log.Info("sock read error:", err)
 		return nil
