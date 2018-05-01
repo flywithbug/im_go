@@ -8,6 +8,7 @@ import (
 
 func TestWriteHeader(t *testing.T) {
 
+	//encode
 	b := []byte("test")
 	buffer := new(bytes.Buffer)
 	var ph protoHeader
@@ -19,6 +20,8 @@ func TestWriteHeader(t *testing.T) {
 	WriteHeader(ph,buffer)
 	buffer.Write(b)
 
+
+	//decode
 	bb := buffer.Bytes()
 	fmt.Println(bb)
 	ph1 ,err := ReadHeader(bb)
