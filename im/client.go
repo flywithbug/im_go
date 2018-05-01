@@ -27,10 +27,11 @@ func NewClient(conn *net.TCPConn)*Client  {
 	}
 	atomic.AddInt64(&serverSummary.nconnections, 1)
 
-
+	client.out = make(chan *Proto,100)
 
 	return client
 }
+
 
 
 func (client *Client)Read()  {
@@ -63,7 +64,7 @@ func (client *Client)Read()  {
 func (client *Client)handleMessage(pro *Proto)  {
 	fmt.Println("receiveMSg:",string(pro.Body),len(pro.Body),pro.Operation)
 
-
+	client.out <- pro
 
 }
 
@@ -74,9 +75,14 @@ func (client *Client)handleMessage(pro *Proto)  {
 
 
 func (client *Client)Write()  {
-
 	for{
-
+		select {
+		case pro := <- client.out:
+			if pro != nil{
+				fmt.Println("chan out msg",pro)
+				client.send(pro)
+			}
+		}
 	}
 
 
