@@ -1,59 +1,126 @@
 package imc
 
-import "io"
-import "bytes"
-import "encoding/binary"
-import log "github.com/golang/glog"
-import "errors"
+import (
+	"errors"
+	"encoding/json"
+	"bytes"
+	"encoding/binary"
+	"io"
+	log "github.com/golang/glog"
+)
 
-//平台号
-const PLATFORM_IOS = 1
-const PLATFORM_ANDROID = 2
-const PLATFORM_WEB = 3
-
-const DEFAULT_VERSION = 1
-
-const MSG_HEADER_SIZE = 12
-
-var message_descriptions map[int]string = make(map[int]string)
-
-type MessageCreator func()IMessage
-var message_creators map[int]MessageCreator = make(map[int]MessageCreator)
-
-type VersionMessageCreator func()IVersionMessage
-var vmessage_creators map[int]VersionMessageCreator = make(map[int]VersionMessageCreator)
-
-
-
-func WriteHeader(len int32, seq int32, cmd byte, version byte, buffer io.Writer) {
-	binary.Write(buffer, binary.BigEndian, len)
-	binary.Write(buffer, binary.BigEndian, seq)
-	t := []byte{cmd, byte(version), 0, 0}
-	buffer.Write(t)
+type Proto struct {
+	Ver       int16           `json:"ver"`  // protocol version
+	Operation int32           `json:"op"`   // operation for request
+	SeqId     int32           `json:"seq"`  // sequence number chosen by client
+	Body      json.RawMessage `json:"body"` // binary body bytes(json.RawMessage is []byte) //解析对象
 }
 
-func ReadHeader(buff []byte) (int, int, int, int) {
-	var length int32
-	var seq int32
+
+//
+//const (
+//	PackSize  	= 4  	//消息最大长度9kb
+//	HeaderSize 	= 2
+//	VerSize  	= 2
+//	OperationSize = 4
+//	SeqIdSize     = 4
+//	RawHeaderSize = PackSize + HeaderSize + VerSize + OperationSize + SeqIdSize
+//	MaxPackSize   = MaxBodySize + int32(RawHeaderSize)
+//
+//	// offset
+//	PackOffset      = 0
+//	HeaderOffset    = PackOffset + PackSize
+//	VerOffset       = HeaderOffset + HeaderSize
+//	OperationOffset = VerOffset + VerSize
+//	SeqIdOffset     = OperationOffset + OperationSize
+//)
+
+//消息头 结构体
+type protoHeader struct {
+	bodyLen 	int32   // 4 消息长度
+	headerLen	int16	// 2  //默认 RawHeaderSize = 16
+	ver 		int16	// 2
+	op			int32	// 4
+	seq			int32	// 4
+}
+
+
+
+
+// for tcp
+const (
+	MaxBodySize = int32(9 << 10)  //数据最大长度9kb
+	RawHeaderSize = int16(16) //4+2+2+4+4
+)
+
+var(
+	emptyProto = Proto{}
+	emptyJSONBody = []byte("{}")
+
+	ErrProtoPackLen   = errors.New("default server codec pack length error")
+	ErrProtoHeaderLen = errors.New("default server codec header length error")
+
+	ProtoReady 	= &Proto{Operation:OP_PROTO_READY}
+	ProtoFinish = &Proto{Operation:OP_PROTO_FINISH}
+)
+
+func WriteHeader(ph protoHeader,buffer io.Writer)  {
+	//bodyLen 	int32   //消息长度
+	//headerLen 	int16
+	//ver 		int16
+	//op			int32
+	//seq			int32
+	if ph.headerLen == 0 {
+		ph.headerLen = RawHeaderSize
+	}
+	binary.Write(buffer,binary.BigEndian,ph.bodyLen)
+	binary.Write(buffer,binary.BigEndian,ph.headerLen)
+	binary.Write(buffer,binary.BigEndian,ph.ver)
+	binary.Write(buffer,binary.BigEndian,ph.op)
+	binary.Write(buffer,binary.BigEndian,ph.seq)
+}
+
+
+func ReadHeader(buff []byte)(*protoHeader,error)  {
+	var ph protoHeader
+	//var (
+	//	bodyLen 	int32   //消息长度
+	//	headerLen 	int16
+	//	ver 		int16
+	//	op			int32
+	//	seq			int32
+	//)
 	buffer := bytes.NewBuffer(buff)
-	binary.Read(buffer, binary.BigEndian, &length)
-	binary.Read(buffer, binary.BigEndian, &seq)
-	cmd, _ := buffer.ReadByte()
-	version, _ := buffer.ReadByte()
-	return int(length), int(seq), int(cmd), int(version)
+	binary.Read(buffer,binary.BigEndian,&ph.bodyLen)
+	binary.Read(buffer,binary.BigEndian,&ph.headerLen)
+	binary.Read(buffer,binary.BigEndian,&ph.ver)
+	binary.Read(buffer,binary.BigEndian,&ph.op)
+	binary.Read(buffer,binary.BigEndian,&ph.seq)
+	if  ph.headerLen != RawHeaderSize{
+		return nil,ErrProtoHeaderLen
+	}
+	return &ph,nil
 }
 
-func WriteMessage(w *bytes.Buffer, msg *Message) {
-	body := msg.ToData()
-	WriteHeader(int32(len(body)), int32(msg.Seq), byte(msg.Cmd), byte(msg.Version), w)
-	w.Write(body)
+
+
+func WriteMessage(w *bytes.Buffer, p *Proto)  {
+	var ph protoHeader
+	ph.bodyLen = int32(len(p.Body))
+	ph.ver = p.Ver
+	ph.op = p.Operation
+	ph.seq = p.SeqId
+	ph.headerLen = RawHeaderSize
+	WriteHeader(ph,w)
+	w.Write(p.Body)
 }
 
-func SendMessage(conn io.Writer, msg *Message) error {
+
+func SendMessage(conn io.Writer,pro *Proto)error  {
 	buffer := new(bytes.Buffer)
-	WriteMessage(buffer, msg)
+	WriteMessage(buffer,pro)
 	buf := buffer.Bytes()
-	n, err := conn.Write(buf)
+	n , err := conn.Write(buf)
 	if err != nil {
 		log.Info("sock write error:", err)
 		return err
@@ -65,44 +132,95 @@ func SendMessage(conn io.Writer, msg *Message) error {
 	return nil
 }
 
-func ReceiveLimitMessage(conn io.Reader, limit_size int) *Message {
-	buff := make([]byte, 12)
-	_, err := io.ReadFull(conn, buff)
+
+func ReceiveLimitMessage(conn io.Reader,limitSize int)(pro *Proto)  {
+	buff := make([]byte,RawHeaderSize)
+	_,err := io.ReadFull(conn,buff)
+	log.Info("receive header",buff)
 	if err != nil {
 		log.Info("sock read error:", err)
 		return nil
 	}
-
-	length, seq, cmd, version := ReadHeader(buff)
-	if length < 0 || length >= limit_size {
-		log.Info("invalid len:", length)
+	ph,err := ReadHeader(buff)
+	if err != nil {
+		log.Info("buff read error:", err)
 		return nil
 	}
-	buff = make([]byte, length)
-	_, err = io.ReadFull(conn, buff)
+	if ph.bodyLen < 0 || int(ph.bodyLen) > limitSize {
+		log.Info("invalid len:",ph.bodyLen)
+		return nil
+	}
+	buff = make([]byte,ph.bodyLen)
+	_,err = io.ReadFull(conn,buff)
 	if err != nil {
 		log.Info("sock read error:", err)
 		return nil
 	}
+	pro = &emptyProto
 
-	message := new(Message)
-	message.Cmd = cmd
-	message.Seq = seq
-	message.Version = version
-	if !message.FromData(buff) {
-		log.Warning("parse error")
-		return nil
-	}
-	return message
+	pro.Ver = ph.ver
+	pro.SeqId = ph.seq
+	pro.Operation = ph.op
+	pro.Body = buff
+	return pro
 }
 
 
-func ReceiveMessage(conn io.Reader) *Message {
+func ReceiveMessage(conn io.Reader) *Proto {
 	return ReceiveLimitMessage(conn, 32*1024)
 }
 
 //消息大小限制在1M
-func ReceiveStorageMessage(conn io.Reader) *Message {
+func ReceiveStorageMessage(conn io.Reader) *Proto {
 	return ReceiveLimitMessage(conn, 1024*1024)
 }
 
+
+
+
+
+const (
+	// handshake
+	OP_HANDSHAKE       = int32(0)
+	OP_HANDSHAKE_REPLY = int32(1)
+	// heartbeat
+	OP_HEARTBEAT       = int32(2)
+	OP_HEARTBEAT_REPLY = int32(3)
+	// send text messgae
+	OP_SEND_MSG       = int32(4)
+	OP_SEND_MSG_REPLY = int32(5)
+	// kick user
+	OP_DISCONNECT_REPLY = int32(6)
+	// auth user
+	OP_AUTH       = int32(7)
+	OP_AUTH_REPLY = int32(8)
+
+	// handshake with sid
+	OP_HANDSHAKE_SID       = int32(9)
+	OP_HANDSHAKE_SID_REPLY = int32(10)
+
+	// raw message
+	OP_RAW = int32(11)
+	// room
+	OP_ROOM_READY = int32(12)
+
+
+
+	// proto
+	OP_PROTO_READY  = int32(13)
+	OP_PROTO_FINISH = int32(14)
+
+
+	// for test
+	OP_TEST       = int32(254)
+	OP_TEST_REPLY = int32(255)
+
+)
+
+func OperationMsg(operation int32)string  {
+	switch operation {
+	case OP_AUTH:
+		return "初次连接授权"
+	}
+	return "default_wait set notify info"
+}

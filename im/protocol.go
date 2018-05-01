@@ -102,16 +102,23 @@ func ReadHeader(buff []byte)(*protoHeader,error)  {
 	return &ph,nil
 }
 
+
+
+func WriteMessage(w *bytes.Buffer, p *Proto)  {
+	var ph protoHeader
+	ph.bodyLen = int32(len(p.Body))
+	ph.ver = p.Ver
+	ph.op = p.Operation
+	ph.seq = p.SeqId
+	ph.headerLen = RawHeaderSize
+	WriteHeader(ph,w)
+	w.Write(p.Body)
+}
+
+
 func SendMessage(conn io.Writer,pro *Proto)error  {
 	buffer := new(bytes.Buffer)
-	p := protoHeader{
-		headerLen:RawHeaderSize,
-		bodyLen:int32(len(pro.Body)),
-		op:pro.Operation,
-		seq:pro.SeqId,
-		ver:pro.Ver,
-	}
-	WriteHeader(p,buffer)
+	WriteMessage(buffer,pro)
 	buf := buffer.Bytes()
 	n , err := conn.Write(buf)
 	if err != nil {
@@ -148,6 +155,7 @@ func ReceiveLimitMessage(conn io.Reader,limitSize int)(pro *Proto)  {
 		log.Info("sock read error:", err)
 		return nil
 	}
+	pro = &emptyProto
 	pro.Ver = ph.ver
 	pro.SeqId = ph.seq
 	pro.Operation = ph.op

@@ -8,8 +8,12 @@ import (
 	"time"
 )
 
+
+const CLIENT_TIMEOUT = (60 * 6)
+
+
 type Connection struct {
-	conn *net.TCPConn
+	conn  net.Conn
 	tc     int32 //write channel timeout count
 
 

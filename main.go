@@ -7,13 +7,16 @@ import (
 	"im_go/model"
 	"im_go/server"
 	"log"
-	"im_go/ims"
+	//"im_go/ims"
+	"im_go/im"
 )
 
 const (
 	Name    string = "IM"
 	Version string = "1.0"
 )
+
+
 
 func main() {
 	log.Println("*********************************************")
@@ -40,6 +43,6 @@ func main() {
 
 	perf.Init(conf.PprofBind)
 	//初始化model包下全局变量值
-	ims.Listen(conf.IMPort)
-	//im.Listen(conf.IMPort)
+	//ims.Listen(conf.IMPort)
+	im.Listen(conf.IMPort)
 }

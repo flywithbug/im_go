@@ -17,18 +17,15 @@ func StartClient(port int) {
 	}
 
 	defer conn.Close()
-	reader := bufio.NewReader(conn)
-	writer := bufio.NewWriter(conn)
+	//reader := bufio.NewReader(conn)
 	in := bufio.NewReader(os.Stdin)
 	go func() {
 		for {
-			if line, _, err := reader.ReadLine(); err == nil {
-				log.Println(string(line),"------")
-
-			}else {
-				fmt.Println(err)
+			msg := ReceiveMessage(conn)
+			if msg == nil{
 				break
 			}
+			fmt.Println("receive Msg",msg)
 		}
 	}()
 
@@ -37,8 +34,23 @@ func StartClient(port int) {
 		// 模拟一个请求
 		// {"command":"GET_CONN","data":null}
 		// {"command":"GET_BUDDY_LIST","data":null}
-		writer.WriteString(string(line) + "\n")
-		writer.Flush()
+		//buffer := new(bytes.Buffer)
+		//var ph protoHeader
+		//ph.headerLen = RawHeaderSize
+		//ph.seq = 1
+		//ph.op = 2
+		//ph.bodyLen = int32(len(line))
+		//ph.ver = 1
+		//WriteHeader(ph,buffer)
+		//buffer.Write(line)
+		//bb := buffer.Bytes()
+		//writer.Write(bb)
+		p := new(Proto)
+		p.Ver = 1
+		p.Body = line
+		p.Operation = OP_AUTH
+		p.SeqId = 1
+		err = SendMessage(conn,p)
+		fmt.Println("send Msg",p,err)
 	}
-
 }

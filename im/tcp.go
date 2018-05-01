@@ -3,29 +3,32 @@ package im
 import (
 	"fmt"
 	"net"
-	"github.com/golang/glog"
 )
+
+func init()  {
+	serverSummary = NewServerSummary()
+	clients = make(map[string]*Client,10)
+}
+
 
 
 func Listen(port int)  {
-	address := fmt.Sprintf("0.0.0.0:%d",port)
-	addr,_:=net.ResolveTCPAddr("tcp",address)
-	listen ,err := net.ListenTCP("tcp",addr)
+	listenAddr := fmt.Sprintf("0.0.0.0:%d", port)
+	listen, err := net.Listen("tcp", listenAddr)
 	if err != nil {
-		glog.Info("初始化失败", err.Error())
+		fmt.Println("初始化失败", err.Error())
 		return
 	}
 	for {
-		conn, err := listen.AcceptTCP()
+		client, err := listen.Accept()
 		if err != nil {
 			return
 		}
-		glog.Infof("新连接地址为:[%s]", conn.RemoteAddr())
-		go handleConnection(conn)
+		go handleConnection(client)
 	}
 }
 
-func handleConnection(conn *net.TCPConn)  {
+func handleConnection(conn net.Conn)  {
 	client := NewClient(conn)
 	client.Listen()
 }

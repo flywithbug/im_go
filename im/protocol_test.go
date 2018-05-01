@@ -19,11 +19,11 @@ func TestWriteHeader(t *testing.T) {
 	ph.ver = 1
 	WriteHeader(ph,buffer)
 	buffer.Write(b)
+	bb := buffer.Bytes()
+	fmt.Println(bb)
 
 
 	//decode
-	bb := buffer.Bytes()
-	fmt.Println(bb)
 	ph1 ,err := ReadHeader(bb)
 	if err != nil {
 		fmt.Println(err)
