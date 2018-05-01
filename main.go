@@ -3,11 +3,11 @@ package main
 import (
 	"flag"
 	"im_go/config"
-	"im_go/ims"
 	"im_go/libs/perf"
 	"im_go/model"
 	"im_go/server"
 	"log"
+	"im_go/im"
 )
 
 const (
@@ -40,5 +40,6 @@ func main() {
 
 	perf.Init(conf.PprofBind)
 	//初始化model包下全局变量值
-	ims.Listen(conf.IMPort)
+	//ims.Listen(conf.IMPort)
+	im.Listen(conf.IMPort)
 }
