@@ -12,6 +12,11 @@ type Connection struct {
 	conn *net.TCPConn
 	tc     int32 //write channel timeout count
 
+	uid    int64
+
+
+
+
 }
 
 func (client *Connection)read()*Proto  {

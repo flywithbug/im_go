@@ -406,9 +406,9 @@ func login(resp http.ResponseWriter, account string, password string, ip string)
 				resp.Write(model.NewIMResponseSimple(500, err.Error(), "").Encode())
 				return
 			}
-			if !strings.EqualFold(user.Id, "") {
+			if !strings.EqualFold(user.UserId, "") {
 				token := uuid.New()
-				if _, err := model.SaveLogin(user.Id, token, ip); err != nil {
+				if _, err := model.SaveLogin(user.UserId, token, ip); err != nil {
 					resp.Write(model.NewIMResponseSimple(500, err.Error(), "").Encode())
 				} else {
 					user.Token = token

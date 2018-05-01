@@ -15,6 +15,7 @@ func StartClient(port int) {
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	defer conn.Close()
 	reader := bufio.NewReader(conn)
 	writer := bufio.NewWriter(conn)

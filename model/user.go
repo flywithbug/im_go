@@ -12,7 +12,8 @@ import (
 用户对象
 */
 type User struct {
-	Id       string    `json:"id"`        //id
+	Id       int64     `json:"id"`        //id
+	UserId 	 string	   `json:"user_id"`   //uuid生成
 	Nick     string    `json:"nick"`      //昵称
 	Status   string    `json:"status"`    //状态 0离线,1在线
 	Sign     string    `json:"sign"`      //个性签名
@@ -103,13 +104,13 @@ func GetBuddiesByCategories(categories []Category) ([]Category, error) {
 */
 func LoginUser(account string, password string) (*User, error) {
 	var user User
-	rows, err := Database.Query("select id, nick, status, sign, avatar, create_at, update_at from im_user where account=? and password=? ", account, password)
+	rows, err := Database.Query("select id,user_id, nick, status, sign, avatar, create_at, update_at from im_user where account=? and password=? ", account, password)
 	if err != nil {
 		return nil, &DatabaseError{"根据账号及密码查询用户错误"}
 	}
 	defer rows.Close()
 	for rows.Next() {
-		err := rows.Scan(&user.Id, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.CreateAt, &user.UpdateAt)
+		err := rows.Scan(&user.Id,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.CreateAt, &user.UpdateAt)
 		if err != nil {
 			return nil, &DatabaseError{"根据账号及密码查询结果映射至对象错误"}
 		}
@@ -121,7 +122,7 @@ func LoginUser(account string, password string) (*User, error) {
  保存用户
 */
 func SaveUser(account string, password string, nick string, avatar string) (*string, error) {
-	insStmt, err := Database.Prepare("insert into im_user (id, account, password, nick, avatar, create_at, update_at) VALUES (?, ?, ?, ?, ?, ?, ?)")
+	insStmt, err := Database.Prepare("insert into im_user (user_id, account, password, nick, avatar, create_at, update_at) VALUES (?, ?, ?, ?, ?, ?, ?)")
 	if err != nil {
 		return nil, &DatabaseError{"保存用户数据库处理错误"}
 	}

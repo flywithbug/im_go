@@ -65,7 +65,7 @@ var(
 )
 
 func WriteHeader(ph protoHeader,buffer io.Writer)  {
-	//packLen 	int32   //消息长度
+	//bodyLen 	int32   //消息长度
 	//headerLen 	int16
 	//ver 		int16
 	//op			int32
@@ -84,7 +84,7 @@ func WriteHeader(ph protoHeader,buffer io.Writer)  {
 func ReadHeader(buff []byte)(*protoHeader,error)  {
 	var ph protoHeader
 	//var (
-	//	packLen 	int32   //消息长度
+	//	bodyLen 	int32   //消息长度
 	//	headerLen 	int16
 	//	ver 		int16
 	//	op			int32

@@ -46,6 +46,7 @@ func SaveLogin(userId string, token string, ip string) (*string, error) {
 	}
 	defer insStmt.Close()
 	id := uuid.New()
+
 	status := 1
 	_, err := insStmt.Exec(id, userId, token, time.Now().Format("2006-01-02 15:04:05"), ip,status)
 	if err != nil {

@@ -7,7 +7,7 @@ import (
 	"im_go/model"
 	"im_go/server"
 	"log"
-	"im_go/im"
+	"im_go/ims"
 )
 
 const (
@@ -40,6 +40,6 @@ func main() {
 
 	perf.Init(conf.PprofBind)
 	//初始化model包下全局变量值
-	//ims.Listen(conf.IMPort)
-	im.Listen(conf.IMPort)
+	ims.Listen(conf.IMPort)
+	//im.Listen(conf.IMPort)
 }
