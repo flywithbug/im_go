@@ -45,5 +45,5 @@ func OperationMsg(operation int32)string  {
 	case OP_AUTH:
 		return "初次连接授权"
 	}
-	return ""
+	return "default_wait set notify info"
 }
