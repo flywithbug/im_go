@@ -12,15 +12,24 @@ import (
 用户对象
 */
 type User struct {
-	id       int64     `json:"id"`        //id
-	UserId 	 string	   `json:"user_id"`   //uuid生成
-	Nick     string    `json:"nick"`      //昵称
-	Status   string    `json:"status"`    //状态 0离线,1在线
-	Sign     string    `json:"sign"`      //个性签名
-	Avatar   string    `json:"avatar"`    //头像
-	createAt time.Time `json:"create_at"` //注册日期
-	updateAt time.Time `json:"update_at"` //更新日期
-	Token    string    `json:"token"`
+	id       	int64     	`json:"id"`        //id
+	appId    	int64	   	`json:"app_id"`
+	UserId 	 	string	   	`json:"user_id"`   //uuid生成
+	Nick     	string    	`json:"nick"`      //昵称
+	Status   	string    	`json:"status"`    //状态 0离线,1在线
+	Sign     	string    	`json:"sign"`      //个性签名
+	Avatar   	string    	`json:"avatar"`    //头像
+	createAt 	time.Time 	`json:"create_at"` //注册日期
+	updateAt 	time.Time 	`json:"update_at"` //更新日期
+	Token    	string    	`json:"token"`
+	Forbidden 	int32		`json:"forbidden"`
+}
+
+func (user *User)Id()int64  {
+	return user.id
+}
+func (user *User)AppId()int64  {
+	return user.appId
 }
 
 /*
@@ -58,10 +67,10 @@ func CheckAccount(account string) (int, error) {
 /*
  根据ID获取用户
 */
-func GetUserById(id string) (*User, error) {
+func GetUserByUserId(userId string) (*User, error) {
 	var user User
-	row := Database.QueryRow("select id, nick, status, sign, avatar, create_at, update_at from im_user where id=?", id)
-	err := row.Scan(&user.id, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
+	row := Database.QueryRow("select id, app_id, user_id, nick, status, sign, avatar, create_at, update_at from im_user where user_id = ?", userId)
+	err := row.Scan(&user.id,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
 	if err != nil {
 		return nil, &DatabaseError{"根据ID查询用户-将结果映射至对象错误"}
 	}
@@ -73,8 +82,8 @@ func GetUserById(id string) (*User, error) {
 */
 func GetUserByToken(token string) (*User, error) {
 	var user User
-	row := Database.QueryRow("select u.id, u.nick, u.status, u.sign, u.avatar, u.create_at, u.update_at from  im_user u left join im_login l on u.id=l.user_id where l.token=?", token)
-	err := row.Scan(&user.id, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
+	row := Database.QueryRow("select u.id, u.app_id,u.user_id,u.nick, u.status, u.sign, u.avatar, u.create_at, u.update_at from  im_user u left join im_login l on u.user_id=l.user_id where l.token=?", token)
+	err := row.Scan(&user.id,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
 	if err != nil {
 		return nil, &DatabaseError{"根据Token查询用户-将结果映射至对象错误"}
 	}
@@ -104,13 +113,13 @@ func GetBuddiesByCategories(categories []Category) ([]Category, error) {
 */
 func LoginUser(account string, password string) (*User, error) {
 	var user User
-	rows, err := Database.Query("select id, user_id, nick, status, sign, avatar, create_at, update_at from im_user where account=? and password=? ", account, password)
+	rows, err := Database.Query("select  user_id, nick, status, sign, avatar, create_at, update_at,forbidden from im_user where account=? and password=? ", account, password)
 	if err != nil {
 		return nil, &DatabaseError{"根据账号及密码查询用户错误"}
 	}
 	defer rows.Close()
 	for rows.Next() {
-		err := rows.Scan(&user.id,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
+		err := rows.Scan(&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt,&user.Forbidden)
 		if err != nil {
 			return nil, &DatabaseError{"根据账号及密码查询结果映射至对象错误"}
 		}
@@ -121,15 +130,15 @@ func LoginUser(account string, password string) (*User, error) {
 /*
  保存用户
 */
-func SaveUser(account string, password string, nick string, avatar string) (*string, error) {
-	insStmt, err := Database.Prepare("insert into im_user (user_id, account, password, nick, avatar, create_at, update_at) VALUES (?, ?, ?, ?, ?, ?, ?)")
+func SaveUser(appId int64,account string, password string, nick string, avatar string) (*string, error) {
+	insStmt, err := Database.Prepare("insert into im_user (user_id,app_id, account, password, nick, avatar, create_at, update_at) VALUES (?,?, ?, ?, ?, ?, ?, ?)")
 	if err != nil {
 		return nil, &DatabaseError{"保存用户数据库处理错误"}
 	}
 	defer insStmt.Close()
 	now := time.Now().Format("2006-01-02 15:04:05")
 	uid := uuid.New()
-	_, err = insStmt.Exec(uid, account, password, nick, avatar, now, now)
+	_, err = insStmt.Exec(uid, appId , account, password, nick, avatar, now, now)
 	if err != nil {
 		return nil, &DatabaseError{"保存用户记录错误"}
 	}

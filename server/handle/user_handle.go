@@ -19,7 +19,7 @@ func handleRegister(resp http.ResponseWriter, req *http.Request) {
 		login := loginoutModel{}
 		if err := json.Unmarshal(body,&login);err == nil {
 			password := common.Md5(login.Password)
-			register(resp, login.Account, password, login.Nick, login.Avatar)
+			register(resp, login.AppId,login.Account, password, login.Nick, login.Avatar)
 		}else {
 			resp.Write(model.NewIMResponseSimple(401, "Bad Request: "+req.Method, "").Encode())
 		}
@@ -408,7 +408,7 @@ func login(resp http.ResponseWriter, account string, password string, ip string)
 			}
 			if !strings.EqualFold(user.UserId, "") {
 				token := uuid.New()
-				if _, err := model.SaveLogin(user.UserId, token, ip); err != nil {
+				if _, err := model.SaveLogin(user.UserId, token, ip,user.Forbidden); err != nil {
 					resp.Write(model.NewIMResponseSimple(500, err.Error(), "").Encode())
 				} else {
 					user.Token = token
@@ -445,7 +445,7 @@ func logout(resp http.ResponseWriter,token string)  {
  104	昵称不能为空
  105	注册失败
 */
-func register(resp http.ResponseWriter, account string, password string, nick string, avatar string) {
+func register(resp http.ResponseWriter,appId int64, account string, password string, nick string, avatar string) {
 	if account == "" {
 		resp.Write(model.NewIMResponseSimple(101, "账号不能为空", "").Encode())
 	} else if password == "" {
@@ -461,7 +461,10 @@ func register(resp http.ResponseWriter, account string, password string, nick st
 		if num > 0 {
 			resp.Write(model.NewIMResponseSimple(104, "用户名已存在", "").Encode())
 		} else {
-			_, err := model.SaveUser(account, password, nick, avatar)
+			if appId == 0{
+				appId = 10
+			}
+			_, err := model.SaveUser(appId,account, password, nick, avatar)
 			if err != nil {
 				resp.Write(model.NewIMResponseSimple(104, err.Error(), "").Encode())
 				return

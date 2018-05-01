@@ -19,6 +19,7 @@ type Login struct {
 	LoginAt   time.Time `json:"login_at"`   // 登录日期
 	LoginIp   string    `json:"login_ip"`   // 登录IP
 	Status 	  int8		`json:"status"`		//status 1 已登录，0表示退出登录
+	Forbidden int32		`json:"forbidden"`  //false 表示未禁言
 }
 
 
@@ -39,8 +40,8 @@ func GetLoginByToken(token string,status int8) (*Login, error) {
 /*
  保存登录状态
  */
-func SaveLogin(userId string, token string, ip string) (*string, error) {
-	insStmt, errStmt := Database.Prepare("insert into im_login (id, user_id, token, login_at, login_ip, status) VALUES (?, ?, ?, ?, ?, ?)")
+func SaveLogin(userId string, token string, ip string,forbidden int32) (*string, error) {
+	insStmt, errStmt := Database.Prepare("insert into im_login (id, user_id, token, login_at, login_ip, status,forbidden) VALUES (?, ?, ?, ?, ?, ?,?)")
 	if errStmt != nil {
 		return nil, &DatabaseError{"服务错误"}
 	}
@@ -48,7 +49,7 @@ func SaveLogin(userId string, token string, ip string) (*string, error) {
 	id := uuid.New()
 
 	status := 1
-	_, err := insStmt.Exec(id, userId, token, time.Now().Format("2006-01-02 15:04:05"), ip,status)
+	_, err := insStmt.Exec(id, userId, token, time.Now().Format("2006-01-02 15:04:05"), ip,status,forbidden)
 	if err != nil {
 		return nil, &DatabaseError{"服务错误"}
 	}
