@@ -13,7 +13,7 @@ type Client struct {
 
 }
 
-func NewClient(conn net.Conn)*Client  {
+func NewClient(conn *net.TCPConn)*Client  {
 	client := new(Client)
 	client.conn = conn
 
