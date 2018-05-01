@@ -16,8 +16,6 @@ type AuthenticationToken struct {
 	DeviceId   		string		`json:"device_id"`
 }
 
-
-
 func (client *Client)HandleAuthToken(pro *Proto)  {
 	if client.uid >0 {
 		log.Info("repeat login")
@@ -39,6 +37,17 @@ func (client *Client)HandleAuthToken(pro *Proto)  {
 		client.EnqueueMessage(pro)
 		return
 	}
+	if login.UId == 0 || login.AppId == 0{
+		var authStatus  AuthenticationStatus
+		authStatus.Status= -1
+		pro.Operation = OP_AUTH_REPLY
+		pro.Body = authStatus.ToData()
+		pro.SeqId = 0
+		client.EnqueueMessage(pro)
+		return
+	}
+	
+	
 	jb,_ :=json.Marshal(login)
 	fmt.Println(string(jb))
 

@@ -30,8 +30,8 @@ type Login struct {
  */
 func GetLoginByToken(token string,status int8) (*Login, error) {
 	var login Login
-	row := Database.QueryRow("select u_id, id, user_id, token, login_at, login_ip, forbidden  from im_login where token=? AND status = ?", token,status)
-	err := row.Scan(&login.UId,&login.Id, &login.UserId, &login.Token, &login.LoginAt, &login.LoginIp,&login.Forbidden)
+	row := Database.QueryRow("select u_id,app_id, id, user_id, token, login_at, login_ip, forbidden  from im_login where token=? AND status = ?", token,status)
+	err := row.Scan(&login.UId,&login.AppId,&login.Id, &login.UserId, &login.Token, &login.LoginAt, &login.LoginIp,&login.Forbidden)
 	if err != nil {
 		return nil, &DatabaseError{"根据Token获取用户登录错误"}
 	}
