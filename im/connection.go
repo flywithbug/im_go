@@ -13,12 +13,15 @@ const CLIENT_TIMEOUT = (60 * 6)
 
 
 type Connection struct {
-	conn  	*net.TCPConn
-	tc     	int32 //write channel timeout count
-	out 	chan *Proto
+	conn  		*net.TCPConn
+
+	closed 		int32
+
+	tc     		int32 //write channel timeout count
+	out 		chan *Proto
 
 
-	tm     	time.Time
+	tm     		time.Time
 
 	appid  		int64
 	uid    		int64
@@ -50,5 +53,33 @@ func (client *Connection)send(pro *Proto)  {
 // 根据连接类型关闭
 func (client *Connection) close() {
 	client.conn.Close()
+}
+
+
+
+
+//把消息加入到发送队列中
+func (client *Client)EnqueueMessage(pro *Proto)bool {
+	closed := atomic.LoadInt32(&client.closed)
+	if closed > 0 {
+		log.Infof("can't send message to closed connection:%d", client.uid)
+		return false
+	}
+	tc := atomic.LoadInt32(&client.tc)
+	if tc > 0 {
+		log.Infof("can't send message to blocked connection:%d", client.uid)
+		atomic.AddInt32(&client.tc, 1)
+		return false
+	}
+
+	select {
+	case client.out <- pro:
+		return true
+	case <- time.After(60*time.Second):
+		atomic.AddInt32(&client.tc, 1)
+		log.Infof("send message to wt timed out:%d", client.uid)
+		return false
+	}
+
 }
 

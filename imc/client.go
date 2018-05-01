@@ -26,6 +26,12 @@ func StartClient(port int) {
 			if msg == nil{
 				break
 			}
+			switch msg.Operation {
+			case OP_AUTH_REPLY:
+				var auth im.AuthenticationStatus
+				auth.FromData(msg.Body)
+				fmt.Println("授权状态",auth.Status)
+			}
 			fmt.Println("receive Msg",string(msg.Body))
 		}
 	}()
@@ -36,8 +42,8 @@ func StartClient(port int) {
 
 		if string(line) == "auth"{
 			var auth im.AuthenticationToken
-			auth.Token = "6bde541f-1eb9-4600-a47e-8d7db7c7b460"
-			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
+			auth.Token = "6bde541f-1eb9-4600-a47e-8d7db7c7b460-1"
+			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec-1"
 			auth.PlatformType = 3
 			p.Ver = 1
 			p.Body = auth.ToData()
@@ -49,7 +55,7 @@ func StartClient(port int) {
 		}else {
 			p.Ver = 1
 			p.Body = line
-			p.Operation = OP_AUTH
+			p.Operation = OP_SEND_MSG
 			p.SeqId = 1
 		}
 

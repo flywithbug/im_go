@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"bytes"
 	"encoding/binary"
+	"im_go/model"
+	"encoding/json"
 )
 
 
@@ -23,13 +25,25 @@ func (client *Client)HandleAuthToken(pro *Proto)  {
 	}
 	var auth AuthenticationToken
 	auth.FromData(pro.Body)
-	fmt.Println("authToken",auth.Token,auth.PlatformType,auth.DeviceId)
+	fmt.Println("authToken:",auth.Token,"platform:",auth.PlatformType,"deviceId:",auth.DeviceId)
+
+
+	login,err := model.GetLoginByToken(auth.Token,model.STATUS_LOGIN)
+	if err != nil {
+		fmt.Println(err)
+		var authStatus  AuthenticationStatus
+		authStatus.Status= -1
+		pro.Operation = OP_AUTH_REPLY
+		pro.Body = authStatus.ToData()
+		pro.SeqId = 0
+		client.EnqueueMessage(pro)
+		return
+	}
+	jb,_ :=json.Marshal(login)
+	fmt.Println(string(jb))
+
+
 }
-
-
-
-
-
 
 
 func (auth *AuthenticationToken) ToData() []byte {
@@ -52,7 +66,7 @@ func (auth *AuthenticationToken) ToData() []byte {
 
 func (auth *AuthenticationToken) FromData(buff []byte) bool {
 	var l int8
-	if (len(buff) <= 3) {
+	if len(buff) <= 3 {
 		return false
 	}
 	platformType := int8(buff[0])
@@ -77,5 +91,30 @@ func (auth *AuthenticationToken) FromData(buff []byte) bool {
 	auth.PlatformType = platformType
 	auth.Token = string(token)
 	auth.DeviceId = string(deviceId)
+	return true
+}
+
+
+
+
+type AuthenticationStatus struct {
+	Status int32   //-1 验证失败
+}
+
+
+func (auth *AuthenticationStatus) ToData ()[]byte {
+	buffer := new(bytes.Buffer)
+	binary.Write(buffer, binary.BigEndian, auth.Status)
+	buf := buffer.Bytes()
+	return buf
+}
+
+func (auth *AuthenticationStatus) FromData(buff []byte) bool {
+	if len(buff) < 4 {
+		return false
+	}
+	buffer := bytes.NewBuffer(buff)
+	binary.Read(buffer, binary.BigEndian, &auth.Status)
+
 	return true
 }
