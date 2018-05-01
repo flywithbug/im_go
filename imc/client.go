@@ -2,7 +2,6 @@ package imc
 
 import (
 	"bufio"
-	"log"
 	"net"
 	"os"
 	"fmt"
@@ -14,7 +13,8 @@ func StartClient(port int) {
 
 	conn, err := net.Dial("tcp", address)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println(err)
+		os.Exit(1)
 	}
 
 	defer conn.Close()

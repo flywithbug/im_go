@@ -6,7 +6,7 @@ import (
 	"bytes"
 	 "encoding/binary"
 	"io"
-	log "github.com/golang/glog"
+	log "github.com/flywithbug/log4go"
 )
 
 type Proto struct {
@@ -124,7 +124,7 @@ func SendMessage(conn io.Writer,pro *Proto)error  {
 		return err
 	}
 	if n != len(buf) {
-		log.Infof("write less:%d %d", n, len(buf))
+		log.Info("write less:%d %d", n, len(buf))
 		return errors.New("write less")
 	}
 	return nil

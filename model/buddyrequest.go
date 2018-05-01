@@ -3,7 +3,7 @@ package model
 import (
 	"github.com/pborman/uuid"
 	"database/sql"
-	"log"
+	log "github.com/flywithbug/log4go"
 	"time"
 )
 
@@ -23,14 +23,14 @@ type BuddyRequest struct {
 func AddBuddyRequest(sender string, sender_cate_id string, receiver string) (*string, error) {
 	insStmt, err := Database.Prepare("insert into im_buddy_request (id,sender,sender_category_id,receiver,send_at,status) VALUES (?,?,?,?,?,?)")
 	if err != nil {
-		log.Println(err)
+		log.Error(err.Error())
 		return nil, &DatabaseError{"保存好友请求错误"}
 	}
 	defer insStmt.Close()
 	id := uuid.New()
 	_, err = insStmt.Exec(id, sender, sender_cate_id, receiver, time.Now().Format("2006-01-02 15:04:05"), "0")
 	if err != nil {
-		log.Println(err)
+		log.Error(err.Error())
 		return nil, &DatabaseError{"保存好友请求错误"}
 	}
 	return &id, nil

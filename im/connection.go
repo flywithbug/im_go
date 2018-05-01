@@ -3,7 +3,7 @@ package im
 import (
 	"net"
 	"sync/atomic"
-	log "github.com/golang/glog"
+	log "github.com/flywithbug/log4go"
 
 	"time"
 )
@@ -39,7 +39,7 @@ func (client *Connection)read()*Proto  {
 func (client *Connection)send(pro *Proto)  {
 	tc := atomic.LoadInt32(&client.tc)
 	if tc > 0 {
-		log.Infof("can't write data to blocked socket")
+		log.Info("can't write data to blocked socket")
 		return
 	}
 	client.conn.SetWriteDeadline(time.Now().Add(60*time.Second))
@@ -62,12 +62,12 @@ func (client *Connection) close() {
 func (client *Client)EnqueueMessage(pro *Proto)bool {
 	closed := atomic.LoadInt32(&client.closed)
 	if closed > 0 {
-		log.Infof("can't send message to closed connection:%d", client.uid)
+		log.Info("can't send message to closed connection:%d", client.uid)
 		return false
 	}
 	tc := atomic.LoadInt32(&client.tc)
 	if tc > 0 {
-		log.Infof("can't send message to blocked connection:%d", client.uid)
+		log.Info("can't send message to blocked connection:%d", client.uid)
 		atomic.AddInt32(&client.tc, 1)
 		return false
 	}
@@ -77,7 +77,7 @@ func (client *Client)EnqueueMessage(pro *Proto)bool {
 		return true
 	case <- time.After(60*time.Second):
 		atomic.AddInt32(&client.tc, 1)
-		log.Infof("send message to wt timed out:%d", client.uid)
+		log.Info("send message to wt timed out:%d", client.uid)
 		return false
 	}
 

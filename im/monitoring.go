@@ -1,14 +1,12 @@
 package im
 
 
-
-
 import "net/http"
 import "encoding/json"
 import "os"
 import "runtime"
 import "runtime/pprof"
-import log "github.com/golang/glog"
+import log "github.com/flywithbug/log4go"
 
 type ServerSummary struct {
 	nconnections      int64

@@ -22,6 +22,5 @@ func handleSystem(resp http.ResponseWriter, req *http.Request) {
 	//data["mem.used_percent"] = fmt.Sprintf("%s%%", strconv.FormatFloat(mem.UsedPercent, 'f', 2, 64))
 	data["cpu.num"] = cpuNum
 	data["cpu.info"] = cpuInfo
-	fmt.Println(req.URL)
 	resp.Write(model.NewIMResponseData(data,"").Encode())
 }

@@ -3,7 +3,10 @@ package im
 import (
 	"fmt"
 	"net"
+	log "github.com/flywithbug/log4go"
 )
+
+
 
 func init()  {
 	serverSummary = NewServerSummary()
@@ -14,7 +17,7 @@ func Listen(port int)  {
 	addr,_ := net.ResolveTCPAddr("tcp",address)
 	listen, err := net.ListenTCP("tcp",addr)
 	if err != nil {
-		fmt.Println("初始化失败", err.Error())
+		log.Error("初始化失败", err.Error())
 		return
 	}
 	for {
@@ -22,7 +25,7 @@ func Listen(port int)  {
 		if err != nil {
 			return
 		}
-		fmt.Printf("新连接地址为:[%s] \n", conn.RemoteAddr())
+		log.Info("新连接地址为:[%s] \n", conn.RemoteAddr())
 		go handleConnection(conn)
 	}
 }

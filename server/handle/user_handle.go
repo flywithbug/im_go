@@ -378,16 +378,6 @@ func handleUserRelationRefuse(resp http.ResponseWriter, req *http.Request) {
 
 
 
-
-
-
-
-
-
-
-
-
-
 // 登录主方法
 func login(resp http.ResponseWriter, account string, password string, ip string) {
 	if account == "" {

@@ -1,12 +1,8 @@
 package perf
 
-
-
 import (
 	"net/http"
 	"net/http/pprof"
-
-	"fmt"
 )
 
 // StartPprof start http pprof.
@@ -18,7 +14,7 @@ func Init(pprofBind string) {
 	pprofServeMux.HandleFunc("/debug/pprof/symbol", pprof.Symbol)
 	go func() {
 		if err := http.ListenAndServe(pprofBind, pprofServeMux); err != nil {
-			fmt.Printf("http.ListenAndServe(\"%s\", pprofServeMux) error(%v)", pprofBind, err)
+			//fmt.Printf("http.ListenAndServe(\"%s\", pprofServeMux) error(%v)", pprofBind, err)
 			panic(err)
 		}
 	}()

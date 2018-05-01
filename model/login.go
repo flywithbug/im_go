@@ -4,7 +4,7 @@ import (
 	"github.com/pborman/uuid"
 	"time"
 	_ "database/sql"
-	"fmt"
+	log "github.com/flywithbug/log4go"
 )
 
 const (
@@ -67,7 +67,7 @@ func Logout(token string)(int64,error) {
 	updateStmt,err := Database.Prepare("UPDATE im_login SET `status` = ? WHERE token=? AND status = 1")
 	defer updateStmt.Close()
 	if err != nil {
-		fmt.Println(err)
+		log.Error(err.Error())
 		return -1, &DatabaseError{"服务出错"}
 	}
 	res ,err := updateStmt.Exec(0,token)

@@ -3,7 +3,7 @@ package im
 import (
 	"net"
 	"sync/atomic"
-	log "github.com/golang/glog"
+	log "github.com/flywithbug/log4go"
 	"time"
 )
 
@@ -32,7 +32,7 @@ func (client *Client)Read()  {
 	for {
 		tc := atomic.LoadInt32(&client.tc)
 		if tc > 0 {
-			log.Infof("quit read goroutine, client:%d write goroutine blocked", client.uid)
+			log.Info("quit read goroutine, client:%d write goroutine blocked", client.uid)
 			client.HandleClientClosed()
 			break
 		}
@@ -40,7 +40,7 @@ func (client *Client)Read()  {
 		msg := client.read()
 		t2 := time.Now().Unix()
 		if t2 - t1 > 6*60 {
-			log.Infof("client:%d socket read timeout:%d %d", client.uid, t1, t2)
+			log.Info("client:%d socket read timeout:%d %d", client.uid, t1, t2)
 		}
 		if msg == nil {
 			client.HandleClientClosed()
@@ -49,7 +49,7 @@ func (client *Client)Read()  {
 		client.handleMessage(msg)
 		t3 := time.Now().Unix()
 		if t3 - t2 > 2 {
-			log.Infof("client:%d handle message is too slow:%d %d", client.uid, t2, t3)
+			log.Info("client:%d handle message is too slow:%d %d", client.uid, t2, t3)
 		}
 
 	}
@@ -79,7 +79,7 @@ func (client *Client)Write()  {
 			if pro == nil{
 				client.close()
 				running = false
-				log.Infof("client:%d socket closed", client.uid)
+				log.Info("client:%d socket closed", client.uid)
 				break
 			}
 			if pro.Operation == OP_SEND_MSG {
