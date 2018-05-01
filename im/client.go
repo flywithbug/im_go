@@ -3,7 +3,6 @@ package im
 import (
 	"net"
 	"sync/atomic"
-	"fmt"
 	log "github.com/golang/glog"
 	"time"
 )
@@ -17,7 +16,6 @@ type Client struct {
 func NewClient(conn *net.TCPConn)*Client  {
 	client := new(Client)
 	client.conn = conn
-
 	addr := conn.LocalAddr()
 	if taddr, ok := addr.(*net.TCPAddr); ok {
 		ip4 := taddr.IP.To4()
@@ -26,13 +24,9 @@ func NewClient(conn *net.TCPConn)*Client  {
 		}
 	}
 	atomic.AddInt64(&serverSummary.nconnections, 1)
-
 	client.out = make(chan *Proto,100)
-
 	return client
 }
-
-
 
 func (client *Client)Read()  {
 	for {
@@ -62,44 +56,55 @@ func (client *Client)Read()  {
 }
 
 func (client *Client)handleMessage(pro *Proto)  {
-	fmt.Println("receiveMSg:",string(pro.Body),len(pro.Body),pro.Operation)
+	//fmt.Println("receiveMSg:",string(pro.Body),len(pro.Body),pro.Operation)
+	switch pro.Operation {
+	case OP_AUTH:
+		client.HandleAuthToken(pro)
+	case OP_SEND_MSG_REPLY:
+		//消息回执
+	}
 
-	client.out <- pro
+	//client.out <- pro
 
 }
-
-
-
-
-
 
 
 func (client *Client)Write()  {
-	for{
+	running := true
+	seq := 0
+
+	for running {
 		select {
 		case pro := <- client.out:
 			if pro == nil{
-				client.HandleClientClosed()
+				client.close()
+				running = false
+				log.Infof("client:%d socket closed", client.uid)
 				break
 			}
+			if pro.Operation == OP_SEND_MSG {
+				atomic.AddInt64(&serverSummary.out_message_count,1)
+			}
+			seq++
+			//p := &Proto{Ver:pro.Ver,}
 			client.send(pro)
-
 		}
 	}
-
+	//等待200ms,避免发送者阻塞
+	//t := time.After(200 * time.Millisecond)
+	//running = true
+	//for running {
+	//	select {
+	//	case <- t:
+	//		running = false
+	//	//case <- client.wt:
+	//	//	log.Warning("msg is dropped")
+	//	//case <- client.ewt:
+	//	//	log.Warning("emsg is dropped")
+	//	}
+	//}
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

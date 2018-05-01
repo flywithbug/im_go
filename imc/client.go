@@ -6,6 +6,7 @@ import (
 	"net"
 	"os"
 	"fmt"
+	"im_go/im"
 )
 
 func StartClient(port int) {
@@ -32,10 +33,26 @@ func StartClient(port int) {
 	for {
 		line, _, _ := in.ReadLine()
 		p := new(Proto)
-		p.Ver = 1
-		p.Body = line
-		p.Operation = OP_AUTH
-		p.SeqId = 1
+
+		if string(line) == "auth"{
+			var auth im.AuthenticationToken
+			auth.Token = "6bde541f-1eb9-4600-a47e-8d7db7c7b460"
+			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
+			auth.PlatformType = 3
+			p.Ver = 1
+			p.Body = auth.ToData()
+			//if err !=nil {
+			//	fmt.Println("Marshal",err)
+			//}
+			p.Operation = OP_AUTH
+			p.SeqId = 1
+		}else {
+			p.Ver = 1
+			p.Body = line
+			p.Operation = OP_AUTH
+			p.SeqId = 1
+		}
+
 		err = SendMessage(conn,p)
 		if err != nil {
 			break
