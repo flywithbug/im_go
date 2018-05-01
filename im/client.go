@@ -2,8 +2,7 @@ package im
 
 import (
 	"net"
-	"log"
-	"bufio"
+
 )
 
 type Client struct {

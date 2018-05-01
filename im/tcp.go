@@ -28,8 +28,4 @@ func Listen(port int)  {
 func handleConnection(conn *net.TCPConn)  {
 	client := NewClient(conn)
 	client.Listen()
-	go func() {
-		client.SendMsg("connect Success")
-	}()
-
 }

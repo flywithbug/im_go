@@ -15,7 +15,7 @@ func TestWriteHeader(t *testing.T) {
 	ph.headerLen = RawHeaderSize
 	ph.seq = 1
 	ph.op = 2
-	ph.packLen = int32(len(b))
+	ph.bodyLen = int32(len(b))
 	ph.ver = 1
 	WriteHeader(ph,buffer)
 	buffer.Write(b)
