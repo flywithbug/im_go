@@ -12,14 +12,14 @@ import (
 用户对象
 */
 type User struct {
-	Id       int64     `json:"id"`        //id
+	id       int64     `json:"id"`        //id
 	UserId 	 string	   `json:"user_id"`   //uuid生成
 	Nick     string    `json:"nick"`      //昵称
 	Status   string    `json:"status"`    //状态 0离线,1在线
 	Sign     string    `json:"sign"`      //个性签名
 	Avatar   string    `json:"avatar"`    //头像
-	CreateAt time.Time `json:"create_at"` //注册日期
-	UpdateAt time.Time `json:"update_at"` //更新日期
+	createAt time.Time `json:"create_at"` //注册日期
+	updateAt time.Time `json:"update_at"` //更新日期
 	Token    string    `json:"token"`
 }
 
@@ -61,7 +61,7 @@ func CheckAccount(account string) (int, error) {
 func GetUserById(id string) (*User, error) {
 	var user User
 	row := Database.QueryRow("select id, nick, status, sign, avatar, create_at, update_at from im_user where id=?", id)
-	err := row.Scan(&user.Id, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.CreateAt, &user.UpdateAt)
+	err := row.Scan(&user.id, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
 	if err != nil {
 		return nil, &DatabaseError{"根据ID查询用户-将结果映射至对象错误"}
 	}
@@ -74,7 +74,7 @@ func GetUserById(id string) (*User, error) {
 func GetUserByToken(token string) (*User, error) {
 	var user User
 	row := Database.QueryRow("select u.id, u.nick, u.status, u.sign, u.avatar, u.create_at, u.update_at from  im_user u left join im_login l on u.id=l.user_id where l.token=?", token)
-	err := row.Scan(&user.Id, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.CreateAt, &user.UpdateAt)
+	err := row.Scan(&user.id, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
 	if err != nil {
 		return nil, &DatabaseError{"根据Token查询用户-将结果映射至对象错误"}
 	}
@@ -92,7 +92,7 @@ func GetBuddiesByCategories(categories []Category) ([]Category, error) {
 		}
 		for rows.Next() {
 			var user User
-			rows.Scan(&user.Id, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.CreateAt, &user.UpdateAt)
+			rows.Scan(&user.id, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
 			categories[k].AddUser(user)
 		}
 	}
@@ -104,13 +104,13 @@ func GetBuddiesByCategories(categories []Category) ([]Category, error) {
 */
 func LoginUser(account string, password string) (*User, error) {
 	var user User
-	rows, err := Database.Query("select id,user_id, nick, status, sign, avatar, create_at, update_at from im_user where account=? and password=? ", account, password)
+	rows, err := Database.Query("select id, user_id, nick, status, sign, avatar, create_at, update_at from im_user where account=? and password=? ", account, password)
 	if err != nil {
 		return nil, &DatabaseError{"根据账号及密码查询用户错误"}
 	}
 	defer rows.Close()
 	for rows.Next() {
-		err := rows.Scan(&user.Id,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.CreateAt, &user.UpdateAt)
+		err := rows.Scan(&user.id,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
 		if err != nil {
 			return nil, &DatabaseError{"根据账号及密码查询结果映射至对象错误"}
 		}
@@ -212,7 +212,7 @@ func QueryUser(clumn string, reg string, data string) ([]User, error) {
 	}
 	for rows.Next() {
 		var user User
-		rows.Scan(&user.Id, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.CreateAt, &user.UpdateAt)
+		rows.Scan(&user.id, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
 		users = append(users, user)
 	}
 	return users, nil
