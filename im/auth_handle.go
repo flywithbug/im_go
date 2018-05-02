@@ -91,23 +91,23 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 		//登出其他账号
 		client.LogOutOtherClient()
 	}
-
-
 }
+
 
 func (client *Client)LogOutOtherClient()  {
 	p := new(Proto)
 	p.Operation = OP_DISCONNECT_REPLY
 	route := appRoute.FindRoute(client.appid)
 	clients := route.FindClientSet(client.uid)
+	//可以扩展多端同时在线。
 	for c, _ := range(clients) {
 		//不再发送给自己
 		if c == client {
 			continue
 		}
+		//发送踢出消息
 		c.EnqueueMessage(p)
-		c.uid = 0
-		c.closed = 1
+		//本地client关闭
 		c.handleClientClosed()
 	}
 }

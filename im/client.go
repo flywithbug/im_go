@@ -129,6 +129,7 @@ func (client *Client) Write() {
 }
 
 func (client *Client) handleClientClosed() {
+	log.Info("close client client userId:%s uid:%d",client.userId,client.uid)
 	atomic.AddInt64(&serverSummary.nconnections, -1)
 	if client.uid > 0 {
 		atomic.AddInt64(&serverSummary.nclients,-1)
@@ -136,7 +137,7 @@ func (client *Client) handleClientClosed() {
 	}
 	atomic.StoreInt32(&client.closed, 1)
 	client.RemoveClient()
-
+	client.uid = 0
 	//quit when write goroutine received
 	client.wt <- nil
 	//client.RoomClient.Logout()
