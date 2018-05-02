@@ -9,7 +9,7 @@ const (
 	OP_HEARTBEAT_REPLY = int32(3)
 	// send text messgae
 	OP_SEND_MSG       = int32(4)
-	OP_SEND_MSG_REPLY = int32(5)
+	OP_SEND_MSG_REPLY = int32(5)  //已读回执
 	// kick user
 	OP_DISCONNECT_REPLY = int32(6)
 	// auth user

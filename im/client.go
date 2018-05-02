@@ -35,6 +35,8 @@ func (client *Client) handleMessage(pro *Proto) {
 		client.HandleAuthToken(pro)
 	case OP_SEND_MSG_REPLY:
 		//消息回执
+		client.HandleACK(pro)
+
 	}
 
 	//client.out <- pro
@@ -103,7 +105,7 @@ func (client *Client) Write() {
 				atomic.AddInt64(&serverSummary.out_message_count, 1)
 			}
 			seq++
-			//p := &Proto{Ver:pro.Ver,}
+			pro.SeqId = int32(seq)
 			client.send(pro)
 		}
 	}
@@ -132,10 +134,10 @@ func (client *Client) HandleClientClosed() {
 	atomic.StoreInt32(&client.closed, 1)
 
 	client.RemoveClient()
-	//
-	////quit when write goroutine received
+
+	//quit when write goroutine received
 	client.wt <- nil
-	//
+
 	//client.RoomClient.Logout()
 	//client.IMClient.Logout()
 }

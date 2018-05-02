@@ -1,10 +1,15 @@
 package handle
 
-import "net/http"
+import (
+	"net/http"
+	"im_go/im"
+)
 
 type RouterHandler func(resp http.ResponseWriter, req *http.Request)
 var routers = map[string]RouterHandler{
 	"/system": handleSystem, //系统状态
+	"/summary":im.Summary,
+
 
 	"/register": handleRegister, //注册
 	"/login": handleLogin,

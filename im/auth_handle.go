@@ -32,16 +32,13 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 	auth.FromData(pro.Body)
 	logInfo := fmt.Sprintf("authToken:%s platform:%d deviceId:%s", auth.Token, auth.PlatformType, auth.DeviceId)
 	log.Debug(logInfo)
-	//call back Body
-
 	if client.uid > 0 && strings.EqualFold(client.Token, auth.Token) {
 		log.Info("repeat login")
 		return
 	}
+	//call back Body
 	var authStatus AuthenticationStatus
 	pro.Operation = OP_AUTH_REPLY
-	pro.SeqId = 0
-
 	login, err := model.GetLoginByToken(auth.Token)
 	if err != nil {
 		log.Error(err.Error())

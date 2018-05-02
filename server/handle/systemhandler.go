@@ -7,6 +7,7 @@ import (
 	"time"
 	"fmt"
 	"im_go/model"
+	"strconv"
 )
 
 // 系统状态信息
@@ -19,8 +20,9 @@ func handleSystem(resp http.ResponseWriter, req *http.Request) {
 	//data["im.conn"] = len(ClientMaps)
 	data["mem.total"] = fmt.Sprintf("%vMB", mem.Total/1024/1024)
 	data["mem.free"] = fmt.Sprintf("%vMB", mem.Free/1024/1024)
-	//data["mem.used_percent"] = fmt.Sprintf("%s%%", strconv.FormatFloat(mem.UsedPercent, 'f', 2, 64))
+	data["mem.used_percent"] = fmt.Sprintf("%s%%", strconv.FormatFloat(mem.UsedPercent, 'f', 2, 64))
 	data["cpu.num"] = cpuNum
 	data["cpu.info"] = cpuInfo
+
 	resp.Write(model.NewIMResponseData(data,"").Encode())
 }

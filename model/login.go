@@ -38,8 +38,9 @@ func GetLoginByToken(token string) (*Login, error) {
 	return &login, nil
 }
 
-////获取已登录的记录，非当前查询的token
+//获取已登录的记录，非当前查询的token
 //func GetLoginByUserId(userId,nToken string)(*User,error)  {
+//
 //
 //}
 
