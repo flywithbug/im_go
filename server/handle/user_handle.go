@@ -49,7 +49,7 @@ func handleLogin(resp http.ResponseWriter, req *http.Request) {
 }
 
 func handleLogout(resp http.ResponseWriter,req*http.Request)  {
-	// POST登录请求
+	// POST请求 退出登录
 	if req.Method == "POST" {
 		body,_ := ioutil.ReadAll(req.Body)
 		m := loginoutModel{}
