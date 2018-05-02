@@ -27,6 +27,37 @@ func NewClient(conn *net.TCPConn) *Client {
 	return client
 }
 
+func (client *Client) handleMessage(pro *Proto) {
+	//fmt.Println("receiveMSg:",string(pro.Body),len(pro.Body),pro.Operation)
+	switch pro.Operation {
+	case OP_AUTH:
+		client.HandleAuthToken(pro)
+	case OP_SEND_MSG_REPLY:
+		//消息回执
+	}
+
+	//client.out <- pro
+
+}
+
+func (client *Client) AddClient() {
+	route := appRoute.FindOrAddRoute(client.appid)
+	route.AddClient(client)
+}
+
+func (client *Client) RemoveClient() {
+	route := appRoute.FindRoute(client.appid)
+	if route == nil {
+		log.Warn("can't find app route")
+		return
+	}
+	route.RemoveClient(client)
+
+	//if client.room_id > 0 {
+	//	route.RemoveRoomClient(client.room_id, client)
+	//}
+}
+
 func (client *Client) Read() {
 	for {
 		tc := atomic.LoadInt32(&client.tc)
@@ -52,19 +83,6 @@ func (client *Client) Read() {
 		}
 
 	}
-}
-
-func (client *Client) handleMessage(pro *Proto) {
-	//fmt.Println("receiveMSg:",string(pro.Body),len(pro.Body),pro.Operation)
-	switch pro.Operation {
-	case OP_AUTH:
-		client.HandleAuthToken(pro)
-	case OP_SEND_MSG_REPLY:
-		//消息回执
-	}
-
-	//client.out <- pro
-
 }
 
 func (client *Client) Write() {
@@ -112,7 +130,7 @@ func (client *Client) HandleClientClosed() {
 	////}
 	//atomic.StoreInt32(&client.closed, 1)
 	//
-	//client.RemoveClient()
+	client.RemoveClient()
 	//
 	////quit when write goroutine received
 	//client.wt <- nil

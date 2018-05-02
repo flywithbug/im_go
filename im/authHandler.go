@@ -3,15 +3,19 @@ package im
 import (
 	"bytes"
 	"encoding/binary"
-	"encoding/json"
 	"fmt"
+	"strings"
+	"time"
+
 	log "github.com/flywithbug/log4go"
+
 	"im_go/model"
 )
 
 const (
-	AuthenticationStatusBadToken = int8(-1)
-	AuthenticationStatusBadLogin = int8(-2)
+	AuthenticationStatusSuccess  = 0
+	AuthenticationStatusBadToken = -1
+	AuthenticationStatusBadLogin = -2
 )
 
 type AuthenticationToken struct {
@@ -21,40 +25,56 @@ type AuthenticationToken struct {
 }
 
 func (client *Client) HandleAuthToken(pro *Proto) {
-	if client.uid > 0 {
+	var auth AuthenticationToken
+	auth.FromData(pro.Body)
+	logInfo := fmt.Sprintf("authToken:%s platform:%d deviceId:%s", auth.Token, auth.PlatformType, auth.DeviceId)
+	log.Info(logInfo)
+	//call back Body
+
+	if client.uid > 0 && strings.EqualFold(client.Token, auth.Token) {
 		log.Info("repeat login")
 		return
 	}
-	var auth AuthenticationToken
-	auth.FromData(pro.Body)
-	fmt.Println("authToken:", auth.Token, "platform:", auth.PlatformType, "deviceId:", auth.DeviceId)
+	var authStatus AuthenticationStatus
+	pro.Operation = OP_AUTH_REPLY
+	pro.SeqId = 0
 
 	login, err := model.GetLoginByToken(auth.Token, model.STATUS_LOGIN)
 	if err != nil {
 		log.Error(err.Error())
-		var authStatus AuthenticationStatus
 		authStatus.Status = AuthenticationStatusBadToken
-		pro.Operation = OP_AUTH_REPLY
 		pro.Body = authStatus.ToData()
-		pro.SeqId = 0
 		client.EnqueueMessage(pro)
 		return
 	}
+
 	if login != nil && (login.UId == 0 || login.AppId == 0 || login.UserId == "") {
 		errString := fmt.Sprintf("auth Error uid:%d appId:%d userId:%s", login.UId, login.AppId, login.UserId)
 		log.Error(errString)
-		var authStatus AuthenticationStatus
 		authStatus.Status = AuthenticationStatusBadLogin //登录用户信息有误
-		pro.Operation = OP_AUTH_REPLY
 		pro.Body = authStatus.ToData()
-		pro.SeqId = 0
 		client.EnqueueMessage(pro)
 		return
 	}
 
-	jb, _ := json.Marshal(login)
-	fmt.Println(string(jb))
+	client.appid = login.AppId
+	client.uid = login.UId
+	client.userId = login.UserId
+	client.platformId = auth.PlatformType
+	client.Token = auth.Token
+	client.online = true
+	client.forbidden = login.Forbidden
+	client.tm = time.Now()
 
+	clientInfo := fmt.Sprintf("auth token:%s appid:%d uid:%d device id:%s forbidden:%d",
+		login.Token, client.appid, client.uid, client.deviceId, client.forbidden)
+	log.Info(clientInfo)
+
+	authStatus.Status = AuthenticationStatusSuccess
+	pro.Body = authStatus.ToData()
+	client.EnqueueMessage(pro)
+
+	client.AddClient()
 }
 
 func (auth *AuthenticationToken) ToData() []byte {
@@ -105,7 +125,7 @@ func (auth *AuthenticationToken) FromData(buff []byte) bool {
 }
 
 type AuthenticationStatus struct {
-	Status int8 //-1 验证失败  -2 用户信息有误
+	Status int32 //-1 验证失败  -2 用户信息有误
 }
 
 func (auth *AuthenticationStatus) ToData() []byte {

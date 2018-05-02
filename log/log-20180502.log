@@ -300,3 +300,91 @@
 
 2018-05-02 15:54:57 	 [ERROR] 	 <authHandler.go:41>  	 auth Error uid:4 appId:0 userId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
 2018-05-02 15:54:59 	 [ERROR] 	 <authHandler.go:30>  	 根据Token获取用户登录错误
+2018-05-02 16:00:59 	 [ INFO] 	 <protocol.go:138>  	 sock read error:%!(EXTRA *net.OpError=read tcp 127.0.0.1:9000->127.0.0.1:59604: i/o timeout)
+2018-05-02 16:32:21 	 [ INFO] 	 <main.go:34>  	 *********************************************
+2018-05-02 16:32:21 	 [ INFO] 	 <main.go:35>  	            系统:[IM]版本:[1.0]
+2018-05-02 16:32:21 	 [ INFO] 	 <main.go:36>  	 *********************************************
+2018-05-02 16:32:21 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 16:32:21 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 16:32:21 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 16:32:21 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 16:32:21 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 16:32:23 	 [ INFO] 	 <tcp.go:26>  	 新连接地址为:[127.0.0.1:60434] 
+
+2018-05-02 16:32:29 	 [ INFO] 	 <authHandler.go:26>  	 repeat login
+2018-05-02 16:32:32 	 [ INFO] 	 <authHandler.go:26>  	 repeat login
+2018-05-02 16:32:59 	 [ INFO] 	 <protocol.go:131>  	 sock read error:%!(EXTRA *errors.errorString=EOF)
+2018-05-02 16:32:59 	 [ INFO] 	 <tcp.go:26>  	 新连接地址为:[127.0.0.1:60439] 
+
+2018-05-02 16:33:02 	 [ERROR] 	 <authHandler.go:43>  	 auth Error uid:4 appId:0 userId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 16:33:07 	 [ERROR] 	 <authHandler.go:39>  	 根据Token获取用户登录错误
+2018-05-02 16:33:36 	 [ INFO] 	 <main.go:34>  	 *********************************************
+2018-05-02 16:33:36 	 [ INFO] 	 <main.go:35>  	            系统:[IM]版本:[1.0]
+2018-05-02 16:33:36 	 [ INFO] 	 <main.go:36>  	 *********************************************
+2018-05-02 16:33:36 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 16:33:36 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 16:33:36 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 16:33:36 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 16:33:36 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 16:33:39 	 [ INFO] 	 <tcp.go:26>  	 新连接地址为:[127.0.0.1:60469] 
+
+2018-05-02 16:33:44 	 [ERROR] 	 <authHandler.go:43>  	 auth Error uid:4 appId:0 userId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 16:34:09 	 [ INFO] 	 <main.go:34>  	 *********************************************
+2018-05-02 16:34:09 	 [ INFO] 	 <main.go:35>  	            系统:[IM]版本:[1.0]
+2018-05-02 16:34:09 	 [ INFO] 	 <main.go:36>  	 *********************************************
+2018-05-02 16:34:09 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 16:34:09 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 16:34:09 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 16:34:09 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 16:34:09 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 16:34:11 	 [ INFO] 	 <tcp.go:26>  	 新连接地址为:[127.0.0.1:60477] 
+
+2018-05-02 16:34:17 	 [ERROR] 	 <authHandler.go:43>  	 auth Error uid:4 appId:0 userId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 16:36:39 	 [ INFO] 	 <main.go:34>  	 *********************************************
+2018-05-02 16:36:39 	 [ INFO] 	 <main.go:35>  	            系统:[IM]版本:[1.0]
+2018-05-02 16:36:39 	 [ INFO] 	 <main.go:36>  	 *********************************************
+2018-05-02 16:36:39 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 16:36:39 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 16:36:39 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 16:36:39 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 16:36:39 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 16:36:43 	 [ INFO] 	 <tcp.go:26>  	 新连接地址为:[127.0.0.1:60490] 
+
+2018-05-02 16:36:56 	 [ERROR] 	 <authHandler.go:43>  	 auth Error uid:4 appId:0 userId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 16:39:24 	 [ INFO] 	 <main.go:34>  	 *********************************************
+2018-05-02 16:39:24 	 [ INFO] 	 <main.go:35>  	            系统:[IM]版本:[1.0]
+2018-05-02 16:39:24 	 [ INFO] 	 <main.go:36>  	 *********************************************
+2018-05-02 16:39:24 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 16:39:24 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 16:39:24 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 16:39:24 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 16:39:24 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 16:39:28 	 [ INFO] 	 <tcp.go:26>  	 新连接地址为:[127.0.0.1:60528] 
+
+2018-05-02 16:39:30 	 [ERROR] 	 <authHandler.go:43>  	 auth Error uid:4 appId:0 userId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 16:39:43 	 [ERROR] 	 <authHandler.go:39>  	 根据Token获取用户登录错误
+2018-05-02 16:39:50 	 [ INFO] 	 <authHandler.go:26>  	 repeat login
+2018-05-02 16:39:51 	 [ INFO] 	 <authHandler.go:26>  	 repeat login
+2018-05-02 16:40:12 	 [ INFO] 	 <protocol.go:131>  	 sock read error:%!(EXTRA *errors.errorString=EOF)
+2018-05-02 16:40:13 	 [ INFO] 	 <tcp.go:26>  	 新连接地址为:[127.0.0.1:60533] 
+
+2018-05-02 16:40:18 	 [ERROR] 	 <authHandler.go:43>  	 auth Error uid:4 appId:0 userId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 16:40:20 	 [ERROR] 	 <authHandler.go:43>  	 auth Error uid:4 appId:0 userId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 16:40:22 	 [ERROR] 	 <authHandler.go:39>  	 根据Token获取用户登录错误
+2018-05-02 16:40:25 	 [ INFO] 	 <authHandler.go:26>  	 repeat login
+2018-05-02 16:40:27 	 [ INFO] 	 <authHandler.go:26>  	 repeat login
+2018-05-02 16:40:31 	 [ INFO] 	 <main.go:34>  	 *********************************************
+2018-05-02 16:40:31 	 [ INFO] 	 <main.go:35>  	            系统:[IM]版本:[1.0]
+2018-05-02 16:40:31 	 [ INFO] 	 <main.go:36>  	 *********************************************
+2018-05-02 16:40:31 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 16:40:31 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 16:40:31 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 16:40:31 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 16:40:31 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 16:40:34 	 [ INFO] 	 <tcp.go:26>  	 新连接地址为:[127.0.0.1:60539] 
+
+2018-05-02 16:40:36 	 [ERROR] 	 <authHandler.go:43>  	 auth Error uid:4 appId:0 userId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 16:40:38 	 [ INFO] 	 <authHandler.go:26>  	 repeat login
+2018-05-02 16:40:39 	 [ INFO] 	 <authHandler.go:26>  	 repeat login
+2018-05-02 16:40:40 	 [ INFO] 	 <authHandler.go:26>  	 repeat login
+2018-05-02 16:46:40 	 [ INFO] 	 <protocol.go:131>  	 sock read error:%!(EXTRA *net.OpError=read tcp 127.0.0.1:9000->127.0.0.1:60539: i/o timeout)

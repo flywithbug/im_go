@@ -19,8 +19,6 @@ func NewServerSummary() *ServerSummary {
 	return s
 }
 
-var serverSummary *ServerSummary
-
 func Summary(rw http.ResponseWriter, req *http.Request) {
 	obj := make(map[string]interface{})
 	obj["goroutine_count"] = runtime.NumGoroutine()

@@ -6,7 +6,13 @@ import (
 	"net"
 )
 
+//client 缓存
+var appRoute *AppRoute
+
+var serverSummary *ServerSummary
+
 func init() {
+	appRoute = NewAppRoute()
 	serverSummary = NewServerSummary()
 }
 

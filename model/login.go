@@ -20,7 +20,7 @@ type Login struct {
 	LoginIp   	string    	`json:"login_ip"`   // 登录IP
 	Status 	  	int8		`json:"status"`		//status 1 已登录，0表示退出登录
 	Forbidden 	int32		`json:"forbidden"`  //false 表示未禁言
-	AppId    	int32		`json:"app_id"`
+	AppId    	int64		`json:"app_id"`
 	UId      	int64		`json:"u_id"`
 }
 
