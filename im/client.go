@@ -5,6 +5,7 @@ import (
 	"net"
 	"sync/atomic"
 	"time"
+	"io"
 )
 
 type Client struct {
@@ -73,34 +74,39 @@ func (client *Client) Read() {
 			break
 		}
 		t1 := time.Now().Unix()
-		msg := client.read()
-		t2 := time.Now().Unix()
-		if t2-t1 > 6*60-1 {
-			log.Info("client:%d socket read timeout:%d %d", client.uid, t1, t2)
+		msg,err := client.read()
+		if err == io.EOF {
+			client.handleClientClosed()
+			break
 		}
 		if msg == nil {
 			client.handleClientClosed()
 			break
 		}
+		t2 := time.Now().Unix()
+		if t2-t1 > 6*60-1 {
+			log.Info("client:%d socket read timeout:%d %d", client.uid, t1, t2)
+		}
+
 		client.handleMessage(msg)
 		t3 := time.Now().Unix()
 		if t3-t2 > 2 {
 			log.Info("client:%d handle message is too slow:%d %d", client.uid, t2, t3)
 		}
 	}
+
 }
 
 func (client *Client) Write() {
 	running := true
 	seq := 0
-
 	for running {
 		select {
 		case pro := <- client.wt:
 			if pro == nil {
 				client.close()
 				running = false
-				log.Info("client:%d socket closed", client.uid)
+				log.Info("client: %s socket closed", client.userId)
 				break
 			}
 			if pro.Operation == OP_SEND_MSG {
@@ -109,7 +115,6 @@ func (client *Client) Write() {
 			seq++
 			pro.SeqId = int32(seq)
 			client.send(pro)
-
 		}
 	}
 	//等待200ms,避免发送者阻塞
@@ -125,23 +130,27 @@ func (client *Client) Write() {
 		//	log.Warning("emsg is dropped")
 		}
 	}
-
 }
 
 func (client *Client) handleClientClosed() {
-	log.Info("close client client userId:%s uid:%d",client.userId,client.uid)
-	atomic.AddInt64(&serverSummary.nconnections, -1)
+	close := atomic.LoadInt32(&client.closed)
 	if client.uid > 0 {
 		atomic.AddInt64(&serverSummary.nclients,-1)
-		log.Info("HandleClientClosed client:%d",client.uid)
+		log.Info("HandleClientClosed client:%d %s",client.uid,client.userId)
+	}
+	if close == 0 {
+		atomic.AddInt64(&serverSummary.nconnections, -1)
+		//quit when write goroutine received
+		client.wt <- nil
+		log.Info("close client userId:%s uid:%d",client.userId,client.uid)
+
+		//client.RoomClient.Logout()
+		//client.IMClient.Logout()
+		client.uid = 0
+		client.RemoveClient()
+
 	}
 	atomic.StoreInt32(&client.closed, 1)
-	client.RemoveClient()
-	client.uid = 0
-	//quit when write goroutine received
-	client.wt <- nil
-	//client.RoomClient.Logout()
-	//client.IMClient.Logout()
 }
 
 func (client *Client) Listen() {

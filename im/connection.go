@@ -35,7 +35,7 @@ type Connection struct {
 	Token      	string //登录用户的token
 }
 
-func (client *Connection) read() *Proto {
+func (client *Connection) read() (*Proto,error) {
 	client.conn.SetReadDeadline(time.Now().Add(CLIENT_TIMEOUT * time.Second))
 	return ReceiveMessage(client.conn)
 }

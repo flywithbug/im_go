@@ -124,41 +124,41 @@ func SendMessage(conn io.Writer, pro *Proto) error {
 	return nil
 }
 
-func ReceiveLimitMessage(conn io.Reader, limitSize int) (pro *Proto) {
+func ReceiveLimitMessage(conn io.Reader, limitSize int) (pro *Proto,err error) {
 	buff := make([]byte, RawHeaderSize)
-	_, err := io.ReadFull(conn, buff)
+	_, err = io.ReadFull(conn, buff)
 	if err != nil {
 		log.Info("sock read error:%s", err.Error())
-		return nil
+		return nil,err
 	}
 	ph, err := ReadHeader(buff)
 	if err != nil {
 		log.Info("buff read error:%s", err.Error())
-		return nil
+		return nil,err
 	}
 	if ph.bodyLen < 0 || int(ph.bodyLen) > limitSize {
 		log.Info("invalid len:%d", ph.bodyLen)
-		return nil
+		return nil,err
 	}
 	buff = make([]byte, ph.bodyLen)
 	_, err = io.ReadFull(conn, buff)
 	if err != nil {
 		log.Info("sock read error:%s", err.Error())
-		return nil
+		return nil,err
 	}
 	pro = &emptyProto
 	pro.Ver = ph.ver
 	pro.SeqId = ph.seq
 	pro.Operation = ph.op
 	pro.Body = buff
-	return pro
+	return pro,nil
 }
 
-func ReceiveMessage(conn io.Reader) *Proto {
+func ReceiveMessage(conn io.Reader) (pro *Proto,err error) {
 	return ReceiveLimitMessage(conn, 32*1024)
 }
 
 //消息大小限制在1M
-func ReceiveStorageMessage(conn io.Reader) *Proto {
+func ReceiveStorageMessage(conn io.Reader) (pro *Proto,err error) {
 	return ReceiveLimitMessage(conn, 1024*1024)
 }

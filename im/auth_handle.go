@@ -107,7 +107,6 @@ func (client *Client)LogOutOtherClient()  {
 		}
 		//发送踢出消息
 		c.EnqueueMessage(p)
-		//本地client关闭
 		c.handleClientClosed()
 	}
 }
