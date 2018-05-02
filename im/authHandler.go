@@ -1,59 +1,61 @@
 package im
 
 import (
-	log "github.com/flywithbug/log4go"
-	"fmt"
 	"bytes"
 	"encoding/binary"
-	"im_go/model"
 	"encoding/json"
+	"fmt"
+	log "github.com/flywithbug/log4go"
+	"im_go/model"
 )
 
+const (
+	AuthenticationStatusBadToken = int8(-1)
+	AuthenticationStatusBadLogin = int8(-2)
+)
 
 type AuthenticationToken struct {
-	Token       	string		`json:"token"`
-	PlatformType 	int8		`json:"platform_type"`
-	DeviceId   		string		`json:"device_id"`
+	Token        string `json:"token"`
+	PlatformType int8   `json:"platform_type"`
+	DeviceId     string `json:"device_id"`
 }
 
-func (client *Client)HandleAuthToken(pro *Proto)  {
-	if client.uid >0 {
+func (client *Client) HandleAuthToken(pro *Proto) {
+	if client.uid > 0 {
 		log.Info("repeat login")
 		return
 	}
 	var auth AuthenticationToken
 	auth.FromData(pro.Body)
-	fmt.Println("authToken:",auth.Token,"platform:",auth.PlatformType,"deviceId:",auth.DeviceId)
+	fmt.Println("authToken:", auth.Token, "platform:", auth.PlatformType, "deviceId:", auth.DeviceId)
 
-
-	login,err := model.GetLoginByToken(auth.Token,model.STATUS_LOGIN)
+	login, err := model.GetLoginByToken(auth.Token, model.STATUS_LOGIN)
 	if err != nil {
-		fmt.Println(err)
-		var authStatus  AuthenticationStatus
-		authStatus.Status= -1
+		log.Error(err.Error())
+		var authStatus AuthenticationStatus
+		authStatus.Status = AuthenticationStatusBadToken
 		pro.Operation = OP_AUTH_REPLY
 		pro.Body = authStatus.ToData()
 		pro.SeqId = 0
 		client.EnqueueMessage(pro)
 		return
 	}
-	if login.UId == 0 || login.AppId == 0{
-		var authStatus  AuthenticationStatus
-		authStatus.Status= -1
+	if login != nil && (login.UId == 0 || login.AppId == 0 || login.UserId == "") {
+		errString := fmt.Sprintf("auth Error uid:%d appId:%d userId:%s", login.UId, login.AppId, login.UserId)
+		log.Error(errString)
+		var authStatus AuthenticationStatus
+		authStatus.Status = AuthenticationStatusBadLogin //登录用户信息有误
 		pro.Operation = OP_AUTH_REPLY
 		pro.Body = authStatus.ToData()
 		pro.SeqId = 0
 		client.EnqueueMessage(pro)
 		return
 	}
-	
-	
-	jb,_ :=json.Marshal(login)
+
+	jb, _ := json.Marshal(login)
 	fmt.Println(string(jb))
 
-
 }
-
 
 func (auth *AuthenticationToken) ToData() []byte {
 	var l int8
@@ -96,22 +98,17 @@ func (auth *AuthenticationToken) FromData(buff []byte) bool {
 	deviceId := make([]byte, l)
 	buffer.Read(deviceId)
 
-
 	auth.PlatformType = platformType
 	auth.Token = string(token)
 	auth.DeviceId = string(deviceId)
 	return true
 }
 
-
-
-
 type AuthenticationStatus struct {
-	Status int32   //-1 验证失败
+	Status int8 //-1 验证失败  -2 用户信息有误
 }
 
-
-func (auth *AuthenticationStatus) ToData ()[]byte {
+func (auth *AuthenticationStatus) ToData() []byte {
 	buffer := new(bytes.Buffer)
 	binary.Write(buffer, binary.BigEndian, auth.Status)
 	buf := buffer.Bytes()

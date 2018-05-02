@@ -4,11 +4,11 @@ import (
 	"flag"
 	"im_go/config"
 	"im_go/libs/perf"
-	"im_go/server"
 	"im_go/model"
+	"im_go/server"
 
-	"im_go/im"
 	log "github.com/flywithbug/log4go"
+	"im_go/im"
 )
 
 const (

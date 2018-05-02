@@ -42,7 +42,31 @@ func StartClient(port int) {
 
 		if string(line) == "auth"{
 			var auth im.AuthenticationToken
+			auth.Token = "7414cc3d-3db0-4715-bdd8-449d9fd9c9bf"
+			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
+			auth.PlatformType = 3
+			p.Ver = 1
+			p.Body = auth.ToData()
+			//if err !=nil {
+			//	fmt.Println("Marshal",err)
+			//}
+			p.Operation = OP_AUTH
+			p.SeqId = 1
+		}else if string(line) == "badauth"{
+			var auth im.AuthenticationToken
 			auth.Token = "6bde541f-1eb9-4600-a47e-8d7db7c7b460"
+			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
+			auth.PlatformType = 3
+			p.Ver = 1
+			p.Body = auth.ToData()
+			//if err !=nil {
+			//	fmt.Println("Marshal",err)
+			//}
+			p.Operation = OP_AUTH
+			p.SeqId = 1
+		}else if string(line) == "badauth1"{
+			var auth im.AuthenticationToken
+			auth.Token = "badToken"
 			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
 			auth.PlatformType = 3
 			p.Ver = 1

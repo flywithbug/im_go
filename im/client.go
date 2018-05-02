@@ -1,34 +1,33 @@
 package im
 
 import (
+	log "github.com/flywithbug/log4go"
 	"net"
 	"sync/atomic"
-	log "github.com/flywithbug/log4go"
 	"time"
 )
 
 type Client struct {
 	Connection
 	publicIp int32
-
 }
 
-func NewClient(conn *net.TCPConn)*Client  {
+func NewClient(conn *net.TCPConn) *Client {
 	client := new(Client)
 	client.conn = conn
 	addr := conn.LocalAddr()
 	if taddr, ok := addr.(*net.TCPAddr); ok {
 		ip4 := taddr.IP.To4()
 		if len(ip4) >= 4 {
-			client.publicIp = int32(ip4[0]) << 24 | int32(ip4[1]) << 16 | int32(ip4[2]) << 8 | int32(ip4[3])
+			client.publicIp = int32(ip4[0])<<24 | int32(ip4[1])<<16 | int32(ip4[2])<<8 | int32(ip4[3])
 		}
 	}
 	atomic.AddInt64(&serverSummary.nconnections, 1)
-	client.out = make(chan *Proto,100)
+	client.out = make(chan *Proto, 100)
 	return client
 }
 
-func (client *Client)Read()  {
+func (client *Client) Read() {
 	for {
 		tc := atomic.LoadInt32(&client.tc)
 		if tc > 0 {
@@ -39,7 +38,7 @@ func (client *Client)Read()  {
 		t1 := time.Now().Unix()
 		msg := client.read()
 		t2 := time.Now().Unix()
-		if t2 - t1 > 6*60 {
+		if t2-t1 > 6*60 {
 			log.Info("client:%d socket read timeout:%d %d", client.uid, t1, t2)
 		}
 		if msg == nil {
@@ -48,14 +47,14 @@ func (client *Client)Read()  {
 		}
 		client.handleMessage(msg)
 		t3 := time.Now().Unix()
-		if t3 - t2 > 2 {
+		if t3-t2 > 2 {
 			log.Info("client:%d handle message is too slow:%d %d", client.uid, t2, t3)
 		}
 
 	}
 }
 
-func (client *Client)handleMessage(pro *Proto)  {
+func (client *Client) handleMessage(pro *Proto) {
 	//fmt.Println("receiveMSg:",string(pro.Body),len(pro.Body),pro.Operation)
 	switch pro.Operation {
 	case OP_AUTH:
@@ -68,22 +67,21 @@ func (client *Client)handleMessage(pro *Proto)  {
 
 }
 
-
-func (client *Client)Write()  {
+func (client *Client) Write() {
 	running := true
 	seq := 0
 
 	for running {
 		select {
-		case pro := <- client.out:
-			if pro == nil{
+		case pro := <-client.out:
+			if pro == nil {
 				client.close()
 				running = false
 				log.Info("client:%d socket closed", client.uid)
 				break
 			}
 			if pro.Operation == OP_SEND_MSG {
-				atomic.AddInt64(&serverSummary.out_message_count,1)
+				atomic.AddInt64(&serverSummary.out_message_count, 1)
 			}
 			seq++
 			//p := &Proto{Ver:pro.Ver,}
@@ -106,11 +104,8 @@ func (client *Client)Write()  {
 
 }
 
-
-
 func (client *Client) HandleClientClosed() {
 	atomic.AddInt64(&serverSummary.nconnections, -1)
-
 
 	//if client.uid > 0 {
 	//	atomic.AddInt64(&server_summary.nclients, -1)
@@ -125,8 +120,6 @@ func (client *Client) HandleClientClosed() {
 	//client.RoomClient.Logout()
 	//client.IMClient.Logout()
 }
-
-
 
 func (client *Client) Listen() {
 	go client.Read()

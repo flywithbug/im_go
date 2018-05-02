@@ -1,12 +1,11 @@
 package main
 
 import (
-	"im_go/imc"
 	"flag"
+	"im_go/imc"
 )
 
 func main() {
 	flag.Parse()
 	imc.StartClient(9000)
 }
-

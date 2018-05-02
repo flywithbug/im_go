@@ -1,7 +1,5 @@
 package im
 
-
-
 const (
 	// handshake
 	OP_HANDSHAKE       = int32(0)
@@ -27,20 +25,16 @@ const (
 	// room
 	OP_ROOM_READY = int32(12)
 
-
-
 	// proto
 	OP_PROTO_READY  = int32(13)
 	OP_PROTO_FINISH = int32(14)
 
-
 	// for test
 	OP_TEST       = int32(254)
 	OP_TEST_REPLY = int32(255)
-
 )
 
-func OperationMsg(operation int32)string  {
+func OperationMsg(operation int32) string {
 	switch operation {
 	case OP_AUTH:
 		return "初次连接授权"

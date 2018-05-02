@@ -2,20 +2,18 @@ package im
 
 import (
 	"fmt"
-	"net"
 	log "github.com/flywithbug/log4go"
+	"net"
 )
 
-
-
-func init()  {
+func init() {
 	serverSummary = NewServerSummary()
 }
 
-func Listen(port int)  {
+func Listen(port int) {
 	address := fmt.Sprintf("0.0.0.0:%d", port)
-	addr,_ := net.ResolveTCPAddr("tcp",address)
-	listen, err := net.ListenTCP("tcp",addr)
+	addr, _ := net.ResolveTCPAddr("tcp", address)
+	listen, err := net.ListenTCP("tcp", addr)
 	if err != nil {
 		log.Error("初始化失败", err.Error())
 		return
@@ -30,7 +28,7 @@ func Listen(port int)  {
 	}
 }
 
-func handleConnection(conn *net.TCPConn)  {
+func handleConnection(conn *net.TCPConn) {
 	client := NewClient(conn)
 	client.Listen()
 }

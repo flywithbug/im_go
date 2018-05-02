@@ -1,9 +1,9 @@
 package im
 
 import (
-	"testing"
 	"bytes"
 	"fmt"
+	"testing"
 )
 
 func TestWriteHeader(t *testing.T) {
@@ -17,14 +17,13 @@ func TestWriteHeader(t *testing.T) {
 	ph.op = 2
 	ph.bodyLen = int32(len(b))
 	ph.ver = 1
-	WriteHeader(ph,buffer)
+	WriteHeader(ph, buffer)
 	buffer.Write(b)
 	bb := buffer.Bytes()
 	fmt.Println(bb)
 
-
 	//decode
-	ph1 ,err := ReadHeader(bb)
+	ph1, err := ReadHeader(bb)
 	if err != nil {
 		fmt.Println(err)
 	}
