@@ -38,6 +38,12 @@ func GetLoginByToken(token string) (*Login, error) {
 	return &login, nil
 }
 
+////获取已登录的记录，非当前查询的token
+//func GetLoginByUserId(userId,nToken string)(*User,error)  {
+//
+//}
+
+
 
 /*
  保存登录状态
@@ -62,7 +68,7 @@ func SaveLogin(appId int64,uId int64 ,userId string, token string, ip string,for
 /*
 	退出登录  status 1 登录状态，0 是退出 -1 被其他登录用户踢出
 */
-func Logout(token string,status int)(int64,error) {
+func Logout(token string)(int64,error) {
 	updateStmt,err := Database.Prepare("UPDATE im_login SET `status` = ?,logout_at=? WHERE token=? AND status = 1")
 	defer updateStmt.Close()
 	if err != nil {
@@ -70,7 +76,7 @@ func Logout(token string,status int)(int64,error) {
 		return -1, &DatabaseError{"服务出错"}
 	}
 
-	res ,err := updateStmt.Exec(status,time.Now().Format("2006-01-02 15:04:05"),token)
+	res ,err := updateStmt.Exec(0,time.Now().Format("2006-01-02 15:04:05"),token)
 	if err != nil {
 		return -1, &DatabaseError{"服务出错"}
 	}

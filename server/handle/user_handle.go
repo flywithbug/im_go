@@ -406,7 +406,7 @@ func logout(resp http.ResponseWriter,token string)  {
 	if token == "" {
 		resp.Write(model.NewIMResponseSimple(401, "token不能为空", "").Encode())
 	}else {
-		num ,err := model.Logout(token,0)
+		num ,err := model.Logout(token)
 		if num <= 0 || err != nil{
 			errStr := err.Error()
 			resp.Write(model.NewIMResponseSimple(500, errStr, "").Encode())
