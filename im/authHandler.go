@@ -10,6 +10,7 @@ import (
 	log "github.com/flywithbug/log4go"
 
 	"im_go/model"
+	"sync/atomic"
 )
 
 const (
@@ -75,6 +76,7 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 	client.EnqueueMessage(pro)
 
 	client.AddClient()
+	atomic.AddInt64(&serverSummary.nclients,1)
 }
 
 func (auth *AuthenticationToken) ToData() []byte {

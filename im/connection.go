@@ -11,25 +11,25 @@ import (
 const CLIENT_TIMEOUT = (60 * 6)
 
 type Connection struct {
-	conn *net.TCPConn
+	conn 		*net.TCPConn
 
-	closed int32
+	closed 		int32
 
-	tc  int32 //write channel timeout count
-	out chan *Proto
+	tc  		int32 //write channel timeout count
+	out 		chan *Proto
 
-	tm time.Time
+	tm 			time.Time
 
-	forbidden int32 //是否被禁言
+	forbidden 	int32 //是否被禁言
 	//notification_on bool //桌面在线时是否通知手机端
-	online bool
+	online 		bool
 
-	appid      int64  //登录用户所属AppId
-	uid        int64  //登录用户的数据Id
-	deviceId   string //设备唯一Id
-	platformId int8   //设备类型Id
-	userId     string //登录用户的UserId
-	Token      string //登录用户的token
+	appid      	int64  //登录用户所属AppId
+	uid        	int64  //登录用户的数据Id
+	deviceId   	string //设备唯一Id
+	platformId 	int8   //设备类型Id
+	userId     	string //登录用户的UserId
+	Token      	string //登录用户的token
 }
 
 func (client *Connection) read() *Proto {
