@@ -11,7 +11,8 @@ const (
 	OP_SEND_MSG       = int32(4)
 	OP_SEND_MSG_REPLY = int32(5)  //已读回执
 	// kick user
-	OP_DISCONNECT_REPLY = int32(6)
+	OP_DISCONNECT_REPLY = int32(6) //踢掉连接
+
 	// auth user
 	OP_AUTH       = int32(7)
 	OP_AUTH_REPLY = int32(8)

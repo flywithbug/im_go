@@ -387,7 +387,7 @@ func login(resp http.ResponseWriter, account string, password string, ip string)
 			}
 			if !strings.EqualFold(user.UserId, "") {
 				token := uuid.New()
-				if err := model.SaveLogin(user.AppId(),user.Id(),user.UserId, token, ip,user.Forbidden); err != nil {
+				if err := model.SaveLogin(user.GetAppId(),user.Id,user.UserId, token, ip,user.Forbidden); err != nil {
 					resp.Write(model.NewIMResponseSimple(500, err.Error(), "").Encode())
 				} else {
 					user.Token = token

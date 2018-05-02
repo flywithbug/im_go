@@ -69,7 +69,7 @@ func (client *Client) Read() {
 		tc := atomic.LoadInt32(&client.tc)
 		if tc > 0 {
 			log.Info("quit read goroutine, client:%d write goroutine blocked", client.uid)
-			client.HandleClientClosed()
+			client.handleClientClosed()
 			break
 		}
 		t1 := time.Now().Unix()
@@ -79,15 +79,14 @@ func (client *Client) Read() {
 			log.Info("client:%d socket read timeout:%d %d", client.uid, t1, t2)
 		}
 		if msg == nil {
-			client.HandleClientClosed()
+			client.handleClientClosed()
 			break
 		}
-		go client.handleMessage(msg)
+		client.handleMessage(msg)
 		t3 := time.Now().Unix()
 		if t3-t2 > 2 {
 			log.Info("client:%d handle message is too slow:%d %d", client.uid, t2, t3)
 		}
-
 	}
 }
 
@@ -110,37 +109,36 @@ func (client *Client) Write() {
 			seq++
 			pro.SeqId = int32(seq)
 			client.send(pro)
+
 		}
 	}
 	//等待200ms,避免发送者阻塞
-	//t := time.After(200 * time.Millisecond)
-	//running = true
-	//for running {
-	//	select {
-	//	case <- t:
-	//		running = false
-	//	//case <- client.wt:
-	//	//	log.Warning("msg is dropped")
-	//	//case <- client.ewt:
-	//	//	log.Warning("emsg is dropped")
-	//	}
-	//}
+	t := time.After(200 * time.Millisecond)
+	running = true
+	for running {
+		select {
+		case <- t:
+			running = false
+		case <- client.wt:
+			log.Warn("msg is dropped")
+		//case <- client.ewt:
+		//	log.Warning("emsg is dropped")
+		}
+	}
 
 }
 
-func (client *Client) HandleClientClosed() {
+func (client *Client) handleClientClosed() {
 	atomic.AddInt64(&serverSummary.nconnections, -1)
 	if client.uid > 0 {
 		atomic.AddInt64(&serverSummary.nclients,-1)
 		log.Info("HandleClientClosed client:%d",client.uid)
 	}
 	atomic.StoreInt32(&client.closed, 1)
-
 	client.RemoveClient()
 
 	//quit when write goroutine received
 	client.wt <- nil
-
 	//client.RoomClient.Logout()
 	//client.IMClient.Logout()
 }

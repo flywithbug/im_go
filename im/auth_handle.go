@@ -17,7 +17,6 @@ const (
 	AuthenticationStatusSuccess  = 0
 	AuthenticationStatusBadToken = -1
 	AuthenticationStatusBadLogin = -2
-	AuthenticationStatusKickOut = -3
 )
 
 type AuthenticationToken struct {
@@ -64,27 +63,55 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 		client.EnqueueMessage(pro)
 		return
 	}
+
+
 	//发消息给其他客户端登录的用户下线，并关闭其他客户端的connection
-	client.appid = login.AppId
-	client.uid = login.UId
-	client.userId = login.UserId
-	client.platformId = auth.PlatformType
-	client.Token = auth.Token
-	client.online = true
-	client.forbidden = login.Forbidden
-	client.tm = time.Now()
-
-	clientInfo := fmt.Sprintf("auth token:%s appid:%d uid:%d device id:%s forbidden:%d",
-		login.Token, client.appid, client.uid, client.deviceId, client.forbidden)
-	log.Debug(clientInfo)
-
+	//暂时只能单端登录
 	authStatus.Status = AuthenticationStatusSuccess
 	pro.Body = authStatus.ToData()
-	client.EnqueueMessage(pro)
+	send := client.EnqueueMessage(pro)
+	if send {
+		client.version = pro.Ver
+		client.appid = login.AppId
+		client.uid = login.UId
+		client.userId = login.UserId
+		client.platformId = auth.PlatformType
+		client.Token = auth.Token
+		client.online = true
+		client.forbidden = login.Forbidden
+		client.tm = time.Now()
 
-	client.AddClient()
-	atomic.AddInt64(&serverSummary.nclients,1)
+		clientInfo := fmt.Sprintf("auth token:%s appid:%d uid:%d device id:%s forbidden:%d",
+			login.Token, client.appid, client.uid, client.deviceId, client.forbidden)
+		log.Debug(clientInfo)
+
+
+		client.AddClient()
+		atomic.AddInt64(&serverSummary.nclients,1)
+		//登出其他账号
+		client.LogOutOtherClient()
+	}
+
+
 }
+
+func (client *Client)LogOutOtherClient()  {
+	p := new(Proto)
+	p.Operation = OP_DISCONNECT_REPLY
+	route := appRoute.FindRoute(client.appid)
+	clients := route.FindClientSet(client.uid)
+	for c, _ := range(clients) {
+		//不再发送给自己
+		if c == client {
+			continue
+		}
+		c.EnqueueMessage(p)
+		c.uid = 0
+		c.closed = 1
+		c.handleClientClosed()
+	}
+}
+
 
 func (auth *AuthenticationToken) ToData() []byte {
 	var l int8

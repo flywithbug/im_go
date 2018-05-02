@@ -20,6 +20,9 @@ type Connection struct {
 
 	tm 			time.Time
 
+	//协议版本号
+	version 	int16
+
 	forbidden 	int32 //是否被禁言
 	//notification_on bool //桌面在线时是否通知手机端
 	online 		bool
@@ -78,4 +81,10 @@ func (client *Client) EnqueueMessage(pro *Proto) bool {
 		log.Info("send message to wt timed out:%d", client.uid)
 		return false
 	}
+}
+
+
+
+func (client *Connection)Logout(){
+
 }
