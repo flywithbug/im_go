@@ -9,6 +9,7 @@ import (
 
 type Client struct {
 	Connection
+	*ClientIM
 	publicIp int32
 }
 
@@ -25,6 +26,9 @@ func NewClient(conn *net.TCPConn) *Client {
 	atomic.AddInt64(&serverSummary.nconnections, 1)
 	client.wt = make(chan *Proto, 100)
 
+	//消息处理器
+	client.ClientIM = &ClientIM{&client.Connection}
+
 	return client
 }
 
@@ -36,9 +40,8 @@ func (client *Client) handleMessage(pro *Proto) {
 	case OP_SEND_MSG_REPLY:
 		//消息回执
 		client.HandleACK(pro)
-
 	}
-
+	client.ClientIM.handleMessage(pro)
 	//client.out <- pro
 
 }
@@ -79,7 +82,7 @@ func (client *Client) Read() {
 			client.HandleClientClosed()
 			break
 		}
-		client.handleMessage(msg)
+		go client.handleMessage(msg)
 		t3 := time.Now().Unix()
 		if t3-t2 > 2 {
 			log.Info("client:%d handle message is too slow:%d %d", client.uid, t2, t3)
