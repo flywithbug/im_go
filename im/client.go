@@ -23,7 +23,8 @@ func NewClient(conn *net.TCPConn) *Client {
 		}
 	}
 	atomic.AddInt64(&serverSummary.nconnections, 1)
-	client.out = make(chan *Proto, 100)
+	client.wt = make(chan *Proto, 100)
+
 	return client
 }
 
@@ -133,7 +134,7 @@ func (client *Client) HandleClientClosed() {
 	client.RemoveClient()
 	//
 	////quit when write goroutine received
-	//client.wt <- nil
+	client.wt <- nil
 	//
 	//client.RoomClient.Logout()
 	//client.IMClient.Logout()

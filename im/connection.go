@@ -16,7 +16,7 @@ type Connection struct {
 	closed 		int32
 
 	tc  		int32 //write channel timeout count
-	out 		chan *Proto
+	wt 			chan *Proto
 
 	tm 			time.Time
 
@@ -71,7 +71,7 @@ func (client *Client) EnqueueMessage(pro *Proto) bool {
 	}
 
 	select {
-	case client.out <- pro:
+	case client.wt <- pro:
 		return true
 	case <-time.After(60 * time.Second):
 		atomic.AddInt32(&client.tc, 1)
