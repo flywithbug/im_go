@@ -54,7 +54,7 @@ func StartClient(port int) {
 			p.SeqId = 1
 		}else if string(line) == "badauth"{
 			var auth im.AuthenticationToken
-			auth.Token = "6bde541f-1eb9-4600-a47e-8d7db7c7b460"
+			auth.Token = "fa9d0cdc-13f0-472c-99c2-e7b0100b8d09"
 			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
 			auth.PlatformType = 3
 			p.Ver = 1

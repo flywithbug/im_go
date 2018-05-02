@@ -49,7 +49,6 @@ func (client *Client)Read() {
 			go client.handleMessage(msg)
 		}
 	}
-	client.HandleClientClosed()
 }
 
 func (client *Client)sendMsg(msg *Message)  {

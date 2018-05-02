@@ -31,7 +31,7 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 	var auth AuthenticationToken
 	auth.FromData(pro.Body)
 	logInfo := fmt.Sprintf("authToken:%s platform:%d deviceId:%s", auth.Token, auth.PlatformType, auth.DeviceId)
-	log.Info(logInfo)
+	log.Debug(logInfo)
 	//call back Body
 
 	if client.uid > 0 && strings.EqualFold(client.Token, auth.Token) {
@@ -79,7 +79,7 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 
 	clientInfo := fmt.Sprintf("auth token:%s appid:%d uid:%d device id:%s forbidden:%d",
 		login.Token, client.appid, client.uid, client.deviceId, client.forbidden)
-	log.Info(clientInfo)
+	log.Debug(clientInfo)
 
 	authStatus.Status = AuthenticationStatusSuccess
 	pro.Body = authStatus.ToData()

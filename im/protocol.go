@@ -128,22 +128,22 @@ func ReceiveLimitMessage(conn io.Reader, limitSize int) (pro *Proto) {
 	buff := make([]byte, RawHeaderSize)
 	_, err := io.ReadFull(conn, buff)
 	if err != nil {
-		log.Info("sock read error:", err)
+		log.Info("sock read error:%s", err.Error())
 		return nil
 	}
 	ph, err := ReadHeader(buff)
 	if err != nil {
-		log.Info("buff read error:", err)
+		log.Info("buff read error:%s", err.Error())
 		return nil
 	}
 	if ph.bodyLen < 0 || int(ph.bodyLen) > limitSize {
-		log.Info("invalid len:", ph.bodyLen)
+		log.Info("invalid len:%d", ph.bodyLen)
 		return nil
 	}
 	buff = make([]byte, ph.bodyLen)
 	_, err = io.ReadFull(conn, buff)
 	if err != nil {
-		log.Info("sock read error:", err)
+		log.Info("sock read error:%s", err.Error())
 		return nil
 	}
 	pro = &emptyProto

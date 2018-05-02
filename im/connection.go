@@ -78,5 +78,4 @@ func (client *Client) EnqueueMessage(pro *Proto) bool {
 		log.Info("send message to wt timed out:%d", client.uid)
 		return false
 	}
-
 }

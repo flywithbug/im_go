@@ -17,6 +17,7 @@ const (
 )
 
 func SetLog() {
+
 	w := log.NewFileWriter()
 	w.SetPathPattern("./log/log-%Y%M%D.log")
 	c := log.NewConsoleWriter()

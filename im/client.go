@@ -70,7 +70,7 @@ func (client *Client) Read() {
 		t1 := time.Now().Unix()
 		msg := client.read()
 		t2 := time.Now().Unix()
-		if t2-t1 > 6*60 {
+		if t2-t1 > 6*60-1 {
 			log.Info("client:%d socket read timeout:%d %d", client.uid, t1, t2)
 		}
 		if msg == nil {
@@ -92,7 +92,7 @@ func (client *Client) Write() {
 
 	for running {
 		select {
-		case pro := <-client.wt:
+		case pro := <- client.wt:
 			if pro == nil {
 				client.close()
 				running = false
@@ -125,9 +125,9 @@ func (client *Client) Write() {
 
 func (client *Client) HandleClientClosed() {
 	atomic.AddInt64(&serverSummary.nconnections, -1)
-
 	if client.uid > 0 {
 		atomic.AddInt64(&serverSummary.nclients,-1)
+		log.Info("HandleClientClosed client:%d",client.uid)
 	}
 	atomic.StoreInt32(&client.closed, 1)
 

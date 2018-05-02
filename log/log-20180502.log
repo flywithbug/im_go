@@ -474,3 +474,62 @@
 2018-05-02 20:37:11 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
 2018-05-02 20:37:11 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
 2018-05-02 20:37:11 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 20:41:41 	 [ INFO] 	 <main.go:35>  	 *********************************************
+2018-05-02 20:41:41 	 [ INFO] 	 <main.go:36>  	            系统:[IM]版本:[1.0]
+2018-05-02 20:41:41 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-02 20:41:41 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 20:41:41 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 20:41:41 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 20:41:41 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 20:41:41 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 20:41:43 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:63868] 
+
+2018-05-02 20:41:48 	 [ INFO] 	 <authHandler.go:34>  	 authToken:fa9d0cdc-13f0-472c-99c2-e7b0100b8d09 platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 20:41:48 	 [ERROR] 	 <authHandler.go:55>  	 token 已失效
+2018-05-02 20:47:48 	 [ INFO] 	 <protocol.go:131>  	 sock read error:%!(EXTRA *net.OpError=read tcp 127.0.0.1:9000->127.0.0.1:63868: i/o timeout)
+2018-05-02 20:47:48 	 [ WARN] 	 <client.go:52>  	 can't find app route
+2018-05-02 20:47:48 	 [ INFO] 	 <client.go:99>  	 client:0 socket closed
+2018-05-02 20:53:49 	 [ INFO] 	 <main.go:35>  	 *********************************************
+2018-05-02 20:53:49 	 [ INFO] 	 <main.go:36>  	            系统:[IM]版本:[1.0]
+2018-05-02 20:53:49 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-02 20:53:49 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 20:53:49 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 20:53:49 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 20:53:49 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 20:53:49 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 20:53:56 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:63993] 
+
+2018-05-02 20:53:59 	 [ INFO] 	 <authHandler.go:34>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 20:53:59 	 [ INFO] 	 <authHandler.go:82>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-02 20:59:59 	 [ INFO] 	 <protocol.go:131>  	 sock read error:read tcp 127.0.0.1:9000->127.0.0.1:63993: i/o timeout
+2018-05-02 20:59:59 	 [ INFO] 	 <client.go:99>  	 client:10001 socket closed
+2018-05-02 21:06:52 	 [ INFO] 	 <main.go:35>  	 *********************************************
+2018-05-02 21:06:52 	 [ INFO] 	 <main.go:36>  	            系统:[IM]版本:[1.0]
+2018-05-02 21:06:52 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-02 21:06:52 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 21:06:52 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 21:06:52 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 21:06:52 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 21:06:52 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 21:06:55 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64510] 
+
+2018-05-02 21:12:55 	 [ INFO] 	 <protocol.go:131>  	 sock read error:read tcp 127.0.0.1:9000->127.0.0.1:64510: i/o timeout
+2018-05-02 21:12:55 	 [ INFO] 	 <client.go:74>  	 client:0 socket read timeout:1525266415 1525266775
+2018-05-02 21:12:55 	 [ INFO] 	 <client.go:127>  	 HandleClientClosed%!(EXTRA int64=0)
+2018-05-02 21:12:55 	 [ WARN] 	 <client.go:52>  	 can't find app route
+2018-05-02 21:12:55 	 [ INFO] 	 <client.go:99>  	 client:0 socket closed
+2018-05-02 21:32:29 	 [ INFO] 	 <main.go:35>  	 *********************************************
+2018-05-02 21:32:29 	 [ INFO] 	 <main.go:36>  	            系统:[IM]版本:[1.0]
+2018-05-02 21:32:29 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-02 21:32:29 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 21:32:29 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 21:32:29 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 21:32:29 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 21:32:29 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 21:32:31 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64896] 
+
+2018-05-02 21:32:32 	 [DEBUG] 	 <authHandler.go:34>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 21:32:32 	 [DEBUG] 	 <authHandler.go:82>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-02 21:32:38 	 [ INFO] 	 <protocol.go:131>  	 sock read error:read tcp 127.0.0.1:9000->127.0.0.1:64896: i/o timeout
+2018-05-02 21:32:38 	 [ INFO] 	 <client.go:130>  	 HandleClientClosed client:10001
+2018-05-02 21:32:38 	 [ INFO] 	 <client.go:99>  	 client:10001 socket closed
