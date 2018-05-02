@@ -17,6 +17,7 @@ const (
 	AuthenticationStatusSuccess  = 0
 	AuthenticationStatusBadToken = -1
 	AuthenticationStatusBadLogin = -2
+	AuthenticationStatusKickOut = -3
 )
 
 type AuthenticationToken struct {
@@ -24,6 +25,7 @@ type AuthenticationToken struct {
 	PlatformType int8   `json:"platform_type"`
 	DeviceId     string `json:"device_id"`
 }
+
 
 func (client *Client) HandleAuthToken(pro *Proto) {
 	var auth AuthenticationToken
@@ -40,9 +42,17 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 	pro.Operation = OP_AUTH_REPLY
 	pro.SeqId = 0
 
-	login, err := model.GetLoginByToken(auth.Token, model.STATUS_LOGIN)
+	login, err := model.GetLoginByToken(auth.Token)
 	if err != nil {
 		log.Error(err.Error())
+		authStatus.Status = AuthenticationStatusBadToken
+		pro.Body = authStatus.ToData()
+		client.EnqueueMessage(pro)
+		return
+	}
+
+	if login.Status != 1 {
+		log.Error("token 已失效")
 		authStatus.Status = AuthenticationStatusBadToken
 		pro.Body = authStatus.ToData()
 		client.EnqueueMessage(pro)
@@ -57,7 +67,7 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 		client.EnqueueMessage(pro)
 		return
 	}
-
+	//发消息给其他客户端登录的用户下线，并关闭其他客户端的connection
 	client.appid = login.AppId
 	client.uid = login.UId
 	client.userId = login.UserId

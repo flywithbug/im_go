@@ -92,7 +92,7 @@ func (client *Client) Write() {
 
 	for running {
 		select {
-		case pro := <-client.out:
+		case pro := <-client.wt:
 			if pro == nil {
 				client.close()
 				running = false

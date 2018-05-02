@@ -367,17 +367,6 @@ func handleUserRelationRefuse(resp http.ResponseWriter, req *http.Request) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // 登录主方法
 func login(resp http.ResponseWriter, account string, password string, ip string) {
 	if account == "" {
@@ -398,7 +387,7 @@ func login(resp http.ResponseWriter, account string, password string, ip string)
 			}
 			if !strings.EqualFold(user.UserId, "") {
 				token := uuid.New()
-				if _, err := model.SaveLogin(user.AppId(),user.Id(),user.UserId, token, ip,user.Forbidden); err != nil {
+				if err := model.SaveLogin(user.AppId(),user.Id(),user.UserId, token, ip,user.Forbidden); err != nil {
 					resp.Write(model.NewIMResponseSimple(500, err.Error(), "").Encode())
 				} else {
 					user.Token = token
@@ -417,7 +406,7 @@ func logout(resp http.ResponseWriter,token string)  {
 	if token == "" {
 		resp.Write(model.NewIMResponseSimple(401, "token不能为空", "").Encode())
 	}else {
-		num ,err := model.Logout(token)
+		num ,err := model.Logout(token,0)
 		if num <= 0 || err != nil{
 			errStr := err.Error()
 			resp.Write(model.NewIMResponseSimple(500, errStr, "").Encode())

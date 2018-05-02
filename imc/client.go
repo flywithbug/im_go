@@ -42,7 +42,7 @@ func StartClient(port int) {
 
 		if string(line) == "auth"{
 			var auth im.AuthenticationToken
-			auth.Token = "7414cc3d-3db0-4715-bdd8-449d9fd9c9bf"
+			auth.Token = "58b70f11-e280-40d8-8ddd-a3810bd65f7a"
 			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
 			auth.PlatformType = 3
 			p.Ver = 1

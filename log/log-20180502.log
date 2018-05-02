@@ -388,3 +388,65 @@
 2018-05-02 16:40:39 	 [ INFO] 	 <authHandler.go:26>  	 repeat login
 2018-05-02 16:40:40 	 [ INFO] 	 <authHandler.go:26>  	 repeat login
 2018-05-02 16:46:40 	 [ INFO] 	 <protocol.go:131>  	 sock read error:%!(EXTRA *net.OpError=read tcp 127.0.0.1:9000->127.0.0.1:60539: i/o timeout)
+2018-05-02 20:20:33 	 [ INFO] 	 <main.go:34>  	 *********************************************
+2018-05-02 20:20:33 	 [ INFO] 	 <main.go:35>  	            系统:[IM]版本:[1.0]
+2018-05-02 20:20:33 	 [ INFO] 	 <main.go:36>  	 *********************************************
+2018-05-02 20:20:33 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 20:20:33 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 20:20:33 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 20:20:33 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 20:20:33 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 20:20:37 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:63138] 
+
+2018-05-02 20:20:39 	 [ INFO] 	 <authHandler.go:34>  	 authToken:7414cc3d-3db0-4715-bdd8-449d9fd9c9bf platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 20:20:39 	 [ERROR] 	 <authHandler.go:47>  	 根据Token获取用户登录错误
+2018-05-02 20:22:32 	 [ INFO] 	 <main.go:34>  	 *********************************************
+2018-05-02 20:22:32 	 [ INFO] 	 <main.go:35>  	            系统:[IM]版本:[1.0]
+2018-05-02 20:22:32 	 [ INFO] 	 <main.go:36>  	 *********************************************
+2018-05-02 20:22:32 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 20:22:32 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 20:22:32 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 20:22:32 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 20:22:32 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 20:22:52 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:63205] 
+
+2018-05-02 20:22:53 	 [ INFO] 	 <authHandler.go:34>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 20:22:53 	 [ERROR] 	 <authHandler.go:47>  	 根据Token获取用户登录错误
+2018-05-02 20:23:49 	 [ INFO] 	 <main.go:34>  	 *********************************************
+2018-05-02 20:23:49 	 [ INFO] 	 <main.go:35>  	            系统:[IM]版本:[1.0]
+2018-05-02 20:23:49 	 [ INFO] 	 <main.go:36>  	 *********************************************
+2018-05-02 20:23:49 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 20:23:49 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 20:23:49 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 20:23:49 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 20:23:49 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 20:23:57 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:63213] 
+
+2018-05-02 20:23:59 	 [ INFO] 	 <authHandler.go:34>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 20:23:59 	 [ WARN] 	 <login.go:35>  	 sql: expected 9 destination arguments in Scan, not 10
+2018-05-02 20:23:59 	 [ERROR] 	 <authHandler.go:47>  	 根据Token获取用户登录错误
+2018-05-02 20:25:05 	 [ INFO] 	 <main.go:34>  	 *********************************************
+2018-05-02 20:25:05 	 [ INFO] 	 <main.go:35>  	            系统:[IM]版本:[1.0]
+2018-05-02 20:25:05 	 [ INFO] 	 <main.go:36>  	 *********************************************
+2018-05-02 20:25:05 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 20:25:05 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 20:25:05 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 20:25:05 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 20:25:05 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 20:25:08 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:63258] 
+
+2018-05-02 20:25:13 	 [ INFO] 	 <authHandler.go:34>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 20:25:13 	 [ WARN] 	 <login.go:35>  	 sql: expected 8 destination arguments in Scan, not 9
+2018-05-02 20:25:13 	 [ERROR] 	 <authHandler.go:47>  	 根据Token获取用户登录错误
+2018-05-02 20:25:35 	 [ INFO] 	 <main.go:34>  	 *********************************************
+2018-05-02 20:25:35 	 [ INFO] 	 <main.go:35>  	            系统:[IM]版本:[1.0]
+2018-05-02 20:25:35 	 [ INFO] 	 <main.go:36>  	 *********************************************
+2018-05-02 20:25:35 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-02 20:25:35 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-02 20:25:35 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-02 20:25:35 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-02 20:25:35 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-02 20:25:39 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:63313] 
+
+2018-05-02 20:25:41 	 [ INFO] 	 <authHandler.go:34>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-02 20:25:41 	 [ INFO] 	 <authHandler.go:82>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
