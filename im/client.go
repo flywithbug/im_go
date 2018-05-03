@@ -7,6 +7,7 @@ import (
 	"time"
 	"io"
 	"im_go/model"
+	"fmt"
 )
 
 type Client struct {
@@ -35,17 +36,15 @@ func NewClient(conn *net.TCPConn) *Client {
 }
 
 func (client *Client) handleMessage(pro *Proto) {
-	//fmt.Println("receiveMSg:",string(pro.Body),len(pro.Body),pro.Operation)
 	switch pro.Operation {
 	case OP_AUTH:
 		client.HandleAuthToken(pro)
-	case OP_SEND_MSG_ACK:
-		//消息回执
-		client.HandleACK(pro)
+	case OP_HEARTBEAT:
+		//TODO
 	}
 	client.ClientIM.handleMessage(pro)
 	//client.out <- pro
-
+	fmt.Println("seq",pro.SeqId)
 }
 
 func (client *Client) AddClient() {
@@ -116,6 +115,7 @@ func (client *Client) Write() {
 			}
 			seq++
 			pro.SeqId = int32(seq)
+			fmt.Println(pro.Description())
 			client.send(pro)
 		}
 	}

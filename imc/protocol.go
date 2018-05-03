@@ -7,6 +7,7 @@ import (
 	"encoding/binary"
 	"io"
 	log "github.com/flywithbug/log4go"
+	"fmt"
 )
 
 type Proto struct {
@@ -16,6 +17,9 @@ type Proto struct {
 	Body      json.RawMessage `json:"body"` // binary body bytes(json.RawMessage is []byte) //解析对象
 }
 
+func (pro *Proto)Description()string{
+	return fmt.Sprintf("ver:%d, operation:%d,seqId:%d,body:%s",pro.Ver,pro.Operation,pro.SeqId,pro.Body)
+}
 
 //
 //const (
@@ -37,12 +41,13 @@ type Proto struct {
 
 //消息头 结构体
 type protoHeader struct {
-	bodyLen 	int32   // 4 消息长度
-	headerLen	int16	// 2  //默认 RawHeaderSize = 16
-	ver 		int16	// 2
-	op			int32	// 4
-	seq			int32	// 4
+	bodyLen   int32 // 4 消息长度
+	headerLen int16 // 2  //默认 RawHeaderSize = 16
+	ver       int16 // 2
+	op        int32 // 4
+	seq       int32 // 4
 }
+
 
 
 
@@ -182,42 +187,40 @@ func ReceiveStorageMessage(conn io.Reader) *Proto {
 const (
 	// handshake
 	OP_HANDSHAKE       = int32(0)
-	OP_HANDSHAKE_REPLY = int32(1)
+	OP_HANDSHAKE_ACK = int32(1)
 	// heartbeat
 	OP_HEARTBEAT       = int32(2)
-	OP_HEARTBEAT_REPLY = int32(3)
+	OP_HEARTBEAT_ACK = int32(3)
 	// send text messgae
 	OP_SEND_MSG       = int32(4)
-	OP_SEND_MSG_REPLY = int32(5)
+	OP_SEND_MSG_ACK = int32(5)  //消息a
+
 	// kick user
-	OP_DISCONNECT_REPLY = int32(6)
+	OP_DISCONNECT_ACK = int32(6) //踢掉连接
+
 	// auth user
-	OP_AUTH       = int32(7)
-	OP_AUTH_REPLY = int32(8)
+	OP_AUTH       	= int32(7)
+	OP_AUTH_ACK 	= int32(8)
 
 	// handshake with sid
 	OP_HANDSHAKE_SID       = int32(9)
-	OP_HANDSHAKE_SID_REPLY = int32(10)
+	OP_HANDSHAKE_SID_ACK = int32(10)
 
 	// raw message
 	OP_RAW = int32(11)
 	// room
 	OP_ROOM_READY = int32(12)
 
-
-
 	// proto
 	OP_PROTO_READY  = int32(13)
 	OP_PROTO_FINISH = int32(14)
 
-
 	// for test
 	OP_TEST       = int32(254)
 	OP_TEST_REPLY = int32(255)
-
 )
 
-func OperationMsg(operation int32)string  {
+func OperationMsg(operation int32) string {
 	switch operation {
 	case OP_AUTH:
 		return "初次连接授权"

@@ -28,12 +28,15 @@ func StartClient(port int) {
 				break
 			}
 			switch msg.Operation {
-			case OP_AUTH_REPLY:
+			case OP_AUTH_ACK:
 				var auth im.AuthenticationStatus
 				auth.FromData(msg.Body)
 				fmt.Println("授权状态",auth.Status)
+			case OP_SEND_MSG_ACK:
+				var ack MessageACK
+				ack.FromData(msg.Body)
+				fmt.Println(ack.Description(),msg.Description())
 			}
-			fmt.Println("receive Msg",string(msg.Body))
 		}
 	}()
 
@@ -57,7 +60,7 @@ func StartClient(port int) {
 			msg := Message{
 				receiver:10002,
 				sender:10001,
-				msgId:20020,
+				msgId:2323232,
 				body:[]byte("hello world"),
 				timestamp:time.Now().Unix(),
 			}
@@ -65,7 +68,7 @@ func StartClient(port int) {
 			p.Body = msg.ToData()
 
 			p.Operation = OP_SEND_MSG
-			p.SeqId = 1
+			p.SeqId = 123456
 		}else if string(line) == "auth1"{
 			var auth im.AuthenticationToken
 			auth.Token = "2c06eaf6-e14a-4d06-ba42-15de3f11741a"

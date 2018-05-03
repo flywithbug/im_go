@@ -60,7 +60,7 @@ func (client *Connection) close() {
 }
 
 //把消息加入到发送队列中
-func (client *Client) EnqueueMessage(pro *Proto) bool {
+func (client *Connection) EnqueueMessage(pro *Proto) bool {
 	closed := atomic.LoadInt32(&client.closed)
 	if closed > 0 {
 		log.Info("can't send message to closed connection:%d", client.uid)
@@ -83,8 +83,12 @@ func (client *Client) EnqueueMessage(pro *Proto) bool {
 	}
 }
 
+func (client *Connection)SendMessage(uid int32,pro *Proto)  {
 
+	//发送推送给offline的uId
 
-func (client *Connection)Logout(){
+	//appid := client.appid
+	//route := appRoute.FindRoute(appid)
+
 
 }

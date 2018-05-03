@@ -55,6 +55,30 @@ func (msg *Message) FromData(buff []byte) bool {
 
 
 
+type MessageACK struct {
+	seq 	int32
+	msgId 	int32
+}
+
+func (msg *MessageACK) Description() string {
+	return fmt.Sprintf("seq:%d,msgId:%d",msg.seq,msg.msgId)
+}
+
+func (ack *MessageACK) ToData() []byte {
+	buffer := new(bytes.Buffer)
+	binary.Write(buffer, binary.BigEndian, ack.seq)
+	binary.Write(buffer, binary.BigEndian, ack.msgId)
+	buf := buffer.Bytes()
+	return buf
+}
+
+func (ack *MessageACK) FromData(buff []byte) bool {
+	buffer := bytes.NewBuffer(buff)
+	binary.Read(buffer, binary.BigEndian, &ack.seq)
+	binary.Read(buffer, binary.BigEndian, &ack.msgId)
+	return true
+}
+
 
 
 

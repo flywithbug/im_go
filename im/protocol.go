@@ -7,6 +7,7 @@ import (
 	"errors"
 	log "github.com/flywithbug/log4go"
 	"io"
+	"fmt"
 )
 
 type Proto struct {
@@ -14,6 +15,10 @@ type Proto struct {
 	Operation int32           `json:"op"`   // operation for request
 	SeqId     int32           `json:"seq"`  // sequence number chosen by client
 	Body      json.RawMessage `json:"body"` // binary body bytes(json.RawMessage is []byte) //解析对象
+}
+
+func (pro *Proto)Description()string{
+	return fmt.Sprintf("ver:%d, operation:%d,seqId:%d,body:%s",pro.Ver,pro.Operation,pro.SeqId,pro.Body)
 }
 
 //
