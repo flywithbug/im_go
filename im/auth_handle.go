@@ -107,7 +107,11 @@ func (client *Client)LogOutOtherClient()  {
 		}
 		//发送踢出消息
 		c.EnqueueMessage(p)
+		//关闭client
 		c.handleClientClosed()
+		if c.Token != client.Token {
+			model.Logout(c.Token)
+		}
 	}
 }
 

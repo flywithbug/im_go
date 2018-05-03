@@ -52,9 +52,9 @@ func StartClient(port int) {
 			//}
 			p.Operation = OP_AUTH
 			p.SeqId = 1
-		}else if string(line) == "badauth"{
+		}else if string(line) == "auth0"{
 			var auth im.AuthenticationToken
-			auth.Token = "fa9d0cdc-13f0-472c-99c2-e7b0100b8d09"
+			auth.Token = "58b70f11-e280-40d8-8ddd-a3810bd65f7a"
 			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
 			auth.PlatformType = 3
 			p.Ver = 1
@@ -64,9 +64,45 @@ func StartClient(port int) {
 			//}
 			p.Operation = OP_AUTH
 			p.SeqId = 1
-		}else if string(line) == "badauth1"{
+		}else if string(line) == "auth1"{
 			var auth im.AuthenticationToken
-			auth.Token = "badToken"
+			auth.Token = "f5e9362c-bc25-4c0e-8f8a-69397952261c"
+			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
+			auth.PlatformType = 3
+			p.Ver = 1
+			p.Body = auth.ToData()
+			//if err !=nil {
+			//	fmt.Println("Marshal",err)
+			//}
+			p.Operation = OP_AUTH
+			p.SeqId = 1
+		}else if string(line) == "auth2"{
+			var auth im.AuthenticationToken
+			auth.Token = "3cad13d1-af29-4545-a280-2d3c74b0f581"
+			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
+			auth.PlatformType = 3
+			p.Ver = 1
+			p.Body = auth.ToData()
+			//if err !=nil {
+			//	fmt.Println("Marshal",err)
+			//}
+			p.Operation = OP_AUTH
+			p.SeqId = 1
+		}else if string(line) == "auth3"{ //另一个账号
+			var auth im.AuthenticationToken
+			auth.Token = "2c06eaf6-e14a-4d06-ba42-15de3f11741a"
+			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
+			auth.PlatformType = 3
+			p.Ver = 1
+			p.Body = auth.ToData()
+			//if err !=nil {
+			//	fmt.Println("Marshal",err)
+			//}
+			p.Operation = OP_AUTH
+			p.SeqId = 1
+		}else if string(line) == "auth4"{
+			var auth im.AuthenticationToken
+			auth.Token = "3680e5ef-d5e8-4efe-82c0-9ad03cf16025"
 			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
 			auth.PlatformType = 3
 			p.Ver = 1
