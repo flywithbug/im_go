@@ -803,3 +803,23 @@
 2018-05-04 07:47:50 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:2c06eaf6-e14a-4d06-ba42-15de3f11741a appid:10 uid:10002 device id: forbidden:0
 2018-05-04 07:47:52 	 [ INFO] 	 <client_im.go:30>  	 msgBody msg1
 2018-05-04 07:47:52 	 [ INFO] 	 <ack_handle.go:10>  	 ack:%!(EXTRA int32=2)
+2018-05-04 07:50:42 	 [ INFO] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-04 07:50:42 	 [ INFO] 	 <client.go:139>  	 HandleClientClosed client:10001 d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-04 07:50:42 	 [ INFO] 	 <client.go:144>  	 close client userId:d5f75fbc-4f64-4f78-b320-2ca770847800 uid:10001
+2018-05-04 07:50:42 	 [ INFO] 	 <client.go:108>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-04 07:50:43 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58653] 
+
+2018-05-04 07:50:44 	 [ INFO] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-04 07:50:44 	 [ INFO] 	 <client.go:139>  	 HandleClientClosed client:10002 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-05-04 07:50:44 	 [ INFO] 	 <client.go:144>  	 close client userId:80d07eb7-09d5-4332-aa4d-01990a291dfd uid:10002
+2018-05-04 07:50:44 	 [ INFO] 	 <client.go:108>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd socket closed
+2018-05-04 07:50:45 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58656] 
+
+2018-05-04 07:50:48 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 07:50:48 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-04 07:50:51 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:2c06eaf6-e14a-4d06-ba42-15de3f11741a platform:1 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 07:50:51 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:2c06eaf6-e14a-4d06-ba42-15de3f11741a appid:10 uid:10002 device id: forbidden:0
+2018-05-04 07:50:52 	 [ INFO] 	 <client_im.go:30>  	 msgBody msg1
+2018-05-04 07:50:52 	 [ INFO] 	 <ack_handle.go:10>  	 ack:%!(EXTRA int32=2)
+2018-05-04 07:50:55 	 [ INFO] 	 <client_im.go:30>  	 msgBody msg
+2018-05-04 07:50:55 	 [ INFO] 	 <ack_handle.go:10>  	 ack:%!(EXTRA int32=3)

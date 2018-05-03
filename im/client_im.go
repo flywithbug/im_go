@@ -32,6 +32,8 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 		log.Warn("im message sender:%d client uid:%d\n", msg.sender, client.uid)
 		return
 	}
+
+	//消息存入服务器
 	msgId, err := model.SaveIMMessage(msg.sender, msg.receiver, 0, msg.body)
 	if err != nil {
 		log.Warn(err.Error() + "消息存储服务出错")
@@ -57,4 +59,5 @@ func (client *ClientIM) handleImMessageACK(msgId int32, ver int16, seq int32) {
 	ack.Operation = OP_SEND_MSG_ACK
 	ack.Body = ackMsg.ToData()
 	client.EnqueueMessage(ack)
+	//客户端收到回执的msgId 才算消息发送完毕
 }
