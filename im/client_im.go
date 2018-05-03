@@ -3,6 +3,7 @@ package im
 import (
 	log "github.com/flywithbug/log4go"
 	"fmt"
+	"time"
 )
 
 type ClientIM struct {
@@ -27,6 +28,7 @@ func (client *ClientIM)HandleIMMessage(pro *Proto)  {
 		log.Warn("message decode not right")
 		return
 	}
+	msg.timestamp = time.Now().Unix()
 
 	fmt.Println(msg.Description())
 

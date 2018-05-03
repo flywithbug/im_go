@@ -113,3 +113,19 @@
 2018-05-04 04:09:01 	 [DEBUG] 	 <auth_handle.go:86>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
 2018-05-04 04:09:04 	 [DEBUG] 	 <auth_handle.go:33>  	 authToken:2c06eaf6-e14a-4d06-ba42-15de3f11741a platform:1 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
 2018-05-04 04:09:04 	 [DEBUG] 	 <auth_handle.go:86>  	 auth token:2c06eaf6-e14a-4d06-ba42-15de3f11741a appid:10 uid:10002 device id: forbidden:0
+2018-05-04 04:15:14 	 [ INFO] 	 <protocol.go:131>  	 sock read error:read tcp 127.0.0.1:9000->127.0.0.1:56248: i/o timeout
+2018-05-04 04:15:14 	 [ INFO] 	 <client.go:141>  	 HandleClientClosed client:10001 d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-04 04:15:14 	 [ INFO] 	 <client.go:146>  	 close client userId:d5f75fbc-4f64-4f78-b320-2ca770847800 uid:10001
+2018-05-04 04:15:14 	 [ INFO] 	 <client.go:111>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-04 04:15:32 	 [ INFO] 	 <protocol.go:131>  	 sock read error:read tcp 127.0.0.1:9000->127.0.0.1:56251: i/o timeout
+2018-05-04 04:15:32 	 [ INFO] 	 <client.go:141>  	 HandleClientClosed client:10002 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-05-04 04:15:32 	 [ INFO] 	 <client.go:146>  	 close client userId:80d07eb7-09d5-4332-aa4d-01990a291dfd uid:10002
+2018-05-04 04:15:32 	 [ INFO] 	 <client.go:111>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd socket closed
+2018-05-04 04:38:27 	 [ INFO] 	 <main.go:35>  	 *********************************************
+2018-05-04 04:38:27 	 [ INFO] 	 <main.go:36>  	            系统:[IM]版本:[1.0]
+2018-05-04 04:38:27 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-04 04:38:27 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-04 04:38:27 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-04 04:38:27 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-04 04:38:27 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-04 04:38:27 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************

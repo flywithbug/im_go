@@ -19,14 +19,13 @@ const (
 
 //Store in mysql
 type IMMessage struct {
-	MessageBody
 	Id				int				`json:"id"`			//msgId
 	Sender			int				`json:"sender"`
 	Receiver		int				`json:"receiver"`
 	TimeStamp 		int				`json:"time_stamp"`
-
 	Status 			int				`json:"status"`
 	UpdateAt		int				`json:"update_at"`
+	Content 		[]byte			`json:"content"`   //客户端自行解析内容
 }
 
 
@@ -46,27 +45,6 @@ func (msg *IMMessage) Decode(data []byte) error {
 	return err
 }
 
-type MessageBody struct {
-	Content 		string			`json:"content"`
-	MsgId			string			`json:"msg_id"`
-	Type 			int				`json:"type"`
-}
-
-/*
- 转JSON数据
- */
-func (msg *MessageBody) Encode() []byte {
-	s, _ := json.Marshal(msg)
-	return s
-}
-
-/*
- 解析JSON数据
- */
-func (msg *MessageBody) Decode(data []byte) error {
-	err := json.Unmarshal(data, msg)
-	return err
-}
 
 
 func MessageOperation(sender int,receiver int,content string)(msg *IMMessage,err error)  {
@@ -117,7 +95,7 @@ func UpdateMessageACK(msgId string, status int)error  {
 
 func FindeMessages(sender string,status int)([]IMMessage,error)  {
 	var messages []IMMessage
-	rows ,err := Database.Query("SELECT id,sender,msg_id,receiver,content,time_stamp,status,mtype,update_at FROM im_message WHERE sender = ? AND status = ?",sender,status)
+	rows ,err := Database.Query("SELECT id,sender,receiver,content,time_stamp,status,update_at FROM im_message WHERE sender = ? AND status = ?",sender,status)
 	defer rows.Close()
 	if err != nil {
 		log.Error(err.Error())
@@ -125,7 +103,7 @@ func FindeMessages(sender string,status int)([]IMMessage,error)  {
 	}
 	for rows.Next(){
 		var msg IMMessage
-		rows.Scan(&msg.Id,&msg.Sender,&msg.MsgId,&msg.Receiver,&msg.Content,&msg.TimeStamp,&msg.Status,&msg.Type,&msg.UpdateAt)
+		rows.Scan(&msg.Id,&msg.Sender,&msg.Receiver,&msg.Content,&msg.TimeStamp,&msg.Status,&msg.UpdateAt)
 		messages = append(messages, msg)
 	}
 	return messages,nil
