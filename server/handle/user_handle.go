@@ -106,14 +106,14 @@ func handleAddRelation(resp http.ResponseWriter, req *http.Request)  {
 		m := relationShipModel{}
 		if err := json.Unmarshal(body,&m);err == nil{
 			//添加好友
-			if strings.EqualFold(m.method,"add")  {
+			if strings.EqualFold(m.Method,"add")  {
 				_, err = model.AddUserRelation(m.UId,m.FriendId)
 				if err != nil {
 					resp.Write(model.NewIMResponseSimple(500, "Server error", "").Encode())
 				}else {
 					resp.Write(model.NewIMResponseData(common.SaveMapData("msg", "好友请求发送成功"), "").Encode())
 				}
-			}else if strings.EqualFold(m.method,"delete") { //删除好友
+			}else if strings.EqualFold(m.Method,"delete") { //删除好友
 				err = model.DelRelationShip(m.RelationId)
 				if err != nil {
 					resp.Write(model.NewIMResponseSimple(500, "Server error", "").Encode())

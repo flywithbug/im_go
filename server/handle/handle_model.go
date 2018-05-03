@@ -25,7 +25,7 @@ type relationShipModel struct {
 	Status 		int			`json:"status"`
 	RelationId 	string		`json:"relation_id"`
 	Remarks		string		`json:"remarks"`
-	method 		string		`json:"method"`  //add delete
+	Method 		string		`json:"method"`  //add delete
 }
 
 
