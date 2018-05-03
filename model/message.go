@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	_ "database/sql"
 	log "github.com/flywithbug/log4go"
-	"github.com/pborman/uuid"
 	"time"
 )
 
@@ -19,8 +18,6 @@ const (
 type IMMessage struct {
 	Id				int				`json:"id"`
 	MsgId			string			`json:"msg_id"`
-	
-	SMsgId			string			`json:"s_msg_id"`
 	TimeStamp 		int				`json:"time_stamp"`
 	Sender			int				`json:"sender"`
 	Receiver		int				`json:"receiver"`
@@ -49,27 +46,31 @@ func (msg *IMMessage) Decode(data []byte) error {
 }
 
 
-//msgId 客户端生成的uuid  字符串长度36
-func SaveIMMessage(sender ,receiver,msgType,status ,font , content, sMsgId string)(*string, error)  {
-	insStmt ,err := Database.Prepare("INSERT into im_message (msg_id,sender,receiver,mtype,status,font,content,s_msg_id)VALUES (?,?,?,?,?,?,?,?) ")
+//msgId 客户端生成的uuid  字符串长度36 返回数据库Id
+func SaveIMMessage(sender ,receiver,msgType,status ,font , content, msgId string)(int64, error)  {
+	insStmt ,err := Database.Prepare("INSERT into im_message (sender,receiver,mtype,status,font,content,msg_id)VALUES (?,?,?,?,?,?,?,?) ")
 	defer insStmt.Close()
 	if err != nil {
-		return nil,&DatabaseError{"消息服务出错"}
+		return -1,&DatabaseError{"消息服务出错"}
 	}
-	if len(sMsgId) == 0 {
-		return nil,&DatabaseError{"消息id 为空"}
+	if len(msgId) == 0 {
+		return -1,&DatabaseError{"消息id 为空"}
 	}
-	msgId := uuid.New()
-	_,err = insStmt.Exec(msgId,sender,receiver,msgType,status,font,content,sMsgId)
+	res,err := insStmt.Exec(sender,receiver,msgType,status,font,content,msgId)
 	if err != nil{
-		return nil,&DatabaseError{"保存消息错误"}
+		return -1,&DatabaseError{"保存消息错误"}
 	}
-	return &msgId,nil
+	id,err := res.LastInsertId()
+	if err != nil{
+		return -1,&DatabaseError{"后去消息Id错误"}
+	}
+	return id,nil
 }
 
 //发送状态回执
 func UpdateMessageACK(msgId string, status int)error  {
 	updatStmt,err := Database.Prepare("UPDATE im_message SET `status` = ? `update_at`= ? WHERE msg_id = ?")
+	defer updatStmt.Close()
 	if err != nil {
 		log.Error(err.Error())
 		return  &DatabaseError{"服务出错"}

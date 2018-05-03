@@ -1,52 +1,68 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	_ "database/sql"
+	log "github.com/flywithbug/log4go"
+
+	"fmt"
 )
 
-type UserRelation struct {
-	UserId     string    `json:"user_id"`
-	CategoryId string    `json:"category_id"`
-	CreateAt   time.Time `json:"create_at"`
+type UserRelationShip struct {
+	Id 			int			`json:"id"`
+	UId 		int			`json:"u_id"`
+	Status 		int			`json:"status"`
+	RelationId 	string		`json:"relation_id"`
+	FriendId	string		`json:"friend_id"`
+	Remarks		string		`json:"remarks"`
 }
 
-/**
-添加好友关系数据库
-*/
-func AddFriendRelation(tx *sql.Tx, userId string, categoryId string) (int64, error) {
-	insStmt, err := tx.Prepare("insert into im_relation_user_category (user_id, category_id, create_at) VALUES (?, ?, ?)")
+func AddUserRelation(uId int,friendId int)(int64,error)  {
+	inStmt,err := Database.Prepare("Replace INTO im_relationship SET relation_id = ?,u_id = ?,status = ?,friend_id = ?")
+	defer inStmt.Close()
 	if err != nil {
-		return -1, &DatabaseError{"添加好友关系数据库处理错误"}
+		log.Error(err.Error())
+		return -1 ,&DatabaseError{"服务错误"}
 	}
-	defer insStmt.Close()
-	res, err := insStmt.Exec(userId, categoryId, time.Now().Format("2006-01-02 15:04:05"))
+	relationId := fmt.Sprintf("%d-%d",uId,friendId)
+	res,err := inStmt.Exec(relationId,uId,0,friendId)
 	if err != nil {
-		return -1, &DatabaseError{"保存好友分类记录错误"}
+		return -1 ,&DatabaseError{"服务错误"}
 	}
-	num, err := res.RowsAffected()
+	id,err := res.LastInsertId()
 	if err != nil {
-		return -1, &DatabaseError{"读取保存好友分类记录影响行数错误"}
+		return -1 ,&DatabaseError{"服务错误"}
 	}
-	return num, nil
+	return id,nil
 }
 
-/**
-删除好友关系数据库
-*/
-func DelFriendRelation(userId string, categoryId string) (int64, error) {
-	delStmt, err := Database.Prepare("delete from im_relation_user_category where user_id=? and category_id=? ")
+func UpdateRelationRemark(relationId ,remark string)error  {
+	updateStmt,err := Database.Prepare("UPDATE im_relationship SET `remark` = ? WHERE relation_id = ?")
+	defer updateStmt.Close()
 	if err != nil {
-		return -1, &DatabaseError{"删除好友关系数据库处理错误"}
+		log.Error(err.Error())
+		return &DatabaseError{"服务错误"}
 	}
+	_ ,err = updateStmt.Exec(remark,relationId)
+	if err != nil {
+		log.Error(err.Error())
+		return &DatabaseError{"服务错误"}
+	}
+	return nil
+}
+
+func DelRelationShip(relationId string)error  {
+	delStmt ,err := Database.Prepare("DELETE FROM im_relationship WHERE relation_id = ?")
 	defer delStmt.Close()
-	res, err := delStmt.Exec(userId, categoryId)
 	if err != nil {
-		return -1, &DatabaseError{"删除好友关系记录错误"}
+		log.Error(err.Error())
+		return &DatabaseError{"服务错误"}
 	}
-	num, err := res.RowsAffected()
+	_,err = delStmt.Exec(relationId)
 	if err != nil {
-		return -1, &DatabaseError{"读取删除好友关系记录影响行数错误"}
+		log.Error(err.Error())
+		return &DatabaseError{"服务错误"}
 	}
-	return num, nil
+	return nil
 }
+
+
