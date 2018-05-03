@@ -1,5 +1,20 @@
 
 
+## 安装说明
+
+系统需要安装Go和MySQL。
+
+打开配置文件 config.json，修改相关配置。
+
+
+创建数据库webcron，再导入install.sql
+
+	$ mysql -u username -p -D webcron < install.sql
+
+
+
+
+
 
 //api  
 host localhost:8080
