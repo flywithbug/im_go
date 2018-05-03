@@ -109,10 +109,8 @@ func (client *Client)LogOutOtherClient()  {
 		c.EnqueueMessage(p)
 		//关闭client
 		c.handleClientClosed()
-		if c.Token != client.Token {
-			model.Logout(c.Token)
-		}
 	}
+	model.LogoutOthers(client.Token,client.uid)
 }
 
 

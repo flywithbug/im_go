@@ -87,3 +87,21 @@ func Logout(token string)(int64,error) {
 	}
 	return num,nil
 }
+
+func LogoutOthers(token string,uid int64)(int64,error)  {
+	updateStmt,err := Database.Prepare("UPDATE im_login SET `status` = ?,logout_at=? WHERE token<>? AND status = 1 AND u_id = ? ")
+	defer updateStmt.Close()
+	if err != nil {
+		log.Error(err.Error())
+		return -1, &DatabaseError{"服务出错"}
+	}
+	res ,err := updateStmt.Exec(0,time.Now().Format("2006-01-02 15:04:05"),token,uid)
+	if err != nil {
+		return -1, &DatabaseError{"服务出错"}
+	}
+	num, err := res.RowsAffected()
+	if err != nil || num <= 0{
+		return -1, &DatabaseError{"token已失效"}
+	}
+	return num,nil
+}
