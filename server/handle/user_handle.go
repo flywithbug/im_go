@@ -11,8 +11,6 @@ import (
 	log "github.com/flywithbug/log4go"
 )
 
-
-
 // 注册请求
 func handleRegister(resp http.ResponseWriter, req *http.Request) {
 	if req.Method == "POST" {
@@ -94,7 +92,7 @@ func handleQuery(resp http.ResponseWriter, req *http.Request) {
 	三个参数，
 	u_id 好友请求发送者
 	friend_id 接收人
-	method  "add",delete
+	method  "add",delete,"remark" 添加备注
 */
 func handleAddRelation(resp http.ResponseWriter, req *http.Request)  {
 	if req.Method == "POST" {
@@ -111,14 +109,21 @@ func handleAddRelation(resp http.ResponseWriter, req *http.Request)  {
 				if err != nil {
 					resp.Write(model.NewIMResponseSimple(500, "Server error", "").Encode())
 				}else {
-					resp.Write(model.NewIMResponseData(common.SaveMapData("msg", "好友请求发送成功"), "").Encode())
+					resp.Write(model.NewIMResponseData(common.SaveMapData("msg", "success"), "").Encode())
 				}
 			}else if strings.EqualFold(m.Method,"delete") { //删除好友
 				err = model.DelRelationShip(m.RelationId)
 				if err != nil {
 					resp.Write(model.NewIMResponseSimple(500, "Server error", "").Encode())
 				}else {
-					resp.Write(model.NewIMResponseData(common.SaveMapData("msg", "好友请求发送成功"), "").Encode())
+					resp.Write(model.NewIMResponseData(common.SaveMapData("msg", "success"), "").Encode())
+				}
+			}else if strings.EqualFold(m.Method,"remark") { //删除好友
+				err = model.UpdateRelationRemark(m.RelationId,m.Remark)
+				if err != nil {
+					resp.Write(model.NewIMResponseSimple(500, "Server error", "").Encode())
+				}else {
+					resp.Write(model.NewIMResponseData(common.SaveMapData("msg", "success"), "").Encode())
 				}
 			}else {
 				resp.Write(model.NewIMResponseSimple(401, "bad Request", "").Encode())
@@ -132,7 +137,6 @@ func handleAddRelation(resp http.ResponseWriter, req *http.Request)  {
 
 	}
 }
-
 
 
 

@@ -5,6 +5,7 @@ import (
 	log "github.com/flywithbug/log4go"
 
 	"fmt"
+	"im_go/common"
 )
 
 type UserRelationShip struct {
@@ -23,7 +24,7 @@ func AddUserRelation(uId int,friendId int)(int64,error)  {
 		log.Error(err.Error())
 		return -1 ,&DatabaseError{"服务错误"}
 	}
-	relationId := fmt.Sprintf("%d-%d",uId,friendId)
+	relationId := common.Md5(fmt.Sprintf("%d-%d",uId,friendId))
 	res,err := inStmt.Exec(relationId,uId,0,friendId)
 	if err != nil {
 		return -1 ,&DatabaseError{"服务错误"}
