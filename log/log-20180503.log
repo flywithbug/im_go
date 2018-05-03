@@ -773,3 +773,7 @@
 2018-05-03 16:26:53 	 [ INFO] 	 <client.go:144>  	 close client userId: uid:0
 2018-05-03 16:26:53 	 [ WARN] 	 <client.go:58>  	 can't find app route
 2018-05-03 16:26:53 	 [ INFO] 	 <client.go:109>  	 client:  socket closed
+2018-05-03 16:32:39 	 [ INFO] 	 <protocol.go:131>  	 sock read error:read tcp 127.0.0.1:9000->127.0.0.1:59744: i/o timeout
+2018-05-03 16:32:39 	 [ INFO] 	 <client.go:139>  	 HandleClientClosed client:10001 d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-03 16:32:39 	 [ INFO] 	 <client.go:144>  	 close client userId:d5f75fbc-4f64-4f78-b320-2ca770847800 uid:10001
+2018-05-03 16:32:39 	 [ INFO] 	 <client.go:109>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
