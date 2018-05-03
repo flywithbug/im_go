@@ -17,16 +17,15 @@ const (
 //Store in mysql
 type IMMessage struct {
 	Id				int				`json:"id"`
-	MsgId			string			`json:"msg_id"`
-	TimeStamp 		int				`json:"time_stamp"`
 	Sender			int				`json:"sender"`
 	Receiver		int				`json:"receiver"`
 	Status 			int				`json:"status"`
 	Type 			int				`json:"type"`
-	Content 		string			`json:"content"`
-	Font 			string			`json:"font"`
-	
+	TimeStamp 		int				`json:"time_stamp"`
 	UpdateAt		int				`json:"update_at"`
+	Content 		string			`json:"content"`
+	MsgId			string			`json:"msg_id"`
+
 }
 
 /*
@@ -47,16 +46,17 @@ func (msg *IMMessage) Decode(data []byte) error {
 
 
 //msgId 客户端生成的uuid  字符串长度36 返回数据库Id
-func SaveIMMessage(sender ,receiver,msgType,status ,font , content, msgId string)(int64, error)  {
-	insStmt ,err := Database.Prepare("INSERT into im_message (sender,receiver,mtype,status,font,content,msg_id)VALUES (?,?,?,?,?,?,?,?) ")
+func SaveIMMessage(sender ,receiver,msgType,status int, content, msgId string)(int64, error)  {
+	insStmt ,err := Database.Prepare("INSERT into im_message (sender,receiver,mtype,status,content,msg_id,time_stamp)VALUES (?,?,?,?,?,?,?,?) ")
 	defer insStmt.Close()
 	if err != nil {
 		return -1,&DatabaseError{"消息服务出错"}
 	}
-	if len(msgId) == 0 {
-		return -1,&DatabaseError{"消息id 为空"}
+	if len(msgId) == 0 || sender == 0 || receiver == 0{
+		return -1,&DatabaseError{"error parameter"}
 	}
-	res,err := insStmt.Exec(sender,receiver,msgType,status,font,content,msgId)
+	now := time.Now().Unix()
+	res,err := insStmt.Exec(sender,receiver,msgType,status,content,msgId,now)
 	if err != nil{
 		return -1,&DatabaseError{"保存消息错误"}
 	}
@@ -83,9 +83,9 @@ func UpdateMessageACK(msgId string, status int)error  {
 	return nil
 }
 
-func GetMessageWithStatus(sender string,status int)([]IMMessage,error)  {
+func FindeMessages(sender string,status int)([]IMMessage,error)  {
 	var messages []IMMessage
-	rows ,err := Database.Query("SELECT id,sender,msg_id,receiver,content,time_stamp,status,mtype,font,update_at FROM im_message WHERE sender = ? AND status = ?",sender,status)
+	rows ,err := Database.Query("SELECT id,sender,msg_id,receiver,content,time_stamp,status,mtype,update_at FROM im_message WHERE sender = ? AND status = ?",sender,status)
 	defer rows.Close()
 	if err != nil {
 		log.Error(err.Error())
@@ -93,7 +93,7 @@ func GetMessageWithStatus(sender string,status int)([]IMMessage,error)  {
 	}
 	for rows.Next(){
 		var msg IMMessage
-		rows.Scan(&msg.Id,&msg.Sender,&msg.MsgId,&msg.Receiver,&msg.Content,&msg.TimeStamp,&msg.Status,&msg.Type,&msg.Font,&msg.UpdateAt)
+		rows.Scan(&msg.Id,&msg.Sender,&msg.MsgId,&msg.Receiver,&msg.Content,&msg.TimeStamp,&msg.Status,&msg.Type,&msg.UpdateAt)
 		messages = append(messages, msg)
 	}
 	return messages,nil
