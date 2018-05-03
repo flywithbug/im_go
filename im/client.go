@@ -141,15 +141,15 @@ func (client *Client) handleClientClosed() {
 	if close == 0 {
 		atomic.AddInt64(&serverSummary.nconnections, -1)
 		//quit when write goroutine received
-		client.wt <- nil
 		log.Info("close client userId:%s uid:%d",client.userId,client.uid)
 
 		//client.RoomClient.Logout()
 		//client.IMClient.Logout()
-		client.uid = 0
 		client.RemoveClient()
-
+		client.uid = 0
 	}
+
+	client.wt <- nil
 	atomic.StoreInt32(&client.closed, 1)
 }
 

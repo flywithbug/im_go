@@ -471,3 +471,70 @@
 2018-05-03 06:24:33 	 [ INFO] 	 <protocol.go:131>  	 sock read error:read tcp 127.0.0.1:9000->127.0.0.1:55294: use of closed network connection
 2018-05-03 06:24:33 	 [ INFO] 	 <client.go:109>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
 2018-05-03 06:24:33 	 [ INFO] 	 <client.go:133>  	 client write close
+2018-05-03 15:37:11 	 [ INFO] 	 <main.go:35>  	 *********************************************
+2018-05-03 15:37:11 	 [ INFO] 	 <main.go:36>  	            系统:[IM]版本:[1.0]
+2018-05-03 15:37:11 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-03 15:37:11 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-03 15:37:11 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-03 15:37:11 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-03 15:37:11 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-03 15:37:11 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-03 15:37:14 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58628] 
+
+2018-05-03 15:37:17 	 [DEBUG] 	 <auth_handle.go:33>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-03 15:37:17 	 [DEBUG] 	 <auth_handle.go:86>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-03 15:37:21 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58631] 
+
+2018-05-03 15:37:23 	 [DEBUG] 	 <auth_handle.go:33>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-03 15:37:23 	 [DEBUG] 	 <auth_handle.go:86>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-03 15:37:23 	 [ INFO] 	 <client.go:139>  	 HandleClientClosed client:10001 d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-03 15:37:23 	 [ INFO] 	 <client.go:144>  	 close client userId:d5f75fbc-4f64-4f78-b320-2ca770847800 uid:10001
+2018-05-03 15:37:23 	 [ INFO] 	 <protocol.go:131>  	 sock read error:read tcp 127.0.0.1:9000->127.0.0.1:58628: use of closed network connection
+2018-05-03 15:37:23 	 [ INFO] 	 <client.go:109>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-03 15:37:23 	 [ WARN] 	 <client.go:128>  	 msg is dropped
+2018-05-03 15:38:20 	 [ INFO] 	 <main.go:35>  	 *********************************************
+2018-05-03 15:38:20 	 [ INFO] 	 <main.go:36>  	            系统:[IM]版本:[1.0]
+2018-05-03 15:38:20 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-03 15:38:20 	 [ INFO] 	 <config.go:68>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-03 15:38:20 	 [ INFO] 	 <config.go:78>  	 连接数据库成功
+2018-05-03 15:38:20 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
+2018-05-03 15:38:20 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
+2018-05-03 15:38:20 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-03 15:38:23 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58690] 
+
+2018-05-03 15:38:25 	 [DEBUG] 	 <auth_handle.go:33>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-03 15:38:25 	 [DEBUG] 	 <auth_handle.go:86>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-03 15:38:48 	 [DEBUG] 	 <auth_handle.go:33>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-03 15:38:48 	 [ INFO] 	 <auth_handle.go:35>  	 repeat login
+2018-05-03 15:38:51 	 [DEBUG] 	 <auth_handle.go:33>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-03 15:38:51 	 [ INFO] 	 <auth_handle.go:35>  	 repeat login
+2018-05-03 15:38:54 	 [DEBUG] 	 <auth_handle.go:33>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-03 15:38:54 	 [ INFO] 	 <auth_handle.go:35>  	 repeat login
+2018-05-03 15:39:00 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58713] 
+
+2018-05-03 15:39:01 	 [DEBUG] 	 <auth_handle.go:33>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-03 15:39:01 	 [DEBUG] 	 <auth_handle.go:86>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-03 15:39:01 	 [ INFO] 	 <client.go:139>  	 HandleClientClosed client:10001 d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-03 15:39:01 	 [ INFO] 	 <client.go:144>  	 close client userId:d5f75fbc-4f64-4f78-b320-2ca770847800 uid:10001
+2018-05-03 15:39:01 	 [ INFO] 	 <protocol.go:131>  	 sock read error:read tcp 127.0.0.1:9000->127.0.0.1:58690: use of closed network connection
+2018-05-03 15:39:01 	 [ INFO] 	 <client.go:109>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-03 15:39:01 	 [ WARN] 	 <client.go:128>  	 msg is dropped
+2018-05-03 15:39:15 	 [ INFO] 	 <protocol.go:131>  	 sock read error:EOF
+2018-05-03 15:39:15 	 [ INFO] 	 <client.go:139>  	 HandleClientClosed client:10001 d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-03 15:39:15 	 [ INFO] 	 <client.go:144>  	 close client userId:d5f75fbc-4f64-4f78-b320-2ca770847800 uid:10001
+2018-05-03 15:39:15 	 [ INFO] 	 <client.go:109>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-03 15:39:16 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58720] 
+
+2018-05-03 15:39:17 	 [DEBUG] 	 <auth_handle.go:33>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-03 15:39:17 	 [DEBUG] 	 <auth_handle.go:86>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-03 15:39:21 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58723] 
+
+2018-05-03 15:39:22 	 [DEBUG] 	 <auth_handle.go:33>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-03 15:39:22 	 [DEBUG] 	 <auth_handle.go:86>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-03 15:39:22 	 [ INFO] 	 <client.go:139>  	 HandleClientClosed client:10001 d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-03 15:39:22 	 [ INFO] 	 <client.go:144>  	 close client userId:d5f75fbc-4f64-4f78-b320-2ca770847800 uid:10001
+2018-05-03 15:39:22 	 [ INFO] 	 <protocol.go:131>  	 sock read error:read tcp 127.0.0.1:9000->127.0.0.1:58720: use of closed network connection
+2018-05-03 15:39:22 	 [ INFO] 	 <client.go:109>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-03 15:39:22 	 [ WARN] 	 <client.go:128>  	 msg is dropped
+2018-05-03 15:39:23 	 [DEBUG] 	 <auth_handle.go:33>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-03 15:39:23 	 [ INFO] 	 <auth_handle.go:35>  	 repeat login
