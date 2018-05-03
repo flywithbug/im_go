@@ -11,16 +11,18 @@ type MessageIMInterface interface {
 	FromData(buff []byte) bool
 }
 
-const RawMessageHeaderLen = 20
+const RawMessageHeaderLen = 16
 
 //此模型只作为消息转发，存储解析 在model库中操作
 type Message struct {
 	sender 		int32   //4
 	receiver 	int32
-	timestamp 	int64   //8
+	timestamp 	int32   //4
 	msgId		int32
 	body 		[]byte
 }
+
+
 func (msg *Message) Description() string {
 	return fmt.Sprintf("sender:%d,receiver:%d,timestamp:%d,msgId:%d,body:%s",msg.sender,msg.receiver,
 		msg.timestamp,msg.msgId,msg.body)

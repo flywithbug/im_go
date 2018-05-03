@@ -28,7 +28,7 @@ type Connection struct {
 	online 		bool
 
 	appid      	int64  //登录用户所属AppId
-	uid        	int64  //登录用户的数据Id
+	uid        	int32  //登录用户的数据Id
 	deviceId   	string //设备唯一Id
 	platformId 	int8   //设备类型Id
 	userId     	string //登录用户的UserId

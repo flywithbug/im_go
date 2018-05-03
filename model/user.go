@@ -135,7 +135,7 @@ func SaveUser(appId int64,account string, password string, nick string, avatar s
 /*
  修改用户状态  //考虑废弃用户登录态更新
 */
-func UpdateUserStatus(u_id int64, status int) (int64, error) {
+func UpdateUserStatus(u_id int32, status int) (int64, error) {
 	updateStmt, _ := Database.Prepare("UPDATE im_user SET `status` = ? WHERE id =?")
 	defer updateStmt.Close()
 	res, err := updateStmt.Exec(status, u_id)

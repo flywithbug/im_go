@@ -17,8 +17,6 @@ var routers = map[string]RouterHandler{
 	"/query": handleQuery,   //根据昵称查询用户列表
 	"/relation":handleAddRelation,// 添加好友
 
-
-
 }
 
 func RegisterRouters(prefix []string) {

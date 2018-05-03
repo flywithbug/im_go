@@ -8,14 +8,14 @@ import (
 type Route struct {
 	appid        int64
 	mutex        sync.Mutex
-	clients      map[int64]ClientSet
+	clients      map[int32]ClientSet
 	room_clients map[int64]ClientSet
 }
 
 func NewRoute(appid int64) *Route {
 	route := new(Route)
 	route.appid = appid
-	route.clients = make(map[int64]ClientSet)
+	route.clients = make(map[int32]ClientSet)
 	route.room_clients = make(map[int64]ClientSet)
 	return route
 }
@@ -83,7 +83,7 @@ func (route *Route) RemoveClient(client *Client) bool {
 	return false
 }
 
-func (route *Route) FindClientSet(uid int64) ClientSet {
+func (route *Route) FindClientSet(uid int32) ClientSet {
 	route.mutex.Lock()
 	defer route.mutex.Unlock()
 
@@ -95,7 +95,7 @@ func (route *Route) FindClientSet(uid int64) ClientSet {
 	}
 }
 
-func (route *Route) IsOnline(uid int64) bool {
+func (route *Route) IsOnline(uid int32) bool {
 	route.mutex.Lock()
 	defer route.mutex.Unlock()
 

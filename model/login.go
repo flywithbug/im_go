@@ -20,7 +20,7 @@ type Login struct {
 	Status 	  	int			`json:"status"`		//status 1 已登录，0表示退出登录
 	Forbidden 	int32		`json:"forbidden"`  //false 表示未禁言
 	AppId    	int64		`json:"app_id"`
-	UId      	int64		`json:"u_id"`
+	UId      	int32		`json:"u_id"`
 }
 
 
@@ -88,7 +88,7 @@ func Logout(token string)(int64,error) {
 	return num,nil
 }
 
-func LogoutOthers(token string,uid int64)(int64,error)  {
+func LogoutOthers(token string,uid int32)(int64,error)  {
 	updateStmt,err := Database.Prepare("UPDATE im_login SET `status` = ?,logout_at=? WHERE token<>? AND status = 1 AND u_id = ? ")
 	defer updateStmt.Close()
 	if err != nil {

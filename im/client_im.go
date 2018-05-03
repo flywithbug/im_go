@@ -2,8 +2,8 @@ package im
 
 import (
 	log "github.com/flywithbug/log4go"
+	"im_go/model"
 	"fmt"
-	"time"
 )
 
 type ClientIM struct {
@@ -28,11 +28,21 @@ func (client *ClientIM)HandleIMMessage(pro *Proto)  {
 		log.Warn("message decode not right")
 		return
 	}
-	msg.timestamp = time.Now().Unix()
+	if msg.sender != client.uid {
+		log.Warn("im message sender:%d client uid:%d\n", msg.sender, client.uid)
+		return
+	}
+	msgId, err := model.SaveIMMessage(msg.sender,msg.receiver,0,msg.body)
+	if err != nil {
+		log.Warn(err.Error()+"消息存储服务出错")
+		return
+	}
+	msg.msgId = msgId
 
-	fmt.Println(msg.Description())
 
+	
+}
 
-
+func (client *ClientIM)handleImMessageACK(msg *Message,ver int16)  {
 
 }

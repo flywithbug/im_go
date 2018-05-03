@@ -5,6 +5,7 @@ import (
 	_ "database/sql"
 	log "github.com/flywithbug/log4go"
 	"time"
+	"fmt"
 )
 
 
@@ -17,6 +18,11 @@ type IMMessage struct {
 	Status 			int				`json:"status"`
 	UpdateAt		int				`json:"update_at"`
 	Content 		[]byte			`json:"content"`   //客户端自行解析内容
+}
+
+func (msg *IMMessage) Description() string {
+	return fmt.Sprintf("sender:%d,receiver:%d,timestamp:%d,msgId:%d,body:%s",msg.Sender,msg.Receiver,
+		msg.TimeStamp,msg.Id,msg.Content)
 }
 
 
@@ -39,28 +45,30 @@ func (msg *IMMessage) Decode(data []byte) error {
 
 
 //msgId 客户端生成的uuid  字符串长度36 返回数据库Id
-func SaveIMMessage(sender, receiver, msgId, timestamp int, body []byte)(int64, error)  {
-	insStmt ,err := Database.Prepare("INSERT into im_message (sender,receive,content,time_stamp,msg_id)VALUES (?,?,?,?,?) ")
+func SaveIMMessage(sender, receiver, timestamp int32, body []byte)(int32, error)  {
+	insStmt ,err := Database.Prepare("INSERT into im_message (sender,receiver,content,time_stamp)VALUES (?, ?, ?, ?) ")
 	defer insStmt.Close()
 	if err != nil {
+		log.Error(err.Error())
 		return -1,&DatabaseError{"消息服务出错"}
 	}
-	if msgId == 0 || sender == 0 || receiver == 0{
+	if sender == 0 || receiver == 0{
 		return -1,&DatabaseError{"error parameter"}
 	}
 	if timestamp == 0 {
-		timestamp = int(time.Now().Unix())
-
+		timestamp = int32(time.Now().Unix())
 	}
-	res,err := insStmt.Exec(sender,receiver,body,timestamp,msgId)
+	res,err := insStmt.Exec(sender,receiver,body,timestamp)
 	if err != nil{
+		log.Error(err.Error())
 		return -1,&DatabaseError{"保存消息错误"}
 	}
 	id,err := res.LastInsertId()
 	if err != nil{
+		log.Error(err.Error())
 		return -1,&DatabaseError{"后去消息Id错误"}
 	}
-	return id,nil
+	return int32(id),nil
 }
 
 //发送状态回执
@@ -79,7 +87,7 @@ func UpdateMessageACK(msgId int, status int)error  {
 	return nil
 }
 
-func FindeMessages(sender int,status int)([]IMMessage,error)  {
+func FindeMessages(sender int32,status int)([]IMMessage,error)  {
 	var messages []IMMessage
 	rows ,err := Database.Query("SELECT id,sender,receiver,content,time_stamp,status,update_at FROM im_message WHERE sender = ? AND status = ?",sender,status)
 	defer rows.Close()
