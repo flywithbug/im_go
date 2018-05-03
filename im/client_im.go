@@ -27,6 +27,7 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 		log.Warn("message decode not right")
 		return
 	}
+	log.Info("msgBody %s", msg.body)
 	if msg.sender != client.uid {
 		log.Warn("im message sender:%d client uid:%d\n", msg.sender, client.uid)
 		return

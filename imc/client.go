@@ -6,7 +6,6 @@ import (
 	"os"
 	"fmt"
 	"im_go/im"
-	"time"
 )
 
 func StartClient(port int) {
@@ -36,6 +35,10 @@ func StartClient(port int) {
 				var ack MessageACK
 				ack.FromData(msg.Body)
 				fmt.Println(ack.Description(),msg.Description())
+			case OP_SEND_MSG:
+				var msg1 Message
+				msg1.FromData(msg.Body)
+				fmt.Println("receiveMsg:",msg1.Description(),msg.Description())
 			}
 		}
 	}()
@@ -62,7 +65,6 @@ func StartClient(port int) {
 				sender:10001,
 				msgId:2323232,
 				body:[]byte("msg"),
-				timestamp:time.Now().Unix(),
 			}
 			p.Ver = 1
 			p.Body = msg.ToData()
@@ -87,7 +89,6 @@ func StartClient(port int) {
 				sender:10002,
 				msgId:20020,
 				body:[]byte("msg1"),
-				timestamp:time.Now().Unix(),
 			}
 			p.Ver = 1
 			p.Operation = OP_SEND_MSG
