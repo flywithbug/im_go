@@ -39,6 +39,14 @@ func StartClient(port int) {
 				var msg1 Message
 				msg1.FromData(msg.Body)
 				fmt.Println("receiveMsg:",msg1.Description(),msg.Description())
+
+				var ack MessageACK
+				ack.msgId = msg1.msgId
+				ack.seq = msg.SeqId
+				msg.Body = ack.ToData()
+				msg.Operation = OP_SEND_MSG_ACK
+				SendMessage(conn,msg)
+
 			}
 		}
 	}()

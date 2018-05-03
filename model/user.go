@@ -59,6 +59,7 @@ func CheckAccount(account string) (int, error) {
 	var num int
 	rows, err := Database.Query("select count(*) from im_user where account=? ", account)
 	if err != nil {
+		log.Error(err.Error())
 		return -1, &DatabaseError{"根据账号查询用户错误"}
 	}
 	defer rows.Close()
@@ -76,6 +77,7 @@ func GetUserByUserId(userId string) (*User, error) {
 	row := Database.QueryRow("select id, app_id, user_id, nick, status, sign, avatar, create_at, update_at from im_user where user_id = ?", userId)
 	err := row.Scan(&user.Id,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
 	if err != nil {
+		log.Error(err.Error())
 		return nil, &DatabaseError{"根据ID查询用户-将结果映射至对象错误"}
 	}
 	return &user, err
@@ -89,6 +91,7 @@ func GetUserByToken(token string) (*User, error) {
 	row := Database.QueryRow("select u.id, u.app_id,u.user_id,u.nick, u.status, u.sign, u.avatar, u.create_at, u.update_at from  im_user u left join im_login l on u.user_id=l.user_id where l.token=?", token)
 	err := row.Scan(&user.Id,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
 	if err != nil {
+		log.Error(err.Error())
 		return nil, &DatabaseError{"根据Token查询用户-将结果映射至对象错误"}
 	}
 	return &user, nil
@@ -102,12 +105,14 @@ func LoginUser(account string, password string) (*User, error) {
 	var user User
 	rows, err := Database.Query("select app_id, id , user_id, nick, status, sign, avatar, create_at, update_at,forbidden from im_user where account=? and password=? ", account, password)
 	if err != nil {
+		log.Error(err.Error())
 		return nil, &DatabaseError{"根据账号及密码查询用户错误"}
 	}
 	defer rows.Close()
 	for rows.Next() {
 		err := rows.Scan(&user.appId,&user.Id ,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt,&user.Forbidden)
 		if err != nil {
+			log.Error(err.Error())
 			return nil, &DatabaseError{"根据账号及密码查询结果映射至对象错误"}
 		}
 	}
@@ -120,6 +125,7 @@ func LoginUser(account string, password string) (*User, error) {
 func SaveUser(appId int64,account string, password string, nick string, avatar string) (*string, error) {
 	insStmt, err := Database.Prepare("insert into im_user (user_id,app_id, account, password, nick, avatar, create_at, update_at) VALUES (?,?, ?, ?, ?, ?, ?, ?)")
 	if err != nil {
+		log.Error(err.Error())
 		return nil, &DatabaseError{"保存用户数据库处理错误"}
 	}
 	defer insStmt.Close()
@@ -127,6 +133,7 @@ func SaveUser(appId int64,account string, password string, nick string, avatar s
 	uid := uuid.New()
 	_, err = insStmt.Exec(uid, appId , account, password, nick, avatar, now, now)
 	if err != nil {
+		log.Error(err.Error())
 		return nil, &DatabaseError{"保存用户记录错误"}
 	}
 	return &uid, nil
@@ -136,12 +143,18 @@ func SaveUser(appId int64,account string, password string, nick string, avatar s
  修改用户状态  //考虑废弃用户登录态更新
 */
 func UpdateUserStatus(u_id int32, status int) (int64, error) {
-	updateStmt, _ := Database.Prepare("UPDATE im_user SET `status` = ? WHERE id =?")
+	updateStmt, err := Database.Prepare("UPDATE im_user SET `status` = ? WHERE id =?")
+	if err != nil {
+		log.Error(err.Error())
+		return -1, &DatabaseError{"服务出错"}
+	}
 	defer updateStmt.Close()
 	res, err := updateStmt.Exec(status, u_id)
 	if err != nil {
+		log.Error(err.Error())
 		return -1, &DatabaseError{"更新用户状态错误"}
 	}
+
 	num, err := res.RowsAffected()
 	if err != nil {
 		return -1, &DatabaseError{"读取修改用户状态影响行数错误"}

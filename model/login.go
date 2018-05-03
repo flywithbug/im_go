@@ -55,7 +55,6 @@ func SaveLogin(appId int64,uId int64 ,userId string, token string, ip string,for
 		return &DatabaseError{"服务错误"}
 	}
 	defer insStmt.Close()
-
 	status := 1
 	_, err := insStmt.Exec(appId,uId, userId, token, time.Now().Format("2006-01-02 15:04:05"), ip,status,forbidden)
 	if err != nil {
@@ -71,12 +70,11 @@ func SaveLogin(appId int64,uId int64 ,userId string, token string, ip string,for
 */
 func Logout(token string)(int64,error) {
 	updateStmt,err := Database.Prepare("UPDATE im_login SET `status` = ?,logout_at=? WHERE token=? AND status = 1")
-	defer updateStmt.Close()
 	if err != nil {
 		log.Error(err.Error())
 		return -1, &DatabaseError{"服务出错"}
 	}
-
+	defer updateStmt.Close()
 	res ,err := updateStmt.Exec(0,time.Now().Format("2006-01-02 15:04:05"),token)
 	if err != nil {
 		return -1, &DatabaseError{"服务出错"}
@@ -90,11 +88,11 @@ func Logout(token string)(int64,error) {
 
 func LogoutOthers(token string,uid int32)(int64,error)  {
 	updateStmt,err := Database.Prepare("UPDATE im_login SET `status` = ?,logout_at=? WHERE token<>? AND status = 1 AND u_id = ? ")
-	defer updateStmt.Close()
 	if err != nil {
 		log.Error(err.Error())
 		return -1, &DatabaseError{"服务出错"}
 	}
+	defer updateStmt.Close()
 	res ,err := updateStmt.Exec(0,time.Now().Format("2006-01-02 15:04:05"),token,uid)
 	if err != nil {
 		return -1, &DatabaseError{"服务出错"}

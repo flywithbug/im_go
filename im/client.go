@@ -38,8 +38,8 @@ func (client *Client) handleMessage(pro *Proto) {
 	switch pro.Operation {
 	case OP_AUTH:
 		client.HandleAuthToken(pro)
-	case OP_HEARTBEAT:
-		//TODO
+	case OP_SEND_MSG_ACK: //客户端返回的ack
+		client.HandleACK(pro)
 	}
 	client.ClientIM.handleMessage(pro)
 

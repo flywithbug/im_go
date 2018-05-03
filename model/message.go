@@ -47,11 +47,11 @@ func (msg *IMMessage) Decode(data []byte) error {
 //msgId 客户端生成的uuid  字符串长度36 返回数据库Id
 func SaveIMMessage(sender, receiver, timestamp int32, body []byte)(int32, error)  {
 	insStmt ,err := Database.Prepare("INSERT into im_message (sender,receiver,content,time_stamp)VALUES (?, ?, ?, ?) ")
-	defer insStmt.Close()
 	if err != nil {
 		log.Error(err.Error())
 		return -1,&DatabaseError{"消息服务出错"}
 	}
+	defer insStmt.Close()
 	if sender == 0 || receiver == 0{
 		return -1,&DatabaseError{"error parameter"}
 	}
@@ -72,14 +72,18 @@ func SaveIMMessage(sender, receiver, timestamp int32, body []byte)(int32, error)
 }
 
 //发送状态回执
-func UpdateMessageACK(msgId int, status int)error  {
-	updatStmt,err := Database.Prepare("UPDATE im_message SET `status` = ? `update_at`= ? WHERE msg_id = ?")
-	defer updatStmt.Close()
+func UpdateMessageACK(msgId int32, status int)error  {
+	updatStmt,err := Database.Prepare("UPDATE im_message SET `status` = ? ,`update_at`= ? WHERE id = ?")
 	if err != nil {
 		log.Error(err.Error())
 		return  &DatabaseError{"服务出错"}
 	}
+	defer updatStmt.Close()
 	res,err := updatStmt.Exec(status,time.Now().Unix(),msgId)
+	if err != nil {
+		log.Error(err.Error())
+		return  &DatabaseError{"服务出错"}
+	}
 	num, err := res.RowsAffected()
 	if err != nil || num <= 0{
 		return &DatabaseError{"未有记录被修改"}

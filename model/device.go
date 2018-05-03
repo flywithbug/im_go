@@ -21,6 +21,7 @@ func SaveDeviceInfo(token ,deviceId,description string,platformType int)error  {
 		err = errors.New("服务错误")
 		return err
 	}
+	defer stmt.Close()
 	_,err = stmt.Exec(deviceId,token,platformType,description)
 	if err!= nil {
 		log.Warn(err.Error())
