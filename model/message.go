@@ -85,7 +85,7 @@ func UpdateMessageACK(msgId string, status int)error  {
 
 func GetMessageWithStatus(sender string,status int)([]IMMessage,error)  {
 	var messages []IMMessage
-	rows ,err := Database.Query("SELECT * FROM im_message WHERE sender = ? AND status = ?",sender,status)
+	rows ,err := Database.Query("SELECT id,sender,msg_id,receiver,content,time_stamp,status,mtype,font,update_at FROM im_message WHERE sender = ? AND status = ?",sender,status)
 	defer rows.Close()
 	if err != nil {
 		log.Error(err.Error())
@@ -93,7 +93,7 @@ func GetMessageWithStatus(sender string,status int)([]IMMessage,error)  {
 	}
 	for rows.Next(){
 		var msg IMMessage
-		rows.Scan(&msg.Id,&msg.Sender,&msg.MsgId,&msg.SMsgId,&msg.Receiver,&msg.Content,&msg.TimeStamp,&msg.TimeStamp,&msg.Status,&msg.Type,&msg.Font,&msg.UpdateAt)
+		rows.Scan(&msg.Id,&msg.Sender,&msg.MsgId,&msg.Receiver,&msg.Content,&msg.TimeStamp,&msg.Status,&msg.Type,&msg.Font,&msg.UpdateAt)
 		messages = append(messages, msg)
 	}
 	return messages,nil
