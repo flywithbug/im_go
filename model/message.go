@@ -7,12 +7,15 @@ import (
 	"time"
 )
 
+
+
 const (
 	IMMessageTypeText	= 1
 	IMMessageTypePhoto	= 2
 	IMMessageTypeAudio	= 3
 	IMMessageTypeVideo	= 4
 )
+
 
 //Store in mysql
 type IMMessage struct {
@@ -25,7 +28,6 @@ type IMMessage struct {
 	UpdateAt		int				`json:"update_at"`
 	Content 		string			`json:"content"`
 	MsgId			string			`json:"msg_id"`
-
 }
 
 /*
@@ -42,6 +44,13 @@ func (msg *IMMessage) Encode() []byte {
 func (msg *IMMessage) Decode(data []byte) error {
 	err := json.Unmarshal(data, msg)
 	return err
+}
+
+func MessageOperation(sender int,receiver int,content string)(msg *IMMessage,err error)  {
+
+
+
+	return
 }
 
 
