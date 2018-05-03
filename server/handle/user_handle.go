@@ -134,11 +134,8 @@ func handleAddRelation(resp http.ResponseWriter, req *http.Request)  {
 		}
 	}else {
 		resp.Write(model.NewIMResponseSimple(404, "Not Found: "+req.Method, "").Encode())
-
 	}
 }
-
-
 
 
 
