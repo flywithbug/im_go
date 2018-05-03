@@ -3,7 +3,6 @@ package im
 import (
 	log "github.com/flywithbug/log4go"
 	"im_go/model"
-	"fmt"
 )
 
 type ClientIM struct {
@@ -37,12 +36,16 @@ func (client *ClientIM)HandleIMMessage(pro *Proto)  {
 		log.Warn(err.Error()+"消息存储服务出错")
 		return
 	}
+
 	msg.msgId = msgId
 
 
-	
+
 }
 
 func (client *ClientIM)handleImMessageACK(msg *Message,ver int16)  {
+	ack := new(Proto)
+	ack.Ver = ver
+	ack.Operation = OP_SEND_MSG_ACK
 
 }

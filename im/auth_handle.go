@@ -37,7 +37,7 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 	}
 	//call back Body
 	var authStatus AuthenticationStatus
-	pro.Operation = OP_AUTH_REPLY
+	pro.Operation = OP_AUTH_ACK
 	login, err := model.GetLoginByToken(auth.Token)
 	if err != nil {
 		log.Error(err.Error())
@@ -97,7 +97,7 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 
 func (client *Client)LogOutOtherClient()  {
 	p := new(Proto)
-	p.Operation = OP_DISCONNECT_REPLY
+	p.Operation = OP_DISCONNECT_ACK
 	route := appRoute.FindRoute(client.appid)
 	clients := route.FindClientSet(client.uid)
 	//可以扩展多端同时在线。

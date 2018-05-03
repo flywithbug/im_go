@@ -39,7 +39,7 @@ func (client *Client) handleMessage(pro *Proto) {
 	switch pro.Operation {
 	case OP_AUTH:
 		client.HandleAuthToken(pro)
-	case OP_SEND_MSG_REPLY:
+	case OP_SEND_MSG_ACK:
 		//消息回执
 		client.HandleACK(pro)
 	}
