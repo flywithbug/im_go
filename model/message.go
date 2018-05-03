@@ -8,15 +8,6 @@ import (
 )
 
 
-
-const (
-	IMMessageTypeText	= 1
-	IMMessageTypePhoto	= 2
-	IMMessageTypeAudio	= 3
-	IMMessageTypeVideo	= 4
-)
-
-
 //Store in mysql
 type IMMessage struct {
 	Id				int				`json:"id"`			//msgId
@@ -47,26 +38,21 @@ func (msg *IMMessage) Decode(data []byte) error {
 
 
 
-func MessageOperation(sender int,receiver int,content string)(msg *IMMessage,err error)  {
-
-
-
-	return
-}
-
-
 //msgId 客户端生成的uuid  字符串长度36 返回数据库Id
-func SaveIMMessage(sender ,receiver,msgType,status int, content, msgId string)(int64, error)  {
-	insStmt ,err := Database.Prepare("INSERT into im_message (sender,receiver,mtype,status,content,msg_id,time_stamp)VALUES (?,?,?,?,?,?,?,?) ")
+func SaveIMMessage(sender, receiver, msgId, timestamp int, body []byte)(int64, error)  {
+	insStmt ,err := Database.Prepare("INSERT into im_message (sender,receive,content,time_stamp,msg_id)VALUES (?,?,?,?,?) ")
 	defer insStmt.Close()
 	if err != nil {
 		return -1,&DatabaseError{"消息服务出错"}
 	}
-	if len(msgId) == 0 || sender == 0 || receiver == 0{
+	if msgId == 0 || sender == 0 || receiver == 0{
 		return -1,&DatabaseError{"error parameter"}
 	}
-	now := time.Now().Unix()
-	res,err := insStmt.Exec(sender,receiver,msgType,status,content,msgId,now)
+	if timestamp == 0 {
+		timestamp = int(time.Now().Unix())
+
+	}
+	res,err := insStmt.Exec(sender,receiver,body,timestamp,msgId)
 	if err != nil{
 		return -1,&DatabaseError{"保存消息错误"}
 	}
@@ -78,7 +64,7 @@ func SaveIMMessage(sender ,receiver,msgType,status int, content, msgId string)(i
 }
 
 //发送状态回执
-func UpdateMessageACK(msgId string, status int)error  {
+func UpdateMessageACK(msgId int, status int)error  {
 	updatStmt,err := Database.Prepare("UPDATE im_message SET `status` = ? `update_at`= ? WHERE msg_id = ?")
 	defer updatStmt.Close()
 	if err != nil {
@@ -93,7 +79,7 @@ func UpdateMessageACK(msgId string, status int)error  {
 	return nil
 }
 
-func FindeMessages(sender string,status int)([]IMMessage,error)  {
+func FindeMessages(sender int,status int)([]IMMessage,error)  {
 	var messages []IMMessage
 	rows ,err := Database.Query("SELECT id,sender,receiver,content,time_stamp,status,update_at FROM im_message WHERE sender = ? AND status = ?",sender,status)
 	defer rows.Close()
