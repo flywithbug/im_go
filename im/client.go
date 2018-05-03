@@ -6,6 +6,7 @@ import (
 	"sync/atomic"
 	"time"
 	"io"
+	"im_go/model"
 )
 
 type Client struct {
@@ -100,6 +101,7 @@ func (client *Client) Read() {
 func (client *Client) Write() {
 	running := true
 	seq := 0
+
 	for running {
 		select {
 		case pro := <- client.wt:
@@ -138,17 +140,18 @@ func (client *Client) handleClientClosed() {
 		atomic.AddInt64(&serverSummary.nclients,-1)
 		log.Info("HandleClientClosed client:%d %s",client.uid,client.userId)
 	}
-	if close == 0 {
+	if close == 0 && client.uid != 0{
 		atomic.AddInt64(&serverSummary.nconnections, -1)
 		//quit when write goroutine received
 		log.Info("close client userId:%s uid:%d",client.userId,client.uid)
-
 		//client.RoomClient.Logout()
 		//client.IMClient.Logout()
 		client.RemoveClient()
+		//数据库登录态置为0 ）
+		model.UpdateUserStatus(client.uid,0)
+
 		client.uid = 0
 	}
-
 	client.wt <- nil
 	atomic.StoreInt32(&client.closed, 1)
 }

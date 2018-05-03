@@ -8,22 +8,27 @@ import (
 	"fmt"
 )
 
-/*
-用户对象
-*/
-type User struct {
+type SimpleUser struct {
 	Id       	int64     	`json:"id"`        //id
 	appId    	int64	   	`json:"app_id"`
 
 	UserId 	 	string	   	`json:"user_id"`   //uuid生成
 	Nick     	string    	`json:"nick"`      //昵称
-	Status   	string    	`json:"status"`    //状态 0离线,1在线
+	Status   	int    		`json:"status"`    //状态 0离线,1在线
 	Sign     	string    	`json:"sign"`      //个性签名
 	Avatar   	string    	`json:"avatar"`    //头像
+	Forbidden 	int32		`json:"forbidden"`
+
+}
+
+/*
+用户对象
+*/
+type User struct {
+	SimpleUser
 	createAt 	time.Time 	`json:"create_at"` //注册日期
 	updateAt 	time.Time 	`json:"update_at"` //更新日期
 	Token    	string    	`json:"token"`
-	Forbidden 	int32		`json:"forbidden"`
 }
 
 func (use *User)GetAppId()int64  {
@@ -89,23 +94,6 @@ func GetUserByToken(token string) (*User, error) {
 	return &user, nil
 }
 
-/*
- 根据分组获取好友列表
-*/
-func GetBuddiesByCategories(categories []Category) ([]Category, error) {
-	for k, v := range categories {
-		rows, err := Database.Query("select u.id, u.nick, u.status, u.sign, u.avatar, u.create_at, u.update_at from im_user u left join im_relation_user_category ug on u.id=ug.user_id where ug.category_id=?", v.Id)
-		if err != nil {
-			return categories, &DatabaseError{"根据分类查询好友列表错误"}
-		}
-		for rows.Next() {
-			var user User
-			rows.Scan(&user.Id, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
-			categories[k].AddUser(user)
-		}
-	}
-	return categories, nil
-}
 
 /*
  登录账号
@@ -141,18 +129,16 @@ func SaveUser(appId int64,account string, password string, nick string, avatar s
 	if err != nil {
 		return nil, &DatabaseError{"保存用户记录错误"}
 	}
-	// 添加默认分类
-	AddCategory(uid, "我的好友")
 	return &uid, nil
 }
 
 /*
- 修改用户状态
+ 修改用户状态  //考虑废弃用户登录态更新
 */
-func UpdateUserStatus(userId string, status string) (int64, error) {
+func UpdateUserStatus(u_id int64, status int) (int64, error) {
 	updateStmt, _ := Database.Prepare("UPDATE im_user SET `status` = ? WHERE id =?")
 	defer updateStmt.Close()
-	res, err := updateStmt.Exec(status, userId)
+	res, err := updateStmt.Exec(status, u_id)
 	if err != nil {
 		return -1, &DatabaseError{"更新用户状态错误"}
 	}
@@ -206,21 +192,17 @@ func GetBuddiesKeyById(id string) ([]string, error) {
 /*
  根据条件查询获取好友列表
 */
-func QueryUser(clumn string, reg string, data string) ([]User, error) {
-	var users []User
-	sql := "select u.id, u.nick, u.status, u.sign, u.avatar, u.create_at, u.update_at from im_user u where %s %s %s "
+func QueryUser(nick string) ([]SimpleUser, error) {
+	var users []SimpleUser
 
-	if reg == "like" {
-		data = "'%" + data + "%'"
-	}
-	sql = fmt.Sprintf(sql, clumn, reg, data)
-	rows, err := Database.Query(sql)
+	rows, err := Database.Query("SELECT id,user_id,nick,status,sign,avatar,forbidden FROM im_user WHERE nick LIKE ?",nick)
 	if err != nil {
-		return users, &DatabaseError{"根据" + clumn + "查询用户错误"}
+		return users, &DatabaseError{"根据查询用户错误"}
 	}
 	for rows.Next() {
-		var user User
-		rows.Scan(&user.Id, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
+		var user SimpleUser
+		rows.Scan(&user.Id,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar,&user.Forbidden)
+		fmt.Println("scan user:",user)
 		users = append(users, user)
 	}
 	return users, nil

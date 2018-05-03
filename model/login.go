@@ -7,8 +7,8 @@ import (
 )
 
 const (
-	STATUS_LOGIN  = 	int8(1)
-	STATUS_LOGOUT  = 	int8(2)
+	STATUS_LOGIN  = 	1
+	STATUS_LOGOUT  = 	2
 )
 
 type Login struct {
@@ -17,7 +17,7 @@ type Login struct {
 	Token     	string    	`json:"token"`      // 用户TOKEN
 	LoginAt   	time.Time 	`json:"login_at"`   // 登录日期
 	LoginIp   	string    	`json:"login_ip"`   // 登录IP
-	Status 	  	int8		`json:"status"`		//status 1 已登录，0表示退出登录
+	Status 	  	int			`json:"status"`		//status 1 已登录，0表示退出登录
 	Forbidden 	int32		`json:"forbidden"`  //false 表示未禁言
 	AppId    	int64		`json:"app_id"`
 	UId      	int64		`json:"u_id"`

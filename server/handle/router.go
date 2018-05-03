@@ -16,15 +16,8 @@ var routers = map[string]RouterHandler{
 	"/logout":handleLogout,  //退出登录
 	"/query": handleQuery,   //根据昵称查询用户列表
 
-	"/users/relation/add": handleUserRelationAdd,
-	"/users/relation/del": handleUserRelationDel,
-	"/users/relation/push": handleUserRelationPush,
-	"/users/relation/refuse": handleUserRelationRefuse,
 
-	"/users/category/add": handleUserCategoryAdd,
-	"/users/category/del": handleUserCategoryDel,
-	"/users/category/edit": handleUserCategoryEdit,
-	"/users/category/query": handleUserCategoryQuery,
+
 
 }
 

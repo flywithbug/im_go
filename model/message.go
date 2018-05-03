@@ -28,6 +28,8 @@ type IMMessage struct {
 	Type 			int				`json:"type"`
 	Content 		string			`json:"content"`
 	Font 			string			`json:"font"`
+	
+	UpdateAt		int				`json:"update_at"`
 }
 
 /*
@@ -65,6 +67,7 @@ func SaveIMMessage(sender ,receiver,msgType,status ,font , content, sMsgId strin
 	return &msgId,nil
 }
 
+//发送状态回执
 func UpdateMessageACK(msgId string, status int)error  {
 	updatStmt,err := Database.Prepare("UPDATE im_message SET `status` = ? `update_at`= ? WHERE msg_id = ?")
 	if err != nil {
@@ -78,6 +81,23 @@ func UpdateMessageACK(msgId string, status int)error  {
 	}
 	return nil
 }
+
+func GetMessageWithStatus(sender string,status int)([]IMMessage,error)  {
+	var messages []IMMessage
+	rows ,err := Database.Query("SELECT * FROM im_message WHERE sender = ? AND status = ?",sender,status)
+	defer rows.Close()
+	if err != nil {
+		log.Error(err.Error())
+		return messages, &DatabaseError{"服务出错"}
+	}
+	for rows.Next(){
+		var msg IMMessage
+		rows.Scan(&msg.Id,&msg.Sender,&msg.MsgId,&msg.SMsgId,&msg.Receiver,&msg.Content,&msg.TimeStamp,&msg.TimeStamp,&msg.Status,&msg.Type,&msg.Font,&msg.UpdateAt)
+		messages = append(messages, msg)
+	}
+	return messages,nil
+}
+
 
 
 

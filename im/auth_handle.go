@@ -90,6 +90,7 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 		atomic.AddInt64(&serverSummary.nclients,1)
 		//登出其他账号
 		client.LogOutOtherClient()
+		model.UpdateUserStatus(login.UId,model.STATUS_LOGIN)
 	}
 }
 
