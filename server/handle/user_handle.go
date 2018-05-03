@@ -8,7 +8,7 @@ import (
 	"im_go/common"
 	"io/ioutil"
 	"encoding/json"
-	"fmt"
+	log "github.com/flywithbug/log4go"
 )
 
 
@@ -42,6 +42,7 @@ func handleLogin(resp http.ResponseWriter, req *http.Request) {
 			password := common.Md5(m.Password)
 			login(resp,m.Account,password,ip)
 		}else {
+			log.Error(err.Error())
 			resp.Write(model.NewIMResponseSimple(401, "Bad Request: "+req.Method, "").Encode())
 		}
 	} else {
@@ -56,6 +57,8 @@ func handleLogout(resp http.ResponseWriter,req*http.Request)  {
 		m := loginoutModel{}
 		if err := json.Unmarshal(body,&m);err == nil{
 			logout(resp,m.Token)
+		}else {
+			log.Error(err.Error())
 		}
 	}else {
 		resp.Write(model.NewIMResponseSimple(404, "Not Found: "+req.Method, "").Encode())
@@ -70,6 +73,7 @@ func handleQuery(resp http.ResponseWriter, req *http.Request) {
 	if req.Method == "POST" {
 		body,err := ioutil.ReadAll(req.Body)
 		if err != nil{
+			log.Error(err.Error())
 			resp.Write(model.NewIMResponseSimple(401, "bad Request", "").Encode())
 			return
 		}
@@ -94,9 +98,19 @@ func handleAddFriend(resp http.ResponseWriter, req *http.Request)  {
 		}
 		m := relationShipModel{}
 		if err := json.Unmarshal(body,&m);err == nil{
-			users, _ := model.AddUserRelation(m.UId,m.FriendId)
-			resp.Write(model.NewIMResponseData(common.SaveMapData("users", users), "").Encode())
+			_, err = model.AddUserRelation(m.UId,m.FriendId)
+			if err != nil {
+				resp.Write(model.NewIMResponseSimple(401, "bad Request", "").Encode())
+			}else {
+				resp.Write(model.NewIMResponseData(common.SaveMapData("msg", "好友请求发送成功"), "").Encode())
+			}
+		}else {
+			log.Error(err.Error())
+			resp.Write(model.NewIMResponseSimple(401, "bad Request", "").Encode())
 		}
+	}else {
+		resp.Write(model.NewIMResponseSimple(404, "Not Found: "+req.Method, "").Encode())
+
 	}
 
 }

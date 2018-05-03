@@ -21,7 +21,7 @@ type loginoutModel struct {
 
 type relationShipModel struct {
 	UId 		int			`json:"u_id"`
-	FriendId	int64		`json:"friend_id"`
+	FriendId	int			`json:"friend_id"`
 	Status 		int			`json:"status"`
 	RelationId 	string		`json:"relation_id"`
 	Remarks		string		`json:"remarks"`
