@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"encoding/json"
 	"time"
-	"fmt"
+	log "github.com/flywithbug/log4go"
 )
 
 type SimpleUser struct {
@@ -201,8 +201,11 @@ func QueryUser(nick string) ([]SimpleUser, error) {
 	}
 	for rows.Next() {
 		var user SimpleUser
-		rows.Scan(&user.Id,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar,&user.Forbidden)
-		fmt.Println("scan user:",user)
+		err =rows.Scan(&user.Id,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar,&user.Forbidden)
+		if err != nil {
+			log.Error(err.Error())
+			continue
+		}
 		users = append(users, user)
 	}
 	return users, nil

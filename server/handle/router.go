@@ -15,7 +15,7 @@ var routers = map[string]RouterHandler{
 	"/login": handleLogin,
 	"/logout":handleLogout,  //退出登录
 	"/query": handleQuery,   //根据昵称查询用户列表
-
+	"/relation":handleAddRelation,// 添加好友
 
 
 

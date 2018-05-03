@@ -65,4 +65,44 @@ func DelRelationShip(relationId string)error  {
 	return nil
 }
 
+func FindRelations(uid int,status int)([]UserRelationShip,error)  {
+	rows,err := Database.Query("SELECT u_id,friend_id,status,relation_id,remarks FROM im_relation WHERE u_id =?,status = ?",uid,status)
+	defer rows.Close()
+	if err != nil {
+		log.Error(err.Error())
+		return nil,&DatabaseError{"服务错误"}
+	}
+	var relastions []UserRelationShip
+	for rows.Next(){
+		var relation UserRelationShip
+		err = rows.Scan(&relation.UId,&relation.FriendId,&relation.Status,&relation.RelationId,&relation.Remarks)
+		if err != nil {
+			log.Error(err.Error())
+			continue
+		}
+		relastions = append(relastions,relation)
+	}
+	return relastions,nil
+}
+
+func FindAllRelations(uid int) ([]UserRelationShip,error) {
+	rows,err := Database.Query("SELECT u_id,friend_id,status,relation_id,remarks FROM im_relation WHERE u_id =?",uid)
+	defer rows.Close()
+	if err != nil {
+		log.Error(err.Error())
+		return nil,&DatabaseError{"服务错误"}
+	}
+	var relastions []UserRelationShip
+	for rows.Next(){
+		var relation UserRelationShip
+		err = rows.Scan(&relation.UId,&relation.FriendId,&relation.Status,&relation.RelationId,&relation.Remarks)
+		if err != nil {
+			log.Error(err.Error())
+			continue
+		}
+		relastions = append(relastions,relation)
+	}
+	return relastions,nil
+}
+
 

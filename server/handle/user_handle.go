@@ -89,7 +89,14 @@ func handleQuery(resp http.ResponseWriter, req *http.Request) {
 	}
 }
 
-func handleAddFriend(resp http.ResponseWriter, req *http.Request)  {
+
+/*
+	三个参数，
+	u_id 好友请求发送者
+	friend_id 接收人
+	method  "add",delete
+*/
+func handleAddRelation(resp http.ResponseWriter, req *http.Request)  {
 	if req.Method == "POST" {
 		body,err := ioutil.ReadAll(req.Body)
 		if err != nil{
@@ -98,11 +105,23 @@ func handleAddFriend(resp http.ResponseWriter, req *http.Request)  {
 		}
 		m := relationShipModel{}
 		if err := json.Unmarshal(body,&m);err == nil{
-			_, err = model.AddUserRelation(m.UId,m.FriendId)
-			if err != nil {
-				resp.Write(model.NewIMResponseSimple(401, "bad Request", "").Encode())
+			//添加好友
+			if strings.EqualFold(m.method,"add")  {
+				_, err = model.AddUserRelation(m.UId,m.FriendId)
+				if err != nil {
+					resp.Write(model.NewIMResponseSimple(500, "Server error", "").Encode())
+				}else {
+					resp.Write(model.NewIMResponseData(common.SaveMapData("msg", "好友请求发送成功"), "").Encode())
+				}
+			}else if strings.EqualFold(m.method,"delete") { //删除好友
+				err = model.DelRelationShip(m.RelationId)
+				if err != nil {
+					resp.Write(model.NewIMResponseSimple(500, "Server error", "").Encode())
+				}else {
+					resp.Write(model.NewIMResponseData(common.SaveMapData("msg", "好友请求发送成功"), "").Encode())
+				}
 			}else {
-				resp.Write(model.NewIMResponseData(common.SaveMapData("msg", "好友请求发送成功"), "").Encode())
+				resp.Write(model.NewIMResponseSimple(401, "bad Request", "").Encode())
 			}
 		}else {
 			log.Error(err.Error())
@@ -112,7 +131,6 @@ func handleAddFriend(resp http.ResponseWriter, req *http.Request)  {
 		resp.Write(model.NewIMResponseSimple(404, "Not Found: "+req.Method, "").Encode())
 
 	}
-
 }
 
 
