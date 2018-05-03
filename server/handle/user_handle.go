@@ -67,20 +67,38 @@ func handleLogout(resp http.ResponseWriter,req*http.Request)  {
 查询请求处理方法
 */
 func handleQuery(resp http.ResponseWriter, req *http.Request) {
-	body,_ := ioutil.ReadAll(req.Body)
-	m := loginoutModel{}
-	fmt.Println(string(body))
-	if err := json.Unmarshal(body,&m);err == nil{
-		users, _ := model.QueryUser(m.Nick)
-		resp.Write(model.NewIMResponseData(common.SaveMapData("users", users), "").Encode())
-	}else {
-		resp.Write(model.NewIMResponseSimple(404, err.Error()+req.Method, "").Encode())
+	if req.Method == "POST" {
+		body,err := ioutil.ReadAll(req.Body)
+		if err != nil{
+			resp.Write(model.NewIMResponseSimple(401, "bad Request", "").Encode())
+			return
+		}
+		m := loginoutModel{}
+		if err := json.Unmarshal(body,&m);err == nil{
+			users, _ := model.QueryUser(m.Nick)
+			resp.Write(model.NewIMResponseData(common.SaveMapData("users", users), "").Encode())
+		}else {
+			resp.Write(model.NewIMResponseSimple(401, "bad Request", "").Encode())
+		}
+	} else {
+		resp.Write(model.NewIMResponseSimple(404, "Not Found: "+req.Method, "").Encode())
 	}
-	//nick := req.FormValue("nick")
-	//users, err := model.QueryUser( nick)
-	//if err == nil {
-	//	resp.Write(model.NewIMResponseData(common.SaveMapData("users", users), "").Encode())
-	//}
+}
+
+func handleAddFriend(resp http.ResponseWriter, req *http.Request)  {
+	if req.Method == "POST" {
+		body,err := ioutil.ReadAll(req.Body)
+		if err != nil{
+			resp.Write(model.NewIMResponseSimple(401, "bad Request", "").Encode())
+			return
+		}
+		m := relationShipModel{}
+		if err := json.Unmarshal(body,&m);err == nil{
+			users, _ := model.AddUserRelation(m.UId,m.FriendId)
+			resp.Write(model.NewIMResponseData(common.SaveMapData("users", users), "").Encode())
+		}
+	}
+
 }
 
 

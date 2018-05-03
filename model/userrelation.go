@@ -10,9 +10,9 @@ import (
 type UserRelationShip struct {
 	Id 			int			`json:"id"`
 	UId 		int			`json:"u_id"`
+	FriendId	int			`json:"friend_id"`
 	Status 		int			`json:"status"`
 	RelationId 	string		`json:"relation_id"`
-	FriendId	string		`json:"friend_id"`
 	Remarks		string		`json:"remarks"`
 }
 
