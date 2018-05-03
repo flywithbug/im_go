@@ -25,7 +25,6 @@ type AuthenticationToken struct {
 	DeviceId     string `json:"device_id"`
 }
 
-
 func (client *Client) HandleAuthToken(pro *Proto) {
 	var auth AuthenticationToken
 	auth.FromData(pro.Body)
@@ -64,7 +63,6 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 		return
 	}
 
-
 	//发消息给其他客户端登录的用户下线，并关闭其他客户端的connection
 	//暂时只能单端登录
 	authStatus.Status = AuthenticationStatusSuccess
@@ -85,23 +83,21 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 			login.Token, client.appid, client.uid, client.deviceId, client.forbidden)
 		log.Debug(clientInfo)
 
-
 		client.AddClient()
-		atomic.AddInt64(&serverSummary.nclients,1)
+		atomic.AddInt64(&serverSummary.nclients, 1)
 		//登出其他账号
 		client.LogOutOtherClient()
-		model.UpdateUserStatus(login.UId,model.STATUS_LOGIN)
+		model.UpdateUserStatus(login.UId, model.STATUS_LOGIN)
 	}
 }
 
-
-func (client *Client)LogOutOtherClient()  {
+func (client *Client) LogOutOtherClient() {
 	p := new(Proto)
 	p.Operation = OP_DISCONNECT_ACK
 	route := appRoute.FindRoute(client.appid)
 	clients := route.FindClientSet(client.uid)
 	//可以扩展多端同时在线。
-	for c, _ := range(clients) {
+	for c, _ := range clients {
 		//不再发送给自己
 		if c == client {
 			continue
@@ -111,9 +107,8 @@ func (client *Client)LogOutOtherClient()  {
 		//关闭client
 		c.handleClientClosed()
 	}
-	model.LogoutOthers(client.Token,client.uid)
+	model.LogoutOthers(client.Token, client.uid)
 }
-
 
 func (auth *AuthenticationToken) ToData() []byte {
 	var l int8

@@ -61,7 +61,7 @@ func StartClient(port int) {
 				receiver:10002,
 				sender:10001,
 				msgId:2323232,
-				body:[]byte("hello world"),
+				body:[]byte("msg"),
 				timestamp:time.Now().Unix(),
 			}
 			p.Ver = 1
@@ -86,7 +86,7 @@ func StartClient(port int) {
 				receiver:10001,
 				sender:10002,
 				msgId:20020,
-				body:[]byte("hello world"),
+				body:[]byte("msg1"),
 				timestamp:time.Now().Unix(),
 			}
 			p.Ver = 1

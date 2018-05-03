@@ -3,17 +3,17 @@ package im
 import (
 	"testing"
 
-	"time"
 	"fmt"
+	"time"
 )
 
 func TestBaseMessage_Decode(t *testing.T) {
-	 msg := Message{
-		receiver:10001,
-		sender:10002,
-		msgId:20020,
-		body:[]byte("hello world"),
-		timestamp:time.Now().Unix(),
+	msg := Message{
+		receiver:  10001,
+		sender:    10002,
+		msgId:     20020,
+		body:      []byte("hello world"),
+		timestamp: time.Now().Unix(),
 	}
 	fmt.Println(msg.Description())
 

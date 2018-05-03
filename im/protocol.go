@@ -5,9 +5,9 @@ import (
 	"encoding/binary"
 	"encoding/json"
 	"errors"
+	"fmt"
 	log "github.com/flywithbug/log4go"
 	"io"
-	"fmt"
 )
 
 type Proto struct {
@@ -17,8 +17,8 @@ type Proto struct {
 	Body      json.RawMessage `json:"body"` // binary body bytes(json.RawMessage is []byte) //解析对象
 }
 
-func (pro *Proto)Description()string{
-	return fmt.Sprintf("ver:%d, operation:%d,seqId:%d,body:%s",pro.Ver,pro.Operation,pro.SeqId,pro.Body)
+func (pro *Proto) Description() string {
+	return fmt.Sprintf("ver:%d, operation:%d,seqId:%d,body:%s", pro.Ver, pro.Operation, pro.SeqId, pro.Body)
 }
 
 //
@@ -129,41 +129,41 @@ func SendMessage(conn io.Writer, pro *Proto) error {
 	return nil
 }
 
-func ReceiveLimitMessage(conn io.Reader, limitSize int) (pro *Proto,err error) {
+func ReceiveLimitMessage(conn io.Reader, limitSize int) (pro *Proto, err error) {
 	buff := make([]byte, RawHeaderSize)
 	_, err = io.ReadFull(conn, buff)
 	if err != nil {
 		log.Info("sock read error:%s", err.Error())
-		return nil,err
+		return nil, err
 	}
 	ph, err := ReadHeader(buff)
 	if err != nil {
 		log.Info("buff read error:%s", err.Error())
-		return nil,err
+		return nil, err
 	}
 	if ph.bodyLen < 0 || int(ph.bodyLen) > limitSize {
 		log.Info("invalid len:%d", ph.bodyLen)
-		return nil,err
+		return nil, err
 	}
 	buff = make([]byte, ph.bodyLen)
 	_, err = io.ReadFull(conn, buff)
 	if err != nil {
 		log.Info("sock read error:%s", err.Error())
-		return nil,err
+		return nil, err
 	}
 	pro = &emptyProto
 	pro.Ver = ph.ver
 	pro.SeqId = ph.seq
 	pro.Operation = ph.op
 	pro.Body = buff
-	return pro,nil
+	return pro, nil
 }
 
-func ReceiveMessage(conn io.Reader) (pro *Proto,err error) {
+func ReceiveMessage(conn io.Reader) (pro *Proto, err error) {
 	return ReceiveLimitMessage(conn, 32*1024)
 }
 
 //消息大小限制在1M
-func ReceiveStorageMessage(conn io.Reader) (pro *Proto,err error) {
+func ReceiveStorageMessage(conn io.Reader) (pro *Proto, err error) {
 	return ReceiveLimitMessage(conn, 1024*1024)
 }

@@ -2,12 +2,11 @@ package im
 
 import (
 	log "github.com/flywithbug/log4go"
+	"im_go/model"
+	"io"
 	"net"
 	"sync/atomic"
 	"time"
-	"io"
-	"im_go/model"
-	"fmt"
 )
 
 type Client struct {
@@ -43,8 +42,7 @@ func (client *Client) handleMessage(pro *Proto) {
 		//TODO
 	}
 	client.ClientIM.handleMessage(pro)
-	//client.out <- pro
-	fmt.Println("seq",pro.SeqId)
+
 }
 
 func (client *Client) AddClient() {
@@ -74,7 +72,7 @@ func (client *Client) Read() {
 			break
 		}
 		t1 := time.Now().Unix()
-		msg,err := client.read()
+		msg, err := client.read()
 		if err == io.EOF {
 			client.handleClientClosed()
 			break
@@ -103,7 +101,7 @@ func (client *Client) Write() {
 
 	for running {
 		select {
-		case pro := <- client.wt:
+		case pro := <-client.wt:
 			if pro == nil {
 				client.close()
 				running = false
@@ -115,7 +113,7 @@ func (client *Client) Write() {
 			}
 			seq++
 			pro.SeqId = int32(seq)
-			fmt.Println(pro.Description())
+
 			client.send(pro)
 		}
 	}
@@ -124,12 +122,12 @@ func (client *Client) Write() {
 	running = true
 	for running {
 		select {
-		case <- t:
+		case <-t:
 			running = false
-		case <- client.wt:
+		case <-client.wt:
 			log.Warn("msg is dropped")
-		//case <- client.ewt:
-		//	log.Warning("emsg is dropped")
+			//case <- client.ewt:
+			//	log.Warning("emsg is dropped")
 		}
 	}
 }
@@ -137,18 +135,18 @@ func (client *Client) Write() {
 func (client *Client) handleClientClosed() {
 	close := atomic.LoadInt32(&client.closed)
 	if client.uid > 0 {
-		atomic.AddInt64(&serverSummary.nclients,-1)
-		log.Info("HandleClientClosed client:%d %s",client.uid,client.userId)
+		atomic.AddInt64(&serverSummary.nclients, -1)
+		log.Info("HandleClientClosed client:%d %s", client.uid, client.userId)
 	}
-	if close == 0 && client.uid != 0{
+	if close == 0 && client.uid != 0 {
 		atomic.AddInt64(&serverSummary.nconnections, -1)
 		//quit when write goroutine received
-		log.Info("close client userId:%s uid:%d",client.userId,client.uid)
+		log.Info("close client userId:%s uid:%d", client.userId, client.uid)
 		//client.RoomClient.Logout()
 		//client.IMClient.Logout()
 		client.RemoveClient()
 		//数据库登录态置为0 ）
-		model.UpdateUserStatus(client.uid,0)
+		model.UpdateUserStatus(client.uid, 0)
 
 		client.uid = 0
 	}
