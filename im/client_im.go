@@ -2,6 +2,7 @@ package im
 
 import (
 	log "github.com/flywithbug/log4go"
+	"fmt"
 )
 
 type ClientIM struct {
@@ -21,8 +22,13 @@ func (client *ClientIM)HandleIMMessage(pro *Proto)  {
 		log.Warn("client has't been authenticated")
 		return
 	}
+	var msg Message
+	if !msg.FromData(pro.Body) {
+		log.Warn("message decode not right")
+		return
+	}
 
-
+	fmt.Println(msg.Description())
 
 
 

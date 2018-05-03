@@ -19,16 +19,16 @@ const (
 
 //Store in mysql
 type IMMessage struct {
-	Id				int				`json:"id"`
+	MessageBody
+	Id				int				`json:"id"`			//msgId
 	Sender			int				`json:"sender"`
 	Receiver		int				`json:"receiver"`
-	Status 			int				`json:"status"`
-	Type 			int				`json:"type"`
 	TimeStamp 		int				`json:"time_stamp"`
+
+	Status 			int				`json:"status"`
 	UpdateAt		int				`json:"update_at"`
-	Content 		string			`json:"content"`
-	MsgId			string			`json:"msg_id"`
 }
+
 
 /*
  转JSON数据
@@ -45,6 +45,29 @@ func (msg *IMMessage) Decode(data []byte) error {
 	err := json.Unmarshal(data, msg)
 	return err
 }
+
+type MessageBody struct {
+	Content 		string			`json:"content"`
+	MsgId			string			`json:"msg_id"`
+	Type 			int				`json:"type"`
+}
+
+/*
+ 转JSON数据
+ */
+func (msg *MessageBody) Encode() []byte {
+	s, _ := json.Marshal(msg)
+	return s
+}
+
+/*
+ 解析JSON数据
+ */
+func (msg *MessageBody) Decode(data []byte) error {
+	err := json.Unmarshal(data, msg)
+	return err
+}
+
 
 func MessageOperation(sender int,receiver int,content string)(msg *IMMessage,err error)  {
 
