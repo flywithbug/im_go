@@ -6,6 +6,7 @@ import (
 	"os"
 	"fmt"
 	"im_go/im"
+	"time"
 )
 
 func StartClient(port int) {
@@ -16,7 +17,7 @@ func StartClient(port int) {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-
+	conn.SetReadDeadline(time.Now().Add(5*60 * time.Second))
 	defer conn.Close()
 	//reader := bufio.NewReader(conn)
 	in := bufio.NewReader(os.Stdin)
