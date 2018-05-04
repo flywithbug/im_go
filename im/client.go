@@ -92,7 +92,6 @@ func (client *Client) Read() {
 			log.Info("client:%d handle message is too slow:%d %d", client.uid, t2, t3)
 		}
 	}
-
 }
 
 func (client *Client) Write() {

@@ -39,22 +39,33 @@ func main() {
 
 	flag.Parse()
 
+	//加载配置文件
 	conf, err := config.ReadConfig(*configPath)
 	if err != nil {
 		log.Fatal("读取配置文件错误:", err.Error())
 	}
 	model.Config = conf
 
+	//启动模型 数据库
 	model.Database, err = conf.DBConfig.Connect()
 	defer model.Database.Close()
+
+
+
 	if err != nil {
 		log.Fatal(err.Error())
 	}
+
 	go func() {
+		//启动网络服务
 		err := server.StartHttpServer(*conf)
 		log.Fatal("Http Server", err)
 	}()
 
+	//启动系统监控
 	perf.Init(conf.PprofBind)
+
+
+	//启用im服务
 	im.Listen(conf.IMPort)
 }
