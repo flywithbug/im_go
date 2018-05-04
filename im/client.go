@@ -106,7 +106,7 @@ func (client *Client) Write() {
 			if pro == nil {
 				client.close()
 				running = false
-				log.Info("client: %s socket closed", client.userId)
+				log.Debug("client: %s socket closed", client.userId)
 				break
 			}
 			if pro.Operation == OP_SEND_MSG {
@@ -141,7 +141,7 @@ func (client *Client) handleClientClosed() {
 	}
 
 	atomic.StoreInt32(&client.closed, 1)
-	log.Info("close client:%d, %s", client.uid, client.userId)
+	log.Debug("close client:%d, %s", client.uid, client.userId)
 
 	//client.RoomClient.Logout()
 	//client.IMClient.Logout()

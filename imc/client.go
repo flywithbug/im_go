@@ -17,14 +17,15 @@ func StartClient(port int) {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-	conn.SetReadDeadline(time.Now().Add(5*60 * time.Second))
+	conn.SetReadDeadline(time.Now().Add(5*6 * time.Second))
 	defer conn.Close()
 	//reader := bufio.NewReader(conn)
-	in := bufio.NewReader(os.Stdin)
+	running := true
 	go func() {
 		for {
 			msg := ReceiveMessage(conn)
 			if msg == nil{
+				running = false
 				break
 			}
 			switch msg.Operation {
@@ -62,8 +63,8 @@ func StartClient(port int) {
 			}
 		}
 	}()
-
-	for {
+	in := bufio.NewReader(os.Stdin)
+	for running {
 		line, _, _ := in.ReadLine()
 		p := new(Proto)
 
@@ -150,5 +151,6 @@ func StartClient(port int) {
 			break
 		}
 		fmt.Println("send Msg",string(p.Body),err)
+
 	}
 }

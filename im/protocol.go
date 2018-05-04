@@ -119,11 +119,11 @@ func SendMessage(conn io.Writer, pro *Proto) error {
 	buf := buffer.Bytes()
 	n, err := conn.Write(buf)
 	if err != nil {
-		log.Info("sock write error:", err)
+		log.Debug("sock write error:", err)
 		return err
 	}
 	if n != len(buf) {
-		log.Info("write less:%d %d", n, len(buf))
+		log.Debug("write less:%d %d", n, len(buf))
 		return errors.New("write less")
 	}
 	return nil
@@ -133,7 +133,7 @@ func ReceiveLimitMessage(conn io.Reader, limitSize int) (pro *Proto, err error) 
 	buff := make([]byte, RawHeaderSize)
 	_, err = io.ReadFull(conn, buff)
 	if err != nil {
-		log.Info("sock read error:%s", err.Error())
+		log.Debug("sock read error:%s", err.Error())
 		return nil, err
 	}
 	ph, err := ReadHeader(buff)
@@ -148,7 +148,7 @@ func ReceiveLimitMessage(conn io.Reader, limitSize int) (pro *Proto, err error) 
 	buff = make([]byte, ph.bodyLen)
 	_, err = io.ReadFull(conn, buff)
 	if err != nil {
-		log.Info("sock read error:%s", err.Error())
+		//log.Info("sock read error:%s", err.Error())
 		return nil, err
 	}
 	pro = &emptyProto

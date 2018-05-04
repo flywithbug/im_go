@@ -29,7 +29,7 @@ func listen(port int) {
 		if err != nil {
 			return
 		}
-		log.Info("新连接地址为:[%s] \n", conn.RemoteAddr())
+		log.Debug("新连接地址为:[%s]", conn.RemoteAddr())
 		go handleConnection(conn)
 	}
 }

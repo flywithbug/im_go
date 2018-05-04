@@ -15,7 +15,6 @@ func (client *ClientIM) handleMessage(pro *Proto) {
 	switch pro.Operation {
 	case OP_SEND_MSG:
 		client.HandleIMMessage(pro)
-
 	}
 
 }
@@ -30,6 +29,7 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 		log.Error(fmt.Sprintf("message decode not right,body: %s,%d" , pro.Body ,client.uid))
 		return
 	}
+
 	if msg.sender != client.uid {
 		log.Warn("im message sender:%d client uid:%d\n", msg.sender, client.uid)
 		return
@@ -79,7 +79,7 @@ func (client *ClientIM)sendOffLineMessage()  {
 		return
 	}
 	for _,imMsg := range ms{
-		fmt.Printf("offline msg :%s",imMsg.Description())
+		//fmt.Printf("offline msg :%s",imMsg.Description())
 		p := new(Proto)
 		p.Operation = OP_SEND_MSG
 		p.Ver = client.version
