@@ -11,12 +11,12 @@ import (
 
 //Store in mysql
 type IMMessage struct {
-	Id				int				`json:"id"`			//msgId
-	Sender			int				`json:"sender"`
-	Receiver		int				`json:"receiver"`
-	TimeStamp 		int				`json:"time_stamp"`
-	Status 			int				`json:"status"`
-	UpdateAt		int				`json:"update_at"`
+	Id				int32			`json:"id"`			//msgId
+	Sender			int32				`json:"sender"`
+	Receiver		int32				`json:"receiver"`
+	TimeStamp 		int32				`json:"time_stamp"`
+	Status 			int32				`json:"status"`
+	UpdateAt		int32				`json:"update_at"`
 	Content 		[]byte			`json:"content"`   //客户端自行解析内容
 }
 
@@ -91,7 +91,25 @@ func UpdateMessageACK(msgId int32, status int)error  {
 	return nil
 }
 
-func FindeMessages(sender int32,status int)([]IMMessage,error)  {
+//查找接收人消息
+func FindeMessagesReceiver(receiver int32,status int)([]IMMessage,error)  {
+	var messages []IMMessage
+	rows ,err := Database.Query("SELECT id,sender,receiver,content,time_stamp,status,update_at FROM im_message WHERE receiver = ? AND status = ?",receiver,status)
+	defer rows.Close()
+	if err != nil {
+		log.Error(err.Error())
+		return messages, &DatabaseError{"服务出错"}
+	}
+	for rows.Next(){
+		var msg IMMessage
+		rows.Scan(&msg.Id,&msg.Sender,&msg.Receiver,&msg.Content,&msg.TimeStamp,&msg.Status,&msg.UpdateAt)
+		messages = append(messages, msg)
+	}
+	return messages,nil
+}
+
+//查找发送人消息
+func FindeMessagesSender(sender int32,status int)([]IMMessage,error)  {
 	var messages []IMMessage
 	rows ,err := Database.Query("SELECT id,sender,receiver,content,time_stamp,status,update_at FROM im_message WHERE sender = ? AND status = ?",sender,status)
 	defer rows.Close()
@@ -106,7 +124,6 @@ func FindeMessages(sender int32,status int)([]IMMessage,error)  {
 	}
 	return messages,nil
 }
-
 
 
 

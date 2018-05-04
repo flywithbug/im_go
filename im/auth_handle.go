@@ -85,6 +85,9 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 
 		client.AddClient()
 		atomic.AddInt64(&serverSummary.nclients, 1)
+
+		//用户授权成功之后 发送离线消息
+		client.sendOffLineMessage()
 		//登出其他账号
 		//client.LogOutOtherClient()
 		//model.UpdateUserStatus(login.UId, model.STATUS_LOGIN)
@@ -92,6 +95,8 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 		log.Error("auth status  消息返回客户端失败")
 	}
 }
+
+
 
 func (client *Client) LogOutOtherClient() {
 	//p := new(Proto)

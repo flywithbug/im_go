@@ -1698,3 +1698,22 @@
 2018-05-04 22:34:31 	 [ INFO] 	 <client.go:109>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
 2018-05-04 22:34:32 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51454] 
 
+2018-05-04 23:47:13 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-04 23:47:13 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-04 23:47:13 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-04 23:47:13 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-04 23:47:13 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-04 23:47:13 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-04 23:47:13 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-04 23:47:13 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-04 23:47:16 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52209] 
+
+2018-05-04 23:47:17 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-04 23:47:18 	 [ERROR] 	 <connection.go:98>  	 can't send message, appid:10 uid:10002 cmd:4
+2018-05-04 23:47:20 	 [ERROR] 	 <connection.go:98>  	 can't send message, appid:10 uid:10002 cmd:4
+2018-05-04 23:47:34 	 [ERROR] 	 <connection.go:98>  	 can't send message, appid:10 uid:10002 cmd:4
+2018-05-04 23:47:39 	 [ERROR] 	 <connection.go:98>  	 can't send message, appid:10 uid:10002 cmd:4
+2018-05-04 23:47:53 	 [ERROR] 	 <connection.go:98>  	 can't send message, appid:10 uid:10002 cmd:4
+2018-05-04 23:53:53 	 [ INFO] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:52209: i/o timeout
+2018-05-04 23:53:53 	 [ INFO] 	 <client.go:144>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-04 23:53:53 	 [ INFO] 	 <client.go:109>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed

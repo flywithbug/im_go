@@ -1,0 +1,107 @@
+2018-05-05 00:01:02 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 00:01:02 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 00:01:02 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 00:01:02 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 00:01:02 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 00:01:02 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 00:01:02 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 00:01:02 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-05 00:01:05 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52505] 
+
+2018-05-05 00:01:07 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-05 00:01:34 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 00:01:34 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 00:01:34 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 00:01:34 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 00:01:34 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 00:01:34 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 00:01:34 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 00:01:34 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-05 00:01:38 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52534] 
+
+2018-05-05 00:01:39 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-05 00:07:39 	 [ INFO] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:52534: i/o timeout
+2018-05-05 00:07:39 	 [ INFO] 	 <client.go:145>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-05 00:07:39 	 [ INFO] 	 <client.go:110>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-05 00:14:34 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 00:14:34 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 00:14:34 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 00:14:34 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 00:14:34 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 00:14:34 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 00:14:34 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 00:14:34 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-05 00:18:34 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52829] 
+
+2018-05-05 00:18:38 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-05 00:18:39 	 [ INFO] 	 <connection.go:100>  	 can't send message, appid:10 uid:10002 cmd:4
+2018-05-05 00:18:41 	 [ INFO] 	 <connection.go:100>  	 can't send message, appid:10 uid:10002 cmd:4
+2018-05-05 00:18:42 	 [ INFO] 	 <connection.go:100>  	 can't send message, appid:10 uid:10002 cmd:4
+2018-05-05 00:18:42 	 [ INFO] 	 <connection.go:100>  	 can't send message, appid:10 uid:10002 cmd:4
+2018-05-05 00:18:43 	 [ INFO] 	 <connection.go:100>  	 can't send message, appid:10 uid:10002 cmd:4
+2018-05-05 00:23:08 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 00:23:08 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 00:23:08 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 00:23:08 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 00:23:08 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 00:23:08 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 00:23:08 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 00:23:08 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-05 00:23:13 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52904] 
+
+2018-05-05 00:23:16 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:2c06eaf6-e14a-4d06-ba42-15de3f11741a appid:10 uid:10002 device id: forbidden:0
+2018-05-05 00:23:16 	 [ WARN] 	 <client_im.go:34>  	 im message sender:10001 client uid:10002
+
+2018-05-05 00:23:16 	 [ERROR] 	 <ack_handle.go:15>  	 error未有记录被修改seq:3,msgId:10103
+2018-05-05 00:23:16 	 [ERROR] 	 <ack_handle.go:15>  	 error未有记录被修改seq:4,msgId:10103
+2018-05-05 00:23:16 	 [ERROR] 	 <ack_handle.go:15>  	 error未有记录被修改seq:5,msgId:10103
+2018-05-05 00:23:16 	 [ERROR] 	 <ack_handle.go:15>  	 error未有记录被修改seq:6,msgId:10103
+2018-05-05 00:23:16 	 [ERROR] 	 <ack_handle.go:15>  	 error未有记录被修改seq:7,msgId:10103
+2018-05-05 00:23:16 	 [ERROR] 	 <ack_handle.go:15>  	 error未有记录被修改seq:8,msgId:10103
+2018-05-05 00:23:16 	 [ERROR] 	 <ack_handle.go:15>  	 error未有记录被修改seq:9,msgId:10103
+2018-05-05 00:24:28 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 00:24:28 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 00:24:28 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 00:24:28 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 00:24:28 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 00:24:28 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 00:24:28 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 00:24:28 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-05 00:29:37 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 00:29:37 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 00:29:37 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 00:29:37 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 00:29:37 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 00:29:37 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 00:29:37 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 00:29:37 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-05 00:31:22 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 00:31:22 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 00:31:22 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 00:31:22 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 00:31:22 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 00:31:22 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 00:31:22 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 00:31:22 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-05 00:31:28 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52994] 
+
+2018-05-05 00:31:30 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:2c06eaf6-e14a-4d06-ba42-15de3f11741a appid:10 uid:10002 device id: forbidden:0
+2018-05-05 00:32:17 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 00:32:17 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 00:32:17 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 00:32:17 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 00:32:17 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 00:32:17 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 00:32:17 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 00:32:17 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-05 00:32:19 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:53028] 
+
+2018-05-05 00:32:22 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:2c06eaf6-e14a-4d06-ba42-15de3f11741a appid:10 uid:10002 device id: forbidden:0
+2018-05-05 00:36:49 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 00:36:49 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 00:36:49 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 00:36:49 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 00:36:49 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 00:36:49 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 00:36:49 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 00:36:49 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************

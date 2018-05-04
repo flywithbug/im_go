@@ -62,6 +62,13 @@ func (client *Connection) close() {
 
 //把消息加入到发送队列中
 func (client *Connection) EnqueueMessage(pro *Proto) bool {
+	//warning 隔离指针传递
+	p := new(Proto)
+	p.SeqId = pro.SeqId
+	p.Body = pro.Body
+	p.Ver = pro.Ver
+	p.Operation = pro.Operation
+
 	closed := atomic.LoadInt32(&client.closed)
 	if closed > 0 {
 		log.Info("can't send message to closed connection:%d %s", client.uid,client.userId)
@@ -75,7 +82,7 @@ func (client *Connection) EnqueueMessage(pro *Proto) bool {
 	}
 
 	select {
-	case client.wt <- pro:
+	case client.wt <- p:
 		return true
 	case <-time.After(60 * time.Second):
 		atomic.AddInt32(&client.tc, 1)
@@ -84,18 +91,19 @@ func (client *Connection) EnqueueMessage(pro *Proto) bool {
 	}
 }
 
+
 func (client *Connection) SendMessage(uid int32, pro *Proto) bool {
 	//发送推送给offline的uId
 	appid := client.appid
 	route := appRoute.FindRoute(appid)
 	if route == nil {
-		log.Error(fmt.Sprintf("can't send message, appid:%d uid:%d cmd:%d", appid, uid, pro.Operation))
+		log.Error(fmt.Sprintf(" app not found: can't send message, appid:%d uid:%d cmd:%d", appid, uid, pro.Operation))
 		return false
 	}
 	clients := route.FindClientSet(uid)
 	if len(clients) == 0 {
 		//走推送通道
-		log.Error(fmt.Sprintf("can't send message, appid:%d uid:%d cmd:%d", appid, uid, pro.Operation))
+		log.Info(fmt.Sprintf("can't send message, appid:%d uid:%d cmd:%d", appid, uid, pro.Operation))
 		return false
 	}
 	//fmt.Printf("======clients===len:%d uid:%d \n",len(clients),uid)

@@ -22,6 +22,8 @@ type Message struct {
 	body      []byte
 }
 
+
+
 func (msg *Message) Description() string {
 	return fmt.Sprintf("sender:%d,receiver:%d,timestamp:%d,msgId:%d,body:%s", msg.sender, msg.receiver,
 		msg.timestamp, msg.msgId, msg.body)
