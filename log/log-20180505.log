@@ -265,3 +265,9 @@
 
 2018-05-05 02:11:20 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54304] 
 
+2018-05-05 02:17:22 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:54304: i/o timeout
+2018-05-05 02:17:22 	 [DEBUG] 	 <client.go:144>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-05-05 02:17:22 	 [DEBUG] 	 <client.go:109>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd socket closed
+2018-05-05 02:17:22 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:54301: i/o timeout
+2018-05-05 02:17:22 	 [DEBUG] 	 <client.go:144>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-05 02:17:22 	 [DEBUG] 	 <client.go:109>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed

@@ -14,12 +14,13 @@ type Client struct {
 	publicIp int32
 }
 
+
 func NewClient(conn *net.TCPConn) *Client {
 	client := new(Client)
 	client.conn = conn
 	addr := conn.LocalAddr()
-	if taddr, ok := addr.(*net.TCPAddr); ok {
-		ip4 := taddr.IP.To4()
+	if addrTcp, ok := addr.(*net.TCPAddr); ok {
+		ip4 := addrTcp.IP.To4()
 		if len(ip4) >= 4 {
 			client.publicIp = int32(ip4[0])<<24 | int32(ip4[1])<<16 | int32(ip4[2])<<8 | int32(ip4[3])
 		}

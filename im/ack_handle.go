@@ -18,7 +18,7 @@ func (client *Client) HandleACK(pro *Proto) {
 
 
 func (client *Client) HandleSyncACK(pro *Proto) {
-	//同步消息回执
+	//多客户端同步消息回执
 	//var ack MessageACK
 	//ack.FromData(pro.Body)
 	////err := model.UpdateMessageACK(ack.msgId,1)
