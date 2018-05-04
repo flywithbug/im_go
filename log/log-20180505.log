@@ -170,3 +170,6 @@
 2018-05-05 00:45:26 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
 2018-05-05 00:45:28 	 [ INFO] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
 2018-05-05 00:45:30 	 [ INFO] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-05 00:51:30 	 [ INFO] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:53230: i/o timeout
+2018-05-05 00:51:30 	 [ INFO] 	 <client.go:144>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-05 00:51:30 	 [ INFO] 	 <client.go:109>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed

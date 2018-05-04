@@ -72,7 +72,6 @@ func (client *ClientIM) handleImMessageACK(msgId int32, ver int16, seq int32) {
 	//客户端收到回执的msgId 才算消息发送完毕
 }
 
-
 func (client *ClientIM)sendOffLineMessage()  {
 	ms,err :=  model.FindeMessagesReceiver(client.uid,0)
 	if err != nil{
