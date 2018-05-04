@@ -11,7 +11,7 @@ import (
 
 //TODO 路由中间件 auth校验
 
-func StartHttpServer(conf config.IMConfig)error  {
+func StartHttpServer(conf config.IMConfig)  {
 	log.Info("Http服务器启动中...")
 	// 设置请求映射地址及对应处理方法
 	handle.RegisterRouters(conf.RouterPrefix)
@@ -20,10 +20,11 @@ func StartHttpServer(conf config.IMConfig)error  {
 	log.Info("*********************************************")
 	// 设置监听地址及端口
 	addr := fmt.Sprintf("localhost:%d", conf.HttpPort)
-	if err := http.ListenAndServe(addr, nil); err != nil {
-		return fmt.Errorf("监听Http失败: %s", err)
-	}
-	return nil
+	go func() {
+		if err := http.ListenAndServe(addr, nil); err != nil {
+			panic(fmt.Errorf("监听Http失败: %s", err))
+		}
+	}()
 }
 
 
