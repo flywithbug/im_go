@@ -79,9 +79,9 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 		client.forbidden = login.Forbidden
 		client.tm = time.Now()
 
-		clientInfo := fmt.Sprintf("auth token:%s appid:%d uid:%d device id:%s forbidden:%d",
-			login.Token, client.appid, client.uid, client.deviceId, client.forbidden)
-		log.Debug(clientInfo)
+		//clientInfo := fmt.Sprintf("auth token:%s appid:%d uid:%d device id:%s forbidden:%d",
+		//	login.Token, client.appid, client.uid, client.deviceId, client.forbidden)
+		//log.Debug(clientInfo)
 
 		client.AddClient()
 		atomic.AddInt64(&serverSummary.nclients, 1)
