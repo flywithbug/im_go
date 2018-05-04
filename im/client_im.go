@@ -47,9 +47,6 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 
 	//发送消息给receiver
 	client.SendMessage(msg.receiver, pro)
-
-
-
 	//发送消息给其他登录登陆点
 	pro.Operation = OP_SEND_MSG_SYNC
 	client.SendMessage(msg.sender,pro)
@@ -57,8 +54,6 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 	client.handleImMessageACK(msgId, client.version, pro.SeqId)
 
 	atomic.AddInt64(&serverSummary.in_message_count, 1)
-
-
 
 }
 
@@ -88,7 +83,7 @@ func (client *ClientIM)sendOffLineMessage()  {
 		p.Ver = client.version
 		p.Body = FromIMMessage(&imMsg).ToData()
 		p.SeqId = imMsg.Id
-		client.SendMessage(imMsg.Receiver,p)
+		client.EnqueueMessage(p)
 	}
 }
 
