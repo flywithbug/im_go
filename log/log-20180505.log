@@ -271,3 +271,100 @@
 2018-05-05 02:17:22 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:54301: i/o timeout
 2018-05-05 02:17:22 	 [DEBUG] 	 <client.go:144>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
 2018-05-05 02:17:22 	 [DEBUG] 	 <client.go:109>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-05 06:05:27 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 06:05:27 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 06:05:27 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 06:05:27 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 06:05:27 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 06:05:27 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 06:05:27 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 06:05:27 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-05 06:05:45 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62296]
+2018-05-05 06:10:21 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 06:10:21 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 06:10:21 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 06:10:21 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 06:10:21 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 06:10:21 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 06:10:21 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 06:10:21 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-05 06:10:24 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62517]
+2018-05-05 06:10:28 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62520]
+2018-05-05 06:10:36 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62523]
+2018-05-05 06:10:41 	 [ERROR] 	 <ack_handle.go:15>  	 error未有记录被修改seq:2,msgId:10138
+2018-05-05 06:11:36 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 06:11:36 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 06:11:36 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 06:11:36 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 06:11:36 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 06:11:36 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 06:11:36 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 06:11:36 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-05 06:11:38 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62555]
+2018-05-05 06:11:41 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62558]
+2018-05-05 06:11:46 	 [DEBUG] 	 <connection.go:107>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-05 06:12:26 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-05 06:12:26 	 [ERROR] 	 <client.go:79>  	 EOF
+2018-05-05 06:12:26 	 [DEBUG] 	 <client.go:145>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-05 06:12:26 	 [DEBUG] 	 <client.go:110>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-05 06:12:28 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62587]
+2018-05-05 06:12:31 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 06:12:31 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 06:12:31 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 06:12:31 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 06:12:31 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 06:12:31 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 06:12:31 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 06:12:31 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-05 06:12:33 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62593]
+2018-05-05 06:12:38 	 [DEBUG] 	 <connection.go:107>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-05 06:13:23 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62626]
+2018-05-05 06:13:31 	 [DEBUG] 	 <connection.go:107>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-05 06:13:31 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-05 06:13:31 	 [ERROR] 	 <client.go:79>  	 EOF
+2018-05-05 06:13:31 	 [DEBUG] 	 <client.go:145>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-05 06:13:31 	 [DEBUG] 	 <client.go:110>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-05 06:13:35 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62629]
+2018-05-05 06:13:47 	 [DEBUG] 	 <connection.go:107>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-05 06:14:06 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62655]
+2018-05-05 06:14:13 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-05 06:14:13 	 [ERROR] 	 <client.go:79>  	 EOF
+2018-05-05 06:14:13 	 [DEBUG] 	 <client.go:145>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-05 06:14:13 	 [DEBUG] 	 <client.go:110>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-05 06:14:21 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62674]
+2018-05-05 06:14:23 	 [ WARN] 	 <client_im.go:24>  	 client has't been authenticated
+2018-05-05 06:14:26 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:62629: read: connection reset by peer
+2018-05-05 06:14:26 	 [DEBUG] 	 <client.go:145>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-05 06:14:26 	 [DEBUG] 	 <protocol.go:122>  	 sock write error:%!(EXTRA *net.OpError=write tcp 127.0.0.1:62310->127.0.0.1:62629: write: broken pipe)
+2018-05-05 06:14:26 	 [ INFO] 	 <connection.go:54>  	 send msg:%!(EXTRA string=default_wait set notify info, string= tcp err:, *net.OpError=write tcp 127.0.0.1:62310->127.0.0.1:62629: write: broken pipe)
+2018-05-05 06:14:26 	 [DEBUG] 	 <client.go:110>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-05 06:16:18 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 06:16:18 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 06:16:18 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 06:16:18 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 06:16:18 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 06:16:18 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 06:16:18 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 06:16:18 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-05 06:16:21 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62736]
+2018-05-05 06:16:23 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62739]
+2018-05-05 06:16:29 	 [DEBUG] 	 <connection.go:107>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-05 06:16:32 	 [DEBUG] 	 <connection.go:107>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-05 06:16:34 	 [DEBUG] 	 <connection.go:107>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-05 06:16:37 	 [DEBUG] 	 <connection.go:107>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-05 06:16:41 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62742]
+2018-05-05 06:16:44 	 [ERROR] 	 <ack_handle.go:15>  	 error未有记录被修改seq:6,msgId:10149
+2018-05-05 06:16:52 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-05 06:16:52 	 [ERROR] 	 <client.go:79>  	 EOF
+2018-05-05 06:16:52 	 [DEBUG] 	 <client.go:145>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-05 06:16:52 	 [DEBUG] 	 <client.go:110>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-05 06:17:13 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-05 06:17:13 	 [ERROR] 	 <client.go:79>  	 EOF
+2018-05-05 06:17:13 	 [DEBUG] 	 <client.go:145>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-05 06:17:13 	 [DEBUG] 	 <client.go:110>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-05 06:17:17 	 [DEBUG] 	 <connection.go:107>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-05-05 06:17:17 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:62742: read: connection reset by peer
+2018-05-05 06:17:17 	 [DEBUG] 	 <client.go:145>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-05-05 06:17:17 	 [DEBUG] 	 <protocol.go:122>  	 sock write error:%!(EXTRA *net.OpError=write tcp 127.0.0.1:62310->127.0.0.1:62742: write: broken pipe)
+2018-05-05 06:17:17 	 [ INFO] 	 <connection.go:54>  	 send msg:%!(EXTRA string=default_wait set notify info, string= tcp err:, *net.OpError=write tcp 127.0.0.1:62310->127.0.0.1:62742: write: broken pipe)
+2018-05-05 06:17:17 	 [DEBUG] 	 <client.go:110>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd socket closed

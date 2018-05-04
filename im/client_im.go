@@ -48,13 +48,19 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 	//发送消息给receiver
 	client.SendMessage(msg.receiver, pro)
 
+
+	syncPro := new(Proto)
+	syncPro.Operation = OP_SEND_MSG_SYNC
+	syncPro.SeqId = pro.SeqId
+	syncPro.Body = pro.Body
+	syncPro.Ver = pro.Ver
+	//发送消息给其他登录登陆点
+	client.SendMessage(msg.sender,syncPro)
 	//消息回执
 	client.handleImMessageACK(msgId, client.version, pro.SeqId)
+
 	atomic.AddInt64(&serverSummary.in_message_count, 1)
 
-	//发送消息给其他登录登陆点
-	pro.Operation = OP_SEND_MSG_SYNC
-	client.SendMessage(msg.sender,pro)
 
 
 }

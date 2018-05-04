@@ -17,7 +17,7 @@ func StartClient(port int) {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-	conn.SetReadDeadline(time.Now().Add(5*6 * time.Second))
+	conn.SetReadDeadline(time.Now().Add(5*60 * time.Second))
 	defer conn.Close()
 	//reader := bufio.NewReader(conn)
 	running := true
