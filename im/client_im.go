@@ -49,13 +49,10 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 	client.SendMessage(msg.receiver, pro)
 
 
-	syncPro := new(Proto)
-	syncPro.Operation = OP_SEND_MSG_SYNC
-	syncPro.SeqId = pro.SeqId
-	syncPro.Body = pro.Body
-	syncPro.Ver = pro.Ver
+
 	//发送消息给其他登录登陆点
-	client.SendMessage(msg.sender,syncPro)
+	pro.Operation = OP_SEND_MSG_SYNC
+	client.SendMessage(msg.sender,pro)
 	//消息回执
 	client.handleImMessageACK(msgId, client.version, pro.SeqId)
 
@@ -84,14 +81,14 @@ func (client *ClientIM)sendOffLineMessage()  {
 		log.Error(err.Error())
 		return
 	}
+	p := new(Proto)
 	for _,imMsg := range ms{
 		//fmt.Printf("offline msg :%s",imMsg.Description())
-		p := new(Proto)
 		p.Operation = OP_SEND_MSG
 		p.Ver = client.version
 		p.Body = FromIMMessage(&imMsg).ToData()
 		p.SeqId = imMsg.Id
-		client.EnqueueMessage(p)
+		client.SendMessage(imMsg.Receiver,p)
 	}
 }
 

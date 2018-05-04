@@ -368,3 +368,13 @@
 2018-05-05 06:17:17 	 [DEBUG] 	 <protocol.go:122>  	 sock write error:%!(EXTRA *net.OpError=write tcp 127.0.0.1:62310->127.0.0.1:62742: write: broken pipe)
 2018-05-05 06:17:17 	 [ INFO] 	 <connection.go:54>  	 send msg:%!(EXTRA string=default_wait set notify info, string= tcp err:, *net.OpError=write tcp 127.0.0.1:62310->127.0.0.1:62742: write: broken pipe)
 2018-05-05 06:17:17 	 [DEBUG] 	 <client.go:110>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd socket closed
+2018-05-05 06:20:26 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-05 06:20:26 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-05 06:20:26 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-05 06:20:26 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-05 06:20:26 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-05 06:20:26 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-05 06:20:26 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-05 06:20:26 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-05 06:20:29 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62927]
+2018-05-05 06:20:56 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62930]
