@@ -3,6 +3,7 @@ package im
 import (
 	log "github.com/flywithbug/log4go"
 	"sync"
+	"fmt"
 )
 
 type Route struct {
@@ -72,6 +73,7 @@ func (route *Route) AddClient(client *Client) {
 func (route *Route) RemoveClient(client *Client) bool {
 	route.mutex.Lock()
 	defer route.mutex.Unlock()
+	fmt.Printf("RemoveClient :client uid :%d\n",client.uid)
 	if set, ok := route.clients[client.uid]; ok {
 		set.Remove(client)
 		if set.Count() == 0 {

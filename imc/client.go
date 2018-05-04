@@ -46,7 +46,18 @@ func StartClient(port int) {
 				msg.Body = ack.ToData()
 				msg.Operation = OP_SEND_MSG_ACK
 				SendMessage(conn,msg)
+			case OP_SEND_MSG_SYNC:
+				var msg1 Message
+				msg1.FromData(msg.Body)
+				fmt.Println("receiveMsg:",msg1.Description(),msg.Description())
 
+				//同步消息可以不发送回执
+				var ack MessageACK
+				ack.msgId = msg1.msgId
+				ack.seq = msg.SeqId
+				msg.Body = ack.ToData()
+				msg.Operation = OP_SEND_MSG_SYNC_ACK
+				SendMessage(conn,msg)
 			}
 		}
 	}()

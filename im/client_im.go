@@ -4,6 +4,7 @@ import (
 	log "github.com/flywithbug/log4go"
 	"im_go/model"
 	"fmt"
+	"sync/atomic"
 )
 
 type ClientIM struct {
@@ -14,6 +15,7 @@ func (client *ClientIM) handleMessage(pro *Proto) {
 	switch pro.Operation {
 	case OP_SEND_MSG:
 		client.HandleIMMessage(pro)
+
 	}
 
 }
@@ -42,10 +44,19 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 
 	msg.msgId = msgId
 	pro.Body = msg.ToData()
+
+
+	//发送消息给receiver
+	client.SendMessage(msg.receiver, pro)
+
 	//消息回执
 	client.handleImMessageACK(msgId, client.version, pro.SeqId)
+	atomic.AddInt64(&serverSummary.in_message_count, 1)
 
-	client.SendMessage(msg.receiver, pro)
+	//发送消息给其他登录登陆点
+	pro.Operation = OP_SEND_MSG_SYNC
+	client.SendMessage(msg.sender,pro)
+
 
 }
 

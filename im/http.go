@@ -32,3 +32,9 @@ func (h loggingHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	log.Info("http request:%s %s %s", r.RemoteAddr, r.Method, r.URL)
 	h.handler.ServeHTTP(w, r)
 }
+
+
+
+
+
+

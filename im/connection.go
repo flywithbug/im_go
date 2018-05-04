@@ -64,7 +64,7 @@ func (client *Connection) close() {
 func (client *Connection) EnqueueMessage(pro *Proto) bool {
 	closed := atomic.LoadInt32(&client.closed)
 	if closed > 0 {
-		log.Info("can't send message to closed connection:%d", client.uid)
+		log.Info("can't send message to closed connection:%d %s", client.uid,client.userId)
 		return false
 	}
 	tc := atomic.LoadInt32(&client.tc)
@@ -98,11 +98,15 @@ func (client *Connection) SendMessage(uid int32, pro *Proto) bool {
 		log.Error(fmt.Sprintf("can't send message, appid:%d uid:%d cmd:%d", appid, uid, pro.Operation))
 		return false
 	}
+	fmt.Printf("======clients===len:%d uid:%d \n",len(clients),uid)
+	send := false
 	for c := range clients {
 		if &c.Connection == client {
 			continue
 		}
-		c.EnqueueMessage(pro)
+		if c.EnqueueMessage(pro) {
+			send = true
+		}
 	}
-	return true
+	return send
 }

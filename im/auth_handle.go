@@ -28,8 +28,8 @@ type AuthenticationToken struct {
 func (client *Client) HandleAuthToken(pro *Proto) {
 	var auth AuthenticationToken
 	auth.FromData(pro.Body)
-	logInfo := fmt.Sprintf("authToken:%s platform:%d deviceId:%s", auth.Token, auth.PlatformType, auth.DeviceId)
-	log.Debug(logInfo)
+	//logInfo := fmt.Sprintf("authToken:%s platform:%d deviceId:%s", auth.Token, auth.PlatformType, auth.DeviceId)
+	//log.Debug(logInfo)
 	if client.uid > 0 && strings.EqualFold(client.Token, auth.Token) {
 		log.Info("repeat login")
 		return
@@ -86,28 +86,29 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 		client.AddClient()
 		atomic.AddInt64(&serverSummary.nclients, 1)
 		//登出其他账号
-		client.LogOutOtherClient()
-		model.UpdateUserStatus(login.UId, model.STATUS_LOGIN)
+		//client.LogOutOtherClient()
+		//model.UpdateUserStatus(login.UId, model.STATUS_LOGIN)
+	}else {
+		log.Error("auth status  消息返回客户端失败")
 	}
 }
 
 func (client *Client) LogOutOtherClient() {
-	p := new(Proto)
-	p.Operation = OP_DISCONNECT_ACK
-	route := appRoute.FindRoute(client.appid)
-	clients := route.FindClientSet(client.uid)
-	//可以扩展多端同时在线。
-	for c, _ := range clients {
-		//不再发送给自己
-		if c == client {
-			continue
-		}
-		//发送踢出消息
-		c.EnqueueMessage(p)
-		//关闭client
-		c.handleClientClosed()
-	}
-	model.LogoutOthers(client.Token, client.uid)
+	//p := new(Proto)
+	//p.Operation = OP_DISCONNECT_ACK
+	//route := appRoute.FindRoute(client.appid)
+	//clients := route.FindClientSet(client.uid)
+	////可以扩展多端同时在线。
+	//for c, _ := range clients {
+	//	//不再发送给自己
+	//	if c == client {
+	//		continue
+	//	}
+	//	//发送踢出消息
+	//	c.EnqueueMessage(p)
+	//	//c.handleClientClosed()
+	//}
+	//model.LogoutOthers(client.Token, client.uid)
 }
 
 func (auth *AuthenticationToken) ToData() []byte {

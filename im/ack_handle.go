@@ -12,6 +12,16 @@ func (client *Client) HandleACK(pro *Proto) {
 	ack.FromData(pro.Body)
 	err := model.UpdateMessageACK(ack.msgId,1)
 	if err != nil {
-		log.Error("error"+err.Error())
+		log.Error("error"+err.Error() + ack.Description())
 	}
+}
+
+
+func (client *Client) HandleSyncACK(pro *Proto) {
+	//同步消息回执
+	//var ack MessageACK
+	//ack.FromData(pro.Body)
+	////err := model.UpdateMessageACK(ack.msgId,1)
+	//if err != nil {
+	//}
 }

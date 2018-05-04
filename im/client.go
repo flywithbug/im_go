@@ -2,7 +2,6 @@ package im
 
 import (
 	log "github.com/flywithbug/log4go"
-	"im_go/model"
 	"io"
 	"net"
 	"sync/atomic"
@@ -40,6 +39,8 @@ func (client *Client) handleMessage(pro *Proto) {
 		client.HandleAuthToken(pro)
 	case OP_SEND_MSG_ACK: //客户端返回的ack
 		client.HandleACK(pro)
+	case OP_SEND_MSG_SYNC_ACK: //客户端返回的ack
+		client.HandleSyncACK(pro)
 	}
 	client.ClientIM.handleMessage(pro)
 
@@ -74,6 +75,7 @@ func (client *Client) Read() {
 		t1 := time.Now().Unix()
 		msg, err := client.read()
 		if err == io.EOF {
+			log.Error(err.Error())
 			client.handleClientClosed()
 			break
 		}
@@ -132,25 +134,19 @@ func (client *Client) Write() {
 }
 
 func (client *Client) handleClientClosed() {
-	close := atomic.LoadInt32(&client.closed)
+
+	atomic.AddInt64(&serverSummary.nconnections, -1)
 	if client.uid > 0 {
 		atomic.AddInt64(&serverSummary.nclients, -1)
-		log.Info("HandleClientClosed client:%d %s", client.uid, client.userId)
 	}
-	if close == 0 && client.uid != 0 {
-		atomic.AddInt64(&serverSummary.nconnections, -1)
-		//quit when write goroutine received
-		log.Info("close client userId:%s uid:%d", client.userId, client.uid)
-		//client.RoomClient.Logout()
-		//client.IMClient.Logout()
-		client.RemoveClient()
-		//数据库登录态置为0 ）
-		model.UpdateUserStatus(client.uid, 0)
 
-		client.uid = 0
-	}
-	client.wt <- nil
 	atomic.StoreInt32(&client.closed, 1)
+	log.Info("close client:%d, %s", client.uid, client.userId)
+
+	//client.RoomClient.Logout()
+	//client.IMClient.Logout()
+	client.RemoveClient()
+	client.wt <- nil
 }
 
 func (client *Client) Listen() {

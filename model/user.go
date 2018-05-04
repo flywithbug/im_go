@@ -139,28 +139,7 @@ func SaveUser(appId int64,account string, password string, nick string, avatar s
 	return &uid, nil
 }
 
-/*
- 修改用户状态  //考虑废弃用户登录态更新
-*/
-func UpdateUserStatus(u_id int32, status int) (int64, error) {
-	updateStmt, err := Database.Prepare("UPDATE im_user SET `status` = ? WHERE id =?")
-	if err != nil {
-		log.Error(err.Error())
-		return -1, &DatabaseError{"服务出错"}
-	}
-	defer updateStmt.Close()
-	res, err := updateStmt.Exec(status, u_id)
-	if err != nil {
-		log.Error(err.Error())
-		return -1, &DatabaseError{"更新用户状态错误"}
-	}
 
-	num, err := res.RowsAffected()
-	if err != nil {
-		return -1, &DatabaseError{"读取修改用户状态影响行数错误"}
-	}
-	return num, nil
-}
 
 /*
  修改用户状态(事务)
