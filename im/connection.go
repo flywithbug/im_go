@@ -98,7 +98,7 @@ func (client *Connection) SendMessage(uid int32, pro *Proto) bool {
 		log.Error(fmt.Sprintf("can't send message, appid:%d uid:%d cmd:%d", appid, uid, pro.Operation))
 		return false
 	}
-	fmt.Printf("======clients===len:%d uid:%d \n",len(clients),uid)
+	//fmt.Printf("======clients===len:%d uid:%d \n",len(clients),uid)
 	send := false
 	for c := range clients {
 		if &c.Connection == client {
