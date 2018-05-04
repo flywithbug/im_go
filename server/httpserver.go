@@ -5,12 +5,16 @@ import (
 	"fmt"
 	"net/http"
 	"im_go/server/handle"
+	"im_go/model"
 )
 
 
 //TODO 路由中间件 auth校验
 
 func StartHttpServer(port int,routPrefix []string)  {
+	if model.Database == nil {
+		panic(fmt.Errorf("mysql服务未连接"))
+	}
 	log.Info("Http服务器启动中...")
 	// 设置请求映射地址及对应处理方法
 	handle.RegisterRouters(routPrefix)

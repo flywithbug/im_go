@@ -58,6 +58,8 @@ func main() {
 
 
 
+
+
 	//启动用户管理服务
 	server.StartHttpServer(conf.ServerPort,conf.RouterPrefix)
 
