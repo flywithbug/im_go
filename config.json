@@ -1,7 +1,8 @@
 {
-  "im_port": 9000,
-  "http_port": 9001,
-  "pprof_bind":"localhost:9002",
+  "im_port": 62310,
+  "http_port": 62311,
+  "server_port": 9002,
+  "pprof_bind":"localhost:9003",
   "db_config": {
     "host": "127.0.0.1:3306",
     "username": "root",

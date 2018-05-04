@@ -59,12 +59,12 @@ func main() {
 
 
 	//启动用户管理服务
-	server.StartHttpServer(*conf)
+	server.StartHttpServer(conf.ServerPort,conf.RouterPrefix)
 
 	//启动系统监控
 	perf.Init(conf.PprofBind)
 
 
 	//启用im服务
-	im.Listen(conf.IMPort)
+	im.StartIMServer(conf.IMPort,conf.HttpPort)
 }

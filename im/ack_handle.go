@@ -7,7 +7,7 @@ import (
 
 func (client *Client) HandleACK(pro *Proto) {
 	//TODO 客户端返回ack
-	log.Info("ack:", pro.SeqId)
+
 	var ack MessageACK
 	ack.FromData(pro.Body)
 	err := model.UpdateMessageACK(ack.msgId,1)

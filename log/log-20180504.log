@@ -871,3 +871,113 @@
 2018-05-04 18:37:52 	 [ INFO] 	 <httpserver.go:15>  	 Http服务器启动中...
 2018-05-04 18:37:52 	 [ INFO] 	 <httpserver.go:19>  	 Http服务器开始监听[9001]端口
 2018-05-04 18:37:52 	 [ INFO] 	 <httpserver.go:20>  	 *********************************************
+2018-05-04 18:44:38 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-04 18:44:38 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-04 18:44:38 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-04 18:44:38 	 [ INFO] 	 <config.go:69>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-04 18:44:38 	 [ INFO] 	 <config.go:79>  	 连接数据库成功
+2018-05-04 18:44:38 	 [ INFO] 	 <httpserver.go:14>  	 Http服务器启动中...
+2018-05-04 18:44:38 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器开始监听[9002]端口
+2018-05-04 18:44:38 	 [ INFO] 	 <httpserver.go:19>  	 *********************************************
+2018-05-04 18:52:37 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-04 18:52:37 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-04 18:52:37 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-04 18:52:37 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-04 18:52:37 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-04 18:52:37 	 [ INFO] 	 <httpserver.go:14>  	 Http服务器启动中...
+2018-05-04 18:52:37 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器开始监听[9002]端口
+2018-05-04 18:52:37 	 [ INFO] 	 <httpserver.go:19>  	 *********************************************
+2018-05-04 18:52:40 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64772] 
+
+2018-05-04 18:52:42 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 18:52:42 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-04 18:52:45 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64775] 
+
+2018-05-04 18:52:46 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 18:52:46 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-04 18:52:46 	 [ INFO] 	 <client.go:138>  	 HandleClientClosed client:10001 d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-04 18:52:46 	 [ INFO] 	 <client.go:143>  	 close client userId:d5f75fbc-4f64-4f78-b320-2ca770847800 uid:10001
+2018-05-04 18:52:46 	 [ INFO] 	 <client.go:107>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-04 18:52:46 	 [ INFO] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:64772: use of closed network connection
+2018-05-04 18:52:46 	 [ WARN] 	 <client.go:127>  	 msg is dropped
+2018-05-04 18:52:48 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:2c06eaf6-e14a-4d06-ba42-15de3f11741a platform:1 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 18:52:48 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:2c06eaf6-e14a-4d06-ba42-15de3f11741a appid:10 uid:10002 device id: forbidden:0
+2018-05-04 18:52:51 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 18:52:51 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-04 18:52:53 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 18:52:53 	 [ INFO] 	 <auth_handle.go:34>  	 repeat login
+2018-05-04 18:52:54 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 18:52:54 	 [ INFO] 	 <auth_handle.go:34>  	 repeat login
+2018-05-04 18:53:06 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64780] 
+
+2018-05-04 18:53:11 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:2c06eaf6-e14a-4d06-ba42-15de3f11741a platform:1 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 18:53:11 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:2c06eaf6-e14a-4d06-ba42-15de3f11741a appid:10 uid:10002 device id: forbidden:0
+2018-05-04 18:53:11 	 [ INFO] 	 <client.go:138>  	 HandleClientClosed client:10001 d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-04 18:53:11 	 [ INFO] 	 <client.go:143>  	 close client userId:d5f75fbc-4f64-4f78-b320-2ca770847800 uid:10001
+2018-05-04 18:53:11 	 [ INFO] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:64775: use of closed network connection
+2018-05-04 18:53:11 	 [ INFO] 	 <client.go:107>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 socket closed
+2018-05-04 18:53:11 	 [ WARN] 	 <client.go:127>  	 msg is dropped
+2018-05-04 18:53:12 	 [ INFO] 	 <client_im.go:30>  	 msgBody msg1
+2018-05-04 18:53:12 	 [ERROR] 	 <connection.go:98>  	 can't send message, appid:10 uid:10001 cmd:4
+2018-05-04 18:53:23 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64783] 
+
+2018-05-04 18:53:27 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 18:53:27 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-04 18:53:28 	 [ WARN] 	 <client_im.go:27>  	 message decode not right
+2018-05-04 18:53:28 	 [ WARN] 	 <client_im.go:27>  	 message decode not right
+2018-05-04 18:53:29 	 [ WARN] 	 <client_im.go:27>  	 message decode not right
+2018-05-04 18:53:34 	 [ INFO] 	 <client_im.go:30>  	 msgBody msg
+2018-05-04 18:53:34 	 [ INFO] 	 <connection.go:67>  	 can't send message to closed connection:0
+2018-05-04 18:53:34 	 [ INFO] 	 <ack_handle.go:10>  	 ack:%!(EXTRA int32=3)
+2018-05-04 18:53:40 	 [ INFO] 	 <client_im.go:30>  	 msgBody msg1
+2018-05-04 18:53:40 	 [ INFO] 	 <ack_handle.go:10>  	 ack:%!(EXTRA int32=3)
+2018-05-04 18:54:30 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-04 18:54:30 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-04 18:54:30 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-04 18:54:30 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-04 18:54:30 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-04 18:54:30 	 [ INFO] 	 <httpserver.go:14>  	 Http服务器启动中...
+2018-05-04 18:54:30 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器开始监听[9002]端口
+2018-05-04 18:54:30 	 [ INFO] 	 <httpserver.go:19>  	 *********************************************
+2018-05-04 18:54:33 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64833] 
+
+2018-05-04 18:54:35 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 18:54:35 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-04 18:54:38 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64838] 
+
+2018-05-04 18:54:40 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:2c06eaf6-e14a-4d06-ba42-15de3f11741a platform:1 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 18:54:40 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:2c06eaf6-e14a-4d06-ba42-15de3f11741a appid:10 uid:10002 device id: forbidden:0
+2018-05-04 18:54:45 	 [ WARN] 	 <client_im.go:27>  	 message decode not rightaa
+2018-05-04 18:54:46 	 [ WARN] 	 <client_im.go:27>  	 message decode not righta
+2018-05-04 18:55:09 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-04 18:55:09 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-04 18:55:09 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-04 18:55:09 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-04 18:55:09 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-04 18:55:09 	 [ INFO] 	 <httpserver.go:14>  	 Http服务器启动中...
+2018-05-04 18:55:09 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器开始监听[9002]端口
+2018-05-04 18:55:09 	 [ INFO] 	 <httpserver.go:19>  	 *********************************************
+2018-05-04 18:55:22 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64849] 
+
+2018-05-04 18:56:20 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 18:56:20 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-04 18:56:23 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64892] 
+
+2018-05-04 18:56:30 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:2c06eaf6-e14a-4d06-ba42-15de3f11741a platform:1 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 18:56:30 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:2c06eaf6-e14a-4d06-ba42-15de3f11741a appid:10 uid:10002 device id: forbidden:0
+2018-05-04 18:56:47 	 [ WARN] 	 <client_im.go:27>  	 message decode not right,body:saa
+2018-05-04 18:58:05 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-04 18:58:05 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-04 18:58:05 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-04 18:58:05 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-04 18:58:05 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-04 18:58:05 	 [ INFO] 	 <httpserver.go:14>  	 Http服务器启动中...
+2018-05-04 18:58:05 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器开始监听[9002]端口
+2018-05-04 18:58:05 	 [ INFO] 	 <httpserver.go:19>  	 *********************************************
+2018-05-04 18:58:10 	 [ INFO] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64996] 
+
+2018-05-04 18:58:12 	 [DEBUG] 	 <auth_handle.go:32>  	 authToken:58b70f11-e280-40d8-8ddd-a3810bd65f7a platform:3 deviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-04 18:58:12 	 [DEBUG] 	 <auth_handle.go:84>  	 auth token:58b70f11-e280-40d8-8ddd-a3810bd65f7a appid:10 uid:10001 device id: forbidden:0
+2018-05-04 18:58:14 	 [ WARN] 	 <client_im.go:32>  	 im message sender:10002 client uid:10001
+
+2018-05-04 18:58:15 	 [ERROR] 	 <client_im.go:28>  	 message decode not right,body: aalal,10001

@@ -16,7 +16,7 @@ func init() {
 	serverSummary = NewServerSummary()
 }
 
-func Listen(port int) {
+func listen(port int) {
 	address := fmt.Sprintf("0.0.0.0:%d", port)
 	addr, _ := net.ResolveTCPAddr("tcp", address)
 	listen, err := net.ListenTCP("tcp", addr)

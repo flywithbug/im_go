@@ -3,6 +3,7 @@ package im
 import (
 	log "github.com/flywithbug/log4go"
 	"im_go/model"
+	"fmt"
 )
 
 type ClientIM struct {
@@ -24,10 +25,9 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 	}
 	msg := new(Message)
 	if !msg.FromData(pro.Body) {
-		log.Warn("message decode not right")
+		log.Error(fmt.Sprintf("message decode not right,body: %s,%d" , pro.Body ,client.uid))
 		return
 	}
-	log.Info("msgBody %s", msg.body)
 	if msg.sender != client.uid {
 		log.Warn("im message sender:%d client uid:%d\n", msg.sender, client.uid)
 		return
