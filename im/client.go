@@ -115,7 +115,7 @@ func (client *Client) Write() {
 			}
 			seq++
 			pro.SeqId = int32(seq)
-
+			pro.Ver = client.version
 			client.send(pro)
 		}
 	}

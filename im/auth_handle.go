@@ -70,6 +70,7 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 	send := client.EnqueueMessage(pro)
 	if send {
 		client.version = pro.Ver
+
 		client.appid = login.AppId
 		client.uid = login.UId
 		client.userId = login.UserId
