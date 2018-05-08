@@ -11,13 +11,13 @@ import (
 
 //Store in mysql
 type IMMessage struct {
-	Id				int32			`json:"id"`			//msgId
+	Id				int32				`json:"id"`			//msgId
 	Sender			int32				`json:"sender"`
 	Receiver		int32				`json:"receiver"`
 	TimeStamp 		int32				`json:"time_stamp"`
 	Status 			int32				`json:"status"`
 	UpdateAt		int32				`json:"update_at"`
-	Content 		[]byte			`json:"content"`   //客户端自行解析内容
+	Content 		[]byte				`json:"content"`   //客户端自行解析内容
 }
 
 func (msg *IMMessage) Description() string {
