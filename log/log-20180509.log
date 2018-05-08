@@ -101,3 +101,137 @@
 2018-05-09 04:14:11 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
 2018-05-09 04:14:11 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
 2018-05-09 04:14:11 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 04:14:26 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64843]
+2018-05-09 04:14:27 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:14:27 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 04:14:27 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 04:14:27 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 04:14:27 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64844]
+2018-05-09 04:14:28 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:14:28 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 04:14:28 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 04:14:28 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 04:14:28 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64845]
+2018-05-09 04:14:28 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:14:28 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 04:14:28 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 04:14:28 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 04:14:28 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64846]
+2018-05-09 04:14:28 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:14:29 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64848]
+2018-05-09 04:14:29 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 04:14:29 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 04:14:29 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 04:14:29 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:14:29 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 04:14:29 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 04:14:29 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 04:14:29 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64849]
+2018-05-09 04:14:29 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64850]
+2018-05-09 04:14:29 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:14:29 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 04:14:29 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 04:14:29 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 04:14:29 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64851]
+2018-05-09 04:14:29 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:14:29 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 04:14:29 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 04:14:29 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 04:14:30 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken body  error 
+2018-05-09 04:14:31 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken body  error 
+2018-05-09 04:14:31 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken body  error 
+2018-05-09 04:14:31 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken body  error 
+2018-05-09 04:14:32 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken body  error 
+2018-05-09 04:14:32 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken body  error 
+2018-05-09 04:14:32 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken body  error 
+2018-05-09 04:16:14 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 04:16:14 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 04:16:14 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 04:16:14 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 04:16:14 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 04:16:14 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 04:16:14 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 04:16:14 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 04:16:15 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64881]
+2018-05-09 04:16:16 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken body  error test
+2018-05-09 04:16:47 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 04:16:47 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 04:16:47 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 04:16:47 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 04:16:47 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 04:16:47 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 04:16:47 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 04:16:47 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 04:16:48 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64905]
+2018-05-09 04:16:49 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken decode error, body:test
+2018-05-09 04:22:49 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:64905: i/o timeout
+2018-05-09 04:22:49 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 04:22:49 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 04:24:19 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:65104]
+2018-05-09 04:24:20 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken decode error, body:test
+2018-05-09 04:25:07 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:25:07 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 04:25:07 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 04:25:07 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 04:25:14 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:65116]
+2018-05-09 04:25:15 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken decode error, body:test
+2018-05-09 04:25:20 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:25:20 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 04:25:20 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 04:25:20 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 04:36:02 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:65462]
+2018-05-09 04:36:10 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 04:36:10 	 [ERROR] 	 <auth_handle.go:48>  	 根据Token获取用户登录错误
+2018-05-09 04:36:11 	 [ INFO] 	 <protocol.go:141>  	 buff read error:default server codec header length error
+2018-05-09 04:36:11 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 04:36:11 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 04:36:37 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:65467]
+2018-05-09 04:36:39 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 04:36:39 	 [ERROR] 	 <auth_handle.go:48>  	 根据Token获取用户登录错误
+2018-05-09 04:36:39 	 [ INFO] 	 <protocol.go:141>  	 buff read error:default server codec header length error
+2018-05-09 04:36:39 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 04:36:39 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 05:17:22 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:49838]
+2018-05-09 05:17:23 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken decode error, body:test
+2018-05-09 05:17:39 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 05:17:39 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 05:17:39 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 05:17:39 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 05:17:39 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 05:17:39 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 05:17:39 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 05:17:39 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 05:17:42 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:49844]
+2018-05-09 05:17:43 	 [ INFO] 	 <auth_handle.go:82>  	 AuthenticationToken decode error, body:test
+2018-05-09 05:17:52 	 [ INFO] 	 <auth_handle.go:82>  	 AuthenticationToken decode error, body:test
+2018-05-09 05:18:57 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 05:18:57 	 [DEBUG] 	 <client.go:80>  	 EOFconnect offline
+2018-05-09 05:18:57 	 [DEBUG] 	 <client.go:147>  	 close client:0, 
+2018-05-09 05:18:57 	 [DEBUG] 	 <client.go:111>  	 client:  0 socket closed
+2018-05-09 05:19:13 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:49855]
+2018-05-09 05:19:14 	 [ INFO] 	 <auth_handle.go:82>  	 AuthenticationToken decode error, body:test
+2018-05-09 05:21:21 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 05:21:21 	 [DEBUG] 	 <client.go:80>  	 EOFconnect offline
+2018-05-09 05:21:21 	 [DEBUG] 	 <client.go:147>  	 close client:0, 
+2018-05-09 05:21:21 	 [DEBUG] 	 <client.go:111>  	 client:  0 socket closed
+2018-05-09 05:21:30 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:49907]
+2018-05-09 05:21:30 	 [ INFO] 	 <auth_handle.go:82>  	 AuthenticationToken decode error, body:test
+2018-05-09 05:22:05 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 05:22:05 	 [DEBUG] 	 <client.go:80>  	 EOFconnect offline
+2018-05-09 05:22:05 	 [DEBUG] 	 <client.go:147>  	 close client:0, 
+2018-05-09 05:22:05 	 [DEBUG] 	 <client.go:111>  	 client:  0 socket closed
+2018-05-09 05:22:20 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50093]
+2018-05-09 05:22:21 	 [ INFO] 	 <auth_handle.go:82>  	 AuthenticationToken decode error, body:test
+2018-05-09 05:22:49 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 05:22:49 	 [DEBUG] 	 <client.go:80>  	 EOFconnect offline
+2018-05-09 05:22:49 	 [DEBUG] 	 <client.go:147>  	 close client:0, 
+2018-05-09 05:22:49 	 [DEBUG] 	 <client.go:111>  	 client:  0 socket closed
+2018-05-09 05:22:57 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50138]
+2018-05-09 05:22:58 	 [ INFO] 	 <auth_handle.go:82>  	 AuthenticationToken decode error, body:test
+2018-05-09 05:23:18 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 05:23:18 	 [DEBUG] 	 <client.go:80>  	 EOFconnect offline
+2018-05-09 05:23:18 	 [DEBUG] 	 <client.go:147>  	 close client:0, 
+2018-05-09 05:23:18 	 [DEBUG] 	 <client.go:111>  	 client:  0 socket closed
+2018-05-09 05:23:27 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50164]
+2018-05-09 05:23:28 	 [ INFO] 	 <auth_handle.go:82>  	 AuthenticationToken decode error, body:
+2018-05-09 05:23:31 	 [ INFO] 	 <auth_handle.go:82>  	 AuthenticationToken decode error, body:
