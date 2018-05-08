@@ -9,3 +9,7 @@
 2018-05-08 23:21:53 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:63237]
 2018-05-08 23:21:59 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
 2018-05-08 23:21:59 	 [ERROR] 	 <auth_handle.go:42>  	 根据Token获取用户登录错误
+2018-05-08 23:27:59 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:63237: i/o timeout
+2018-05-08 23:27:59 	 [DEBUG] 	 <client.go:145>  	 close client:0, 
+2018-05-08 23:27:59 	 [ WARN] 	 <client.go:58>  	 can't find app route
+2018-05-08 23:27:59 	 [DEBUG] 	 <client.go:110>  	 client:  socket closed

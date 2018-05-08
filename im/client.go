@@ -55,7 +55,7 @@ func (client *Client) AddClient() {
 func (client *Client) RemoveClient() {
 	route := appRoute.FindRoute(client.appid)
 	if route == nil {
-		log.Warn("can't find app route")
+		log.Warn("can't find app route %d",client.appid)
 		return
 	}
 	route.RemoveClient(client)
@@ -76,7 +76,7 @@ func (client *Client) Read() {
 		t1 := time.Now().Unix()
 		msg, err := client.read()
 		if err == io.EOF {
-			log.Error(err.Error())
+			log.Debug(err.Error() + "connect offline")
 			client.handleClientClosed()
 			break
 		}
@@ -107,7 +107,7 @@ func (client *Client) Write() {
 			if pro == nil {
 				client.close()
 				running = false
-				log.Debug("client: %s socket closed", client.userId)
+				log.Debug("client: %s %d socket closed", client.userId,client.uid)
 				break
 			}
 			if pro.Operation == OP_SEND_MSG {
@@ -139,14 +139,13 @@ func (client *Client) handleClientClosed() {
 	atomic.AddInt64(&serverSummary.nconnections, -1)
 	if client.uid > 0 {
 		atomic.AddInt64(&serverSummary.nclients, -1)
+		client.RemoveClient()
 	}
 
 	atomic.StoreInt32(&client.closed, 1)
 	log.Debug("close client:%d, %s", client.uid, client.userId)
-
 	//client.RoomClient.Logout()
 	//client.IMClient.Logout()
-	client.RemoveClient()
 	client.wt <- nil
 }
 

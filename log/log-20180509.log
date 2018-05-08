@@ -1,0 +1,103 @@
+2018-05-09 04:03:42 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 04:03:42 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 04:03:42 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 04:03:42 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 04:03:42 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 04:03:42 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 04:03:42 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 04:03:42 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 04:03:49 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64607]
+2018-05-09 04:04:01 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 04:04:01 	 [ERROR] 	 <auth_handle.go:42>  	 根据Token获取用户登录错误
+2018-05-09 04:06:11 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 04:06:11 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 04:06:11 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 04:06:11 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 04:06:11 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 04:06:11 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 04:06:11 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 04:06:11 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 04:06:14 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64696]
+2018-05-09 04:06:16 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 04:06:16 	 [ERROR] 	 <auth_handle.go:46>  	 根据Token获取用户登录错误
+2018-05-09 04:07:29 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 04:07:29 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 04:07:29 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 04:07:29 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 04:07:29 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 04:07:29 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 04:07:29 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 04:07:29 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 04:07:32 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64708]
+2018-05-09 04:07:33 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken body  error 
+2018-05-09 04:07:39 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken body  error 
+2018-05-09 04:07:41 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:07:41 	 [ERROR] 	 <client.go:79>  	 EOF
+2018-05-09 04:07:41 	 [DEBUG] 	 <client.go:145>  	 close client:0, 
+2018-05-09 04:07:41 	 [ WARN] 	 <client.go:58>  	 can't find app route
+2018-05-09 04:07:41 	 [DEBUG] 	 <client.go:110>  	 client:  socket closed
+2018-05-09 04:07:41 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64709]
+2018-05-09 04:07:43 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken body  error 
+2018-05-09 04:07:44 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken body  error 
+2018-05-09 04:07:45 	 [ INFO] 	 <auth_handle.go:34>  	 AuthenticationToken body  error 
+2018-05-09 04:07:45 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:07:46 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64710]
+2018-05-09 04:07:46 	 [ERROR] 	 <client.go:79>  	 EOF
+2018-05-09 04:07:46 	 [DEBUG] 	 <client.go:145>  	 close client:0, 
+2018-05-09 04:07:46 	 [ WARN] 	 <client.go:58>  	 can't find app route
+2018-05-09 04:07:46 	 [DEBUG] 	 <client.go:110>  	 client:  socket closed
+2018-05-09 04:07:47 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64711]
+2018-05-09 04:07:47 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:07:47 	 [ERROR] 	 <client.go:79>  	 EOF
+2018-05-09 04:07:47 	 [DEBUG] 	 <client.go:145>  	 close client:0, 
+2018-05-09 04:07:47 	 [ WARN] 	 <client.go:58>  	 can't find app route
+2018-05-09 04:07:47 	 [DEBUG] 	 <client.go:110>  	 client:  socket closed
+2018-05-09 04:07:47 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:07:47 	 [ERROR] 	 <client.go:79>  	 EOF
+2018-05-09 04:07:47 	 [DEBUG] 	 <client.go:145>  	 close client:0, 
+2018-05-09 04:07:47 	 [ WARN] 	 <client.go:58>  	 can't find app route
+2018-05-09 04:07:47 	 [DEBUG] 	 <client.go:110>  	 client:  socket closed
+2018-05-09 04:07:47 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64712]
+2018-05-09 04:07:47 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64713]
+2018-05-09 04:07:47 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:07:47 	 [ERROR] 	 <client.go:79>  	 EOF
+2018-05-09 04:07:47 	 [DEBUG] 	 <client.go:145>  	 close client:0, 
+2018-05-09 04:07:47 	 [ WARN] 	 <client.go:58>  	 can't find app route
+2018-05-09 04:07:47 	 [DEBUG] 	 <client.go:110>  	 client:  socket closed
+2018-05-09 04:08:25 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 04:08:25 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 04:08:25 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 04:08:25 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 04:08:25 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 04:08:25 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 04:08:25 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 04:08:25 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 04:08:27 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64719]
+2018-05-09 04:08:30 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:08:30 	 [ERROR] 	 <client.go:79>  	 EOF
+2018-05-09 04:08:30 	 [DEBUG] 	 <client.go:145>  	 close client:0, 
+2018-05-09 04:08:30 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64720]
+2018-05-09 04:08:30 	 [ WARN] 	 <client.go:58>  	 can't find app route 0
+2018-05-09 04:08:30 	 [DEBUG] 	 <client.go:110>  	 client:  socket closed
+2018-05-09 04:11:31 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 04:11:31 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 04:11:31 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 04:11:31 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 04:11:31 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 04:11:31 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 04:11:31 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 04:11:31 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 04:11:38 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64755]
+2018-05-09 04:11:39 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 04:11:39 	 [ERROR] 	 <client.go:79>  	 EOF
+2018-05-09 04:11:39 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 04:11:39 	 [DEBUG] 	 <client.go:110>  	 client:  socket closed
+2018-05-09 04:11:39 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:64761]
+2018-05-09 04:14:11 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 04:14:11 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 04:14:11 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 04:14:11 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 04:14:11 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 04:14:11 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 04:14:11 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 04:14:11 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************

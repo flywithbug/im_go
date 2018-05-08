@@ -24,16 +24,24 @@ type AuthenticationToken struct {
 	PlatformType int8   `json:"platform_type"`
 	DeviceId     string `json:"device_id"`
 }
+func (auth *AuthenticationToken) Description() string {
+	return fmt.Sprintf("Token:%s,PlatformType:%d,DeviceId:%s" , auth.Token, auth.PlatformType,auth.DeviceId)
+}
 
 func (client *Client) HandleAuthToken(pro *Proto) {
 	var auth AuthenticationToken
-	auth.FromData(pro.Body)
+	if !auth.FromData(pro.Body) {
+		log.Info("AuthenticationToken body  error ")
+		return
+	}
+
 	//logInfo := fmt.Sprintf("authToken:%s platform:%d deviceId:%s", auth.Token, auth.PlatformType, auth.DeviceId)
 	//log.Debug(logInfo)
 	if client.uid > 0 && strings.EqualFold(client.Token, auth.Token) {
 		log.Info("repeat login")
 		return
 	}
+
 	//call back Body
 	var authStatus AuthenticationStatus
 	pro.Operation = OP_AUTH_ACK
