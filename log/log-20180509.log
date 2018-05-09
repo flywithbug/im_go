@@ -264,3 +264,481 @@
 2018-05-09 05:30:45 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
 2018-05-09 05:30:45 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
 2018-05-09 05:30:45 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 05:56:00 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50670]
+2018-05-09 05:56:10 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 05:56:10 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 05:56:10 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 05:56:10 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 05:56:17 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50695]
+2018-05-09 05:56:20 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50696]
+2018-05-09 05:56:20 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 05:56:20 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 05:56:20 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 05:56:20 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 05:56:30 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 05:56:30 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 05:56:30 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 05:56:30 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 05:56:37 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50713]
+2018-05-09 05:56:38 	 [ INFO] 	 <auth_handle.go:23>  	 AuthenticationToken decode error, body:
+2018-05-09 05:56:51 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 05:56:51 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 05:56:51 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 05:56:51 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 05:56:59 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50724]
+2018-05-09 05:56:59 	 [ INFO] 	 <auth_handle.go:23>  	 AuthenticationToken decode error, body:test
+2018-05-09 06:02:59 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:50724: i/o timeout
+2018-05-09 06:02:59 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 06:02:59 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 06:07:37 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50908]
+2018-05-09 06:07:45 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:07:45 	 [ERROR] 	 <auth_handle.go:37>  	 根据Token获取用户登录错误
+2018-05-09 06:07:57 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 06:07:57 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 06:07:57 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 06:07:57 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 06:07:57 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 06:07:57 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 06:07:57 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 06:07:57 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 06:08:01 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50928]
+2018-05-09 06:08:16 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:08:16 	 [ERROR] 	 <auth_handle.go:37>  	 根据Token获取用户登录错误
+2018-05-09 06:08:19 	 [ INFO] 	 <protocol.go:141>  	 buff read error:default server codec header length error
+2018-05-09 06:08:19 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 06:08:19 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 06:08:33 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50933]
+2018-05-09 06:08:35 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:08:35 	 [ERROR] 	 <auth_handle.go:37>  	 根据Token获取用户登录错误
+2018-05-09 06:12:47 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:unexpected EOF
+2018-05-09 06:12:47 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 06:12:47 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 06:12:57 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51001]
+2018-05-09 06:13:04 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:13:04 	 [ERROR] 	 <auth_handle.go:37>  	 根据Token获取用户登录错误
+2018-05-09 06:13:07 	 [ INFO] 	 <protocol.go:141>  	 buff read error:default server codec header length error
+2018-05-09 06:13:07 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 06:13:07 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 06:14:03 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51011]
+2018-05-09 06:14:08 	 [ INFO] 	 <auth_handle.go:23>  	 AuthenticationToken decode error, body:test232323
+2018-05-09 06:15:02 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 06:15:02 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 06:15:02 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 06:15:02 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 06:15:08 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51042]
+2018-05-09 06:15:09 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51043]
+2018-05-09 06:15:09 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 06:15:09 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 06:15:09 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 06:15:09 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 06:15:11 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:15:11 	 [ERROR] 	 <auth_handle.go:37>  	 根据Token获取用户登录错误
+2018-05-09 06:15:44 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 06:15:44 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 06:15:44 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 06:15:44 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 06:15:44 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 06:15:44 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 06:15:44 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 06:15:44 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 06:15:46 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51051]
+2018-05-09 06:15:47 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:15:47 	 [ERROR] 	 <auth_handle.go:37>  	 根据Token获取用户登录错误
+2018-05-09 06:16:13 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 06:16:13 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 06:16:13 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 06:16:13 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 06:16:13 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 06:16:13 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 06:16:13 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 06:16:13 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 06:16:15 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51075]
+2018-05-09 06:16:16 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:16:16 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:16:16 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:16:17 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:16:17 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:16:17 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:16:18 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:16:18 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:16:18 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:16:18 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:16:18 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:16:18 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:16:18 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:16:18 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:16:18 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:16:19 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:16:19 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:16:19 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:16:51 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 06:16:51 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 06:16:51 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 06:16:51 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 06:16:58 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51082]
+2018-05-09 06:17:03 	 [ INFO] 	 <auth_handle.go:23>  	 AuthenticationToken decode error, auth:Token:,PlatformType:0,DeviceId:
+2018-05-09 06:17:06 	 [ INFO] 	 <auth_handle.go:23>  	 AuthenticationToken decode error, auth:Token:,PlatformType:0,DeviceId:
+2018-05-09 06:17:07 	 [ INFO] 	 <auth_handle.go:23>  	 AuthenticationToken decode error, auth:Token:,PlatformType:0,DeviceId:
+2018-05-09 06:17:07 	 [ INFO] 	 <auth_handle.go:23>  	 AuthenticationToken decode error, auth:Token:,PlatformType:0,DeviceId:
+2018-05-09 06:17:08 	 [ INFO] 	 <auth_handle.go:23>  	 AuthenticationToken decode error, auth:Token:,PlatformType:0,DeviceId:
+2018-05-09 06:18:04 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 06:18:04 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 06:18:04 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 06:18:04 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 06:18:26 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51115]
+2018-05-09 06:18:27 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:18:27 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:18:27 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:18:56 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 06:18:56 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 06:18:56 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 06:18:56 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 06:19:17 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51120]
+2018-05-09 06:19:18 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:18 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:18 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:22 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:22 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:22 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:22 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:22 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:22 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:22 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:22 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:22 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:22 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:22 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:22 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:23 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:23 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:23 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:23 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:23 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:23 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:23 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:23 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:23 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:23 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:23 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:23 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:23 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:23 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:23 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:23 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:23 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:23 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:24 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:24 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:24 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:24 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:24 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:24 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:24 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:24 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:24 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:24 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:24 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:24 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:24 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:24 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:24 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:25 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:25 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:25 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:25 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:25 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:25 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:25 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:25 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:25 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:25 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:25 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:25 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:25 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:25 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:25 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:25 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:25 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:25 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:26 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:26 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:26 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:26 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:26 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:26 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:26 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51121]
+2018-05-09 06:19:26 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 06:19:26 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 06:19:26 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 06:19:26 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 06:19:27 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:27 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:27 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:27 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:27 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:27 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:28 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:28 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:28 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:28 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:28 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:28 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:28 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:28 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:28 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:29 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:29 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:29 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:29 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:29 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:29 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:29 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:29 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:29 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:29 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:29 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:29 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:29 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:29 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:29 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:30 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:30 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:30 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:30 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:30 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:30 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:30 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:30 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:30 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:30 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:30 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:30 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:30 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:30 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:30 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:31 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:31 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:31 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:31 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:31 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:31 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:19:31 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:19:31 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:19:31 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:20:07 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 06:20:07 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 06:20:07 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 06:20:07 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 06:20:31 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51156]
+2018-05-09 06:20:34 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51157]
+2018-05-09 06:20:34 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 06:20:34 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 06:20:34 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 06:20:34 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 06:20:36 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:20:36 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:20:36 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:20:37 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:20:37 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:20:37 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:20:37 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:20:37 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:20:37 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:20:38 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:20:38 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:20:38 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:20:38 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:20:38 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:20:38 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:20:38 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:20:38 	 [ INFO] 	 <auth_handle.go:37>  	 AuthenticationToken get data error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:20:38 	 [ERROR] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:22:38 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 06:22:38 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 06:22:38 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 06:22:38 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 06:22:38 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 06:22:38 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 06:22:38 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 06:22:38 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 06:22:40 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51169]
+2018-05-09 06:22:42 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:22:42 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:22:42 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:22:44 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 06:22:44 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 06:22:44 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 06:28:44 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:51169: i/o timeout
+2018-05-09 06:28:44 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 06:28:44 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 07:49:07 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52482]
+2018-05-09 07:49:12 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 07:49:12 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 07:49:12 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 07:50:08 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 07:50:08 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 07:50:08 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 07:50:08 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 07:50:17 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52496]
+2018-05-09 07:50:17 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 07:50:17 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 07:50:17 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 07:51:12 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 07:51:12 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 07:51:12 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 07:51:12 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 07:51:19 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52505]
+2018-05-09 07:51:20 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 07:51:20 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 07:51:20 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 07:52:19 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 07:52:19 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 07:52:19 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 07:52:19 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 07:52:27 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52534]
+2018-05-09 07:52:28 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 07:52:28 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 07:52:28 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 07:53:31 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 07:53:31 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 07:53:31 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 07:53:31 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 07:53:38 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52544]
+2018-05-09 07:53:39 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 07:53:39 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 07:53:39 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 07:57:28 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 07:57:28 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 07:57:28 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 07:57:28 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 07:57:35 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52627]
+2018-05-09 07:57:35 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 07:57:35 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 07:57:35 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 08:03:35 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:52627: i/o timeout
+2018-05-09 08:03:35 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 08:03:35 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 08:11:42 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52828]
+2018-05-09 08:11:44 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 08:11:44 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 08:11:44 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 08:14:02 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 08:14:02 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 08:14:02 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 08:14:02 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 09:01:52 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:53372]
+2018-05-09 09:01:53 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 09:01:53 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 09:01:53 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 09:02:10 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 09:02:10 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 09:02:10 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 09:02:10 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 09:02:19 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:53377]
+2018-05-09 09:02:23 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 09:02:23 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 09:02:23 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 09:04:11 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 09:04:11 	 [DEBUG] 	 <client.go:79>  	 EOFconnect offline
+2018-05-09 09:04:11 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 09:04:11 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 09:05:48 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:53418]
+2018-05-09 09:05:49 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 09:05:49 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 09:05:49 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 09:11:49 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:53418: i/o timeout
+2018-05-09 09:11:49 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 09:11:49 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 11:42:25 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58977]
+2018-05-09 11:42:26 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-09 11:42:26 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:test,PlatformType:1,DeviceId:23232323
+2018-05-09 11:42:26 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-09 11:48:26 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:58977: i/o timeout
+2018-05-09 11:48:26 	 [DEBUG] 	 <client.go:146>  	 close client:0, 
+2018-05-09 11:48:26 	 [DEBUG] 	 <client.go:110>  	 client:  0 socket closed
+2018-05-09 13:57:39 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 13:57:39 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 13:57:39 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 13:57:39 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 13:57:39 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 13:57:39 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 13:57:39 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 13:57:39 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 14:05:11 	 [ERROR] 	 <user_handle.go:43>  	 invalid character 'a' looking for beginning of value
+2018-05-09 14:08:58 	 [ERROR] 	 <user_handle.go:43>  	 invalid character 'a' looking for beginning of value
+2018-05-09 14:14:08 	 [ERROR] 	 <user_handle.go:43>  	 invalid character 'a' looking for beginning of value
+2018-05-09 14:17:35 	 [ERROR] 	 <user_handle.go:43>  	 invalid character 'a' looking for beginning of value
+2018-05-09 14:18:13 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 14:18:13 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 14:18:13 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 14:18:13 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 14:18:13 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 14:18:13 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 14:18:13 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 14:18:13 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 14:18:18 	 [ERROR] 	 <user_handle.go:45>  	 invalid character 'a' looking for beginning of value
+2018-05-09 14:21:54 	 [ERROR] 	 <user_handle.go:45>  	 invalid character '=' looking for beginning of value
+2018-05-09 21:41:26 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 21:41:26 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 21:41:26 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 21:41:26 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 21:41:26 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 21:41:26 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 21:41:26 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 21:41:26 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 21:41:40 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:56398]
+2018-05-09 21:41:43 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:56399]
+2018-05-09 21:41:43 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 21:41:43 	 [DEBUG] 	 <client.go:81>  	 EOFconnect offline
+2018-05-09 21:41:43 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-05-09 21:41:43 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-05-09 21:41:49 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 21:41:49 	 [DEBUG] 	 <client.go:81>  	 EOFconnect offline
+2018-05-09 21:41:49 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-05-09 21:41:49 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-05-09 21:41:49 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:56400]
+2018-05-09 21:44:30 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 21:44:30 	 [DEBUG] 	 <client.go:81>  	 EOFconnect offline
+2018-05-09 21:44:30 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-05-09 21:44:30 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-05-09 21:50:39 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:56558]
+2018-05-09 21:52:16 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 21:52:16 	 [DEBUG] 	 <client.go:81>  	 EOFconnect offline
+2018-05-09 21:52:16 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-05-09 21:52:16 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-05-09 21:52:24 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:56622]
+2018-05-09 21:53:07 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 21:53:07 	 [DEBUG] 	 <client.go:81>  	 EOFconnect offline
+2018-05-09 21:53:07 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-05-09 21:53:07 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-05-09 21:53:19 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:56645]
+2018-05-09 21:54:02 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 21:54:02 	 [DEBUG] 	 <client.go:81>  	 EOFconnect offline
+2018-05-09 21:54:02 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-05-09 21:54:02 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-05-09 21:54:28 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:56706]
+2018-05-09 21:56:17 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:56741]
+2018-05-09 21:58:16 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 21:58:16 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 21:58:16 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 21:58:16 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 21:58:16 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 21:58:16 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 21:58:16 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 21:58:16 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 21:58:19 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:56779]
+2018-05-09 21:59:38 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-09 21:59:38 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-09 21:59:38 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-09 21:59:38 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-09 21:59:38 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-09 21:59:38 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-09 21:59:38 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-09 21:59:38 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-09 21:59:41 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:56847]
+2018-05-09 21:59:56 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:56868]
+2018-05-09 22:01:44 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-09 22:01:44 	 [DEBUG] 	 <client.go:81>  	 EOFconnect offline
+2018-05-09 22:01:44 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-05-09 22:01:44 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-05-09 22:02:46 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:56969]

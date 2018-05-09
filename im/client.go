@@ -42,6 +42,8 @@ func (client *Client) handleMessage(pro *Proto) {
 		client.HandleACK(pro)
 	case OP_SEND_MSG_SYNC_ACK: //客户端返回的ack
 		client.HandleSyncACK(pro)
+	case OP_HEARTBEAT: //心跳检测
+		client.HandleHeartbeat(pro)
 	}
 	client.ClientIM.handleMessage(pro)
 

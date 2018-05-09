@@ -20,7 +20,7 @@ const (
 func (client *Client) HandleAuthToken(pro *Proto) {
 	var auth AuthenticationToken
 	if !auth.FromData(pro.Body) {
-		log.Info("AuthenticationToken decode error, body:%s",pro.Body)
+		log.Info("AuthenticationToken decode error, auth:%s",auth.Description())
 		return
 	}
 
@@ -34,10 +34,11 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 	pro.Operation = OP_AUTH_ACK
 	login, err := model.GetLoginByToken(auth.Token)
 	if err != nil {
-		log.Error(err.Error())
+		log.Warn("get login by token error, auth:%s",auth.Description())
+		log.Warn(err.Error())
 		authStatus.Status = AuthenticationStatusBadToken
 		pro.Body = authStatus.ToData()
-		client.EnqueueMessage(pro)
+		client.EnqueueMessage(*pro)
 		return
 	}
 
@@ -45,7 +46,7 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 		log.Error("token 已失效")
 		authStatus.Status = AuthenticationStatusBadToken
 		pro.Body = authStatus.ToData()
-		client.EnqueueMessage(pro)
+		client.EnqueueMessage(*pro)
 		return
 	}
 
@@ -54,7 +55,7 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 		log.Error(errString)
 		authStatus.Status = AuthenticationStatusBadLogin //登录用户信息有误
 		pro.Body = authStatus.ToData()
-		client.EnqueueMessage(pro)
+		client.EnqueueMessage(*pro)
 		return
 	}
 
@@ -62,7 +63,7 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 	//暂时只能单端登录
 	authStatus.Status = AuthenticationStatusSuccess
 	pro.Body = authStatus.ToData()
-	send := client.EnqueueMessage(pro)
+	send := client.EnqueueMessage(*pro)
 	if send {
 		client.version = pro.Ver
 

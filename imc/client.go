@@ -37,6 +37,9 @@ func StartClient(port int) {
 				var ack MessageACK
 				ack.FromData(msg.Body)
 				fmt.Println(ack.Description(),msg.Description())
+			case OP_HEARTBEAT_ACK:
+				fmt.Println("OP_HEARTBEAT_ACK",msg.Description())
+
 			case OP_SEND_MSG:
 				var msg1 Message
 				msg1.FromData(msg.Body)
@@ -127,17 +130,12 @@ func StartClient(port int) {
 			//}
 			p.Operation = OP_AUTH
 			p.SeqId = 1
-		}else if string(line) == "auth4"{
-			var auth im.AuthenticationToken
-			auth.Token = "3680e5ef-d5e8-4efe-82c0-9ad03cf16025"
-			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
-			auth.PlatformType = 3
+		}else if string(line) == "heart"{
 			p.Ver = 1
-			p.Body = auth.ToData()
 			//if err !=nil {
 			//	fmt.Println("Marshal",err)
 			//}
-			p.Operation = OP_AUTH
+			p.Operation = OP_HEARTBEAT
 			p.SeqId = 1
 		}else {
 			p.Ver = 1

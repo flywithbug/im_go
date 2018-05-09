@@ -8,8 +8,8 @@ import (
 
 //首次连接token
 type AuthenticationToken struct {
-	Token        string `json:"token"`
 	PlatformType int8   `json:"platform_type"`
+	Token        string `json:"token"`
 	DeviceId     string `json:"device_id"`
 }
 

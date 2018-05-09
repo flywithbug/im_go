@@ -61,13 +61,13 @@ func (client *Connection) close() {
 }
 
 //把消息加入到发送队列中
-func (client *Connection) EnqueueMessage(pro *Proto) bool {
+func (client *Connection) EnqueueMessage(p Proto) bool {
 	//warning 隔离指针传递
-	p := new(Proto)
-	p.SeqId = pro.SeqId
-	p.Body = pro.Body
-	p.Ver = pro.Ver
-	p.Operation = pro.Operation
+	//p := new(Proto)
+	//p.SeqId = pro.SeqId
+	//p.Body = pro.Body
+	//p.Ver = pro.Ver
+	//p.Operation = pro.Operation
 
 	closed := atomic.LoadInt32(&client.closed)
 	if closed > 0 {
@@ -82,7 +82,7 @@ func (client *Connection) EnqueueMessage(pro *Proto) bool {
 	}
 
 	select {
-	case client.wt <- p:
+	case client.wt <- &p:
 		return true
 	case <-time.After(60 * time.Second):
 		atomic.AddInt32(&client.tc, 1)
@@ -113,7 +113,7 @@ func (client *Connection) SendMessage(uid int32, pro *Proto) bool {
 		if &c.Connection == client {
 			continue
 		}
-		if c.EnqueueMessage(pro) {
+		if c.EnqueueMessage(*pro) {
 			send = true
 		}
 	}
