@@ -742,3 +742,6 @@
 2018-05-09 22:01:44 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
 2018-05-09 22:01:44 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
 2018-05-09 22:02:46 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:56969]
+2018-05-09 22:05:57 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:56868: i/o timeout
+2018-05-09 22:05:57 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-05-09 22:05:57 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed

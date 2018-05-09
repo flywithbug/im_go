@@ -60,7 +60,7 @@ func (client *Connection) close() {
 	client.conn.Close()
 }
 
-//把消息加入到发送队列中
+//把消息加入到发送队列中 拷贝消息对象，不使用指针传递
 func (client *Connection) EnqueueMessage(p Proto) bool {
 	//warning 隔离指针传递
 	//p := new(Proto)
