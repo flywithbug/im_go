@@ -13,7 +13,7 @@ type ClientIM struct {
 
 func (client *ClientIM) handleMessage(pro *Proto) {
 	switch pro.Operation {
-	case OP_SEND_MSG:
+	case OP_MSG:
 		client.HandleIMMessage(pro)
 	}
 
@@ -48,7 +48,7 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 	//发送消息给receiver
 	client.SendMessage(msg.receiver, pro)
 	//发送消息给其他登录登陆点
-	pro.Operation = OP_SEND_MSG_SYNC
+	pro.Operation = OP_MSG_SYNC
 	client.SendMessage(msg.sender,pro)
 	//消息回执
 	client.handleImMessageACK(msgId, client.version, pro.SeqId)
@@ -63,7 +63,7 @@ func (client *ClientIM) handleImMessageACK(msgId int32, ver int16, seq int32) {
 
 	ack := Proto{}
 	ack.Ver = ver
-	ack.Operation = OP_SEND_MSG_ACK
+	ack.Operation = OP_MSG_ACK
 	ack.Body = ackMsg.ToData()
 	ack.SeqId = seq
 	client.EnqueueMessage(ack)
@@ -80,7 +80,7 @@ func (client *ClientIM)sendOffLineMessage()  {
 	p := Proto{}
 	for _,imMsg := range ms{
 		//fmt.Printf("offline msg :%s",imMsg.Description())
-		p.Operation = OP_SEND_MSG
+		p.Operation = OP_MSG
 		p.Ver = client.version
 		p.Body = FromIMMessage(&imMsg).ToData()
 		p.SeqId = imMsg.Id

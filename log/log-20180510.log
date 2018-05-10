@@ -104,3 +104,14 @@
 2018-05-10 13:22:45 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:65180]
 2018-05-10 13:22:48 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
 2018-05-10 13:22:55 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-10 13:28:55 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:65180: i/o timeout
+2018-05-10 13:28:55 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-10 13:28:55 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-10 13:45:02 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-10 13:45:02 	 [ INFO] 	 <main.go:38>  	            系统:[IM]版本:[1.0]
+2018-05-10 13:45:02 	 [ INFO] 	 <main.go:39>  	 *********************************************
+2018-05-10 13:45:02 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-10 13:45:02 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-10 13:45:02 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-10 13:45:02 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-10 13:45:02 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************

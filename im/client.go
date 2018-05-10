@@ -38,9 +38,9 @@ func (client *Client) handleMessage(pro *Proto) {
 	switch pro.Operation {
 	case OP_AUTH:
 		client.HandleAuthToken(pro)
-	case OP_SEND_MSG_ACK: //客户端返回的ack
+	case OP_MSG_ACK: //客户端返回的ack
 		client.HandleACK(pro)
-	case OP_SEND_MSG_SYNC_ACK: //客户端返回的ack
+	case OP_MSG_SYNC_ACK: //客户端返回的ack
 		client.HandleSyncACK(pro)
 	case OP_HEARTBEAT: //心跳检测
 		client.HandleHeartbeat(pro)
@@ -112,7 +112,7 @@ func (client *Client) Write() {
 				log.Debug("client: %s %d socket closed", client.userId,client.uid)
 				break
 			}
-			if pro.Operation == OP_SEND_MSG {
+			if pro.Operation == OP_MSG {
 				atomic.AddInt64(&serverSummary.out_message_count, 1)
 			}
 			seq++

@@ -12,10 +12,10 @@ const (
 
 
 	// send  messgae
-	OP_SEND_MSG     = int32(4)
-	OP_SEND_MSG_ACK = int32(5) //消息a
-	OP_SEND_MSG_SYNC = int32(6)
-	OP_SEND_MSG_SYNC_ACK = int32(7)
+	OP_MSG     = int32(4)
+	OP_MSG_ACK = int32(5) //消息a
+	OP_MSG_SYNC = int32(6)
+	OP_MSG_SYNC_ACK = int32(7)
 
 
 
