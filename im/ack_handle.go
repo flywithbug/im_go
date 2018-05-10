@@ -6,8 +6,8 @@ import (
 )
 
 func (client *Client) HandleACK(pro *Proto) {
-	//TODO 客户端返回ack
 
+	//TODO 优化为rpc和方式修改
 	var ack MessageACK
 	ack.FromData(pro.Body)
 	err := model.UpdateMessageACK(ack.msgId,1)

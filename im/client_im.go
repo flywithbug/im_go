@@ -71,6 +71,7 @@ func (client *ClientIM) handleImMessageACK(msgId int32, ver int16, seq int32) {
 }
 
 func (client *ClientIM)sendOffLineMessage()  {
+	//TODO 优化为rpc和方式获取
 	ms,err :=  model.FindeMessagesReceiver(client.uid,0)
 	if err != nil{
 		log.Error(err.Error())

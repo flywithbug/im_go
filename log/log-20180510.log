@@ -1,0 +1,22 @@
+2018-05-10 07:30:46 	 [ INFO] 	 <main.go:38>  	 *********************************************
+2018-05-10 07:30:46 	 [ INFO] 	 <main.go:39>  	            系统:[IM]版本:[1.0]
+2018-05-10 07:30:46 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-10 07:30:46 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-10 07:30:46 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-10 07:30:46 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-10 07:30:46 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-10 07:30:46 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-10 07:31:05 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58110]
+2018-05-10 07:31:50 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-10 07:31:50 	 [DEBUG] 	 <client.go:81>  	 EOFconnect offline
+2018-05-10 07:31:50 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-05-10 07:31:50 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-05-10 07:31:57 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58119]
+2018-05-10 07:32:25 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-10 07:32:25 	 [DEBUG] 	 <client.go:81>  	 EOFconnect offline
+2018-05-10 07:32:25 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-05-10 07:32:25 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-05-10 07:32:34 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58126]
+2018-05-10 07:38:35 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:58126: i/o timeout
+2018-05-10 07:38:35 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-05-10 07:38:35 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed

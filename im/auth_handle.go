@@ -29,10 +29,11 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 		return
 	}
 
+
 	//call back Body
 	var authStatus AuthenticationStatus
 	pro.Operation = OP_AUTH_ACK
-	login, err := model.GetLoginByToken(auth.Token)
+	login, err := model.GetLoginByToken(auth.Token)  //TODO 优化为rpc和方式获取
 	if err != nil {
 		log.Warn("get login by token error, auth:%s",auth.Description())
 		log.Warn(err.Error())
