@@ -59,13 +59,13 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 
 func (client *ClientIM) handleImMessageACK(msgId int32, ver int16, seq int32) {
 	ackMsg := new(MessageACK)
-	ackMsg.seq = seq
 	ackMsg.msgId = msgId
 
 	ack := Proto{}
 	ack.Ver = ver
 	ack.Operation = OP_SEND_MSG_ACK
 	ack.Body = ackMsg.ToData()
+	ack.SeqId = seq
 	client.EnqueueMessage(ack)
 	//客户端收到回执的msgId 才算消息发送完毕
 }

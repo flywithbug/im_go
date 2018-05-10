@@ -47,7 +47,6 @@ func StartClient(port int) {
 
 				var ack MessageACK
 				ack.msgId = msg1.msgId
-				ack.seq = msg.SeqId
 				msg.Body = ack.ToData()
 				msg.Operation = OP_SEND_MSG_ACK
 				SendMessage(conn,msg)
@@ -59,7 +58,6 @@ func StartClient(port int) {
 				//同步消息可以不发送回执
 				var ack MessageACK
 				ack.msgId = msg1.msgId
-				ack.seq = msg.SeqId
 				msg.Body = ack.ToData()
 				msg.Operation = OP_SEND_MSG_SYNC_ACK
 				SendMessage(conn,msg)

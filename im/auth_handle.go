@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	AuthenticationStatusSuccess  = 0
+	AuthenticationStatusSuccess  = 1
 	AuthenticationStatusBadToken = -1
 	AuthenticationStatusBadLogin = -2
 )
