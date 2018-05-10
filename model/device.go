@@ -10,7 +10,7 @@ type Device struct {
 	Id  			int64   	`json:"id"`
 	DeviceToken 	string	 	`json:"device_token"`
 	DeviceId		string		`json:"device_id"`
-	Platform		int			`json:"platform"`
+	Platform		int			`json:"platform"`   //1.iOS, 2.android
 	Description		string		`json:"description"`
 }
 

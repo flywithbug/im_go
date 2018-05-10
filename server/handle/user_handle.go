@@ -9,7 +9,6 @@ import (
 	"io/ioutil"
 	"encoding/json"
 	log "github.com/flywithbug/log4go"
-	"fmt"
 )
 
 // 注册请求
@@ -36,7 +35,7 @@ func handleLogin(resp http.ResponseWriter, req *http.Request) {
 	if req.Method == "POST" {
 		ip := common.GetIp(req)
 		body,_ := ioutil.ReadAll(req.Body)
-		fmt.Println("req.Body",string(body));
+		log.Debug("req.Body",string(body))
 		m := loginoutModel{}
 		if err := json.Unmarshal(body,&m);err == nil{
 			password := common.Md5(m.Password)

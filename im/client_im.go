@@ -79,13 +79,14 @@ func (client *ClientIM)sendOffLineMessage()  {
 	}
 	p := Proto{}
 	for _,imMsg := range ms{
-		//fmt.Printf("offline msg :%s",imMsg.Description())
+		log.Debug("offline msg :%s \n",imMsg.Description())
 		p.Operation = OP_MSG
 		p.Ver = client.version
 		p.Body = FromIMMessage(&imMsg).ToData()
 		p.SeqId = imMsg.Id
 		client.EnqueueMessage(p)
 	}
+
 }
 
 func FromIMMessage(imMsg *model.IMMessage)(msg *Message)  {
