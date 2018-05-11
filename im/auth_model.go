@@ -84,7 +84,6 @@ func (auth *AuthenticationStatus) FromData(buff []byte) bool {
 	}
 	buffer := bytes.NewBuffer(buff)
 	binary.Read(buffer, binary.BigEndian, &auth.Status)
-
 	return true
 }
 

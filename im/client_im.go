@@ -79,7 +79,7 @@ func (client *ClientIM)sendOffLineMessage()  {
 	}
 	p := Proto{}
 	for _,imMsg := range ms{
-		log.Debug("offline msg :%s \n",imMsg.Description())
+		log.Debug("offline msg :%s",imMsg.Description())
 		p.Operation = OP_MSG
 		p.Ver = client.version
 		p.Body = FromIMMessage(&imMsg).ToData()

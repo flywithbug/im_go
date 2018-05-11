@@ -400,3 +400,6 @@
 2018-05-10 21:56:54 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
 2018-05-10 21:56:54 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
 2018-05-10 21:58:13 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:59108]
+2018-05-10 22:04:14 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:59108: i/o timeout
+2018-05-10 22:04:14 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-10 22:04:14 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed

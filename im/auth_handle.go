@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	AuthenticationStatusSuccess  = 1
+	AuthenticationStatusSuccess  = 0
 	AuthenticationStatusBadToken = -1
 	AuthenticationStatusBadLogin = -2
 )
@@ -29,11 +29,10 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 		return
 	}
 
-
 	//call back Body
 	var authStatus AuthenticationStatus
 	pro.Operation = OP_AUTH_ACK
-	login, err := model.GetLoginByToken(auth.Token)  //TODO 优化为rpc和方式获取
+	login, err := model.GetLoginByToken(auth.Token)
 	if err != nil {
 		log.Warn("get login by token error, auth:%s",auth.Description())
 		log.Warn(err.Error())

@@ -1,0 +1,125 @@
+2018-05-12 00:06:03 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-12 00:06:03 	 [ INFO] 	 <main.go:38>  	            系统:[IM]版本:[1.0]
+2018-05-12 00:06:03 	 [ INFO] 	 <main.go:39>  	 *********************************************
+2018-05-12 00:06:03 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-12 00:06:03 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-12 00:06:03 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-12 00:06:03 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-12 00:06:03 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-12 00:06:06 	 [DEBUG] 	 <user_handle.go:38>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 00:06:08 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:55990]
+2018-05-12 00:06:08 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7 
+
+2018-05-12 00:06:08 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6 
+
+2018-05-12 00:06:08 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5 
+
+2018-05-12 00:06:08 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3 
+
+2018-05-12 00:06:08 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4 
+
+2018-05-12 00:06:08 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1 
+
+2018-05-12 00:06:08 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2 
+
+2018-05-12 00:06:08 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8 
+
+2018-05-12 00:07:05 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-12 00:07:05 	 [ INFO] 	 <main.go:38>  	            系统:[IM]版本:[1.0]
+2018-05-12 00:07:05 	 [ INFO] 	 <main.go:39>  	 *********************************************
+2018-05-12 00:07:05 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-12 00:07:05 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-12 00:07:05 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-12 00:07:05 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-12 00:07:05 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-12 00:07:10 	 [DEBUG] 	 <user_handle.go:38>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 00:07:11 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:56031]
+2018-05-12 00:07:11 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7
+2018-05-12 00:07:11 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6
+2018-05-12 00:07:11 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5
+2018-05-12 00:07:11 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3
+2018-05-12 00:07:11 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4
+2018-05-12 00:07:11 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
+2018-05-12 00:07:11 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
+2018-05-12 00:07:11 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8
+2018-05-12 00:07:29 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-12 00:07:29 	 [DEBUG] 	 <client.go:81>  	 EOFconnect offline
+2018-05-12 00:07:29 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-12 00:07:29 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-12 05:58:48 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-12 05:58:48 	 [ INFO] 	 <main.go:38>  	            系统:[IM]版本:[1.0]
+2018-05-12 05:58:48 	 [ INFO] 	 <main.go:39>  	 *********************************************
+2018-05-12 05:58:48 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-12 05:58:48 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-12 05:58:48 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-12 05:58:48 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-12 05:58:48 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-12 05:58:59 	 [DEBUG] 	 <user_handle.go:38>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 05:59:01 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:57196]
+2018-05-12 05:59:01 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7
+2018-05-12 05:59:01 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6
+2018-05-12 05:59:01 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5
+2018-05-12 05:59:01 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3
+2018-05-12 05:59:01 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4
+2018-05-12 05:59:01 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
+2018-05-12 05:59:01 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
+2018-05-12 05:59:01 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8
+2018-05-12 06:04:55 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-12 06:04:55 	 [ INFO] 	 <main.go:38>  	            系统:[IM]版本:[1.0]
+2018-05-12 06:04:55 	 [ INFO] 	 <main.go:39>  	 *********************************************
+2018-05-12 06:04:55 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-12 06:04:55 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-12 06:04:55 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-12 06:04:55 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-12 06:04:55 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-12 06:05:14 	 [DEBUG] 	 <user_handle.go:38>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 06:07:22 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-12 06:07:22 	 [ INFO] 	 <main.go:38>  	            系统:[IM]版本:[1.0]
+2018-05-12 06:07:22 	 [ INFO] 	 <main.go:39>  	 *********************************************
+2018-05-12 06:07:22 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-12 06:07:22 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-12 06:07:22 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-12 06:07:22 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-12 06:07:22 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-12 06:12:27 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-12 06:12:27 	 [ INFO] 	 <main.go:38>  	            系统:[IM]版本:[1.0]
+2018-05-12 06:12:27 	 [ INFO] 	 <main.go:39>  	 *********************************************
+2018-05-12 06:12:27 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-12 06:12:27 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-12 06:12:27 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-12 06:12:27 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-12 06:12:27 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-12 06:12:31 	 [DEBUG] 	 <user_handle.go:38>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 06:13:27 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-12 06:13:27 	 [ INFO] 	 <main.go:38>  	            系统:[IM]版本:[1.0]
+2018-05-12 06:13:27 	 [ INFO] 	 <main.go:39>  	 *********************************************
+2018-05-12 06:13:27 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-12 06:13:27 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-12 06:13:27 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-12 06:13:27 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-12 06:13:27 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-12 06:13:44 	 [DEBUG] 	 <user_handle.go:38>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 06:29:36 	 [DEBUG] 	 <user_handle.go:38>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 06:29:38 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:57659]
+2018-05-12 06:29:38 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7
+2018-05-12 06:29:38 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6
+2018-05-12 06:29:38 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5
+2018-05-12 06:29:38 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3
+2018-05-12 06:29:38 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4
+2018-05-12 06:29:38 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
+2018-05-12 06:29:38 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
+2018-05-12 06:29:38 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8
+2018-05-12 06:31:06 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-12 06:31:06 	 [DEBUG] 	 <client.go:81>  	 EOFconnect offline
+2018-05-12 06:31:06 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-12 06:31:06 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-12 06:31:17 	 [DEBUG] 	 <user_handle.go:38>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 06:31:18 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:57699]
+2018-05-12 06:31:18 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7
+2018-05-12 06:31:18 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6
+2018-05-12 06:31:18 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5
+2018-05-12 06:31:18 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3
+2018-05-12 06:31:18 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4
+2018-05-12 06:31:18 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
+2018-05-12 06:31:18 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
+2018-05-12 06:31:18 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8

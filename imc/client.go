@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"im_go/im"
 	"time"
+	"strconv"
 )
 
 func StartClient(port int) {
@@ -86,7 +87,7 @@ func StartClient(port int) {
 				receiver:10002,
 				sender:10001,
 				msgId:2323232,
-				body:[]byte("msg"),
+				body:[]byte("msg" + strconv.Itoa(int(int32(time.Now().Unix())))),
 			}
 			p.Ver = 1
 			p.Body = msg.ToData()
@@ -110,7 +111,7 @@ func StartClient(port int) {
 				receiver:10001,
 				sender:10002,
 				msgId:20020,
-				body:[]byte("msg1"),
+				body:[]byte("msg1" + strconv.Itoa(int(int32(time.Now().Unix())))),
 			}
 			p.Ver = 1
 			p.Operation = OP_SEND_MSG
