@@ -5,6 +5,7 @@ import (
 	"im_go/model"
 	"fmt"
 	"sync/atomic"
+	"time"
 )
 
 type ClientIM struct {
@@ -34,9 +35,11 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 		log.Warn("im message sender:%d client uid:%d\n", msg.sender, client.uid)
 		return
 	}
-
+	if msg.timestamp == 0 {
+		msg.timestamp =  int32(time.Now().Unix())
+	}
 	//消息存入服务器
-	msgId, err := model.SaveIMMessage(msg.sender, msg.receiver, 0, msg.body)
+	msgId, err := model.SaveIMMessage(msg.sender, msg.receiver, msg.timestamp, msg.body)
 	if err != nil {
 		log.Warn(err.Error() + "消息存储服务出错")
 		return

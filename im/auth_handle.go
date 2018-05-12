@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	AuthenticationStatusSuccess  = 0
+	AuthenticationStatusSuccess  = 1
 	AuthenticationStatusBadToken = -1
 	AuthenticationStatusBadLogin = -2
 )
@@ -64,6 +64,7 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 	authStatus.Status = AuthenticationStatusSuccess
 	pro.Body = authStatus.ToData()
 	send := client.EnqueueMessage(*pro)
+
 	if send {
 		client.version = pro.Ver
 

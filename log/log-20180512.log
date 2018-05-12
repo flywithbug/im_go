@@ -123,3 +123,182 @@
 2018-05-12 06:31:18 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
 2018-05-12 06:31:18 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
 2018-05-12 06:31:18 	 [DEBUG] 	 <client_im.go:82>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8
+2018-05-12 06:37:18 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:57699: i/o timeout
+2018-05-12 06:37:18 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-12 06:37:18 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-12 10:26:54 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-12 10:26:54 	 [ INFO] 	 <main.go:38>  	            系统:[IM]版本:[1.0]
+2018-05-12 10:26:54 	 [ INFO] 	 <main.go:39>  	 *********************************************
+2018-05-12 10:26:54 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-12 10:26:54 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-12 10:26:54 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-12 10:26:54 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-12 10:26:54 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-12 10:26:54 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62262]
+2018-05-12 10:32:54 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:62262: i/o timeout
+2018-05-12 10:32:54 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-05-12 10:32:54 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-05-12 10:36:41 	 [DEBUG] 	 <user_handle.go:41>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 10:37:18 	 [DEBUG] 	 <user_handle.go:41>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 10:38:14 	 [DEBUG] 	 <user_handle.go:41>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 10:41:58 	 [DEBUG] 	 <user_handle.go:41>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 10:46:10 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62567]
+2018-05-12 10:46:18 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62568]
+2018-05-12 10:46:45 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-12 10:46:45 	 [ INFO] 	 <main.go:38>  	            系统:[IM]版本:[1.0]
+2018-05-12 10:46:45 	 [ INFO] 	 <main.go:39>  	 *********************************************
+2018-05-12 10:46:45 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-12 10:46:45 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-12 10:46:45 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-12 10:46:45 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-12 10:46:45 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-12 10:47:08 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62585]
+2018-05-12 10:53:08 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:62585: i/o timeout
+2018-05-12 10:53:08 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-05-12 10:53:08 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-05-12 10:54:40 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62699]
+2018-05-12 10:54:41 	 [DEBUG] 	 <user_handle.go:41>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 10:54:41 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7
+2018-05-12 10:54:41 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6
+2018-05-12 10:54:41 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5
+2018-05-12 10:54:41 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3
+2018-05-12 10:54:41 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4
+2018-05-12 10:54:41 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
+2018-05-12 10:54:41 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
+2018-05-12 10:54:41 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8
+2018-05-12 10:57:49 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:62699: read: connection reset by peer
+2018-05-12 10:57:49 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-12 10:57:49 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-12 10:58:01 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62723]
+2018-05-12 10:58:02 	 [DEBUG] 	 <user_handle.go:41>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 10:58:02 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7
+2018-05-12 10:58:02 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6
+2018-05-12 10:58:02 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5
+2018-05-12 10:58:02 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3
+2018-05-12 10:58:02 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4
+2018-05-12 10:58:02 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
+2018-05-12 10:58:02 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
+2018-05-12 10:58:02 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8
+2018-05-12 10:58:44 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:62723: read: connection reset by peer
+2018-05-12 10:58:44 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-12 10:58:44 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-12 10:58:54 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62729]
+2018-05-12 10:58:55 	 [DEBUG] 	 <user_handle.go:41>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 10:58:55 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7
+2018-05-12 10:58:55 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6
+2018-05-12 10:58:55 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5
+2018-05-12 10:58:55 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3
+2018-05-12 10:58:55 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4
+2018-05-12 10:58:55 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
+2018-05-12 10:58:55 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
+2018-05-12 10:58:55 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8
+2018-05-12 10:59:46 	 [DEBUG] 	 <user_handle.go:41>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 10:59:46 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7
+2018-05-12 10:59:46 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6
+2018-05-12 10:59:46 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5
+2018-05-12 10:59:46 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3
+2018-05-12 10:59:46 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4
+2018-05-12 10:59:46 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
+2018-05-12 10:59:46 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
+2018-05-12 10:59:46 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8
+2018-05-12 10:59:56 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:62729: read: connection reset by peer
+2018-05-12 10:59:56 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-12 10:59:56 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-12 11:00:04 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62781]
+2018-05-12 11:00:05 	 [DEBUG] 	 <user_handle.go:41>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 11:00:05 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7
+2018-05-12 11:00:05 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6
+2018-05-12 11:00:05 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5
+2018-05-12 11:00:05 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3
+2018-05-12 11:00:05 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4
+2018-05-12 11:00:05 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
+2018-05-12 11:00:05 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
+2018-05-12 11:00:05 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8
+2018-05-12 11:01:34 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-12 11:01:34 	 [ INFO] 	 <main.go:38>  	            系统:[IM]版本:[1.0]
+2018-05-12 11:01:34 	 [ INFO] 	 <main.go:39>  	 *********************************************
+2018-05-12 11:01:34 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-12 11:01:34 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-12 11:01:34 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-12 11:01:34 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-12 11:01:34 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-12 11:02:01 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-12 11:02:01 	 [ INFO] 	 <main.go:38>  	            系统:[IM]版本:[1.0]
+2018-05-12 11:02:01 	 [ INFO] 	 <main.go:39>  	 *********************************************
+2018-05-12 11:02:01 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-12 11:02:01 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-12 11:02:01 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-12 11:02:01 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-12 11:02:01 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-12 11:02:23 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62836]
+2018-05-12 11:02:25 	 [DEBUG] 	 <user_handle.go:41>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 11:02:25 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7
+2018-05-12 11:02:25 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6
+2018-05-12 11:02:25 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5
+2018-05-12 11:02:25 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3
+2018-05-12 11:02:25 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4
+2018-05-12 11:02:25 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
+2018-05-12 11:02:25 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
+2018-05-12 11:02:25 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8
+2018-05-12 11:03:54 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:62836: read: connection reset by peer
+2018-05-12 11:03:54 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-12 11:03:54 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-12 11:04:02 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62848]
+2018-05-12 11:04:03 	 [DEBUG] 	 <user_handle.go:41>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 11:04:03 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7
+2018-05-12 11:04:03 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6
+2018-05-12 11:04:03 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5
+2018-05-12 11:04:03 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3
+2018-05-12 11:04:03 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4
+2018-05-12 11:04:03 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
+2018-05-12 11:04:03 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
+2018-05-12 11:04:03 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8
+2018-05-12 11:05:31 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-12 11:05:31 	 [DEBUG] 	 <client.go:81>  	 EOFconnect offline
+2018-05-12 11:05:31 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-12 11:05:31 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-12 11:06:09 	 [DEBUG] 	 <user_handle.go:41>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 11:06:10 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62872]
+2018-05-12 11:06:10 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7
+2018-05-12 11:06:10 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6
+2018-05-12 11:06:10 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5
+2018-05-12 11:06:10 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3
+2018-05-12 11:06:10 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4
+2018-05-12 11:06:10 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
+2018-05-12 11:06:10 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
+2018-05-12 11:06:10 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8
+2018-05-12 11:06:56 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-12 11:06:56 	 [DEBUG] 	 <client.go:81>  	 EOFconnect offline
+2018-05-12 11:06:56 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-12 11:06:56 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-12 11:07:06 	 [DEBUG] 	 <user_handle.go:41>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 11:07:07 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62883]
+2018-05-12 11:07:07 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7
+2018-05-12 11:07:07 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6
+2018-05-12 11:07:07 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5
+2018-05-12 11:07:07 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3
+2018-05-12 11:07:07 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4
+2018-05-12 11:07:07 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
+2018-05-12 11:07:07 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
+2018-05-12 11:07:07 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8
+2018-05-12 11:07:32 	 [ INFO] 	 <main.go:37>  	 *********************************************
+2018-05-12 11:07:32 	 [ INFO] 	 <main.go:38>  	            系统:[IM]版本:[1.0]
+2018-05-12 11:07:32 	 [ INFO] 	 <main.go:39>  	 *********************************************
+2018-05-12 11:07:32 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-12 11:07:32 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-12 11:07:32 	 [ INFO] 	 <httpserver.go:18>  	 Http服务器启动中...
+2018-05-12 11:07:32 	 [ INFO] 	 <httpserver.go:22>  	 Http服务器开始监听[9002]端口
+2018-05-12 11:07:32 	 [ INFO] 	 <httpserver.go:23>  	 *********************************************
+2018-05-12 11:07:44 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:62892]
+2018-05-12 11:07:45 	 [DEBUG] 	 <user_handle.go:41>  	 req.Body%!(EXTRA string={"account":"ori","password":"ori"})
+2018-05-12 11:07:45 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009065,msgId:10186,body:msg7
+2018-05-12 11:07:45 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009064,msgId:10185,body:msg6
+2018-05-12 11:07:45 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009062,msgId:10184,body:msg5
+2018-05-12 11:07:45 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:msg3
+2018-05-12 11:07:45 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009044,msgId:10183,body:msg4
+2018-05-12 11:07:45 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:msg1
+2018-05-12 11:07:45 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:msg2
+2018-05-12 11:07:45 	 [DEBUG] 	 <client_im.go:85>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009067,msgId:10187,body:msg8
+2018-05-12 11:08:05 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:62892: read: connection reset by peer
+2018-05-12 11:08:05 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-12 11:08:05 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed

@@ -66,7 +66,7 @@ func SaveIMMessage(sender, receiver, timestamp int32, body []byte)(int32, error)
 	id,err := res.LastInsertId()
 	if err != nil{
 		log.Error(err.Error())
-		return -1,&DatabaseError{"后去消息Id错误"}
+		return -1,&DatabaseError{"获取消息Id错误"}
 	}
 	return int32(id),nil
 }
