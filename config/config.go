@@ -16,7 +16,7 @@ type IMConfig struct {
 	IMPort     		int      	`json:"im_port"`     	//IM服务长连接监听端口
 	HttpPort   		int      	`json:"http_port"`   	//IM服务外部调研接口
 
-	ServerPort 		int			`json:"server_port"`	//用户关系相关服务
+	ServerPort 		string		`json:"server_port"`	//用户关系相关服务
 	PprofBind		string	 	`json:"pprof_bind"`		//机器监控
 	DBConfig   		DBConfig 	`json:"db_config"`   	//数据库配置
 	RouterPrefix 	[]string 	`json:"router_prefix"` //api前缀

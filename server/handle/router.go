@@ -6,6 +6,7 @@ import (
 )
 
 type RouterHandler func(resp http.ResponseWriter, req *http.Request)
+
 var routers = map[string]RouterHandler{
 	"/system": handleSystem, //系统状态
 	"/summary":im.Summary,

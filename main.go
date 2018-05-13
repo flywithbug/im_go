@@ -34,9 +34,9 @@ func main() {
 	SetLog()
 	defer log.Close()
 
-	log.Info("*********************************************")
-	log.Info("           系统:[%s]版本:[%s]", Name, Version)
-	log.Info("*********************************************")
+	//log.Info("*********************************************")
+	//log.Info("           系统:[%s]版本:[%s]", Name, Version)
+	//log.Info("*********************************************")
 	configPath := flag.String("config", "config.json", "Configuration file to use")
 
 	flag.Parse()
