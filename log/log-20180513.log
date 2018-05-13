@@ -162,3 +162,11 @@
 2018-05-13 17:41:06 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
 2018-05-13 17:42:47 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
 2018-05-13 17:42:47 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-13 17:52:11 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-13 17:52:11 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-13 17:57:51 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-13 17:57:51 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-13 17:59:02 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-13 17:59:02 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-13 18:06:36 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-13 18:06:36 	 [ INFO] 	 <config.go:80>  	 连接数据库成功

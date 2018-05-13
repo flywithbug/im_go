@@ -6,15 +6,14 @@ import (
 )
 
 var routers = map[string]gin.HandlerFunc{
-	"GET   		/system": handleSystem, //系统状态
+	"GET   		/system": 		handleSystem, //系统状态
 
-	"POST 		/register": handleRegister, //注册
-	//"/login": handleLogin,
-	//"/logout":handleLogout,  //退出登录
-	//"/query": handleQuery,   //根据昵称查询用户列表
-	//"/relation":handleAddRelation,// 添加好友
+	"POST 		/register": 	handleRegister, //注册
+	"POST  		/login": 		handleLogin,
+	"POST		/logout":		handleLogout,  //退出登录
 
-
+	"POST 		/query": 		handleQuery,   //根据昵称查询用户列表
+	"POST  		/relation":		handleAddRelation,// 添加好友
 }
 
 func RegisterRouters(r *gin.Engine, prefixs []string){
