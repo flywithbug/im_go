@@ -3,6 +3,7 @@
   "http_port": 62311,
   "server_port": ":9002",
   "pprof_bind":"localhost:9003",
+  "log_level":0,
   "db_config": {
     "host": "127.0.0.1:3306",
     "username": "root",

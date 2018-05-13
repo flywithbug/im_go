@@ -101,8 +101,6 @@ func (client *Client) Read() {
 
 func (client *Client) Write() {
 	running := true
-	seq := 0
-
 	for running {
 		select {
 		case pro := <-client.wt:
@@ -112,11 +110,11 @@ func (client *Client) Write() {
 				log.Debug("client: %s %d socket closed", client.userId,client.uid)
 				break
 			}
+
 			if pro.Operation == OP_MSG {
 				atomic.AddInt64(&serverSummary.out_message_count, 1)
 			}
-			seq++
-			pro.SeqId = int32(seq)
+
 			pro.Ver = client.version
 			client.send(pro)
 		}

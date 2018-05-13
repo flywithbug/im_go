@@ -2,6 +2,10 @@
 
 ## 安装说明
 
+//编译为centos 执行文件
+CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build main.go
+
+
 系统需要安装Go和MySQL。
 
 打开配置文件 config.json，修改相关配置。
