@@ -13,6 +13,5 @@
   },
   "router_prefix":[
     "api"
-  ],
-  "log":"./log.xml"
+  ]
 }
