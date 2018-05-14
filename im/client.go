@@ -46,7 +46,7 @@ func (client *Client) handleMessage(pro *Proto) {
 		client.handleSyncACK(pro)
 	case OP_HEARTBEAT: //心跳检测
 		client.HandleHeartbeat(pro)
-	case OP_MSG: //心跳检测
+	case OP_MSG: //通讯消息
 		client.ClientIM.handleMessage(pro)
 	default://未处理消息
 		log.Warn("msg not handle %s",pro.Description())
