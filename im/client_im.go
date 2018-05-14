@@ -12,13 +12,13 @@ type ClientIM struct {
 	*Connection
 }
 
-func (client *ClientIM) handleMessage(pro *Proto) {
-	switch pro.Operation {
-	case OP_MSG:
-		client.HandleIMMessage(pro)
-	}
-
-}
+//func (client *ClientIM) handleMessage(pro *Proto) {
+//	switch pro.Operation {
+//	case OP_MSG:
+//		client.HandleIMMessage(pro)
+//	}
+//
+//}
 
 func (client *ClientIM) HandleIMMessage(pro *Proto) {
 	if client.uid == 0 {
@@ -38,6 +38,7 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 	if msg.timestamp == 0 {
 		msg.timestamp =  int32(time.Now().Unix())
 	}
+	//TODO rpc 处理，消息转发 和信息存储分开做 ？需要考虑一下
 	//消息存入服务器
 	msgId, err := model.SaveIMMessage(msg.sender, msg.receiver, msg.timestamp, msg.body)
 	if err != nil {

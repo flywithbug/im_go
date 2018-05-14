@@ -13,7 +13,7 @@ import (
 type Proto struct {
 	Ver       int16           `json:"ver"`  // protocol version
 	Operation int32           `json:"op"`   // operation for request
-	SeqId     int32           `json:"seq"`  // sequence number chosen by client   //-1 表示offlineMSg   其他的使用msgId
+	SeqId     int32           `json:"seq"`  // sequence number chosen by client   //-1 表示offlineMSg  使用客户端发来的seqId,
 	Body      json.RawMessage `json:"body"` // binary body bytes(json.RawMessage is []byte) //解析对象
 }
 
