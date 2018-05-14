@@ -6,6 +6,7 @@ import (
 	"github.com/itsjamie/gin-cors"
 	log "github.com/flywithbug/log4go"
 	"fmt"
+	"im_go/server/handler"
 )
 
 
@@ -28,7 +29,7 @@ func StartHttpServer(address string,rPrefix []string)  {
 		Credentials:     true,
 		ValidateHeaders: false,
 	}))
-	RegisterRouters(r,rPrefix)
+	handler.RegisterRouters(r,rPrefix)
 	err := r.Run(address)
 	if  err != nil {
 		panic(fmt.Errorf("监听Http失败: %s", err))

@@ -13,14 +13,33 @@ const (
 
 	// send  messgae
 	OP_MSG     = int32(4)
-	OP_MSG_ACK = int32(5) //消息a
-	OP_MSG_SYNC = int32(6)
-	OP_MSG_SYNC_ACK = int32(7)
+	OP_MSG_ACK = int32(5) //客户端返回的ack 用于更新发送状态
 
+	OP_MSG_SYNC = int32(6)    //消息发送者，发送消息给其他登录端
+	OP_MSG_SYNC_ACK = int32(7)    //消息发送者，发送消息给其他登录端
+
+
+	//OP_MSG_Read = int32(8)
+	OP_MSG_Read_ACK = int32(9) //消息已读回执
+
+
+
+
+
+
+	// handshake with sid
+	//OP_HANDSHAKE_SID     = int32(9)
+	//OP_HANDSHAKE_SID_ACK = int32(10)
+
+	// raw message
+	//OP_RAW = int32(11)
+	//// room
+	//OP_ROOM_READY = int32(12)
 
 
 	// kick user
-	OP_DISCONNECT_ACK = int32(17) //踢掉连接 重定义
+	//OP_DISCONNECT_ACK = int32(17) //踢掉连接 重定义
+
 
 	// auth user
 	OP_AUTH     = int32(18)
@@ -28,14 +47,6 @@ const (
 
 
 
-	// handshake with sid
-	OP_HANDSHAKE_SID     = int32(9)
-	OP_HANDSHAKE_SID_ACK = int32(10)
-
-	// raw message
-	OP_RAW = int32(11)
-	// room
-	OP_ROOM_READY = int32(12)
 
 	// proto
 	OP_PROTO_READY  = int32(13)

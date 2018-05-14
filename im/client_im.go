@@ -53,23 +53,24 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 	//发送消息给其他登录登陆点
 	pro.Operation = OP_MSG_SYNC
 	client.SendMessage(msg.sender,pro)
-	//消息回执
-	client.handleImMessageACK(msgId, client.version, pro.SeqId)
+
+	//消息回执，使用seqId为标记，返回给客户端服务器存储的msgId,
+	client.sendMessageACK(msgId, client.version, pro.SeqId)
 
 	atomic.AddInt64(&serverSummary.in_message_count, 1)
 
 }
 
-func (client *ClientIM) handleImMessageACK(msgId int32, ver int16, seq int32) {
+func (client *ClientIM) sendMessageACK(msgId int32, ver int16, seq int32) {
 	ackMsg := new(MessageACK)
 	ackMsg.msgId = msgId
 
-	ack := Proto{}
-	ack.Ver = ver
-	ack.Operation = OP_MSG_ACK
-	ack.Body = ackMsg.ToData()
-	ack.SeqId = seq
-	client.EnqueueMessage(ack)
+	p := Proto{}
+	p.Ver = ver
+	p.Operation = OP_MSG_ACK
+	p.Body = ackMsg.ToData()
+	p.SeqId = seq
+	client.EnqueueMessage(p)
 	//客户端收到回执的msgId 才算消息发送完毕
 }
 
@@ -82,17 +83,17 @@ func (client *ClientIM)sendOffLineMessage()  {
 	}
 	p := Proto{}
 	for _,imMsg := range ms{
-		log.Debug("offline msg :%s",imMsg.Description())
 		p.Operation = OP_MSG
 		p.Ver = client.version
-		p.Body = FromIMMessage(&imMsg).ToData()
-		p.SeqId = imMsg.Id
+		p.Body = FromIMMessage(imMsg).ToData()
+		p.SeqId = -1  //offlineMsg
 		client.EnqueueMessage(p)
 	}
 
 }
 
-func FromIMMessage(imMsg *model.IMMessage)(msg *Message)  {
+func FromIMMessage(imMsg model.IMMessage)(msg *Message)  {
+	log.Debug("offline msg :%s",imMsg.Description())
 	msg = new(Message)
 	msg.sender = imMsg.Sender
 	msg.receiver = imMsg.Receiver
