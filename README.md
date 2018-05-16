@@ -25,10 +25,10 @@ host localhost:8080
 
 |method|	path|
 |-------|------|
-|get| /api/system | 系统状态|
-|get| /api/register| 注册|
-|存储属性用于获取和设置值。|	存储属性用于获取和设置值。|
-|也用于计算属性。|	也用于计算属性。|
+|Get| /api/system | 系统状态|
+|Post| /api/register| 注册|
+|Post|	login。|
+|Post。|	/query。|
 
 
 
