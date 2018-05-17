@@ -90,8 +90,9 @@ func (client *ClientIM)sendOffLineMessage()  {
 		p.SeqId = -1  //offlineMsg
 		client.EnqueueMessage(p)
 	}
-
 }
+
+
 
 func FromIMMessage(imMsg model.IMMessage)(msg *Message)  {
 	log.Debug("offline msg :%s",imMsg.Description())
