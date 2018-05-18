@@ -40,7 +40,7 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 	}
 	//TODO rpc 处理，消息转发 和信息存储分开做 ？需要考虑一下
 	//消息存入服务器
-	msgId, err := model.SaveOfflineIMMessage(msg.sender, msg.receiver, msg.timestamp,pro.Operation, msg.body,)
+	msgId, err := model.SaveIMMessage(msg.sender, msg.receiver, msg.timestamp, msg.body)
 	if err != nil {
 		log.Warn(err.Error() + "消息存储服务出错")
 		return
@@ -77,7 +77,7 @@ func (client *ClientIM) sendMessageACK(msgId int32, ver int16, seq int32) {
 
 func (client *ClientIM)sendOffLineMessage()  {
 	//TODO 优化为rpc和方式获取
-	ms,err :=  model.FindeOfflineMessagesReceiver(client.uid,0)
+	ms,err :=  model.FindeMessagesReceiver(client.uid,0)
 	if err != nil{
 		log.Error(err.Error())
 		return

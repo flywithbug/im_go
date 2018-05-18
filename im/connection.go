@@ -120,6 +120,3 @@ func (client *Connection) SendMessage(uid int32, pro *Proto) bool {
 	return send
 }
 
-func (client *Connection)handleSaveOfflinemsg(pro* Proto)  {
-
-}

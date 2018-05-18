@@ -15,17 +15,12 @@ const (
 	OP_MSG     = int32(4)
 	OP_MSG_ACK = int32(5) //客户端返回的ack 用于更新发送状态
 
-	OP_MSG_SYNC = int32(6)    //同步消息：发送消息给其他登录端
-
-	// 废弃
-	OP_MSG_SYNC_ACK = int32(14)    //同步消息：发送消息给其他登录端
-
-
-	OP_MSG_DELIVER_ACK = int32(7)    //送达回执，服务端给发送者
+	OP_MSG_SYNC = int32(6)    //消息发送者，发送消息给其他登录端
+	OP_MSG_SYNC_ACK = int32(7)    //消息发送者，发送消息给其他登录端
 
 
 	//OP_MSG_Read = int32(8)
-	OP_MSG_Read_ACK = int32(9) //已读回执，给发送者
+	OP_MSG_Read_ACK = int32(9) //消息已读回执
 
 
 

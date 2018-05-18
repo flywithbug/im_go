@@ -34,24 +34,24 @@ func StartClient(port int) {
 				var auth im.AuthenticationStatus
 				auth.FromData(msg.Body)
 				fmt.Println("授权状态",auth.Status)
-			case OP_MSG_ACK:
+			case OP_SEND_MSG_ACK:
 				var ack MessageACK
 				ack.FromData(msg.Body)
 				fmt.Println(ack.Description(),msg.Description())
 			case OP_HEARTBEAT_ACK:
 				fmt.Println("OP_HEARTBEAT_ACK",msg.Description())
 
-			case OP_MSG:
+			case OP_SEND_MSG:
 				var msg1 Message
 				msg1.FromData(msg.Body)
 				fmt.Println("receiveMsg:",msg1.Description(),msg.Description())
 
-				var ack MessageACK
-				ack.msgId = msg1.msgId
-				msg.Body = ack.ToData()
-				msg.Operation = OP_MSG_ACK
-				SendMessage(conn,msg)
-			case OP_MSG_SYNC:
+				//var ack MessageACK
+				//ack.msgId = msg1.msgId
+				//msg.Body = ack.ToData()
+				//msg.Operation = OP_SEND_MSG_ACK
+				//SendMessage(conn,msg)
+			case OP_SEND_MSG_SYNC:
 				var msg1 Message
 				msg1.FromData(msg.Body)
 				fmt.Println("receiveMsg:",msg1.Description(),msg.Description())
@@ -60,7 +60,7 @@ func StartClient(port int) {
 				var ack MessageACK
 				ack.msgId = msg1.msgId
 				msg.Body = ack.ToData()
-				msg.Operation = OP_MSG_SYNC_ACK
+				msg.Operation = OP_SEND_MSG_SYNC_ACK
 				SendMessage(conn,msg)
 			}
 		}
@@ -72,7 +72,7 @@ func StartClient(port int) {
 
 		if string(line) == "auth"{
 			var auth im.AuthenticationToken
-			auth.Token = "ee3b01e0-b0c7-4b44-80f3-e3683d7d3c77"
+			auth.Token = "58b70f11-e280-40d8-8ddd-a3810bd65f7a"
 			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
 			auth.PlatformType = 3
 			p.Ver = 1
@@ -92,11 +92,11 @@ func StartClient(port int) {
 			p.Ver = 1
 			p.Body = msg.ToData()
 
-			p.Operation = OP_MSG
+			p.Operation = OP_SEND_MSG
 			p.SeqId = 123456
 		}else if string(line) == "auth1"{
 			var auth im.AuthenticationToken
-			auth.Token = "9f0587f4-f5a2-49cb-b64b-569571f5217d"
+			auth.Token = "2c06eaf6-e14a-4d06-ba42-15de3f11741a"
 			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
 			auth.PlatformType = 1
 			p.Ver = 1
@@ -114,7 +114,7 @@ func StartClient(port int) {
 				body:[]byte("msg1" + strconv.Itoa(int(int32(time.Now().Unix())))),
 			}
 			p.Ver = 1
-			p.Operation = OP_MSG
+			p.Operation = OP_SEND_MSG
 			p.SeqId = 1
 			p.Body = msg.ToData()
 		}else if string(line) == "auth3"{ //另一个账号
@@ -139,7 +139,7 @@ func StartClient(port int) {
 		}else {
 			p.Ver = 1
 			p.Body = line
-			p.Operation = OP_MSG
+			p.Operation = OP_SEND_MSG
 			p.SeqId = 1
 		}
 
