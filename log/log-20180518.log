@@ -453,3 +453,18 @@
 2018-05-18 15:09:03 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54521]
 2018-05-18 15:09:07 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526626519,msgId:10278,body:msg11526626519
 2018-05-18 15:09:07 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526626521,msgId:10279,body:msg11526626521
+2018-05-18 15:11:51 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 15:11:51 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 15:11:51 	 [DEBUG] 	 <client.go:151>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 15:11:51 	 [DEBUG] 	 <client.go:115>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 15:11:55 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54554]
+2018-05-18 15:12:01 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 15:12:01 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 15:12:01 	 [DEBUG] 	 <client.go:151>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 15:12:01 	 [DEBUG] 	 <client.go:115>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 15:12:02 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54557]
+2018-05-18 15:12:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-05-18 15:12:08 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-05-18 15:18:08 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:54557: i/o timeout
+2018-05-18 15:18:08 	 [DEBUG] 	 <client.go:151>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-05-18 15:18:08 	 [DEBUG] 	 <client.go:115>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed

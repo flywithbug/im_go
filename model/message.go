@@ -15,6 +15,7 @@ const  (
 	IMMessageReceiver_Type_ReCall  			=  4  //撤回
 )
 
+//TODO 缓存的消息定期清理
 //Store in mysql
 type IMMessage struct {
 	Id				int32				`json:"id"`			//msgId
@@ -51,27 +52,27 @@ func (msg *IMMessage) Decode(data []byte) error {
 
 
 
-////msgId 客户端生成的uuid  字符串长度36 返回数据库Id 转存到已发送的表中 删除offline表中的数据
-//func SaveIMMessage(msg *IMMessage)(int32, error)  {
-//	insStmt ,err := Database.Prepare("INSERT into im_message (id,sender,receiver,content,time_stamp)VALUES (?,?, ?, ?, ?) ")
-//	if err != nil {
-//		log.Error(err.Error())
-//		return -1,&DatabaseError{"消息服务出错"}
-//	}
-//	defer insStmt.Close()
-//	if msg.Sender == 0 || msg.Receiver == 0{
-//		return -1,&DatabaseError{"error parameter"}
-//	}
-//	if msg.TimeStamp == 0 {
-//		msg.TimeStamp = int32(time.Now().Unix())
-//	}
-//	_,err = insStmt.Exec(msg.Id,msg.Sender,msg.Receiver,msg.Content,msg.TimeStamp)
-//	if err != nil{
-//		log.Error(err.Error())
-//		return -1,&DatabaseError{"保存消息错误"}
-//	}
-//	return msg.Id,nil
-//}
+//msgId 客户端生成的uuid  字符串长度36 返回数据库Id 转存到已发送的表中 删除offline表中的数据
+func SaveIMMessage(msg *IMMessage)(int32, error)  {
+	insStmt ,err := Database.Prepare("INSERT into im_message (id,sender,receiver,content,time_stamp)VALUES (?,?, ?, ?, ?) ")
+	if err != nil {
+		log.Error(err.Error())
+		return -1,&DatabaseError{"消息服务出错"}
+	}
+	defer insStmt.Close()
+	if msg.Sender == 0 || msg.Receiver == 0{
+		return -1,&DatabaseError{"error parameter"}
+	}
+	if msg.TimeStamp == 0 {
+		msg.TimeStamp = int32(time.Now().Unix())
+	}
+	_,err = insStmt.Exec(msg.Id,msg.Sender,msg.Receiver,msg.Content,msg.TimeStamp)
+	if err != nil{
+		log.Error(err.Error())
+		return -1,&DatabaseError{"保存消息错误"}
+	}
+	return msg.Id,nil
+}
 
 func SaveIMMessageFromOfflineMessage(msgId int32)error  {
 	insStmt ,err := Database.Prepare("INSERT into im_message (id,sender,receiver,content,time_stamp) SELECT id,sender,receiver,content,time_stamp from im_offline_message where id = ? ")
