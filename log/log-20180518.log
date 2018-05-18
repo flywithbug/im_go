@@ -1,0 +1,455 @@
+2018-05-18 11:29:17 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-18 11:29:17 	 [ INFO] 	 <main.go:41>  	            系统:[IM]版本:[1.0]
+2018-05-18 11:29:17 	 [ INFO] 	 <main.go:42>  	 *********************************************
+2018-05-18 11:29:17 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-18 11:29:17 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-18 11:29:17 	 [ INFO] 	 <httpserver.go:17>  	 Http服务器启动中...
+2018-05-18 11:29:17 	 [ INFO] 	 <httpserver.go:20>  	 Http服务器开始监听[:9002]端口
+2018-05-18 11:29:17 	 [ INFO] 	 <httpserver.go:21>  	 *********************************************
+2018-05-18 11:29:26 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51961]
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10270,body:{"type":1,"text":"rz0cs"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10269,body:{"type":1,"text":"NRbAm"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10268,body:{"type":1,"text":"Z2vfJ"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10253,body:{"type":1,"text":"FFZeW"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526378218,msgId:10243,body:{"type": 1,"text": "0"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526378223,msgId:10244,body:{"type": 1,"text": "11"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10245,body:{"type": "1","text": "1"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10246,body:{"type": "1","text": "2"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10247,body:{"type": "1","text": "3"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10267,body:{"type":1,"text":"qf5bu"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10266,body:{"type":1,"text":"jXTtO"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10265,body:{"type":1,"text":"d8Rss"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10264,body:{"type":1,"text":"IPuoZ"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10263,body:{"type":1,"text":"BjlD9"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10262,body:{"type":1,"text":"YDfjc"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10261,body:{"type":1,"text":"yFkNB"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10260,body:{"type":1,"text":"eAKV4"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10257,body:{"type":1,"text":"fpJ2G"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10259,body:{"type":1,"text":"LGlAM"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10258,body:{"type":1,"text":"48SLH"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10252,body:{"type":1,"text":"nFb2q"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10254,body:{"type":1,"text":"yDyqe"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10250,body:{"type": "1","text": "4"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:{"type": "1","text": "5"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:{"type": "1","text": "6"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:{"type": "1","text": "7"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10248,body:{"type": "1","text": "8"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10249,body:{"type": "1","text": "9"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10256,body:{"type":1,"text":"RuXt4"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10255,body:{"type":1,"text":"0tHte"}
+2018-05-18 11:29:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10251,body:{"type":1,"text":"EfFj1"}
+2018-05-18 11:31:26 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 11:33:26 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 11:35:26 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 11:37:26 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 11:37:49 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 11:37:49 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 11:37:49 	 [DEBUG] 	 <client.go:151>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 11:37:49 	 [DEBUG] 	 <client.go:115>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 11:39:54 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52005]
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10270,body:{"type":1,"text":"rz0cs"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10269,body:{"type":1,"text":"NRbAm"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10268,body:{"type":1,"text":"Z2vfJ"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10253,body:{"type":1,"text":"FFZeW"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526378218,msgId:10243,body:{"type": 1,"text": "0"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526378223,msgId:10244,body:{"type": 1,"text": "11"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10245,body:{"type": "1","text": "1"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10246,body:{"type": "1","text": "2"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10247,body:{"type": "1","text": "3"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10267,body:{"type":1,"text":"qf5bu"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10266,body:{"type":1,"text":"jXTtO"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10265,body:{"type":1,"text":"d8Rss"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10264,body:{"type":1,"text":"IPuoZ"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10263,body:{"type":1,"text":"BjlD9"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10262,body:{"type":1,"text":"YDfjc"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10261,body:{"type":1,"text":"yFkNB"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10260,body:{"type":1,"text":"eAKV4"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10257,body:{"type":1,"text":"fpJ2G"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10259,body:{"type":1,"text":"LGlAM"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10258,body:{"type":1,"text":"48SLH"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10252,body:{"type":1,"text":"nFb2q"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10254,body:{"type":1,"text":"yDyqe"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10250,body:{"type": "1","text": "4"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:{"type": "1","text": "5"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:{"type": "1","text": "6"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:{"type": "1","text": "7"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10248,body:{"type": "1","text": "8"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10249,body:{"type": "1","text": "9"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10256,body:{"type":1,"text":"RuXt4"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10255,body:{"type":1,"text":"0tHte"}
+2018-05-18 11:39:54 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10251,body:{"type":1,"text":"EfFj1"}
+2018-05-18 11:40:00 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-18 11:40:00 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:,PlatformType:1,DeviceId:0AC16FEB-D9C4-4A88-B019-157D79480650
+2018-05-18 11:40:00 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-18 11:40:00 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:52005: read: connection reset by peer
+2018-05-18 11:40:00 	 [DEBUG] 	 <client.go:151>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 11:40:00 	 [DEBUG] 	 <client.go:115>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 11:40:08 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52008]
+2018-05-18 11:40:08 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-18 11:40:08 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:,PlatformType:1,DeviceId:0AC16FEB-D9C4-4A88-B019-157D79480650
+2018-05-18 11:40:08 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-18 11:40:14 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 11:40:14 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 11:40:14 	 [DEBUG] 	 <client.go:151>  	 close client:0, 
+2018-05-18 11:40:14 	 [DEBUG] 	 <client.go:115>  	 client:  0 socket closed
+2018-05-18 11:40:16 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52009]
+2018-05-18 11:40:16 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-18 11:40:16 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:,PlatformType:1,DeviceId:0AC16FEB-D9C4-4A88-B019-157D79480650
+2018-05-18 11:40:16 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-18 11:42:31 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 11:42:31 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 11:42:31 	 [DEBUG] 	 <client.go:151>  	 close client:0, 
+2018-05-18 11:42:31 	 [DEBUG] 	 <client.go:115>  	 client:  0 socket closed
+2018-05-18 11:48:50 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52043]
+2018-05-18 11:48:52 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 11:48:52 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 11:48:52 	 [DEBUG] 	 <client.go:151>  	 close client:0, 
+2018-05-18 11:48:52 	 [DEBUG] 	 <client.go:115>  	 client:  0 socket closed
+2018-05-18 11:48:57 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52044]
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10270,body:{"type":1,"text":"rz0cs"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10269,body:{"type":1,"text":"NRbAm"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10268,body:{"type":1,"text":"Z2vfJ"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10253,body:{"type":1,"text":"FFZeW"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526378218,msgId:10243,body:{"type": 1,"text": "0"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526378223,msgId:10244,body:{"type": 1,"text": "11"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10245,body:{"type": "1","text": "1"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10246,body:{"type": "1","text": "2"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10247,body:{"type": "1","text": "3"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10267,body:{"type":1,"text":"qf5bu"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10266,body:{"type":1,"text":"jXTtO"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10265,body:{"type":1,"text":"d8Rss"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10264,body:{"type":1,"text":"IPuoZ"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10263,body:{"type":1,"text":"BjlD9"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10262,body:{"type":1,"text":"YDfjc"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10261,body:{"type":1,"text":"yFkNB"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10260,body:{"type":1,"text":"eAKV4"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10257,body:{"type":1,"text":"fpJ2G"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10259,body:{"type":1,"text":"LGlAM"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10258,body:{"type":1,"text":"48SLH"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10252,body:{"type":1,"text":"nFb2q"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10254,body:{"type":1,"text":"yDyqe"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10250,body:{"type": "1","text": "4"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:{"type": "1","text": "5"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:{"type": "1","text": "6"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:{"type": "1","text": "7"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10248,body:{"type": "1","text": "8"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10249,body:{"type": "1","text": "9"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10256,body:{"type":1,"text":"RuXt4"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10255,body:{"type":1,"text":"0tHte"}
+2018-05-18 11:48:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10251,body:{"type":1,"text":"EfFj1"}
+2018-05-18 11:48:59 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-18 11:48:59 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:,PlatformType:1,DeviceId:0AC16FEB-D9C4-4A88-B019-157D79480650
+2018-05-18 11:48:59 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-18 11:48:59 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 11:48:59 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 11:48:59 	 [DEBUG] 	 <client.go:151>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 11:48:59 	 [DEBUG] 	 <client.go:115>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 11:49:05 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52046]
+2018-05-18 11:49:05 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-18 11:49:05 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:,PlatformType:1,DeviceId:0AC16FEB-D9C4-4A88-B019-157D79480650
+2018-05-18 11:49:05 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10270,body:{"type":1,"text":"rz0cs"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10269,body:{"type":1,"text":"NRbAm"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10268,body:{"type":1,"text":"Z2vfJ"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10253,body:{"type":1,"text":"FFZeW"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526378218,msgId:10243,body:{"type": 1,"text": "0"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526378223,msgId:10244,body:{"type": 1,"text": "11"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10245,body:{"type": "1","text": "1"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10246,body:{"type": "1","text": "2"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10247,body:{"type": "1","text": "3"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10267,body:{"type":1,"text":"qf5bu"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10266,body:{"type":1,"text":"jXTtO"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10265,body:{"type":1,"text":"d8Rss"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10264,body:{"type":1,"text":"IPuoZ"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10263,body:{"type":1,"text":"BjlD9"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10262,body:{"type":1,"text":"YDfjc"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10261,body:{"type":1,"text":"yFkNB"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10260,body:{"type":1,"text":"eAKV4"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10257,body:{"type":1,"text":"fpJ2G"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10259,body:{"type":1,"text":"LGlAM"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10258,body:{"type":1,"text":"48SLH"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10252,body:{"type":1,"text":"nFb2q"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10254,body:{"type":1,"text":"yDyqe"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10250,body:{"type": "1","text": "4"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:{"type": "1","text": "5"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:{"type": "1","text": "6"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:{"type": "1","text": "7"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10248,body:{"type": "1","text": "8"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10249,body:{"type": "1","text": "9"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10256,body:{"type":1,"text":"RuXt4"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10255,body:{"type":1,"text":"0tHte"}
+2018-05-18 11:49:05 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10251,body:{"type":1,"text":"EfFj1"}
+2018-05-18 11:49:08 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-18 11:49:08 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:,PlatformType:1,DeviceId:0AC16FEB-D9C4-4A88-B019-157D79480650
+2018-05-18 11:49:08 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-18 11:49:08 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 11:49:08 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 11:49:08 	 [DEBUG] 	 <client.go:151>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 11:49:08 	 [DEBUG] 	 <client.go:115>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 11:49:11 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52047]
+2018-05-18 11:49:11 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-18 11:49:11 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:,PlatformType:1,DeviceId:0AC16FEB-D9C4-4A88-B019-157D79480650
+2018-05-18 11:49:11 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-18 11:50:50 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 11:52:53 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 11:54:50 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 11:56:52 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 11:58:50 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:00:50 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:02:53 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:03:04 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 12:03:04 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 12:03:04 	 [DEBUG] 	 <client.go:151>  	 close client:0, 
+2018-05-18 12:03:04 	 [DEBUG] 	 <client.go:115>  	 client:  0 socket closed
+2018-05-18 12:03:14 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52351]
+2018-05-18 12:03:15 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 12:03:15 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 12:03:15 	 [DEBUG] 	 <client.go:151>  	 close client:0, 
+2018-05-18 12:03:15 	 [DEBUG] 	 <client.go:115>  	 client:  0 socket closed
+2018-05-18 12:03:17 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52352]
+2018-05-18 12:03:18 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 12:03:18 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 12:03:18 	 [DEBUG] 	 <client.go:151>  	 close client:0, 
+2018-05-18 12:03:18 	 [DEBUG] 	 <client.go:115>  	 client:  0 socket closed
+2018-05-18 12:03:23 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52353]
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10270,body:{"type":1,"text":"rz0cs"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10269,body:{"type":1,"text":"NRbAm"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10268,body:{"type":1,"text":"Z2vfJ"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10253,body:{"type":1,"text":"FFZeW"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526378218,msgId:10243,body:{"type": 1,"text": "0"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526378223,msgId:10244,body:{"type": 1,"text": "11"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10245,body:{"type": "1","text": "1"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10246,body:{"type": "1","text": "2"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10247,body:{"type": "1","text": "3"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10267,body:{"type":1,"text":"qf5bu"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10266,body:{"type":1,"text":"jXTtO"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10265,body:{"type":1,"text":"d8Rss"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10264,body:{"type":1,"text":"IPuoZ"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10263,body:{"type":1,"text":"BjlD9"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10262,body:{"type":1,"text":"YDfjc"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10261,body:{"type":1,"text":"yFkNB"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10260,body:{"type":1,"text":"eAKV4"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10257,body:{"type":1,"text":"fpJ2G"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10259,body:{"type":1,"text":"LGlAM"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10258,body:{"type":1,"text":"48SLH"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10252,body:{"type":1,"text":"nFb2q"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10254,body:{"type":1,"text":"yDyqe"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10250,body:{"type": "1","text": "4"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:{"type": "1","text": "5"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:{"type": "1","text": "6"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:{"type": "1","text": "7"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10248,body:{"type": "1","text": "8"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10249,body:{"type": "1","text": "9"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10256,body:{"type":1,"text":"RuXt4"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10255,body:{"type":1,"text":"0tHte"}
+2018-05-18 12:03:23 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10251,body:{"type":1,"text":"EfFj1"}
+2018-05-18 12:03:28 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 12:03:28 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 12:03:28 	 [DEBUG] 	 <client.go:151>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 12:03:28 	 [DEBUG] 	 <client.go:115>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 12:03:32 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52355]
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10270,body:{"type":1,"text":"rz0cs"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10269,body:{"type":1,"text":"NRbAm"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10268,body:{"type":1,"text":"Z2vfJ"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10253,body:{"type":1,"text":"FFZeW"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526378218,msgId:10243,body:{"type": 1,"text": "0"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526378223,msgId:10244,body:{"type": 1,"text": "11"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10245,body:{"type": "1","text": "1"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10246,body:{"type": "1","text": "2"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10247,body:{"type": "1","text": "3"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10267,body:{"type":1,"text":"qf5bu"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10266,body:{"type":1,"text":"jXTtO"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10265,body:{"type":1,"text":"d8Rss"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10264,body:{"type":1,"text":"IPuoZ"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10263,body:{"type":1,"text":"BjlD9"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10262,body:{"type":1,"text":"YDfjc"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10261,body:{"type":1,"text":"yFkNB"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10260,body:{"type":1,"text":"eAKV4"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10257,body:{"type":1,"text":"fpJ2G"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10259,body:{"type":1,"text":"LGlAM"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10258,body:{"type":1,"text":"48SLH"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10252,body:{"type":1,"text":"nFb2q"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10254,body:{"type":1,"text":"yDyqe"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10250,body:{"type": "1","text": "4"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:{"type": "1","text": "5"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:{"type": "1","text": "6"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:{"type": "1","text": "7"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10248,body:{"type": "1","text": "8"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10249,body:{"type": "1","text": "9"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10256,body:{"type":1,"text":"RuXt4"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10255,body:{"type":1,"text":"0tHte"}
+2018-05-18 12:03:32 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10251,body:{"type":1,"text":"EfFj1"}
+2018-05-18 12:05:14 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:07:14 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:08:13 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-18 12:08:13 	 [ INFO] 	 <main.go:41>  	            系统:[IM]版本:[1.0]
+2018-05-18 12:08:13 	 [ INFO] 	 <main.go:42>  	 *********************************************
+2018-05-18 12:08:13 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-18 12:08:13 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-18 12:08:13 	 [ INFO] 	 <httpserver.go:17>  	 Http服务器启动中...
+2018-05-18 12:08:13 	 [ INFO] 	 <httpserver.go:20>  	 Http服务器开始监听[:9002]端口
+2018-05-18 12:08:13 	 [ INFO] 	 <httpserver.go:21>  	 *********************************************
+2018-05-18 12:08:14 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52396]
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10270,body:{"type":1,"text":"rz0cs"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10269,body:{"type":1,"text":"NRbAm"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392088,msgId:10268,body:{"type":1,"text":"Z2vfJ"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10253,body:{"type":1,"text":"FFZeW"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526378218,msgId:10243,body:{"type": 1,"text": "0"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526378223,msgId:10244,body:{"type": 1,"text": "11"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10245,body:{"type": "1","text": "1"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10246,body:{"type": "1","text": "2"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10247,body:{"type": "1","text": "3"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10267,body:{"type":1,"text":"qf5bu"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10266,body:{"type":1,"text":"jXTtO"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10265,body:{"type":1,"text":"d8Rss"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10264,body:{"type":1,"text":"IPuoZ"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10263,body:{"type":1,"text":"BjlD9"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392087,msgId:10262,body:{"type":1,"text":"YDfjc"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10261,body:{"type":1,"text":"yFkNB"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10260,body:{"type":1,"text":"eAKV4"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10257,body:{"type":1,"text":"fpJ2G"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10259,body:{"type":1,"text":"LGlAM"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10258,body:{"type":1,"text":"48SLH"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10252,body:{"type":1,"text":"nFb2q"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10254,body:{"type":1,"text":"yDyqe"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10250,body:{"type": "1","text": "4"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10182,body:{"type": "1","text": "5"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009014,msgId:10180,body:{"type": "1","text": "6"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009023,msgId:10181,body:{"type": "1","text": "7"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10248,body:{"type": "1","text": "8"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526009025,msgId:10249,body:{"type": "1","text": "9"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392086,msgId:10256,body:{"type":1,"text":"RuXt4"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10255,body:{"type":1,"text":"0tHte"}
+2018-05-18 12:08:14 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526392085,msgId:10251,body:{"type":1,"text":"EfFj1"}
+2018-05-18 12:09:10 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 12:09:10 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 12:09:10 	 [DEBUG] 	 <client.go:151>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 12:09:10 	 [DEBUG] 	 <client.go:115>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 12:10:02 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52409]
+2018-05-18 12:12:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:14:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:16:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:18:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:20:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:22:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:24:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:26:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:28:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:30:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:32:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:34:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:36:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:38:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:40:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:42:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:44:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:46:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:48:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:50:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:52:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 12:53:30 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 12:53:30 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 12:53:30 	 [DEBUG] 	 <client.go:151>  	 close client:0, 
+2018-05-18 12:53:30 	 [DEBUG] 	 <client.go:115>  	 client:  0 socket closed
+2018-05-18 14:43:04 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-18 14:43:04 	 [ INFO] 	 <main.go:41>  	            系统:[IM]版本:[1.0]
+2018-05-18 14:43:04 	 [ INFO] 	 <main.go:42>  	 *********************************************
+2018-05-18 14:43:04 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-18 14:43:04 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-18 14:43:04 	 [ INFO] 	 <httpserver.go:17>  	 Http服务器启动中...
+2018-05-18 14:43:04 	 [ INFO] 	 <httpserver.go:20>  	 Http服务器开始监听[:9002]端口
+2018-05-18 14:43:04 	 [ INFO] 	 <httpserver.go:21>  	 *********************************************
+2018-05-18 14:54:04 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-18 14:54:04 	 [ INFO] 	 <main.go:41>  	            系统:[IM]版本:[1.0]
+2018-05-18 14:54:04 	 [ INFO] 	 <main.go:42>  	 *********************************************
+2018-05-18 14:54:04 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-18 14:54:04 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-18 14:54:04 	 [ INFO] 	 <httpserver.go:17>  	 Http服务器启动中...
+2018-05-18 14:54:04 	 [ INFO] 	 <httpserver.go:20>  	 Http服务器开始监听[:9002]端口
+2018-05-18 14:54:04 	 [ INFO] 	 <httpserver.go:21>  	 *********************************************
+2018-05-18 14:54:10 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54356]
+2018-05-18 14:54:16 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-18 14:54:16 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:2c06eaf6-e14a-4d06-ba42-15de3f11741a,PlatformType:1,DeviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-18 14:54:16 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-18 14:55:15 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 14:55:15 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 14:55:15 	 [DEBUG] 	 <client.go:151>  	 close client:0, 
+2018-05-18 14:55:15 	 [DEBUG] 	 <client.go:115>  	 client:  0 socket closed
+2018-05-18 14:55:16 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54375]
+2018-05-18 14:55:19 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-05-18 14:55:21 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-05-18 14:55:45 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54379]
+2018-05-18 14:57:25 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54385]
+2018-05-18 14:57:31 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 14:57:31 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 14:57:31 	 [DEBUG] 	 <client.go:151>  	 close client:0, 
+2018-05-18 14:57:31 	 [DEBUG] 	 <client.go:115>  	 client:  0 socket closed
+2018-05-18 14:57:34 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526626519,msgId:10278,body:msg11526626519
+2018-05-18 14:57:34 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526626521,msgId:10279,body:msg11526626521
+2018-05-18 14:57:34 	 [ERROR] 	 <message.go:79>  	 Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'when id = ?' at line 1
+2018-05-18 14:57:34 	 [ERROR] 	 <ack_handle.go:20>  	 error消息服务出错MessageACK=>msgId:10278
+2018-05-18 14:57:34 	 [ERROR] 	 <message.go:79>  	 Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'when id = ?' at line 1
+2018-05-18 14:57:34 	 [ERROR] 	 <ack_handle.go:20>  	 error消息服务出错MessageACK=>msgId:10279
+2018-05-18 14:58:16 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-18 14:58:16 	 [ INFO] 	 <main.go:41>  	            系统:[IM]版本:[1.0]
+2018-05-18 14:58:16 	 [ INFO] 	 <main.go:42>  	 *********************************************
+2018-05-18 14:58:16 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-18 14:58:16 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-18 14:58:16 	 [ INFO] 	 <httpserver.go:17>  	 Http服务器启动中...
+2018-05-18 14:58:16 	 [ INFO] 	 <httpserver.go:20>  	 Http服务器开始监听[:9002]端口
+2018-05-18 14:58:16 	 [ INFO] 	 <httpserver.go:21>  	 *********************************************
+2018-05-18 14:58:19 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54392]
+2018-05-18 14:58:22 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526626519,msgId:10278,body:msg11526626519
+2018-05-18 14:58:22 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526626521,msgId:10279,body:msg11526626521
+2018-05-18 15:02:18 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-18 15:02:18 	 [ INFO] 	 <main.go:41>  	            系统:[IM]版本:[1.0]
+2018-05-18 15:02:18 	 [ INFO] 	 <main.go:42>  	 *********************************************
+2018-05-18 15:02:18 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-18 15:02:18 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-18 15:02:18 	 [ INFO] 	 <httpserver.go:17>  	 Http服务器启动中...
+2018-05-18 15:02:18 	 [ INFO] 	 <httpserver.go:20>  	 Http服务器开始监听[:9002]端口
+2018-05-18 15:02:18 	 [ INFO] 	 <httpserver.go:21>  	 *********************************************
+2018-05-18 15:02:21 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54489]
+2018-05-18 15:02:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526626519,msgId:10278,body:msg11526626519
+2018-05-18 15:02:26 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526626521,msgId:10279,body:msg11526626521
+2018-05-18 15:02:26 	 [ERROR] 	 <message.go:79>  	 Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values (?)' at line 1
+2018-05-18 15:02:26 	 [ERROR] 	 <ack_handle.go:20>  	 error消息服务出错MessageACK=>msgId:10278
+2018-05-18 15:02:26 	 [ERROR] 	 <message.go:79>  	 Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values (?)' at line 1
+2018-05-18 15:02:26 	 [ERROR] 	 <ack_handle.go:20>  	 error消息服务出错MessageACK=>msgId:10279
+2018-05-18 15:06:06 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-18 15:06:06 	 [ INFO] 	 <main.go:41>  	            系统:[IM]版本:[1.0]
+2018-05-18 15:06:06 	 [ INFO] 	 <main.go:42>  	 *********************************************
+2018-05-18 15:06:06 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-18 15:06:06 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-18 15:06:06 	 [ INFO] 	 <httpserver.go:17>  	 Http服务器启动中...
+2018-05-18 15:06:06 	 [ INFO] 	 <httpserver.go:20>  	 Http服务器开始监听[:9002]端口
+2018-05-18 15:06:06 	 [ INFO] 	 <httpserver.go:21>  	 *********************************************
+2018-05-18 15:06:08 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54502]
+2018-05-18 15:06:10 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526626519,msgId:10278,body:msg11526626519
+2018-05-18 15:06:10 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526626521,msgId:10279,body:msg11526626521
+2018-05-18 15:06:10 	 [ERROR] 	 <message.go:79>  	 Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES (?)' at line 1
+2018-05-18 15:06:10 	 [ERROR] 	 <ack_handle.go:20>  	 error消息服务出错MessageACK=>msgId:10278
+2018-05-18 15:06:10 	 [ERROR] 	 <message.go:79>  	 Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES (?)' at line 1
+2018-05-18 15:06:10 	 [ERROR] 	 <ack_handle.go:20>  	 error消息服务出错MessageACK=>msgId:10279
+2018-05-18 15:07:41 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-18 15:07:41 	 [ INFO] 	 <main.go:41>  	            系统:[IM]版本:[1.0]
+2018-05-18 15:07:41 	 [ INFO] 	 <main.go:42>  	 *********************************************
+2018-05-18 15:07:41 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-18 15:07:41 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-18 15:07:41 	 [ INFO] 	 <httpserver.go:17>  	 Http服务器启动中...
+2018-05-18 15:07:41 	 [ INFO] 	 <httpserver.go:20>  	 Http服务器开始监听[:9002]端口
+2018-05-18 15:07:41 	 [ INFO] 	 <httpserver.go:21>  	 *********************************************
+2018-05-18 15:07:44 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54510]
+2018-05-18 15:07:47 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526626519,msgId:10278,body:msg11526626519
+2018-05-18 15:07:47 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526626521,msgId:10279,body:msg11526626521
+2018-05-18 15:08:59 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-18 15:08:59 	 [ INFO] 	 <main.go:41>  	            系统:[IM]版本:[1.0]
+2018-05-18 15:08:59 	 [ INFO] 	 <main.go:42>  	 *********************************************
+2018-05-18 15:08:59 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-18 15:08:59 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-18 15:08:59 	 [ INFO] 	 <httpserver.go:17>  	 Http服务器启动中...
+2018-05-18 15:08:59 	 [ INFO] 	 <httpserver.go:20>  	 Http服务器开始监听[:9002]端口
+2018-05-18 15:08:59 	 [ INFO] 	 <httpserver.go:21>  	 *********************************************
+2018-05-18 15:09:03 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54521]
+2018-05-18 15:09:07 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526626519,msgId:10278,body:msg11526626519
+2018-05-18 15:09:07 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526626521,msgId:10279,body:msg11526626521
