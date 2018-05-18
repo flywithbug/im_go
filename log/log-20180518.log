@@ -1,0 +1,30 @@
+2018-05-18 16:04:48 	 [ INFO] 	 <main.go:40>  	 *********************************************
+2018-05-18 16:04:48 	 [ INFO] 	 <main.go:41>  	            系统:[IM]版本:[1.0]
+2018-05-18 16:04:48 	 [ INFO] 	 <main.go:42>  	 *********************************************
+2018-05-18 16:04:48 	 [ INFO] 	 <config.go:70>  	 db:root:root@tcp(127.0.0.1:3306)/gim?parseTime=true&charset=utf8
+2018-05-18 16:04:48 	 [ INFO] 	 <config.go:80>  	 连接数据库成功
+2018-05-18 16:04:48 	 [ INFO] 	 <httpserver.go:17>  	 Http服务器启动中...
+2018-05-18 16:04:48 	 [ INFO] 	 <httpserver.go:20>  	 Http服务器开始监听[:9002]端口
+2018-05-18 16:04:48 	 [ INFO] 	 <httpserver.go:21>  	 *********************************************
+2018-05-18 16:04:51 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:55057]
+2018-05-18 16:04:54 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-18 16:04:54 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:2c06eaf6-e14a-4d06-ba42-15de3f11741a,PlatformType:1,DeviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-18 16:04:54 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-18 16:04:56 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-18 16:04:56 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:2c06eaf6-e14a-4d06-ba42-15de3f11741a,PlatformType:1,DeviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-18 16:04:56 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-18 16:04:59 	 [ WARN] 	 <login.go:35>  	 sql: no rows in result set
+2018-05-18 16:04:59 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:58b70f11-e280-40d8-8ddd-a3810bd65f7a,PlatformType:3,DeviceId:4c6aba79-f768-4e26-8344-aa2b7bc173ec
+2018-05-18 16:04:59 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-05-18 16:05:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526630149,msgId:10280,body:msg11526630149
+2018-05-18 16:05:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526630204,msgId:10281,body:msg11526630204
+2018-05-18 16:05:57 	 [DEBUG] 	 <client_im.go:98>  	 offline msg :sender:10002,receiver:10001,timestamp:1526630206,msgId:10282,body:msg11526630206
+2018-05-18 16:06:05 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:55072]
+2018-05-18 16:06:25 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 16:06:25 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 16:06:25 	 [DEBUG] 	 <client.go:151>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 16:06:25 	 [DEBUG] 	 <client.go:115>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 16:06:27 	 [DEBUG] 	 <protocol.go:136>  	 sock read error:EOF
+2018-05-18 16:06:27 	 [DEBUG] 	 <client.go:86>  	 EOFconnect offline
+2018-05-18 16:06:27 	 [DEBUG] 	 <client.go:151>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-05-18 16:06:27 	 [DEBUG] 	 <client.go:115>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed

@@ -2,15 +2,15 @@ package im
 
 const (
 	// handshake
-	OP_HANDSHAKE     = int32(0)
-	OP_HANDSHAKE_ACK = int32(1)
+	//OP_HANDSHAKE     = int32(0)
+	//OP_HANDSHAKE_ACK = int32(1)
 
 	// heartbeat
 	OP_HEARTBEAT     = int32(2)
 	OP_HEARTBEAT_ACK = int32(3)
 
 
-
+	//其他消息类型，都在客户端自行实现。
 	// send  messgae
 	OP_MSG     = int32(4)
 	OP_MSG_ACK = int32(5) //客户端返回的ack 用于更新发送状态
@@ -20,7 +20,7 @@ const (
 
 
 	//OP_MSG_Read = int32(8)
-	OP_MSG_Read_ACK = int32(9) //消息已读回执
+	//OP_MSG_Read_ACK = int32(9) //消息已读回执
 
 
 
@@ -49,12 +49,12 @@ const (
 
 
 	// proto
-	OP_PROTO_READY  = int32(13)
-	OP_PROTO_FINISH = int32(14)
-
-	// for test
-	OP_TEST       = int32(254)
-	OP_TEST_REPLY = int32(255)
+	//OP_PROTO_READY  = int32(13)
+	//OP_PROTO_FINISH = int32(14)
+	//
+	//// for test
+	//OP_TEST       = int32(254)
+	//OP_TEST_REPLY = int32(255)
 )
 
 func OperationMsg(operation int32) string {

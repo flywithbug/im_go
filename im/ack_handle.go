@@ -6,7 +6,7 @@ import (
 )
 
 /*
-// 客户端返回的ack 用于标记消息已发送成功
+// 客户端返回的ack 用于标记消息已发送成功 //send delivryAck to sender
 */
 func (client *Client) handleMessageACK(pro *Proto) {
 	//TODO 优化为rpc和方式修改
@@ -22,7 +22,6 @@ func (client *Client) handleMessageACK(pro *Proto) {
 func (client *Client)handleMessageReadAck(pro *Proto)  {
 
 }
-
 
 
 

@@ -40,8 +40,8 @@ func (client *Client) handleMessage(pro *Proto) {
 		client.HandleAuthToken(pro)
 	case OP_MSG_ACK: //客户端返回的ack 用于更新发送状态
 		client.handleMessageACK(pro)
-	case OP_MSG_Read_ACK:
-		client.handleMessageReadAck(pro)
+	//case OP_MSG_Read_ACK:
+	//	client.handleMessageReadAck(pro)
 	case OP_MSG_SYNC_ACK: //消息发送者，发送消息给其他登录端
 		client.handleSyncACK(pro)
 	case OP_HEARTBEAT: //心跳检测
