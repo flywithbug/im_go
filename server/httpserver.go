@@ -4,7 +4,6 @@ import (
 	"time"
 	"github.com/gin-gonic/gin"
 	"github.com/itsjamie/gin-cors"
-	log "github.com/flywithbug/log4go"
 	"fmt"
 	"im_go/server/handler"
 )
@@ -14,11 +13,11 @@ import (
 
 func StartHttpServer(address string,rPrefix []string)  {
 
-	log.Info("Http服务器启动中...")
-	// 设置请求映射地址及对应处理方法
-	//打印监听端口
-	log.Info("Http服务器开始监听[%s]端口", address)
-	log.Info("*********************************************")
+	//log.Info("Http服务器启动中...")
+	//// 设置请求映射地址及对应处理方法
+	////打印监听端口
+	//log.Info("Http服务器开始监听[%s]端口", address)
+	//log.Info("*********************************************")
 	r := gin.Default()
 	r.Use(cors.Middleware(cors.Config{
 		Origins:         "*",

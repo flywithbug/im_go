@@ -33,26 +33,18 @@ func main() {
 	flag.Parse()
 	//加载配置文件
 	conf, err := config.ReadConfig(*configPath)
-
-	SetLog(conf)
-	defer log.Close()
-
-	log.Info("*********************************************")
-	log.Info("           系统:[%s]版本:[%s]", Name, Version)
-	log.Info("*********************************************")
-
 	if err != nil {
 		log.Fatal("读取配置文件错误:", err.Error())
 	}
-
+	SetLog(conf)
+	defer log.Close()
 
 	//连接数据库
 	model.Database, err= conf.DBConfig.Connect()
-	defer model.Database.Close()
 	if err != nil {
 		log.Fatal(err.Error())
 	}
-
+	defer model.Database.Close()
 
 	go func() {
 		//启动用户管理服务

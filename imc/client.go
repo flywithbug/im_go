@@ -34,14 +34,14 @@ func StartClient(port int) {
 				var auth im.AuthenticationStatus
 				auth.FromData(msg.Body)
 				fmt.Println("授权状态",auth.Status)
-			case OP_SEND_MSG_ACK:
+			case OP_MSG_ACK:
 				var ack MessageACK
 				ack.FromData(msg.Body)
 				fmt.Println(ack.Description(),msg.Description())
 			case OP_HEARTBEAT_ACK:
 				fmt.Println("OP_HEARTBEAT_ACK",msg.Description())
 
-			case OP_SEND_MSG:
+			case OP_MSG:
 				var msg1 Message
 				msg1.FromData(msg.Body)
 				fmt.Println("receiveMsg:",msg1.Description(),msg.Description())
@@ -51,17 +51,17 @@ func StartClient(port int) {
 				//msg.Body = ack.ToData()
 				//msg.Operation = OP_SEND_MSG_ACK
 				//SendMessage(conn,msg)
-			case OP_SEND_MSG_SYNC:
+			case OP_MSG_SYNC:
 				var msg1 Message
 				msg1.FromData(msg.Body)
 				fmt.Println("receiveMsg:",msg1.Description(),msg.Description())
 
 				//同步消息可以不发送回执
-				var ack MessageACK
-				ack.msgId = msg1.msgId
-				msg.Body = ack.ToData()
-				msg.Operation = OP_SEND_MSG_SYNC_ACK
-				SendMessage(conn,msg)
+				//var ack MessageACK
+				//ack.msgId = msg1.msgId
+				//msg.Body = ack.ToData()
+				//msg.Operation = OP_SEND_MSG_SYNC_ACK
+				//SendMessage(conn,msg)
 			}
 		}
 	}()
@@ -92,7 +92,7 @@ func StartClient(port int) {
 			p.Ver = 1
 			p.Body = msg.ToData()
 
-			p.Operation = OP_SEND_MSG
+			p.Operation = OP_MSG
 			p.SeqId = 123456
 		}else if string(line) == "auth1"{
 			var auth im.AuthenticationToken
@@ -114,7 +114,7 @@ func StartClient(port int) {
 				body:[]byte("msg1" + strconv.Itoa(int(int32(time.Now().Unix())))),
 			}
 			p.Ver = 1
-			p.Operation = OP_SEND_MSG
+			p.Operation = OP_MSG
 			p.SeqId = 1
 			p.Body = msg.ToData()
 		}else if string(line) == "auth3"{ //另一个账号
@@ -139,7 +139,7 @@ func StartClient(port int) {
 		}else {
 			p.Ver = 1
 			p.Body = line
-			p.Operation = OP_SEND_MSG
+			p.Operation = OP_MSG
 			p.SeqId = 1
 		}
 

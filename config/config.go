@@ -6,7 +6,6 @@ import (
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"io/ioutil"
-	log "github.com/flywithbug/log4go"
 )
 
 /*
@@ -15,7 +14,7 @@ IM配置结构体
 type IMConfig struct {
 	IMPort     		int      	`json:"im_port"`     	//IM服务长连接监听端口
 	HttpPort   		int      	`json:"http_port"`   	//IM服务外部调研接口
-	LogLevel     int			`json:"log_level"`    // 0:release  1:debug
+	LogLevel        int			`json:"log_level"`    // 0:release  1:debug
 	ServerPort 		string		`json:"server_port"`	//用户关系相关服务
 	PprofBind		string	 	`json:"pprof_bind"`		//机器监控
 	DBConfig   		DBConfig 	`json:"db_config"`   	//数据库配置
@@ -67,7 +66,6 @@ func (this *IMConfig) Parse(path string) error {
 func (this *DBConfig) Connect() (*sql.DB, error) {
 	// 从配置文件中读取配置信息并初始化连接池(go中含有连接池处理机制)
 	url := fmt.Sprintf("%s:%s@tcp(%s)/%s?parseTime=true&charset=utf8", this.Username, this.Password, this.Host, this.Name)
-	log.Info("db:%s",url)
 	db, err := sql.Open("mysql", url)
 	db.SetMaxIdleConns(this.MaxIdleConns) // 最大空闲连接
 	db.SetMaxOpenConns(this.MaxOpenConns) // 最大连接数
@@ -77,6 +75,5 @@ func (this *DBConfig) Connect() (*sql.DB, error) {
 	if err := db.Ping(); err != nil {
 		return nil, err
 	}
-	log.Info("连接数据库成功")
 	return db, nil
 }

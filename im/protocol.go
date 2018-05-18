@@ -61,8 +61,6 @@ var (
 	ErrProtoPackLen   = errors.New("default server codec pack length error")
 	ErrProtoHeaderLen = errors.New("default server codec header length error")
 
-	ProtoReady  = &Proto{Operation: OP_PROTO_READY}
-	ProtoFinish = &Proto{Operation: OP_PROTO_FINISH}
 )
 
 func WriteHeader(ph protoHeader, buffer io.Writer) {

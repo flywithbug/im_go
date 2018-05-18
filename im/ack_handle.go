@@ -18,22 +18,6 @@ func (client *Client) handleMessageACK(pro *Proto) {
 	}
 }
 
-//已读回执
-func (client *Client)handleMessageReadAck(pro *Proto)  {
-
-}
-
-
-
-func (client *Client) handleSyncACK(pro *Proto) {
-	//多客户端同步消息回执
-	//var ack MessageACK
-	//ack.FromData(pro.Body)
-	////err := model.UpdateMessageACK(ack.msgId,1)
-	//if err != nil {
-	//}
-}
-
 
 
 
