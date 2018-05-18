@@ -13,7 +13,7 @@ func TestBaseMessage_Decode(t *testing.T) {
 		sender:    10002,
 		msgId:     20020,
 		body:      []byte("hello world"),
-		timestamp: time.Now().Unix(),
+		timestamp: int32(time.Now().Unix()),
 	}
 	fmt.Println(msg.Description())
 
