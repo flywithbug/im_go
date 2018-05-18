@@ -1,13 +1,13 @@
 # ************************************************************
 # Sequel Pro SQL dump
-# Version 4096
+# Version 4541
 #
 # http://www.sequelpro.com/
-# http://code.google.com/p/sequel-pro/
+# https://github.com/sequelpro/sequelpro
 #
 # Host: 127.0.0.1 (MySQL 5.7.21)
 # Database: gim
-# Generation Time: 2018-05-12 23:59:07 +0000
+# Generation Time: 2018-05-18 08:56:45 +0000
 # ************************************************************
 
 
@@ -66,35 +66,16 @@ CREATE TABLE `im_login` (
 DROP TABLE IF EXISTS `im_message`;
 
 CREATE TABLE `im_message` (
-  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '数据库自增',
+  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增',
   `sender` int(10) NOT NULL COMMENT '发送人(用户ID)',
   `receiver` int(10) NOT NULL COMMENT '接收人(可以是用户，群，讨论组)',
   `content` varbinary(4096) NOT NULL DEFAULT '' COMMENT '保存为二进制流',
   `time_stamp` int(10) NOT NULL COMMENT '发送日期',
-  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '消息状态 0对方离线，未发送，1送达，2已读，3 撤回 4 删除',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '1发送成功',
   `update_at` int(10) DEFAULT NULL COMMENT '状态修改时间',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-LOCK TABLES `im_message` WRITE;
-/*!40000 ALTER TABLE `im_message` DISABLE KEYS */;
-
-INSERT INTO `im_message` (`id`, `sender`, `receiver`, `content`, `time_stamp`, `status`, `update_at`)
-VALUES
-  (10186,10002,10001,X'6D736737',1526009065,0,NULL),
-  (10199,10002,10001,X'6D73673131353236313031333036',1526101306,0,NULL),
-  (10185,10002,10001,X'6D736736',1526009064,0,NULL),
-  (10184,10002,10001,X'6D736735',1526009062,0,NULL),
-  (10198,10002,10001,X'6D73673131353236313031323938',1526101298,0,NULL),
-  (10182,10002,10001,X'6D736733',1526009025,0,NULL),
-  (10183,10002,10001,X'6D736734',1526009044,0,NULL),
-  (10180,10002,10001,X'6D736731',1526009014,0,NULL),
-  (10181,10002,10001,X'6D736732',1526009023,0,NULL),
-  (10187,10002,10001,X'6D736738',1526009067,0,NULL),
-  (10197,10002,10001,X'6D73673131353236313030393433',1526100943,0,NULL);
-
-/*!40000 ALTER TABLE `im_message` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 # Dump of table im_relationship
@@ -113,16 +94,6 @@ CREATE TABLE `im_relationship` (
   UNIQUE KEY `relation_id` (`relation_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-LOCK TABLES `im_relationship` WRITE;
-/*!40000 ALTER TABLE `im_relationship` DISABLE KEYS */;
-
-INSERT INTO `im_relationship` (`id`, `u_id`, `relation_id`, `friend_id`, `status`, `remark`)
-VALUES
-  (10017,10001,'10001-10002',10002,0,''),
-  (10020,10001,'0b83e3965f12affa4371beaa267c3071',10002,0,'');
-
-/*!40000 ALTER TABLE `im_relationship` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 # Dump of table im_room
@@ -164,18 +135,6 @@ CREATE TABLE `im_user` (
   UNIQUE KEY `user_id` (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-LOCK TABLES `im_user` WRITE;
-/*!40000 ALTER TABLE `im_user` DISABLE KEYS */;
-
-INSERT INTO `im_user` (`id`, `user_id`, `account`, `password`, `nick`, `sign`, `avatar`, `status`, `create_at`, `update_at`, `app_id`, `forbidden`)
-VALUES
-  (10001,'d5f75fbc-4f64-4f78-b320-2ca770847800','ori','16b1c83de8f9518e673838b2d6ea75dc','ori','','http://www.qqzhi.com/uploadpic/2014-09-23/000247589.jpg',0,'2018-05-02 20:20:59','2018-05-02 20:20:59',10,'0'),
-  (10002,'80d07eb7-09d5-4332-aa4d-01990a291dfd','ori1','16b1c83de8f9518e673838b2d6ea75dc','ori','','http://www.qqzhi.com/uploadpic/2014-09-23/000247589.jpg',0,'2018-05-03 16:16:26','2018-05-03 16:16:26',10,'0'),
-  (10003,'fe9609b4-d22e-4672-b27c-1c13a3849f37','ori2','16b1c83de8f9518e673838b2d6ea75dc','ori','','http://www.qqzhi.com/uploadpic/2014-09-23/000247589.jpg',0,'2018-05-03 16:18:02','2018-05-03 16:18:02',10,'0'),
-  (10004,'df417cac-15e1-430a-8858-27cec879f267','ori3','16b1c83de8f9518e673838b2d6ea75dc','ori','','http://www.qqzhi.com/uploadpic/2014-09-23/000247589.jpg',0,'2018-05-04 18:22:04','2018-05-04 18:22:04',10,'0');
-
-/*!40000 ALTER TABLE `im_user` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 
