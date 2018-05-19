@@ -68,7 +68,7 @@ func (client *Client) HandleAuthToken(pro *Proto) {
 	if send {
 		client.version = pro.Ver
 
-		client.appid = login.AppId
+		client.appId = login.AppId
 		client.uid = login.UId
 		client.userId = login.UserId
 		client.platformId = auth.PlatformType

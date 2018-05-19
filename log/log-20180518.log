@@ -264,3 +264,80 @@
 2018-05-18 19:06:41 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
 2018-05-18 19:08:41 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
 2018-05-18 19:10:41 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:12:43 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:14:43 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:16:43 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:18:43 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:20:41 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:22:41 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:24:41 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:26:41 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:28:41 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:30:41 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:32:41 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:34:43 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:36:41 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:38:41 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:40:41 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:42:43 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:44:43 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:46:43 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 19:47:15 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-05-18 19:47:15 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-05-18 19:47:15 	 [DEBUG] 	 <client.go:147>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 19:47:15 	 [DEBUG] 	 <client.go:111>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 19:58:06 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:57718]
+2018-05-18 19:58:33 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-18 20:02:57 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-05-18 20:02:57 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-05-18 20:02:57 	 [DEBUG] 	 <client.go:147>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 20:02:57 	 [DEBUG] 	 <client.go:111>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 20:26:36 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:57927]
+2018-05-18 20:28:21 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-18 20:28:33 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-18 20:28:50 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-05-18 20:28:50 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-05-18 20:28:50 	 [DEBUG] 	 <client.go:147>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 20:28:50 	 [DEBUG] 	 <client.go:111>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 21:41:27 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58677]
+2018-05-18 21:44:34 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-05-18 21:44:34 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-05-18 21:44:34 	 [DEBUG] 	 <client.go:147>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 21:44:34 	 [DEBUG] 	 <client.go:111>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 21:44:46 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58698]
+2018-05-18 21:44:47 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-18 21:46:26 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-05-18 21:46:26 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-05-18 21:46:26 	 [DEBUG] 	 <client.go:147>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 21:46:26 	 [DEBUG] 	 <client.go:111>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 22:36:45 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:59147]
+2018-05-18 22:36:48 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-05-18 22:36:48 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-05-18 22:36:48 	 [DEBUG] 	 <client.go:147>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 22:36:48 	 [DEBUG] 	 <client.go:111>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 22:36:51 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:59149]
+2018-05-18 22:38:45 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 22:39:49 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-05-18 22:39:49 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-05-18 22:39:49 	 [DEBUG] 	 <client.go:147>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 22:39:49 	 [DEBUG] 	 <client.go:111>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 22:39:59 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:59169]
+2018-05-18 22:40:18 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:59176]
+2018-05-18 22:40:34 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:59179]
+2018-05-18 22:41:38 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-18 22:41:59 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-05-18 22:43:09 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-18 22:43:38 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-18 22:45:29 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-05-18 22:45:29 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-05-18 22:45:29 	 [DEBUG] 	 <client.go:147>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 22:45:29 	 [DEBUG] 	 <client.go:111>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-05-18 22:45:38 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:59205]
+2018-05-18 22:45:40 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-05-18 22:46:18 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:read tcp 127.0.0.1:62310->127.0.0.1:59176: i/o timeout
+2018-05-18 22:46:18 	 [DEBUG] 	 <client.go:147>  	 close client:0, 
+2018-05-18 22:46:18 	 [DEBUG] 	 <client.go:111>  	 client:  0 socket closed
+2018-05-18 22:46:49 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-05-18 22:46:49 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-05-18 22:46:49 	 [DEBUG] 	 <client.go:147>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-05-18 22:46:49 	 [DEBUG] 	 <client.go:111>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed

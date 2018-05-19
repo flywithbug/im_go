@@ -9,34 +9,34 @@ type Route struct {
 	appid        int64
 	mutex        sync.Mutex
 	clients      map[int32]ClientSet
-	room_clients map[int64]ClientSet
+	roomClients map[int64]ClientSet
 }
 
 func NewRoute(appid int64) *Route {
 	route := new(Route)
 	route.appid = appid
 	route.clients = make(map[int32]ClientSet)
-	route.room_clients = make(map[int64]ClientSet)
+	route.roomClients = make(map[int64]ClientSet)
 	return route
 }
 
-func (route *Route) AddRoomClient(room_id int64, client *Client) {
+func (route *Route) AddRoomClient(roomId int64, client *Client) {
 	route.mutex.Lock()
 	defer route.mutex.Unlock()
-	set, ok := route.room_clients[room_id]
+	set, ok := route.roomClients[roomId]
 	if !ok {
 		set = NewClientSet()
-		route.room_clients[room_id] = set
+		route.roomClients[roomId] = set
 	}
 	set.Add(client)
 }
 
 //todo optimise client set clone
-func (route *Route) FindRoomClientSet(room_id int64) ClientSet {
+func (route *Route) FindRoomClientSet(roomId int64) ClientSet {
 	route.mutex.Lock()
 	defer route.mutex.Unlock()
 
-	set, ok := route.room_clients[room_id]
+	set, ok := route.roomClients[roomId]
 	if ok {
 		return set.Clone()
 	} else {
@@ -44,13 +44,13 @@ func (route *Route) FindRoomClientSet(room_id int64) ClientSet {
 	}
 }
 
-func (route *Route) RemoveRoomClient(room_id int64, client *Client) bool {
+func (route *Route) RemoveRoomClient(roomId int64, client *Client) bool {
 	route.mutex.Lock()
 	defer route.mutex.Unlock()
-	if set, ok := route.room_clients[room_id]; ok {
+	if set, ok := route.roomClients[roomId]; ok {
 		set.Remove(client)
 		if set.Count() == 0 {
-			delete(route.room_clients, room_id)
+			delete(route.roomClients, roomId)
 		}
 		return true
 	}

@@ -11,6 +11,7 @@ import (
 type Client struct {
 	Connection
 	*ClientIM
+	*ClientROOM
 	publicIp int32
 }
 
@@ -29,8 +30,8 @@ func NewClient(conn *net.TCPConn) *Client {
 	client.wt = make(chan *Proto, 100)
 
 	//消息处理器
-	client.ClientIM = &ClientIM{&client.Connection}
-
+	client.ClientIM = &ClientIM{Connection:&client.Connection}
+	client.ClientROOM = &ClientROOM{Connection:&client.Connection}
 	return client
 }
 
@@ -51,14 +52,14 @@ func (client *Client) handleMessage(pro *Proto) {
 }
 
 func (client *Client) AddClient() {
-	route := appRoute.FindOrAddRoute(client.appid)
+	route := appRoute.FindOrAddRoute(client.appId)
 	route.AddClient(client)
 }
 
 func (client *Client) RemoveClient() {
-	route := appRoute.FindRoute(client.appid)
+	route := appRoute.FindRoute(client.appId)
 	if route == nil {
-		log.Warn("can't find app route %d",client.appid)
+		log.Warn("can't find app route %d",client.appId)
 		return
 	}
 	route.RemoveClient(client)

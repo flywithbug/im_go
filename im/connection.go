@@ -28,7 +28,7 @@ type Connection struct {
 	//notification_on bool //桌面在线时是否通知手机端
 	online bool
 
-	appid      int64  //登录用户所属AppId
+	appId      int64  //登录用户所属AppId
 	uid        int32  //登录用户的数据Id
 	deviceId   string //设备唯一Id
 	platformId int8   //设备类型Id
@@ -94,7 +94,7 @@ func (client *Connection) EnqueueMessage(p Proto) bool {
 
 func (client *Connection) SendMessage(uid int32, pro *Proto) bool {
 	//发送推送给offline的uId
-	appid := client.appid
+	appid := client.appId
 	route := appRoute.FindRoute(appid)
 	if route == nil {
 		log.Error(fmt.Sprintf(" app not found: can't send message, appid:%d uid:%d cmd:%d", appid, uid, pro.Operation))
