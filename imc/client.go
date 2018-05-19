@@ -117,9 +117,9 @@ func StartClient(port int) {
 			p.Operation = OP_MSG
 			p.SeqId = 1
 			p.Body = msg.ToData()
-		}else if string(line) == "auth3"{ //另一个账号
+		}else if string(line) == "auth2"{ //另一个账号
 			var auth im.AuthenticationToken
-			auth.Token = "2c06eaf6-e14a-4d06-ba42-15de3f11741a"
+			auth.Token = "2c06eaf6-e14a-4d06-ba42-15de3f11741a222"
 			auth.DeviceId = "4c6aba79-f768-4e26-8344-aa2b7bc173ec"
 			auth.PlatformType = 3
 			p.Ver = 1
