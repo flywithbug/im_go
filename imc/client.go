@@ -46,11 +46,11 @@ func StartClient(port int) {
 				msg1.FromData(msg.Body)
 				fmt.Println("receiveMsg:",msg1.Description(),msg.Description())
 
-				//var ack MessageACK
-				//ack.msgId = msg1.msgId
-				//msg.Body = ack.ToData()
-				//msg.Operation = OP_SEND_MSG_ACK
-				//SendMessage(conn,msg)
+				var ack MessageACK
+				ack.msgId = msg1.msgId
+				msg.Body = ack.ToData()
+				msg.Operation = OP_MSG_ACK
+				SendMessage(conn,msg)
 			case OP_MSG_SYNC:
 				var msg1 Message
 				msg1.FromData(msg.Body)

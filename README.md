@@ -14,9 +14,9 @@ CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build main.go
 打开配置文件 config.json，修改相关配置。
 
 
-创建数据库webcron，再导入install.sql
+创建数据库im_go，再导入install.sql
 
-	$ mysql -u username -p -D webcron < install.sql
+	$ mysql -u username -p -D im_go < install.sql
 
 
 
