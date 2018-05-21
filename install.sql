@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.21)
 # Database: gim
-# Generation Time: 2018-05-18 08:56:45 +0000
+# Generation Time: 2018-05-21 03:50:13 +0000
 # ************************************************************
 
 
@@ -74,24 +74,6 @@ CREATE TABLE `im_message` (
   `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '1发送成功',
   `update_at` int(10) DEFAULT NULL COMMENT '状态修改时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-
-
-# Dump of table im_relationship
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `im_relationship`;
-
-CREATE TABLE `im_relationship` (
-  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '数据库自增',
-  `u_id` int(10) NOT NULL COMMENT '用户Id',
-  `relation_id` varchar(40) NOT NULL DEFAULT '' COMMENT 'u_id+friend_id',
-  `friend_id` int(11) NOT NULL COMMENT '好友申请人',
-  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0 好友申请,1 好友关系，-1 黑名单:  ',
-  `remark` varchar(20) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `relation_id` (`relation_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 

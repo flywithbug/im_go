@@ -11,9 +11,7 @@ var routers = map[string]gin.HandlerFunc{
 	"POST 		/register": 	handleRegister, //注册
 	"POST  		/login": 		handleLogin,
 	"POST		/logout":		handleLogout,  //退出登录
-
 	"POST 		/query": 		handleQuery,   //根据昵称查询用户列表
-	"POST  		/relation":		handleAddRelation,// 添加好友
 }
 
 func RegisterRouters(r *gin.Engine, prefixs []string){
