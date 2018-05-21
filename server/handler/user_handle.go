@@ -171,3 +171,21 @@ func handleQuery(c *gin.Context)  {
 	aRes.AddResponseInfo("users",users)
 }
 
+func handleGetUserInfo(c *gin.Context)  {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(aRes.Code,aRes)
+	}()
+	userId := c.Param("id")
+	if len(userId) == 0{
+		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid")
+		return
+	}
+	user,err := model.GetUserByUserId(userId)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusInternalServerError ,"server error")
+		return
+	}
+	aRes.AddResponseInfo("user",user)
+}
+

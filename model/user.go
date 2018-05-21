@@ -2,7 +2,6 @@ package model
 
 import (
 	"github.com/pborman/uuid"
-	"database/sql"
 	"encoding/json"
 	"time"
 	log "github.com/flywithbug/log4go"
@@ -141,45 +140,7 @@ func SaveUser(appId int64,account string, password string, nick string, avatar s
 
 
 
-/*
- 修改用户状态(事务)
-*/
-func UpdateUserStatusTx(tx *sql.Tx, userId string, status string) (int64, error) {
-	var num int64
-	updateStmt, err := tx.Prepare("UPDATE im_user SET `status` = ? WHERE id =?")
-	if err != nil {
-		return -1, &DatabaseError{"修改用户状态数据库处理错误"}
-	}
-	defer updateStmt.Close()
-	res, err := updateStmt.Exec(status, userId)
-	if err != nil {
-		tx.Rollback()
-		return -1, &DatabaseError{"更新用户状态错误"}
-	}
-	num, err = res.RowsAffected()
-	if err != nil {
-		tx.Rollback()
-		return -1, &DatabaseError{"读取修改用户状态影响行数错误"}
-	}
-	return num, nil
-}
 
-/*
- 根据用户ID获取在线好友的连接KEY列表
-*/
-func GetBuddiesKeyById(id string) ([]string, error) {
-	var keys []string
-	rows, err := Database.Query("select co.`id` from im_conn co where co.user_id in (select ug.user_id from im_relation_user_category ug where ug.category_id in (select g.id from im_category g where g.creator=?))", id)
-	if err != nil {
-		return keys, &DatabaseError{"根据用户ID获取在线好友的连接KEY列表错误"}
-	}
-	for rows.Next() {
-		var key string
-		rows.Scan(&key)
-		keys = append(keys, key)
-	}
-	return keys, nil
-}
 
 /*
  根据条件查询获取好友列表
