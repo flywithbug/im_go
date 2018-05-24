@@ -12,10 +12,11 @@ func (client *Client) handleMessageACK(pro *Proto) {
 	//TODO 优化为rpc和方式修改
 	var ack MessageACK
 	ack.FromData(pro.Body)
-	err := model.UpdateMessageACK(ack.msgId,1)
+	err := model.UpdateMessageACK(ack.msgId)
 	if err != nil {
 		log.Error("error"+err.Error() + ack.Description())
 	}
+
 }
 
 

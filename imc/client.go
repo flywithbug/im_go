@@ -37,7 +37,7 @@ func StartClient(port int) {
 			case OP_MSG_ACK:
 				var ack MessageACK
 				ack.FromData(msg.Body)
-				fmt.Println(ack.Description(),msg.Description())
+				fmt.Println("OP_MSG_ACK",ack.Description(),msg.Description())
 			case OP_HEARTBEAT_ACK:
 				fmt.Println("OP_HEARTBEAT_ACK",msg.Description())
 
@@ -111,7 +111,7 @@ func StartClient(port int) {
 				receiver:10001,
 				sender:10002,
 				msgId:20020,
-				body:[]byte("msg1" + strconv.Itoa(int(int32(time.Now().Unix())))),
+				body:[]byte("{\"type\" : 1,\"text\" : \"hello\"}"),
 			}
 			p.Ver = 1
 			p.Operation = OP_MSG

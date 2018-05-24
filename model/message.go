@@ -71,21 +71,25 @@ func SaveIMMessage(sender, receiver, timestamp int32, body []byte)(int32, error)
 	return int32(id),nil
 }
 
-//发送状态回执
-func UpdateMessageACK(msgId int32, status int)error  {
-	updatStmt,err := Database.Prepare("UPDATE im_message SET `status` = ? ,`update_at`= ? WHERE id = ?")
+//发送状态回执,回执状态自动加1. 多设备登录，消息并不同步
+func UpdateMessageACK(msgId int32)error  {
+	updatStmt,err := Database.Prepare("UPDATE im_message SET `status` = status + 1 ,`update_at`= ? WHERE id = ?")
 	if err != nil {
 		log.Error(err.Error())
 		return  &DatabaseError{"服务出错"}
 	}
 	defer updatStmt.Close()
-	res,err := updatStmt.Exec(status,time.Now().Unix(),msgId)
+	res,err := updatStmt.Exec(time.Now().Unix(),msgId)
 	if err != nil {
 		log.Error(err.Error())
 		return  &DatabaseError{"服务出错"}
 	}
 	num, err := res.RowsAffected()
-	if err != nil || num <= 0{
+	if err != nil {
+		log.Error(err.Error())
+		return  &DatabaseError{"服务出错"}
+	}
+	if num <= 0{
 		return &DatabaseError{"未有记录被修改"}
 	}
 	return nil

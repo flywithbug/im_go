@@ -53,7 +53,7 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 	client.SendMessage(msg.receiver, pro)
 	//发送消息给其他登录登陆点
 	pro.Operation = OP_MSG_SYNC
-	client.SendMessage(msg.sender,pro)
+	client.SendMessage(client.uid,pro)
 
 	//消息回执，使用seqId为标记，返回给客户端服务器存储的msgId,
 	client.sendMessageACK(msgId, client.version, pro.SeqId)
