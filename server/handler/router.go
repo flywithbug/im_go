@@ -3,11 +3,12 @@ package handler
 import (
 	"github.com/gin-gonic/gin"
 	"regexp"
+	"im_go/im"
 )
 
 var routers = map[string]gin.HandlerFunc{
 	"GET   		/system": 		handleSystem, //系统状态
-
+	"GET		/summary":		im.GinSummary,
 	"POST 		/register": 	handleRegister, //注册
 	"POST  		/login": 		handleLogin,
 	"POST		/logout":		handleLogout,  //退出登录

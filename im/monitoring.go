@@ -5,7 +5,10 @@ import "encoding/json"
 import "os"
 import "runtime"
 import "runtime/pprof"
-import log "github.com/flywithbug/log4go"
+import (
+	log "github.com/flywithbug/log4go"
+	"github.com/gin-gonic/gin"
+)
 
 type ServerSummary struct {
 	nconnections      int64
@@ -17,6 +20,16 @@ type ServerSummary struct {
 func NewServerSummary() *ServerSummary {
 	s := new(ServerSummary)
 	return s
+}
+
+func GinSummary(c *gin.Context)  {
+	obj := make(map[string]interface{})
+	obj["goroutine_count"] = runtime.NumGoroutine()
+	obj["connection_count"] = serverSummary.nconnections
+	obj["client_count"] = serverSummary.nclients
+	obj["in_message_count"] = serverSummary.in_message_count
+	obj["out_message_count"] = serverSummary.out_message_count
+	c.JSON(http.StatusOK,obj)
 }
 
 func Summary(rw http.ResponseWriter, req *http.Request) {
