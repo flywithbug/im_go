@@ -181,7 +181,7 @@ func handleGetUserInfo(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid")
 		return
 	}
-	user,err := model.GetUserByUserId(userId)
+	user,err := model.GetUserByUId(userId)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusInternalServerError ,"server error")
 		return

@@ -81,6 +81,19 @@ func GetUserByUserId(userId string) (*User, error) {
 	}
 	return &user, err
 }
+/*
+ 根据ID获取用户
+*/
+func GetUserByUId(uId string) (*User, error) {
+	var user User
+	row := Database.QueryRow("select id, app_id, user_id, nick, status, sign, avatar, create_at, update_at from im_user where id = ?", uId)
+	err := row.Scan(&user.Uid,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
+	if err != nil {
+		log.Error(err.Error())
+		return nil, &DatabaseError{"根据ID查询用户-将结果映射至对象错误"}
+	}
+	return &user, err
+}
 
 /*
  根据token获取用户
