@@ -49,7 +49,7 @@ func funcDoRouteRegister(method, route string, handler gin.HandlerFunc, r *gin.E
 	}
 }
 
-var routerRe = regexp.MustCompile(`([A-Z]+)[^/]*(/[a-zA-Z/]+)`)
+var routerRe = regexp.MustCompile(`([A-Z]+)[^/]*(/[a-zA-Z/:]+)`)
 func regexpRouters(router string) (method,path string) {
 	match := routerRe.FindAllStringSubmatch(router, -1)
 	return match[0][1],match[0][2]
