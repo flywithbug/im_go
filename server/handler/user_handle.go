@@ -49,7 +49,8 @@ func handleRegister(c *gin.Context) {
 	if login.AppId == 0{
 		login.AppId = 10
 	}
-	_,err = model.SaveUser(login.AppId,login.Account,login.Password,login.Nick,login.Avatar)
+	password := common.Md5(login.Password)
+	_,err = model.SaveUser(login.AppId,login.Account,password,login.Nick,login.Avatar)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusInternalServerError,"server error ")
 		return
