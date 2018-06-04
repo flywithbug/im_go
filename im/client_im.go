@@ -45,11 +45,12 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 		log.Warn(err.Error() + "消息存储服务出错")
 		return
 	}
+	msg.msgId = msgId
+	pro.Body = msg.ToData()
+
 	if msg.sender == msg.receiver {
 		model.UpdateMessageACK(msgId)
 	}
-	msg.msgId = msgId
-	pro.Body = msg.ToData()
 
 	//发送消息给receiver
 	client.SendMessage(msg.receiver, pro)
