@@ -45,7 +45,9 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 		log.Warn(err.Error() + "消息存储服务出错")
 		return
 	}
-
+	if msg.sender == msg.receiver {
+		model.UpdateMessageACK(msgId)
+	}
 	msg.msgId = msgId
 	pro.Body = msg.ToData()
 
@@ -82,6 +84,7 @@ func (client *ClientIM)sendOffLineMessage()  {
 		log.Error(err.Error())
 		return
 	}
+	log.Debug("offlineMsg count %d",len(ms))
 	p := Proto{}
 	for _,imMsg := range ms{
 		p.Operation = OP_MSG
