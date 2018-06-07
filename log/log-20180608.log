@@ -74,3 +74,840 @@
 2018-06-08 00:13:23 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
 2018-06-08 00:13:25 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52611]
 2018-06-08 00:13:25 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 00:14:45 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 00:14:45 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 00:14:45 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 00:14:45 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 00:14:53 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52632]
+2018-06-08 00:14:53 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 00:14:56 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:14:56 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:14:56 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:15:00 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:15:00 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:15:00 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:15:00 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:15:00 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:15:00 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:15:34 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:15:39 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:15:39 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:15:57 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:15:57 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:15:57 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:15:57 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:15:57 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:27 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 00:16:27 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 00:16:27 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 00:16:27 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 00:16:37 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52668]
+2018-06-08 00:16:37 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 00:16:38 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 00:16:38 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 00:16:38 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 00:16:38 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 00:16:39 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52670]
+2018-06-08 00:16:39 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 00:16:40 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:40 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:40 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:40 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:41 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:41 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:41 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:41 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:41 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:41 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:42 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:42 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:42 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:42 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:42 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:42 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:43 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:43 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:43 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:46 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:47 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:47 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:52 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:52 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:16:52 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:18:37 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 00:20:17 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 00:20:17 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 00:20:17 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 00:20:17 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 00:20:27 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52689]
+2018-06-08 00:20:27 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 00:20:30 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:20:30 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:20:30 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:20:30 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:20:30 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:20:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:20:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:20:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:21:35 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 00:21:35 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 00:21:35 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 00:21:35 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 00:23:32 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56062]
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 97
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25310,body:{"ack_msgId":25281,"ack_uuid":"06435D06-6903-4878-845C-295F0FAD7299","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"E576FA93-60AF-4F85-96F1-85008E452921"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25311,body:{"ack_msgId":25282,"ack_uuid":"C4C02889-81F6-49AF-8E2A-632F965D212D","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"5CA5ED27-76A3-41BB-BF70-63ABAD88B4F3"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25312,body:{"ack_msgId":25283,"ack_uuid":"25214883-3A7D-488F-BF9B-6DF55AB2FCB3","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"1E0A13C3-C082-446A-B7F5-2B6B631A9CE4"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25313,body:{"ack_msgId":25284,"ack_uuid":"40D60B7D-832D-4811-BB0A-0156E5108F2B","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"765E5559-F4ED-4274-83F4-CB648C6E1060"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25314,body:{"ack_msgId":25285,"ack_uuid":"E6D006DA-E55D-4A77-AF60-7B76A3BB0D53","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"8223D44C-4A02-49A4-9F11-F0D5A13915A4"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25315,body:{"ack_msgId":25286,"ack_uuid":"E689942E-0A86-41DE-9989-548E34B96D15","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"207CD842-4D12-4DAA-A196-50E4D251BEA6"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25316,body:{"ack_msgId":25287,"ack_uuid":"AF436896-5BAE-478D-B4C7-99C34AE973BB","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"453BD2CD-3FA7-4B8A-A661-DA4C8FD2E167"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25317,body:{"ack_msgId":25288,"ack_uuid":"278D0D8A-7104-457E-B16E-0BEB4C1072DE","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"61D9110E-75A1-4964-A40E-392C96F4CCA2"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25318,body:{"ack_msgId":25289,"ack_uuid":"AF436896-5BAE-478D-B4C7-99C34AE973BB","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"034B82B7-5F69-49F2-AFC0-7368928BE85C"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25319,body:{"ack_msgId":25290,"ack_uuid":"8D3DCD21-267E-4D16-A5B0-34D916392ADD","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"FC32DD90-1477-4EE7-8FD1-0890E92B3D32"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25320,body:{"ack_msgId":25291,"ack_uuid":"C6094067-0F28-4B17-AEFB-490AE96B48D4","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"75C265A8-ACD9-4F74-AFED-E95994E7286A"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25321,body:{"ack_msgId":25292,"ack_uuid":"036A2AFD-BF0C-473E-AEC3-A1E77B57E1AA","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"F6648625-7FD3-4644-9C4E-C0CD1C998CFD"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25322,body:{"ack_msgId":25293,"ack_uuid":"6423E50D-292A-4444-899A-A429AC4C37DB","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"9D7DCFA9-7DAD-45FB-BAB2-A74C103944D9"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25323,body:{"ack_msgId":25294,"ack_uuid":"3191D1E1-FA78-4FBC-974C-7E771533D548","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"EE86973D-634C-44B0-83AD-2C2BA7A67C5D"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25324,body:{"ack_msgId":25295,"ack_uuid":"54ADB9D8-E807-479E-87A7-F8CDC7DB3C56","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"CD8DEFAB-3095-44E3-B254-8F4F2F639EEA"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25325,body:{"ack_msgId":25296,"ack_uuid":"7BE1A4DB-968F-4452-84CE-A8D8FDAC9F14","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"8F228AF3-8826-4BB3-A0A4-6ACF2A0A77BF"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25326,body:{"ack_msgId":25297,"ack_uuid":"34301C61-08ED-409D-A375-EBF699F04272","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"234A1225-8AAE-46B0-83CD-320722208AA0"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25327,body:{"ack_msgId":25298,"ack_uuid":"6CFEAF85-5A9F-4117-B529-3F735798B3EF","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"7E8F2A3E-6A84-4FEA-939C-625049CEB54E"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25328,body:{"ack_msgId":25299,"ack_uuid":"AF2DC0C0-5797-4DC3-A667-F8A9B9F521FE","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"E8C770B7-3EF0-441D-ABBC-A981E0D5CEA0"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25329,body:{"ack_msgId":25300,"ack_uuid":"AF436896-5BAE-478D-B4C7-99C34AE973BB","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"620895B8-D931-4141-99F2-59A0884F123D"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25330,body:{"ack_msgId":25301,"ack_uuid":"1A441151-13C2-4F9E-A56C-889A38FE3F03","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"556F923C-D33F-40CF-9E20-D97322163723"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25331,body:{"ack_msgId":25302,"ack_uuid":"2779E2D9-C35B-47F1-8F24-0DBAD98BAF11","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"F1A3BD31-CA24-4810-8A02-D2AF60C18B8C"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25332,body:{"ack_msgId":25303,"ack_uuid":"0961B64F-AF34-493A-82E2-0A7F24149A09","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"063E693E-51F9-4D2C-9C39-AAD6F3201086"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25333,body:{"ack_msgId":25304,"ack_uuid":"00857C5C-81CB-4F22-A23C-6915DC99408E","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"28FF87FA-FF25-4907-8684-183F0B2BAA0F"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25334,body:{"ack_msgId":25305,"ack_uuid":"03778AC0-8216-453D-BCE3-1FF48447CEEA","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"4FFFAF77-D4EC-41D6-9EFE-92AD0A676DCA"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25335,body:{"ack_msgId":25306,"ack_uuid":"028C99C7-CEDE-4431-9F03-1B4B0A3FFC78","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"7C929835-F51C-4137-81F3-C3F9A2DD0217"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25336,body:{"ack_msgId":25307,"ack_uuid":"6D1248F6-DEF7-4EBF-8804-419B71A85870","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"FED08974-C063-46DF-A15C-1FA1BD538ED4"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25337,body:{"ack_msgId":25308,"ack_uuid":"90743EAE-0485-409A-B005-9CB3013300D1","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"A02CA590-8D43-4CD1-8F1A-BF872ACF1631"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387046,msgId:25338,body:{"ack_msgId":25309,"ack_uuid":"D6196311-5310-4F90-AF54-EB62A19F653A","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"4EEB64B2-8429-4F4A-A455-7D9AA5B5FB5B"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387056,msgId:25339,body:{"content":"BUBlbiTURqJETi13892929899SHm3jvwkJE98I2dWwbdhWHPOR1g75f2pu22O1oqhYtBiLdPyMq9OIBkGWV5RloQYHhTSGRkQ0XMDENha9hMnqILWrVq4RZA4QkpMeuREFA2TLSelkgDcFLFdXA8vejUKerY3Rlm36http:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"EA48B316-4C91-4CBA-8CA9-D066D3D9A8D3"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387056,msgId:25340,body:{"content":"wblYtiLbc8h6sByIZMFKEg2lksF913892929899j2p3FQiIcnDsA6buaBJ1bykLPJ8I4gwFKFB9qg54iefEwBZsfa6EKqrasB6DvsG2NdSRh5RymxZQ0AGfIBATfFw3bXC6VKeEfb1OEu5VvFdtt67LCVmWhttp:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"B282F1F5-B016-4784-9A98-DBFA5C5378DA"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387056,msgId:25341,body:{"content":"anI1Lmmv5lH6hIqaiYUhifG8138929298996Osv8koIxxJmOvn8l4PZEzgRnQRFZOQcBw0auztkVr04CVbT7VyyyUMaRja5t3OAuFLMXwgdNQ42we013L507khttp:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"658A0A47-37C8-4656-89F0-C5FACECC90FF"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387056,msgId:25342,body:{"content":"98HbHMmA3amqKn1Tm13892929899CuguXO7D8RXUitun1mO2IMMCo6Mtw8MNGK9N3fcRWxlhttp:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"40F6752F-809C-479E-AE43-B0E03AA54952"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387349,msgId:25343,body:{"content":"IPcvhMuQmD45Jj13892929899SMj97FTzT12bs229YgmR2QgSKycCFkcKslsVBNrYmOjfmnk5DCpBxYDhEhHJtWX6V5uCCWwBOPHp9QTJ82W6lUNVaTyP6kkE3ypfXiI2kNidZrTnUoRSLbxEqBMmpWSFzL1Gd68oGhttp:\/\/www.baidu.com","type":1,"uuid":"D42FC2F6-229E-472F-BB56-C0F0B631986F"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387370,msgId:25344,body:{"content":"IPsziHB1HlPl6813892929899Z3yPjrL1eEdgCgBwNx62XOzLUUwrahTjPd2byiMtuKRtxFBTO4B32wABdCUhhNkMkcgb8WR3vPPyoHuabosNnwxUI7TY8jxDkZpZ8mVnf13PHu1NE4ufMdsgBiet0dJDgkOaUALeQhttp:\/\/www.baidu.com","type":1,"uuid":"9437BA79-9ED6-4A39-A0C8-FE49CD75CA8C"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387402,msgId:25345,body:{"content":"R9FjwlZ0hbVHZnnNK13892929899eCjxaeGQAU6Vz641suALTzvNprY89KUbbGy6RIorQI5http:\/\/www.baidu.com","type":1,"uuid":"2E07EC70-293C-4512-8442-8B01C6405050"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387408,msgId:25346,body:{"content":"P210bAJHiE13892929899VfMiJ4DY615p7HTZCmc8tU7YT8seqH2hrMhQV7dnSSkJ97mF7B4vXMetzqr1pyL5pL1FaGlEKuWviGlfOOeYXYxEOmyZFm1R6qKuJ050JnJ7vrvtIorY9puj3nhttp:\/\/www.baidu.com","type":1,"uuid":"924F3695-0EF0-4E1A-A2F9-167C7F9BC520"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387410,msgId:25347,body:{"content":"6KOhGaIpCS1ZTjCfdi509omT13892929899QzVDNiaYhsSgszxJFls8STTcqSXTwzpi5GPjqpK91kAcyEhmUGIbTLkXmnpniORb3aMjBDIBQ2I4e96fextPZThttp:\/\/www.baidu.com","type":1,"uuid":"3573FD83-4889-4AD4-BE5B-C158BCA7D107"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387410,msgId:25348,body:{"content":"inZcWBvV0lNy8k8deyNbb8RbfrBK13892929899apnnkadKVJ05g682uwAaE7u5v5NIVijbUoDaOmX1RaIFk9uWch20NZQMcmJ4Wr4ybGbNZX1T1n1xLyWeDIIBVHI4vbXsxcD7k7qhkks40B0Hx4Mp42YUhttp:\/\/www.baidu.com","type":1,"uuid":"C75ECC6B-BE62-47BB-85B7-751A62B24323"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387410,msgId:25349,body:{"content":"inZcWBvV0lNy8k8deyNbb8RbfrBK13892929899apnnkadKVJ05g682uwAaE7u5v5NIVijbUoDaOmX1RaIFk9uWch20NZQMcmJ4Wr4ybGbNZX1T1n1xLyWeDIIBVHI4vbXsxcD7k7qhkks40B0Hx4Mp42YUhttp:\/\/www.baidu.com","type":1,"uuid":"C75ECC6B-BE62-47BB-85B7-751A62B24323"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387465,msgId:25350,body:{"content":"GLlWOM3IbY0AlP13892929899i2Q77KkvZkxlJRd4VJDbtl4ut2FGHB2vWzaCX2TmouSDJgujTA5mqzUOojF5jOOywmFPOakoK6bGj8minykNkPgbjvt5OhrSbBHvQNTKNOoiTV8lqDFwaCdPU5fAGOgDGbPZpyg6Ghttp:\/\/www.baidu.com","type":1,"uuid":"CE5948F8-3412-4E46-A721-DEEA73EED6C9"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387478,msgId:25351,body:{"content":"wMQX3TRP9ZWo4EhoswlcnHgQ8cws138929298990YtMdyhxph3Z8xLrGwUoJqvKZzHFhYwPmStyimX733L5SAh6zqijiBCwSmJGIr1vKu6VNkFVckmLM2gNOYOgOGWqHV1sKcGQkH0iAXOafGvVFhYtrOXJhttp:\/\/www.baidu.com","type":1,"uuid":"D11B1732-429A-41CA-8B19-20E79600BD85"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387616,msgId:25352,body:{"content":"i0AyJsCmtl5YLx0N313892929899yOeKzwWKTcQqTolFAMMiy0f5bmKTRNIaSxTmndiH890http:\/\/www.baidu.com","type":1,"uuid":"AA2951D6-84D9-4223-A8F4-0816C22452CC"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387677,msgId:25353,body:{"content":"b3Z7N2AlukMq4A138929298998TM2gjICFDSWVXF0SIqGC8XyOJuhAFRC2doPwXKcfXchpd7T95O0a3rREWQ9Bi9iBFEpaeg2zmiW0RGuEOz8Zwy0D1BapXQlirYZ7UG6q22tStkHX90qaS6WPS4fBmI6POCCtzxYmhttp:\/\/www.baidu.com","type":1,"uuid":"5F31474D-F71B-448F-958E-1BC86FFB22F7"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387973,msgId:25354,body:{"content":"XzA3gDPNntyaZ313892929899mWonrbfd48CMY26rKbaRtZWWkogAZr6S3m4NOkXstT9gpSBnNDD0rUIF3yXVc8ji6MvCiXqO2IDfXPggj494AI4twsg3h7MejLQYNktdxLqZZbjJREORdoYAavLtCZmadasWXcylehttp:\/\/www.baidu.com","type":1,"uuid":"2A3ADF69-389B-40E9-B947-85E3E278F569"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387973,msgId:25355,body:{"content":"LBSqBGNvaa0eroCExJRXJ7tHeHFe138929298996UKpgZ7I4uDYwRSrOVdcUSjQtyyUXdsNsPBZRe4NY0xRewbWnilSFsm0w63XLaaJGE5hyvJYxkc1ChpxrLm2oa6R1snww7WogeIkIJRjRBuXFE4kZHS2http:\/\/www.baidu.com","type":1,"uuid":"F1B414C8-DB47-439B-8FB0-8D635FF12FCE"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528387973,msgId:25356,body:{"content":"5dJYbmzq4vBk4TIclLYPLXUp138929298990IKYnIJVUl4L5FkOUJTBiKAiRW2NcvTHpzipe3NMzjnTksbKGEELcODiRH3pAGsJWQ9NboZkgkJw7M6OMtdyEThttp:\/\/www.baidu.com","type":1,"uuid":"06A5617C-4A1A-447B-8B27-DAEBA02D97DF"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388096,msgId:25357,body:{"content":"9d7U9jvJebySu813892929899Nt63DDHRDXgL0YdKz1qJkeK8jxGKeVq3laOAQPVrEcvRfzTqEboWb0M9fEVYSP1dPGEhbtW7TkAkpIFUO57GacGi20mj0ht4GD51OLzw45y1jNuzpFZ1AhoKV0dkCW4qj5vlLSeOThttp:\/\/www.baidu.com","type":1,"uuid":"67E8590B-21D9-4B5E-8401-60BDF551C3F4"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388096,msgId:25358,body:{"content":"EuNzwiHxctZE0IXe1i7ZEzdStVFa13892929899strGZMDfqXqgsHNFcC4K0bRghFHYjXLLLRqQ4OsMPQwlYd7hSJCeXyK9qP0db15P4I0LjBxYPkAcsbPwxHTuStyuNoT5cmi5ugPEGXMaNTaqwaC65QIehttp:\/\/www.baidu.com","type":1,"uuid":"332F0DDF-1E08-4B40-8CEF-11BCDC860AD8"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388096,msgId:25359,body:{"content":"U6Pmd7sZssmO9Od55jd1AGRY13892929899KpMorfaPvYMYtqJNBMwyMHrSdZkB5T5KZuCQIw1d7Yi6b1zmBwX6MrHx93xKLhpXSx4ITGYloor3q4umjN9C3Ehttp:\/\/www.baidu.com","type":1,"uuid":"918C27E2-0C46-4D55-B952-1CE6D14C50D9"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388100,msgId:25360,body:{"content":"sQR13892929899Z5aEYpHbnRBJQ1hf0XxpkoOTq4X2klL9qKcGsXpHMheoX8SgaLWogA8oa3bixGtlvpMRJaLwgi6EPMUiTRolGjntTSLM4k8ZSx9qeL5ZvLKmDqHreF1PIzJ2PVQ4jrIMhttp:\/\/www.baidu.com","type":1,"uuid":"71827F21-B4A4-44A7-9D9C-7E6BD06A1F61"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388100,msgId:25361,body:{"content":"tgPWVRCKRM2CXcpZT13892929899fPd8s1x10u0lXnu6mMIYSfvcb72rJsdqIuRPcUvOOk1http:\/\/www.baidu.com","type":1,"uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388100,msgId:25362,body:{"content":"D06UTa1BjE13892929899MrJs3uti7hJKOqYbIIgu4Cr9J7knEnWsaSVFsVJAdUa3ueXNEfpKTaTCzxSsS9dbnHuHKYLQ91Q0m3m3p8eZ5ZyxVlIq2H0YZkHgStoie1RJtZt1fH9R6ajGr9http:\/\/www.baidu.com","type":1,"uuid":"9743C26B-265F-4DFF-8236-625CFFE39671"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388100,msgId:25363,body:{"content":"D06UTa1BjE13892929899MrJs3uti7hJKOqYbIIgu4Cr9J7knEnWsaSVFsVJAdUa3ueXNEfpKTaTCzxSsS9dbnHuHKYLQ91Q0m3m3p8eZ5ZyxVlIq2H0YZkHgStoie1RJtZt1fH9R6ajGr9http:\/\/www.baidu.com","type":1,"uuid":"9743C26B-265F-4DFF-8236-625CFFE39671"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388100,msgId:25364,body:{"content":"tgPWVRCKRM2CXcpZT13892929899fPd8s1x10u0lXnu6mMIYSfvcb72rJsdqIuRPcUvOOk1http:\/\/www.baidu.com","type":1,"uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388100,msgId:25365,body:{"content":"sQR13892929899Z5aEYpHbnRBJQ1hf0XxpkoOTq4X2klL9qKcGsXpHMheoX8SgaLWogA8oa3bixGtlvpMRJaLwgi6EPMUiTRolGjntTSLM4k8ZSx9qeL5ZvLKmDqHreF1PIzJ2PVQ4jrIMhttp:\/\/www.baidu.com","type":1,"uuid":"71827F21-B4A4-44A7-9D9C-7E6BD06A1F61"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388134,msgId:25366,body:{"content":"efX2XeSGVHImU5PmU1389292989941YvX2a6vTAyccD2Jj9XmRfvpw3qSiG2YV0wOhEWFTzhttp:\/\/www.baidu.com","type":1,"uuid":"07155037-0F54-48FB-AC39-7B69E42C677E"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388139,msgId:25367,body:{"content":"NXKSgARsh413892929899J4awKjDQOdwnI4Jjay8JCOS4gsVa8eBDtw0dNIu1bK0bZzVYhQVr6LcLQm4C2FTLLXslFnbMqSZhTljF89cGcsepleB49txImowpGle0SJWqtCv7feiJkkJ4Kchttp:\/\/www.baidu.com","type":1,"uuid":"0D46817A-104D-41DA-9477-BAF3E06F2111"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388139,msgId:25368,body:{"content":"2JE13892929899UhhX7Y6vFoTjur0YCLxCa2kT4oVVbzkHvdvxHVe4Sq2GRDyvPFBSNgkaFpANwO3E61blbvraMcOhX6CCwJjlivV6NcySU25YvMcA1he0EvJkjtaod3gaZHddGPUuIGsKhttp:\/\/www.baidu.com","type":1,"uuid":"C7334FCF-E75C-4351-A4E2-ABF76B745ADD"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388157,msgId:25369,body:{"content":"sQR13892929899Z5aEYpHbnRBJQ1hf0XxpkoOTq4X2klL9qKcGsXpHMheoX8SgaLWogA8oa3bixGtlvpMRJaLwgi6EPMUiTRolGjntTSLM4k8ZSx9qeL5ZvLKmDqHreF1PIzJ2PVQ4jrIMhttp:\/\/www.baidu.com","type":1,"uuid":"71827F21-B4A4-44A7-9D9C-7E6BD06A1F61"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388157,msgId:25370,body:{"content":"tgPWVRCKRM2CXcpZT13892929899fPd8s1x10u0lXnu6mMIYSfvcb72rJsdqIuRPcUvOOk1http:\/\/www.baidu.com","type":1,"uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388157,msgId:25371,body:{"content":"D06UTa1BjE13892929899MrJs3uti7hJKOqYbIIgu4Cr9J7knEnWsaSVFsVJAdUa3ueXNEfpKTaTCzxSsS9dbnHuHKYLQ91Q0m3m3p8eZ5ZyxVlIq2H0YZkHgStoie1RJtZt1fH9R6ajGr9http:\/\/www.baidu.com","type":1,"uuid":"9743C26B-265F-4DFF-8236-625CFFE39671"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388157,msgId:25372,body:{"content":"D06UTa1BjE13892929899MrJs3uti7hJKOqYbIIgu4Cr9J7knEnWsaSVFsVJAdUa3ueXNEfpKTaTCzxSsS9dbnHuHKYLQ91Q0m3m3p8eZ5ZyxVlIq2H0YZkHgStoie1RJtZt1fH9R6ajGr9http:\/\/www.baidu.com","type":1,"uuid":"9743C26B-265F-4DFF-8236-625CFFE39671"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388157,msgId:25373,body:{"content":"tgPWVRCKRM2CXcpZT13892929899fPd8s1x10u0lXnu6mMIYSfvcb72rJsdqIuRPcUvOOk1http:\/\/www.baidu.com","type":1,"uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388200,msgId:25374,body:{"content":"lUNeMOBolG9v3Y13892929899bTBwKNV8IrLruhXmnPbiLbKdXnec5R1eKmWBLl8NejmCQHdBaW8drIpPyy0w1Lz2d0ccYvYXoma6bS7nM2JKpWt9HzhuZhzu3iPhDqqE9lV9Emzc2tWf66nntIk90V2ATxoVwdpUJhttp:\/\/www.baidu.com","type":1,"uuid":"A75A45AB-DC9A-4B60-8690-9E385B848955"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388200,msgId:25375,body:{"content":"yvRufw3RMZMeI220Ca6L9rt0siaF13892929899tzAcF84Cq3KQLd65QZ89JvUPk3LBxyjhI2ThvM8ZA7xkT1ZdaG1GMTV2Eli4sYAgu5gvBxnsfJNAgc9CSkzLW68wE5sde3PcyiMdVGftIRomtllIyCIdhttp:\/\/www.baidu.com","type":1,"uuid":"0D1EDC65-4DC0-4DD8-8BBD-D3991015ABBA"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388200,msgId:25376,body:{"content":"h9uQbrQ5uHZHPpd8ljBUXv0V13892929899e2zZ7CWQL6jvlr2FnDKwWuWLhlRoJrx554wQfwoWbqkwdoMoBxuunQhZPMExdVqWTUgPEtxCXrc5gebwwoAt4Bhttp:\/\/www.baidu.com","type":1,"uuid":"114BC6BB-CA7C-48DF-B5A5-7BE280C772BB"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388200,msgId:25377,body:{"content":"Ai9D1hcvwmSoqMviE13892929899Pi8MIGNGmuQYLlxSdwDeH6PejPY8ucC6X54lX5aLj2Xhttp:\/\/www.baidu.com","type":1,"uuid":"F0FE0B1D-8481-432E-A371-9730AE1BB259"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388201,msgId:25378,body:{"content":"jI0Lg5MEDA13892929899xAziQHQvqDeNpaiQPZfroZPwIb0iaiC8U0YSmHUlBUlNGwIdyeifCGqyt95VACVqweCRATS3me0xrje5KTNBmLDBRYNJMQgTqS9DDGpDmGo5RE9JI6XskkeoJwhttp:\/\/www.baidu.com","type":1,"uuid":"135AD050-EE7D-4FE2-85F7-139EF9019386"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388201,msgId:25379,body:{"content":"3hD13892929899jA1tDtY6cetYfor3nGs4yuX9CoTeg55qsT1EU4v52imBvascoanuYeqvaJEtz0NbJJc106o26J7JwODJfbvo8UObz2y4aslCNUV5v6GZj3yPTmm1TF3X2pETjc65FTgThttp:\/\/www.baidu.com","type":1,"uuid":"89B32DA4-9073-4560-9ABC-D92CFFD161FC"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388201,msgId:25380,body:{"content":"vaAqlLGAgh9FHgl8UYRKB13892929899YQspVmltZb0h1M0uhlHcgQuSqcE0cQCOAC3y53glZKaQIYwJfUERkWFVw34ALxdgyD0MnxbGCWHhBjdF0A5AFSQWEL6YybAscPhDGJxzShxiSEhttp:\/\/www.baidu.com","type":1,"uuid":"47400B14-9914-4B88-B711-224EA481E960"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388201,msgId:25381,body:{"content":"Ac3AUOJVWRE8sQcWwOOYOGfq13892929899qfPq36TgpCxgEBau2JMv2hR3J3FLomHSOMRk4vCOnMUgYjUiDWT9x83OBsaN1G6PQUjQHTakwyGrxhttp:\/\/www.baidu.com","type":1,"uuid":"170FB83A-BE6F-43D9-A0D6-2110705C161B"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388201,msgId:25382,body:{"content":"H138929298993pBWGe6tsAuHux8UaWCR9uJPGWzruzLF4auXNkf5aoA56FmRo20WmRFKd9miCNrS36Wfr6EStvYMn4NEgkjtC14lCBYkKXL8kglf8Ks1cxcHrePSiAJoHgXDOvpZzEvhttp:\/\/www.baidu.com","type":1,"uuid":"B14C5D08-0AFB-45EE-ABFB-8B0C9C369883"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388201,msgId:25383,body:{"content":"ISeq385CSjeISlE1gYPOYEa13892929899GKYtTAQiVORrhSMf4iXSrEJVOIclsixAKShisNBLFSZ3Ntjdsb4GKHJOonpVhjzk3xZ8jj8S80h54DtG9InYhRmpadN7XkuRyaUo2zJ873UtYVMb4JWZl21zAh3D7gyxjy4u5Abhvhttp:\/\/www.baidu.com","type":1,"uuid":"07BF3B61-B030-4E52-B2A7-82475C43FEB0"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388202,msgId:25384,body:{"content":"gYGo0xMjLpFf13892929899ilBvf8FMPlCQOkQJmEQDhiTR8TEUW286ihdk6CijIYafRRkt5AE2N6CRTifHaJ9cBXQjAhttp:\/\/www.baidu.com","type":1,"uuid":"CF178A0D-9105-44E3-A48B-9FE4A1410582"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388202,msgId:25385,body:{"content":"znBOD6k17iqopo7AjrJpZZeuwriP13892929899A77pQdL12mCcjA8ynd0hKJioFFcDxVIMCVPDBIbX38F8pGx58XdCEPNJVJ2EhxdhVkiTiOVlZc0rlEpcH8cdIEw0qafSgUzWimgGEuhIEBpwVyHxuMfjU6CkzF0yNY6GzXhttp:\/\/www.baidu.com","type":1,"uuid":"6A3D2AA2-F746-4EBB-8A47-B298E205A69B"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388202,msgId:25386,body:{"content":"E6H13892929899zN1uWpO5D72yRBk5BO8lCP5zlR8k2mKOFnHySgha0llqQ9hmIr8LIaQUENZtxn4KCIjLN3mUSVYjK3QAXhttp:\/\/www.baidu.com","type":1,"uuid":"B251ED0B-A377-4ADA-B56B-205EE0765AD6"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388202,msgId:25387,body:{"content":"eNf138929298994OYPVhMhrtcAw5CxW8FdOKB9ZPiHTXKZZYncGUtNPAYNyjtZ0M8YZqpmVfDVX3DrZNRVzFUkknhttp:\/\/www.baidu.com","type":1,"uuid":"E0DE06AA-0ACD-47C0-B444-D1DB3EC70110"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388202,msgId:25388,body:{"content":"b3HQ4dOF138929298998jRODkXcvSUkkiqpS2Vq0ERv7Q7gGw16qcOzSmQVpnZMd9tGGNuOKzYUYoRHxapOadnnXE1pzC5EjUzRxB4INohttp:\/\/www.baidu.com","type":1,"uuid":"E81100AC-F2B0-4562-9C21-8BE846ABCA42"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388202,msgId:25389,body:{"content":"A22tE6gqmcOV5DiZCYr8Eneep0o0M113892929899DdV3eFbPcs1PtwKniDTyDFcoBOiJN4zL3lx0g9pOleSUIhcJg5B167S5JUrUOVaRIy3bhJK4HylgoOV6qeTj0czw3kAYZHg0YZ2C2aAhttp:\/\/www.baidu.com","type":1,"uuid":"0294195A-52B9-49BE-92C4-D4B4E82C8C3A"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388203,msgId:25390,body:{"content":"slcDVD1ZVMgHr13892929899hoLkaqHp1D0ISCIJzqHWSf6fqcAW5PzFBCLoV5uxiz0HrzwFepwD4iG55uzRc42PUyEJXFeUbT3zCJJY5n6qmyMA1lHBk1f29pKhudyMpTPBshttp:\/\/www.baidu.com","type":1,"uuid":"EB75CA60-C1B9-4CB5-8F95-0A15835A1964"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388203,msgId:25391,body:{"content":"3pYYbZVZEeSVSKdU9XeJIadHXRiy2513892929899rIlUGMIYvtxhsQpIjDqSThkRM13ZoPsegoJ6WtWVBfpeLBbuNF7WEhzDEJT2ArzHGisqyjfyoKKCalsGozm842VdLLOop1M5DhnuP5QTluRekQ1rjW8Bu1http:\/\/www.baidu.com","type":1,"uuid":"7090911F-215D-41A0-B093-1198BA1CD3D5"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388203,msgId:25392,body:{"content":"XXfVEQFU3W1NCr138929298996rfMljzEm9O6STYxNjOjrEq4bswvHbmpLffggpeJzUkGrmvbMNhGrFdODSd8ZvUzzGntmvm9I3FhBrUapVFo0bYXlGc5OityAHdGkTG2BTThttp:\/\/www.baidu.com","type":1,"uuid":"363ED522-A56D-4644-B138-2157E0DEA89D"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388206,msgId:25393,body:{"content":"sQR13892929899Z5aEYpHbnRBJQ1hf0XxpkoOTq4X2klL9qKcGsXpHMheoX8SgaLWogA8oa3bixGtlvpMRJaLwgi6EPMUiTRolGjntTSLM4k8ZSx9qeL5ZvLKmDqHreF1PIzJ2PVQ4jrIMhttp:\/\/www.baidu.com","type":1,"uuid":"71827F21-B4A4-44A7-9D9C-7E6BD06A1F61"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388207,msgId:25394,body:{"content":"D06UTa1BjE13892929899MrJs3uti7hJKOqYbIIgu4Cr9J7knEnWsaSVFsVJAdUa3ueXNEfpKTaTCzxSsS9dbnHuHKYLQ91Q0m3m3p8eZ5ZyxVlIq2H0YZkHgStoie1RJtZt1fH9R6ajGr9http:\/\/www.baidu.com","type":1,"uuid":"9743C26B-265F-4DFF-8236-625CFFE39671"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388207,msgId:25395,body:{"content":"tgPWVRCKRM2CXcpZT13892929899fPd8s1x10u0lXnu6mMIYSfvcb72rJsdqIuRPcUvOOk1http:\/\/www.baidu.com","type":1,"uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388212,msgId:25396,body:{"content":"sQR13892929899Z5aEYpHbnRBJQ1hf0XxpkoOTq4X2klL9qKcGsXpHMheoX8SgaLWogA8oa3bixGtlvpMRJaLwgi6EPMUiTRolGjntTSLM4k8ZSx9qeL5ZvLKmDqHreF1PIzJ2PVQ4jrIMhttp:\/\/www.baidu.com","type":1,"uuid":"71827F21-B4A4-44A7-9D9C-7E6BD06A1F61"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388212,msgId:25397,body:{"content":"D06UTa1BjE13892929899MrJs3uti7hJKOqYbIIgu4Cr9J7knEnWsaSVFsVJAdUa3ueXNEfpKTaTCzxSsS9dbnHuHKYLQ91Q0m3m3p8eZ5ZyxVlIq2H0YZkHgStoie1RJtZt1fH9R6ajGr9http:\/\/www.baidu.com","type":1,"uuid":"9743C26B-265F-4DFF-8236-625CFFE39671"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388212,msgId:25398,body:{"content":"tgPWVRCKRM2CXcpZT13892929899fPd8s1x10u0lXnu6mMIYSfvcb72rJsdqIuRPcUvOOk1http:\/\/www.baidu.com","type":1,"uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388430,msgId:25399,body:{"content":"E9dw5DfbUm5oHW13892929899P9ZMQG0z2aIaymGQ6SrfLqIHMUHj6SPYtjngHJiwodFDbHhn2GXGGcKZI1QTob7quwLzatoH98WlKatpsw6mlmIVKDm6UurPdPWEuokygnZ3jM56u6qi0GxGPth75pQh3N827V2n1http:\/\/www.baidu.com","type":1,"uuid":"369547F7-884C-4C1D-8054-E85DABB19607"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388430,msgId:25400,body:{"content":"b7rEPMEc8ILcJUwfCg7lIhrvb4b813892929899sjiu7pm0vJuWmkh2PKtjWq1QpO6v7ZsnKC5buixEdFBi8gPvlehDPTop2DJKqArDq9IgXwhw2q8qLHsTC3BzKG4VdBbnWkEIbQwB2TmzOBUmUhyGyIsQhttp:\/\/www.baidu.com","type":1,"uuid":"3C9BC73C-B794-49C5-881D-A2AE641A7E7E"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388430,msgId:25401,body:{"content":"nN6dAADZ5OAbMIdd3CiG00zZ13892929899I5GqW8lXhRy4UzvxZFm2phNBv4r8LhEfOv4J8dTZD4WqFuiHgx4rLThZ6KG21bxd9FuWfDeUD7nPo3ZXEbyYr1http:\/\/www.baidu.com","type":1,"uuid":"606D633D-C4B8-41F5-B70F-07889D346773"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388430,msgId:25402,body:{"content":"zNXg9LCTAsTEatGeK13892929899U8qgSOT3yFfBCDhXkVm9XhhtxgnyHKVF8EpPa0NLEMdhttp:\/\/www.baidu.com","type":1,"uuid":"3E6013FB-00D7-429A-9B3D-C01C2119427E"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388430,msgId:25403,body:{"content":"J0MPDAAq9H13892929899exTQlM5M475CsIzZZz8wUawz2YirjStyxN7nc9ivpumxdQjbVkeUyEYiCv84iwqN9e0kOV85jRee2zeLFmgkljc8jsJ9EiocJfOvhETsf2dpjRylY4XFarUJHJhttp:\/\/www.baidu.com","type":1,"uuid":"42DFCCB6-064F-495A-8D43-1CF0D3619F3D"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388432,msgId:25404,body:{"content":"sQR13892929899Z5aEYpHbnRBJQ1hf0XxpkoOTq4X2klL9qKcGsXpHMheoX8SgaLWogA8oa3bixGtlvpMRJaLwgi6EPMUiTRolGjntTSLM4k8ZSx9qeL5ZvLKmDqHreF1PIzJ2PVQ4jrIMhttp:\/\/www.baidu.com","type":1,"uuid":"71827F21-B4A4-44A7-9D9C-7E6BD06A1F61"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388432,msgId:25405,body:{"content":"D06UTa1BjE13892929899MrJs3uti7hJKOqYbIIgu4Cr9J7knEnWsaSVFsVJAdUa3ueXNEfpKTaTCzxSsS9dbnHuHKYLQ91Q0m3m3p8eZ5ZyxVlIq2H0YZkHgStoie1RJtZt1fH9R6ajGr9http:\/\/www.baidu.com","type":1,"uuid":"9743C26B-265F-4DFF-8236-625CFFE39671"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388432,msgId:25406,body:{"content":"tgPWVRCKRM2CXcpZT13892929899fPd8s1x10u0lXnu6mMIYSfvcb72rJsdqIuRPcUvOOk1http:\/\/www.baidu.com","type":1,"uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D"}
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:23:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:24:21 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:24:21 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:24:21 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:24:21 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:24:23 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 00:24:29 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52757]
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 41
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25407,body:{"ack_msgId":25343,"ack_uuid":"D42FC2F6-229E-472F-BB56-C0F0B631986F","sequeneceId":0,"status":2,"type":20,"uuid":"C0D3DCB3-8C46-4AD0-BA8B-8B53DC7F5CB5"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25408,body:{"ack_msgId":25402,"ack_uuid":"3E6013FB-00D7-429A-9B3D-C01C2119427E","sequeneceId":0,"status":2,"type":20,"uuid":"AB390AE7-39DE-4F6B-BDDC-A1B4167C419E"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25409,body:{"ack_msgId":25339,"ack_uuid":"EA48B316-4C91-4CBA-8CA9-D066D3D9A8D3","sequeneceId":0,"status":2,"type":20,"uuid":"47F14DF9-9047-4F80-B840-11F86FE7A885"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25410,body:{"ack_msgId":25344,"ack_uuid":"9437BA79-9ED6-4A39-A0C8-FE49CD75CA8C","sequeneceId":0,"status":2,"type":20,"uuid":"C8BCB8FA-727D-4A15-BEE0-7BB9595963F2"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25411,body:{"ack_msgId":25403,"ack_uuid":"42DFCCB6-064F-495A-8D43-1CF0D3619F3D","sequeneceId":0,"status":2,"type":20,"uuid":"61F82987-DB45-44C7-B8D6-58B4E2E167F6"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25412,body:{"ack_msgId":25340,"ack_uuid":"B282F1F5-B016-4784-9A98-DBFA5C5378DA","sequeneceId":0,"status":2,"type":20,"uuid":"ECBE24E0-71AF-437A-AB55-64A7E1E5B907"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25413,body:{"ack_msgId":25345,"ack_uuid":"2E07EC70-293C-4512-8442-8B01C6405050","sequeneceId":0,"status":2,"type":20,"uuid":"A6EE1DD8-7356-48EE-9D4B-38B5D460E9CD"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25414,body:{"ack_msgId":25404,"ack_uuid":"71827F21-B4A4-44A7-9D9C-7E6BD06A1F61","sequeneceId":0,"status":2,"type":20,"uuid":"CAB7D4D8-1349-432F-BF99-5C88D3E79907"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25415,body:{"ack_msgId":25341,"ack_uuid":"658A0A47-37C8-4656-89F0-C5FACECC90FF","sequeneceId":0,"status":2,"type":20,"uuid":"6CA94EA0-3A5A-4E50-BBF9-F76B71A852FC"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25416,body:{"ack_msgId":25346,"ack_uuid":"924F3695-0EF0-4E1A-A2F9-167C7F9BC520","sequeneceId":0,"status":2,"type":20,"uuid":"901E99A7-71C2-4011-9361-A9431436906E"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25417,body:{"ack_msgId":25405,"ack_uuid":"9743C26B-265F-4DFF-8236-625CFFE39671","sequeneceId":0,"status":2,"type":20,"uuid":"9A7437D7-EEFA-4DEE-B697-2A18217EFDA9"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25418,body:{"ack_msgId":25342,"ack_uuid":"40F6752F-809C-479E-AE43-B0E03AA54952","sequeneceId":0,"status":2,"type":20,"uuid":"DA49BE46-A696-4053-AD21-5692D4F68C97"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25419,body:{"ack_msgId":25347,"ack_uuid":"3573FD83-4889-4AD4-BE5B-C158BCA7D107","sequeneceId":0,"status":2,"type":20,"uuid":"B41DDF65-818C-4976-A183-3C03212A789C"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25420,body:{"ack_msgId":25406,"ack_uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D","sequeneceId":0,"status":2,"type":20,"uuid":"24E42D60-4920-41B3-B007-D3C4944740DB"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25421,body:{"ack_msgId":25348,"ack_uuid":"C75ECC6B-BE62-47BB-85B7-751A62B24323","sequeneceId":0,"status":2,"type":20,"uuid":"488D2C20-D254-4C6B-B3E1-3AFFD92FC7B8"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25422,body:{"ack_msgId":25349,"ack_uuid":"C75ECC6B-BE62-47BB-85B7-751A62B24323","sequeneceId":0,"status":2,"type":20,"uuid":"956D14A0-95E3-4D9C-A1DC-F2F88F4254FF"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25423,body:{"ack_msgId":25350,"ack_uuid":"CE5948F8-3412-4E46-A721-DEEA73EED6C9","sequeneceId":0,"status":2,"type":20,"uuid":"CB6DB8BB-1D9C-4F45-9E15-576DB3B6278F"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25424,body:{"ack_msgId":25351,"ack_uuid":"D11B1732-429A-41CA-8B19-20E79600BD85","sequeneceId":0,"status":2,"type":20,"uuid":"93C36C68-29E5-4454-995E-7469C8F4B630"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25425,body:{"ack_msgId":25352,"ack_uuid":"AA2951D6-84D9-4223-A8F4-0816C22452CC","sequeneceId":0,"status":2,"type":20,"uuid":"4582CC94-A341-4413-AD27-44D0A597C4C1"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25426,body:{"ack_msgId":25353,"ack_uuid":"5F31474D-F71B-448F-958E-1BC86FFB22F7","sequeneceId":0,"status":2,"type":20,"uuid":"C06C8D55-5D22-4D87-A7A9-932642552501"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25427,body:{"ack_msgId":25354,"ack_uuid":"2A3ADF69-389B-40E9-B947-85E3E278F569","sequeneceId":0,"status":2,"type":20,"uuid":"2ECB8BC3-1C74-4A54-BAB4-3BC790F77200"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25428,body:{"ack_msgId":25355,"ack_uuid":"F1B414C8-DB47-439B-8FB0-8D635FF12FCE","sequeneceId":0,"status":2,"type":20,"uuid":"74CA6D1D-394F-4462-A0AA-30E19C044C44"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25429,body:{"ack_msgId":25356,"ack_uuid":"06A5617C-4A1A-447B-8B27-DAEBA02D97DF","sequeneceId":0,"status":2,"type":20,"uuid":"0D2C1345-3B6D-470D-8FB2-5911FF6FDF7E"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25430,body:{"ack_msgId":25357,"ack_uuid":"67E8590B-21D9-4B5E-8401-60BDF551C3F4","sequeneceId":0,"status":2,"type":20,"uuid":"10576BEF-3E5D-4F0A-8079-36C387D28A8A"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25431,body:{"ack_msgId":25358,"ack_uuid":"332F0DDF-1E08-4B40-8CEF-11BCDC860AD8","sequeneceId":0,"status":2,"type":20,"uuid":"9B1500CF-E9F0-4CD7-BFAD-04563B98D18F"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25432,body:{"ack_msgId":25359,"ack_uuid":"918C27E2-0C46-4D55-B952-1CE6D14C50D9","sequeneceId":0,"status":2,"type":20,"uuid":"0D5846FE-7AEB-4942-B8B6-EB1F5FED4168"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25433,body:{"ack_msgId":25360,"ack_uuid":"71827F21-B4A4-44A7-9D9C-7E6BD06A1F61","sequeneceId":0,"status":2,"type":20,"uuid":"FDE23095-E272-4F27-B80C-98AD2C2B27B1"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25434,body:{"ack_msgId":25361,"ack_uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D","sequeneceId":0,"status":2,"type":20,"uuid":"0C665C27-40AE-4AFE-AA2A-1195650DB11A"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25435,body:{"ack_msgId":25362,"ack_uuid":"9743C26B-265F-4DFF-8236-625CFFE39671","sequeneceId":0,"status":2,"type":20,"uuid":"41ACFC37-E905-4622-8BB5-0EB778E087EE"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25436,body:{"ack_msgId":25363,"ack_uuid":"9743C26B-265F-4DFF-8236-625CFFE39671","sequeneceId":0,"status":2,"type":20,"uuid":"F602B043-5386-4387-84ED-9DC00C831130"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25437,body:{"ack_msgId":25364,"ack_uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D","sequeneceId":0,"status":2,"type":20,"uuid":"B7D751C4-D4E9-4802-8E4B-D23354F0BC90"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25438,body:{"ack_msgId":25365,"ack_uuid":"71827F21-B4A4-44A7-9D9C-7E6BD06A1F61","sequeneceId":0,"status":2,"type":20,"uuid":"1A7F3CB6-0191-4186-A512-DD72B6E40D92"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25439,body:{"ack_msgId":25366,"ack_uuid":"07155037-0F54-48FB-AC39-7B69E42C677E","sequeneceId":0,"status":2,"type":20,"uuid":"7F13FD47-3E20-4C23-B388-C328E6FD391C"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25440,body:{"ack_msgId":25367,"ack_uuid":"0D46817A-104D-41DA-9477-BAF3E06F2111","sequeneceId":0,"status":2,"type":20,"uuid":"A3BFAE0B-0A5D-4ECC-A481-1F99771C300F"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25441,body:{"ack_msgId":25368,"ack_uuid":"C7334FCF-E75C-4351-A4E2-ABF76B745ADD","sequeneceId":0,"status":2,"type":20,"uuid":"4DC654D8-32C4-4184-829D-AD1302A2CE9E"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388612,msgId:25442,body:{"ack_msgId":25369,"ack_uuid":"71827F21-B4A4-44A7-9D9C-7E6BD06A1F61","sequeneceId":0,"status":2,"type":20,"uuid":"2678D2CB-0282-45A9-BE30-388E4ABD711B"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388661,msgId:25443,body:{"content":"glUuAhGAsh4aep13892929899hVy1BWXBL6w82cOaY2rMW8lWGmcn8oVKIL4cIYOOoCLdkjXpZBw5X0OIFdqBzp2gQXTxse7JGi7z2OgOdIlLf9D1ieihNMt2lbvCDG3JEZiYmSnLIHeG3OTjKCcBOlTc7IST1eC8thttp:\/\/www.baidu.com","type":1,"uuid":"25641F12-6429-41C7-882B-79BE3DCBD807"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388661,msgId:25444,body:{"content":"2DrTlTH5Gesq2q1S3734LoXpaC0S13892929899rkND8pqm6iBP1BTCkSeuOqznAFIiYeTlYsXdqAyfAfPh5LGKwx9SgyhaLWi03bBUI61IzzbLE6LAy9OZCFtOb9IJdBwlDVBLIKKS7b8cisZm5DOrg6P5http:\/\/www.baidu.com","type":1,"uuid":"86C7A39E-CEB8-4669-9893-2DBA96D86259"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388661,msgId:25445,body:{"content":"8SfjOPN162wCBl2MD0Woa2Bu13892929899JwHRqqPaoc33m8OaxuDHbDtiUDsugYqwkUp9yJqYzVXnUgo5B3GS1P8HHK4CCXgTjQzMSJcnyY9J857uRZEXjshttp:\/\/www.baidu.com","type":1,"uuid":"BFF1ACB5-1C69-4F49-B373-C010CDB063DE"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388661,msgId:25446,body:{"content":"hSpNqJuOsRj1cW9Si13892929899XSXFodcH1b5qr9M5QR2lufBKNDDt9Bkawoy8QiDveM8http:\/\/www.baidu.com","type":1,"uuid":"D7FD5BD9-2348-4812-941A-3AA02E73DE83"}
+2018-06-08 00:24:29 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528388663,msgId:25447,body:{"content":"Z4uhf27O5jlhaLPFsjO0x43QaitT13892929899ChRDlKT6zL0DKsR1xByKzVYqHJa8jbbnXCzbNq7osx1lnCtiEgcKGwPgDRSjjFJjAsusjSTF5nwr4GOcHIXw24Xl8aiY8U0ZMTtSrd1abPomu3Si9JOJhttp:\/\/www.baidu.com","type":1,"uuid":"2F7B886D-4805-45DB-8A30-35A7C6EDEB4E"}
+2018-06-08 00:25:32 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 00:26:31 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 00:26:47 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 00:26:47 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 00:26:47 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 00:26:47 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 02:58:22 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56190]
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 32
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388157,msgId:25370,body:{"content":"tgPWVRCKRM2CXcpZT13892929899fPd8s1x10u0lXnu6mMIYSfvcb72rJsdqIuRPcUvOOk1http:\/\/www.baidu.com","type":1,"uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388157,msgId:25371,body:{"content":"D06UTa1BjE13892929899MrJs3uti7hJKOqYbIIgu4Cr9J7knEnWsaSVFsVJAdUa3ueXNEfpKTaTCzxSsS9dbnHuHKYLQ91Q0m3m3p8eZ5ZyxVlIq2H0YZkHgStoie1RJtZt1fH9R6ajGr9http:\/\/www.baidu.com","type":1,"uuid":"9743C26B-265F-4DFF-8236-625CFFE39671"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388157,msgId:25372,body:{"content":"D06UTa1BjE13892929899MrJs3uti7hJKOqYbIIgu4Cr9J7knEnWsaSVFsVJAdUa3ueXNEfpKTaTCzxSsS9dbnHuHKYLQ91Q0m3m3p8eZ5ZyxVlIq2H0YZkHgStoie1RJtZt1fH9R6ajGr9http:\/\/www.baidu.com","type":1,"uuid":"9743C26B-265F-4DFF-8236-625CFFE39671"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388157,msgId:25373,body:{"content":"tgPWVRCKRM2CXcpZT13892929899fPd8s1x10u0lXnu6mMIYSfvcb72rJsdqIuRPcUvOOk1http:\/\/www.baidu.com","type":1,"uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388200,msgId:25374,body:{"content":"lUNeMOBolG9v3Y13892929899bTBwKNV8IrLruhXmnPbiLbKdXnec5R1eKmWBLl8NejmCQHdBaW8drIpPyy0w1Lz2d0ccYvYXoma6bS7nM2JKpWt9HzhuZhzu3iPhDqqE9lV9Emzc2tWf66nntIk90V2ATxoVwdpUJhttp:\/\/www.baidu.com","type":1,"uuid":"A75A45AB-DC9A-4B60-8690-9E385B848955"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388200,msgId:25375,body:{"content":"yvRufw3RMZMeI220Ca6L9rt0siaF13892929899tzAcF84Cq3KQLd65QZ89JvUPk3LBxyjhI2ThvM8ZA7xkT1ZdaG1GMTV2Eli4sYAgu5gvBxnsfJNAgc9CSkzLW68wE5sde3PcyiMdVGftIRomtllIyCIdhttp:\/\/www.baidu.com","type":1,"uuid":"0D1EDC65-4DC0-4DD8-8BBD-D3991015ABBA"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388200,msgId:25376,body:{"content":"h9uQbrQ5uHZHPpd8ljBUXv0V13892929899e2zZ7CWQL6jvlr2FnDKwWuWLhlRoJrx554wQfwoWbqkwdoMoBxuunQhZPMExdVqWTUgPEtxCXrc5gebwwoAt4Bhttp:\/\/www.baidu.com","type":1,"uuid":"114BC6BB-CA7C-48DF-B5A5-7BE280C772BB"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388200,msgId:25377,body:{"content":"Ai9D1hcvwmSoqMviE13892929899Pi8MIGNGmuQYLlxSdwDeH6PejPY8ucC6X54lX5aLj2Xhttp:\/\/www.baidu.com","type":1,"uuid":"F0FE0B1D-8481-432E-A371-9730AE1BB259"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388201,msgId:25378,body:{"content":"jI0Lg5MEDA13892929899xAziQHQvqDeNpaiQPZfroZPwIb0iaiC8U0YSmHUlBUlNGwIdyeifCGqyt95VACVqweCRATS3me0xrje5KTNBmLDBRYNJMQgTqS9DDGpDmGo5RE9JI6XskkeoJwhttp:\/\/www.baidu.com","type":1,"uuid":"135AD050-EE7D-4FE2-85F7-139EF9019386"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388201,msgId:25379,body:{"content":"3hD13892929899jA1tDtY6cetYfor3nGs4yuX9CoTeg55qsT1EU4v52imBvascoanuYeqvaJEtz0NbJJc106o26J7JwODJfbvo8UObz2y4aslCNUV5v6GZj3yPTmm1TF3X2pETjc65FTgThttp:\/\/www.baidu.com","type":1,"uuid":"89B32DA4-9073-4560-9ABC-D92CFFD161FC"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388201,msgId:25380,body:{"content":"vaAqlLGAgh9FHgl8UYRKB13892929899YQspVmltZb0h1M0uhlHcgQuSqcE0cQCOAC3y53glZKaQIYwJfUERkWFVw34ALxdgyD0MnxbGCWHhBjdF0A5AFSQWEL6YybAscPhDGJxzShxiSEhttp:\/\/www.baidu.com","type":1,"uuid":"47400B14-9914-4B88-B711-224EA481E960"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388201,msgId:25381,body:{"content":"Ac3AUOJVWRE8sQcWwOOYOGfq13892929899qfPq36TgpCxgEBau2JMv2hR3J3FLomHSOMRk4vCOnMUgYjUiDWT9x83OBsaN1G6PQUjQHTakwyGrxhttp:\/\/www.baidu.com","type":1,"uuid":"170FB83A-BE6F-43D9-A0D6-2110705C161B"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388201,msgId:25382,body:{"content":"H138929298993pBWGe6tsAuHux8UaWCR9uJPGWzruzLF4auXNkf5aoA56FmRo20WmRFKd9miCNrS36Wfr6EStvYMn4NEgkjtC14lCBYkKXL8kglf8Ks1cxcHrePSiAJoHgXDOvpZzEvhttp:\/\/www.baidu.com","type":1,"uuid":"B14C5D08-0AFB-45EE-ABFB-8B0C9C369883"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388201,msgId:25383,body:{"content":"ISeq385CSjeISlE1gYPOYEa13892929899GKYtTAQiVORrhSMf4iXSrEJVOIclsixAKShisNBLFSZ3Ntjdsb4GKHJOonpVhjzk3xZ8jj8S80h54DtG9InYhRmpadN7XkuRyaUo2zJ873UtYVMb4JWZl21zAh3D7gyxjy4u5Abhvhttp:\/\/www.baidu.com","type":1,"uuid":"07BF3B61-B030-4E52-B2A7-82475C43FEB0"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388202,msgId:25384,body:{"content":"gYGo0xMjLpFf13892929899ilBvf8FMPlCQOkQJmEQDhiTR8TEUW286ihdk6CijIYafRRkt5AE2N6CRTifHaJ9cBXQjAhttp:\/\/www.baidu.com","type":1,"uuid":"CF178A0D-9105-44E3-A48B-9FE4A1410582"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388202,msgId:25385,body:{"content":"znBOD6k17iqopo7AjrJpZZeuwriP13892929899A77pQdL12mCcjA8ynd0hKJioFFcDxVIMCVPDBIbX38F8pGx58XdCEPNJVJ2EhxdhVkiTiOVlZc0rlEpcH8cdIEw0qafSgUzWimgGEuhIEBpwVyHxuMfjU6CkzF0yNY6GzXhttp:\/\/www.baidu.com","type":1,"uuid":"6A3D2AA2-F746-4EBB-8A47-B298E205A69B"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388202,msgId:25386,body:{"content":"E6H13892929899zN1uWpO5D72yRBk5BO8lCP5zlR8k2mKOFnHySgha0llqQ9hmIr8LIaQUENZtxn4KCIjLN3mUSVYjK3QAXhttp:\/\/www.baidu.com","type":1,"uuid":"B251ED0B-A377-4ADA-B56B-205EE0765AD6"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388202,msgId:25387,body:{"content":"eNf138929298994OYPVhMhrtcAw5CxW8FdOKB9ZPiHTXKZZYncGUtNPAYNyjtZ0M8YZqpmVfDVX3DrZNRVzFUkknhttp:\/\/www.baidu.com","type":1,"uuid":"E0DE06AA-0ACD-47C0-B444-D1DB3EC70110"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388202,msgId:25388,body:{"content":"b3HQ4dOF138929298998jRODkXcvSUkkiqpS2Vq0ERv7Q7gGw16qcOzSmQVpnZMd9tGGNuOKzYUYoRHxapOadnnXE1pzC5EjUzRxB4INohttp:\/\/www.baidu.com","type":1,"uuid":"E81100AC-F2B0-4562-9C21-8BE846ABCA42"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388202,msgId:25389,body:{"content":"A22tE6gqmcOV5DiZCYr8Eneep0o0M113892929899DdV3eFbPcs1PtwKniDTyDFcoBOiJN4zL3lx0g9pOleSUIhcJg5B167S5JUrUOVaRIy3bhJK4HylgoOV6qeTj0czw3kAYZHg0YZ2C2aAhttp:\/\/www.baidu.com","type":1,"uuid":"0294195A-52B9-49BE-92C4-D4B4E82C8C3A"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388203,msgId:25390,body:{"content":"slcDVD1ZVMgHr13892929899hoLkaqHp1D0ISCIJzqHWSf6fqcAW5PzFBCLoV5uxiz0HrzwFepwD4iG55uzRc42PUyEJXFeUbT3zCJJY5n6qmyMA1lHBk1f29pKhudyMpTPBshttp:\/\/www.baidu.com","type":1,"uuid":"EB75CA60-C1B9-4CB5-8F95-0A15835A1964"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388203,msgId:25391,body:{"content":"3pYYbZVZEeSVSKdU9XeJIadHXRiy2513892929899rIlUGMIYvtxhsQpIjDqSThkRM13ZoPsegoJ6WtWVBfpeLBbuNF7WEhzDEJT2ArzHGisqyjfyoKKCalsGozm842VdLLOop1M5DhnuP5QTluRekQ1rjW8Bu1http:\/\/www.baidu.com","type":1,"uuid":"7090911F-215D-41A0-B093-1198BA1CD3D5"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388203,msgId:25392,body:{"content":"XXfVEQFU3W1NCr138929298996rfMljzEm9O6STYxNjOjrEq4bswvHbmpLffggpeJzUkGrmvbMNhGrFdODSd8ZvUzzGntmvm9I3FhBrUapVFo0bYXlGc5OityAHdGkTG2BTThttp:\/\/www.baidu.com","type":1,"uuid":"363ED522-A56D-4644-B138-2157E0DEA89D"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388206,msgId:25393,body:{"content":"sQR13892929899Z5aEYpHbnRBJQ1hf0XxpkoOTq4X2klL9qKcGsXpHMheoX8SgaLWogA8oa3bixGtlvpMRJaLwgi6EPMUiTRolGjntTSLM4k8ZSx9qeL5ZvLKmDqHreF1PIzJ2PVQ4jrIMhttp:\/\/www.baidu.com","type":1,"uuid":"71827F21-B4A4-44A7-9D9C-7E6BD06A1F61"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388207,msgId:25394,body:{"content":"D06UTa1BjE13892929899MrJs3uti7hJKOqYbIIgu4Cr9J7knEnWsaSVFsVJAdUa3ueXNEfpKTaTCzxSsS9dbnHuHKYLQ91Q0m3m3p8eZ5ZyxVlIq2H0YZkHgStoie1RJtZt1fH9R6ajGr9http:\/\/www.baidu.com","type":1,"uuid":"9743C26B-265F-4DFF-8236-625CFFE39671"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388207,msgId:25395,body:{"content":"tgPWVRCKRM2CXcpZT13892929899fPd8s1x10u0lXnu6mMIYSfvcb72rJsdqIuRPcUvOOk1http:\/\/www.baidu.com","type":1,"uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388212,msgId:25396,body:{"content":"sQR13892929899Z5aEYpHbnRBJQ1hf0XxpkoOTq4X2klL9qKcGsXpHMheoX8SgaLWogA8oa3bixGtlvpMRJaLwgi6EPMUiTRolGjntTSLM4k8ZSx9qeL5ZvLKmDqHreF1PIzJ2PVQ4jrIMhttp:\/\/www.baidu.com","type":1,"uuid":"71827F21-B4A4-44A7-9D9C-7E6BD06A1F61"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388212,msgId:25397,body:{"content":"D06UTa1BjE13892929899MrJs3uti7hJKOqYbIIgu4Cr9J7knEnWsaSVFsVJAdUa3ueXNEfpKTaTCzxSsS9dbnHuHKYLQ91Q0m3m3p8eZ5ZyxVlIq2H0YZkHgStoie1RJtZt1fH9R6ajGr9http:\/\/www.baidu.com","type":1,"uuid":"9743C26B-265F-4DFF-8236-625CFFE39671"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388212,msgId:25398,body:{"content":"tgPWVRCKRM2CXcpZT13892929899fPd8s1x10u0lXnu6mMIYSfvcb72rJsdqIuRPcUvOOk1http:\/\/www.baidu.com","type":1,"uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388430,msgId:25399,body:{"content":"E9dw5DfbUm5oHW13892929899P9ZMQG0z2aIaymGQ6SrfLqIHMUHj6SPYtjngHJiwodFDbHhn2GXGGcKZI1QTob7quwLzatoH98WlKatpsw6mlmIVKDm6UurPdPWEuokygnZ3jM56u6qi0GxGPth75pQh3N827V2n1http:\/\/www.baidu.com","type":1,"uuid":"369547F7-884C-4C1D-8054-E85DABB19607"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388430,msgId:25400,body:{"content":"b7rEPMEc8ILcJUwfCg7lIhrvb4b813892929899sjiu7pm0vJuWmkh2PKtjWq1QpO6v7ZsnKC5buixEdFBi8gPvlehDPTop2DJKqArDq9IgXwhw2q8qLHsTC3BzKG4VdBbnWkEIbQwB2TmzOBUmUhyGyIsQhttp:\/\/www.baidu.com","type":1,"uuid":"3C9BC73C-B794-49C5-881D-A2AE641A7E7E"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528388430,msgId:25401,body:{"content":"nN6dAADZ5OAbMIdd3CiG00zZ13892929899I5GqW8lXhRy4UzvxZFm2phNBv4r8LhEfOv4J8dTZD4WqFuiHgx4rLThZ6KG21bxd9FuWfDeUD7nPo3ZXEbyYr1http:\/\/www.baidu.com","type":1,"uuid":"606D633D-C4B8-41F5-B70F-07889D346773"}
+2018-06-08 02:58:23 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:07 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 02:59:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 03:01:19 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56206]
+2018-06-08 03:01:19 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:01:26 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:01:26 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:01:28 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:01:28 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:03:20 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 03:03:52 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:03:52 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:03:52 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 03:03:52 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 03:04:05 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56222]
+2018-06-08 03:04:05 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:04:19 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:05:01 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:06:01 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:06:01 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:06:01 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 03:06:01 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 03:08:54 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56251]
+2018-06-08 03:08:54 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:10:04 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:10:18 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:10:39 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:10:39 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:10:39 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 03:10:39 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 03:11:55 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:53597]
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 37
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397903,msgId:25501,body:{"ack_msgId":25370,"ack_uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"4DEB1269-01A3-483D-9FA5-B2BBE09BAAA6"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25502,body:{"ack_msgId":25371,"ack_uuid":"9743C26B-265F-4DFF-8236-625CFFE39671","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"5C5ADBFC-7F32-46C2-8E54-50E5B84DAFF2"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25503,body:{"ack_msgId":25372,"ack_uuid":"9743C26B-265F-4DFF-8236-625CFFE39671","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"407F90F5-BC2C-4518-8831-7754CFACDF30"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25504,body:{"ack_msgId":25373,"ack_uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"D5415E16-4788-4E51-BCAC-3DE70B4B46EF"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25505,body:{"ack_msgId":25374,"ack_uuid":"A75A45AB-DC9A-4B60-8690-9E385B848955","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"E1CB9B48-668D-420F-BDE6-015958D3DD8D"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25506,body:{"ack_msgId":25375,"ack_uuid":"0D1EDC65-4DC0-4DD8-8BBD-D3991015ABBA","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"B16D2740-093D-4AAC-A7EA-F8F8E35CCF04"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25507,body:{"ack_msgId":25376,"ack_uuid":"114BC6BB-CA7C-48DF-B5A5-7BE280C772BB","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"51E21808-A7B4-403E-9C22-6170AE3752CB"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25508,body:{"ack_msgId":25377,"ack_uuid":"F0FE0B1D-8481-432E-A371-9730AE1BB259","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"9219DC69-077F-4E80-8FD3-F5F9063C0A06"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25509,body:{"ack_msgId":25378,"ack_uuid":"135AD050-EE7D-4FE2-85F7-139EF9019386","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"95168D86-1FA5-4A29-B770-B3FF98CF035D"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25510,body:{"ack_msgId":25379,"ack_uuid":"89B32DA4-9073-4560-9ABC-D92CFFD161FC","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"0BEFAD09-DE92-4936-ACAE-6318C24D0A4C"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25511,body:{"ack_msgId":25380,"ack_uuid":"47400B14-9914-4B88-B711-224EA481E960","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"6275A733-3B6E-490B-8EEA-CD84BE014DAB"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25512,body:{"ack_msgId":25381,"ack_uuid":"170FB83A-BE6F-43D9-A0D6-2110705C161B","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"DF05A276-E58A-4F88-81E1-61DB265496E3"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25513,body:{"ack_msgId":25382,"ack_uuid":"B14C5D08-0AFB-45EE-ABFB-8B0C9C369883","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"4C52DF1C-DD79-4AF4-8834-16DB46C28326"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25514,body:{"ack_msgId":25383,"ack_uuid":"07BF3B61-B030-4E52-B2A7-82475C43FEB0","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"012C84CB-7636-4A5F-B251-73391DE0D238"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25515,body:{"ack_msgId":25384,"ack_uuid":"CF178A0D-9105-44E3-A48B-9FE4A1410582","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"737CF579-ED21-4738-AA42-9039D218DBCE"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25516,body:{"ack_msgId":25385,"ack_uuid":"6A3D2AA2-F746-4EBB-8A47-B298E205A69B","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"EF54FEE4-BADA-4644-AFCE-F234E9732D10"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25517,body:{"ack_msgId":25386,"ack_uuid":"B251ED0B-A377-4ADA-B56B-205EE0765AD6","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"5A7D3B50-3F85-4188-9044-BA9E574C8E9C"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25518,body:{"ack_msgId":25387,"ack_uuid":"E0DE06AA-0ACD-47C0-B444-D1DB3EC70110","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"37A1E5BB-A482-410D-9BB5-7C2B6A741BEC"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25519,body:{"ack_msgId":25388,"ack_uuid":"E81100AC-F2B0-4562-9C21-8BE846ABCA42","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"F1D0E958-78B6-428F-9858-95893290E16E"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25520,body:{"ack_msgId":25389,"ack_uuid":"0294195A-52B9-49BE-92C4-D4B4E82C8C3A","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"6A33EC76-3841-4E04-8840-BAB8C8E54D82"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25521,body:{"ack_msgId":25390,"ack_uuid":"EB75CA60-C1B9-4CB5-8F95-0A15835A1964","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"70204E19-7A0F-4AD0-96F3-EE57D6F531A7"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25522,body:{"ack_msgId":25391,"ack_uuid":"7090911F-215D-41A0-B093-1198BA1CD3D5","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"DA6B606B-B44A-47D3-963D-CA6A2AEFA140"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25523,body:{"ack_msgId":25392,"ack_uuid":"363ED522-A56D-4644-B138-2157E0DEA89D","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"FE6E1223-D2A8-409D-B117-6A84B8CFB2D5"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25524,body:{"ack_msgId":25393,"ack_uuid":"71827F21-B4A4-44A7-9D9C-7E6BD06A1F61","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"B344EFC0-DE11-416B-ACAD-D12495651D3B"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25525,body:{"ack_msgId":25394,"ack_uuid":"9743C26B-265F-4DFF-8236-625CFFE39671","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"A6891C23-49AD-4388-BDFA-C7221F09EB11"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25526,body:{"ack_msgId":25395,"ack_uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"7488853E-1A0A-41D6-9472-72860A2A13D5"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25527,body:{"ack_msgId":25396,"ack_uuid":"71827F21-B4A4-44A7-9D9C-7E6BD06A1F61","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"7E40D617-6589-4B1C-B4A9-26B0C5D4C2F8"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25528,body:{"ack_msgId":25397,"ack_uuid":"9743C26B-265F-4DFF-8236-625CFFE39671","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"D97F59B0-0F62-4195-803A-660EA6CAA11C"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25529,body:{"ack_msgId":25398,"ack_uuid":"86B703A5-3A83-46CD-9A67-95BCDF2B2B2D","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"3ED1136C-1563-48ED-8B02-9AADEE43B328"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25530,body:{"ack_msgId":25399,"ack_uuid":"369547F7-884C-4C1D-8054-E85DABB19607","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"105032D3-02AC-4A23-A389-07B83B31DBD8"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25531,body:{"ack_msgId":25400,"ack_uuid":"3C9BC73C-B794-49C5-881D-A2AE641A7E7E","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"8F6EC595-8C9C-45E1-AD44-4A5E77822AB1"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528397947,msgId:25532,body:{"ack_msgId":25401,"ack_uuid":"606D633D-C4B8-41F5-B70F-07889D346773","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"9621885B-E184-44D3-91F3-7376B1265D99"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528398086,msgId:25533,body:{"content":"v0qqbYboZcZgVq13892929899TevvehFDBd6K63A6EZUUVCFVbBQDICnR8voC10LXe0AMWp1rrACl832vKohuY52hDNePPEf2x5XDXrzx15EjevVY8laSoKSgPgpSgJSyhyfAIaooVuDnLeHnpXQMhUaokv8fa7bVmhttp:\/\/www.baidu.com","type":1,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"FE1D7596-F079-49A8-87B7-D3B050707AFF"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528398088,msgId:25534,body:{"content":"4hQH9RQoWiSQTmgbO91kuAxAcSkM13892929899gt8FyyaTVIuKC35bnNrQgKNd5DhzMpRQF3Wi4fZdzEitmvVsM4HRIY3R3EflFXcEiFqOku90Zm1cf7JpbrX5CRNCp56cL6AM8GZ3LJPSA0dJmK6H1jnAhttp:\/\/www.baidu.com","type":1,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"6E64359A-8226-4D35-87D5-CB93898A238C"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528398259,msgId:25535,body:{"content":"qvLVBuojBROif113892929899WTynnERNrT9X6EYz6OGzMbowbhaT9ecngsQ0gJpJJzwvnB45XLvVYdpHAvKgy7sqOHDJFMa5UgDA1tMEr8LeFJcMomgVcjKHz1llyn8Dr0oCn3ukpzgaJg4OcEiLMi73bSNDEMUO8http:\/\/www.baidu.com","type":1,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"EE8050F7-7261-43D2-9F18-461704D32D73"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528398604,msgId:25536,body:{"content":"PfH7z9lKqbeWTb13892929899aII9CAexiJnJhdlnu0VyfaW5EwUV8pkmuvmV1BidKM37Giddypbl1i5QQmRie2ARAGMw6Oir1qhC2lcUaFvsYCtCFTIh7gNNtLpCTRf0vdFLnvaSen5BnzfyZBk0d23rRMCvOV9pKhttp:\/\/www.baidu.com","type":1,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"9935C895-64EE-4765-A135-1AC98FA73286"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528398618,msgId:25539,body:{"content":"RSuWaL1rLFoYkWcLMmHjfMhWE8Zm138929298995tzQtI0JlkemUy5eewZYBk3oBbkPwgmSu4nsi7nvGTHXLTAOlcRJMMR9qIOceK2PCrdJfLT56heF00m14pP56VuFPGN4EBX6EfGMI2pDJTeqlhA6QAOdhttp:\/\/www.baidu.com","type":1,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"142E637C-3BB2-400B-847A-54BA541571AA"}
+2018-06-08 03:11:55 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:11:55 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:11:55 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:11:55 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:11:55 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:11:55 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:11:55 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:11:55 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:11:55 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:11:55 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:12:20 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:12:20 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:12:20 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:12:20 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:13:32 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:53639]
+2018-06-08 03:13:32 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:13:41 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56252]
+2018-06-08 03:13:41 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 5
+2018-06-08 03:13:41 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528398715,msgId:25540,body:{"ack_msgId":25533,"ack_uuid":"FE1D7596-F079-49A8-87B7-D3B050707AFF","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"A5ECFD23-35C5-491D-82F5-58BC0C95F4B6"}
+2018-06-08 03:13:41 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528398715,msgId:25541,body:{"ack_msgId":25534,"ack_uuid":"6E64359A-8226-4D35-87D5-CB93898A238C","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"B5CA451A-003C-442F-BCE0-8D9B78262340"}
+2018-06-08 03:13:41 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528398715,msgId:25542,body:{"ack_msgId":25535,"ack_uuid":"EE8050F7-7261-43D2-9F18-461704D32D73","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"21F2FC01-FDC8-4F43-9316-6778FD77F2F1"}
+2018-06-08 03:13:41 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528398715,msgId:25543,body:{"ack_msgId":25536,"ack_uuid":"9935C895-64EE-4765-A135-1AC98FA73286","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"54433580-E6E4-4C96-B763-9E7F9CDB7569"}
+2018-06-08 03:13:41 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528398715,msgId:25544,body:{"ack_msgId":25539,"ack_uuid":"142E637C-3BB2-400B-847A-54BA541571AA","sequeneceId":0,"status":2,"type":20,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"9FDCC546-3671-4CFB-BAC8-CEC994373E1A"}
+2018-06-08 03:14:15 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:14:15 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:14:15 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:14:15 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:14:21 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:53671]
+2018-06-08 03:14:21 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 1
+2018-06-08 03:14:21 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528398822,msgId:25545,body:{"content":"ERKRv7lPAk3CpM13892929899qBURWQ0x1HeUYtb1PkJjyuT1xsUfQdK0LUUzRVVl8Mnyenb8HL6bcZvqmSSZYiwiCKfDANAW8bZxoOccZaQHmlUCBXBU0yNvsbceeEH5fZDc55ATXtSKgdoSVP1G6D88wHA8uDK6Phttp:\/\/www.baidu.com","type":1,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"041FA9AE-710B-43F5-9F27-516DAA16B504"}
+2018-06-08 03:15:30 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:15:30 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:15:30 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 03:15:30 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 03:16:21 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 03:17:15 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:17:15 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:17:15 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:17:15 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:17:16 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54030]
+2018-06-08 03:17:16 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:17:17 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:17:17 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:17:29 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:17:29 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:17:29 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:17:29 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:18:25 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56260]
+2018-06-08 03:18:25 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 03:18:25 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 2
+2018-06-08 03:18:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528399037,msgId:25551,body:{"content":"YbxIEjnvaDG1AeB0Cwz4KRh9laze13892929899cmgwHMk7xR2CmuMqODv6Lv1MaFDmiV7xTG3t5oO0MKG3vPmEDSbM5uyxlR8wan0Z732wsMlH5JeWCIq7pBQ3tvZNpaFm5KfXEydLWwSFhYL9Kf1reGX0http:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"D74E80A3-5E52-4D7E-A0C4-658087AF7AC3"}
+2018-06-08 03:18:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528399037,msgId:25552,body:{"content":"fNgBW3BPvOAEYI1hWQEEDLDo13892929899lqjQUimaKOHBwpAgPqTVvjiBQ6XecvmxpKE8A1DJYWXbROPZeV4VFVHre3qqs3zuUjO5Ea7QHxrbxtO1QCDscphttp:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"33FAF03C-844D-4836-8FA6-216A18421191"}
+2018-06-08 03:18:25 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:18:25 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:18:32 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:18:32 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:18:32 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 03:18:32 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 03:18:34 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54090]
+2018-06-08 03:18:34 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 2
+2018-06-08 03:18:34 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528399105,msgId:25553,body:{"ack_msgId":25551,"ack_uuid":"D74E80A3-5E52-4D7E-A0C4-658087AF7AC3","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"8CF2B09A-4554-48EF-90F1-D227BA872D7D"}
+2018-06-08 03:18:34 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528399105,msgId:25554,body:{"ack_msgId":25552,"ack_uuid":"33FAF03C-844D-4836-8FA6-216A18421191","sequeneceId":0,"status":2,"type":20,"userId":"80d07eb7-09d5-4332-aa4d-01990a291dfd","uuid":"6388386B-509E-4D1B-93A6-8D956897217C"}
+2018-06-08 03:18:39 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56284]
+2018-06-08 03:18:39 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:18:44 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:18:44 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:18:44 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:18:44 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:18:46 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54104]
+2018-06-08 03:18:46 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:18:48 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:18:48 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:18:48 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 03:18:48 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 03:19:04 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:19:24 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:19:55 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:19:55 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:19:55 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:19:55 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:19:59 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54151]
+2018-06-08 03:19:59 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:20:35 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:20:35 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:20:35 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:20:35 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:20:41 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54161]
+2018-06-08 03:20:41 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:20:56 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:22:49 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:22:49 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 03:23:23 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:23:23 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:23:23 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:23:23 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:23:59 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54244]
+2018-06-08 03:23:59 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:24:12 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:24:12 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:24:12 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:24:12 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:24:18 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54257]
+2018-06-08 03:24:18 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:24:58 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:24:58 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:24:58 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:24:58 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:30:40 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54373]
+2018-06-08 03:30:40 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:31:56 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:31:56 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:31:56 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:31:56 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:32:08 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54386]
+2018-06-08 03:32:08 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:36:30 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:36:30 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:36:30 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:36:30 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:36:38 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54483]
+2018-06-08 03:36:38 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:37:09 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:37:09 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:37:09 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:37:09 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:37:09 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54486]
+2018-06-08 03:37:09 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:37:11 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:37:11 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:37:16 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:37:16 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:37:16 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:37:16 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:37:32 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54519]
+2018-06-08 03:37:32 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:37:34 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:37:34 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:37:34 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:37:34 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:37:34 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:37:34 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:37:34 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:37:34 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:37:34 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:37:34 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:38:06 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:38:06 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:38:06 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:38:06 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:38:11 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54530]
+2018-06-08 03:38:11 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:39:06 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:39:06 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:39:06 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:39:06 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:39:14 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54540]
+2018-06-08 03:39:14 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:41:14 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 03:43:14 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 03:45:14 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 03:47:09 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:47:09 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:47:09 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:47:09 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:47:15 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54618]
+2018-06-08 03:47:15 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:48:47 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:48:47 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:48:47 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:48:47 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:49:02 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54685]
+2018-06-08 03:49:02 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:50:12 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:50:12 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:50:12 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:50:12 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:50:21 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54697]
+2018-06-08 03:50:21 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:50:28 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:51:33 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:51:35 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:51:35 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:51:35 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:51:35 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:52:01 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56356]
+2018-06-08 03:52:01 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 12
+2018-06-08 03:52:01 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528399144,msgId:25555,body:{"content":"mgyIkw2q5JkpZJ13892929899hLH1RoY2wcFVeqv8VZN73J6HNtxkoCvQIu3vkWKdPlSEtd9byUpfMtky8kiLfqWHDiQl3wFwpz5YX3PIDllBNXwQWptARBEzc98YxJwsezMZATykPAdSi5vPze3O2o23ACBbIiE6Thttp:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"451FF0EB-760D-4323-84B6-C0CCE472D842"}
+2018-06-08 03:52:01 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528399164,msgId:25556,body:{"content":"OOcuVW3GqUh8gYGn5J0GzWDxuCgT13892929899MDmpXhJpFe5CcEWAWa1QV5HtXW64pJ2ZkVJtJfM53PcibeCgtl7mUmHKSUY6gTKcLR6eedU5OoIUrFCrGZDI7FNZNjPFP0h1fxRPDQdjm7HwNvdu7uP0http:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"F1AEE421-28B3-46B7-BD85-5AA4671A214B"}
+2018-06-08 03:52:01 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528399256,msgId:25558,body:{"content":"tdC6SrRA1L8L4v13892929899WrOskhj768Xfs5Jv7ZsgGwzD6hGzxEhEBacRsadPoEvZYZJtvbbyaGyxbxrX7FnAST21SWfpSZTIXr8AJOIGpPeggp1MVPkhWr6H1AshaBkljX3HyTZMyvifVzsTo7P1ThIkyKeN9http:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"E8D7B2F2-7F34-4731-9A37-199C52538A8D"}
+2018-06-08 03:52:01 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528399369,msgId:25559,body:{"content":"HwVoaj0CF17aXDLJnwzlZu3ErqpK138929298993EIHj7u8mgB7xeiFsWyzfMhW6JwXHqhNoxrsVMK5DfAHWJQDdAqK3ZKkQzLPZ63C8EB9DTV5Rftq4Km3Ylz8NZeUB3scmwQWjHbkJvp9xkFUJS1zplD9http:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"621E9A48-B36D-4C86-8795-B2B4C54C2728"}
+2018-06-08 03:52:01 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400231,msgId:25560,body:{"content":"zW3zKbWOkVuqwH13892929899t3MU44wo8Ra5Bfg1CTPz1UPImGLr6STUXYMDNZGHOefJddIYLw7R7iaOtBnV7lcqUNuNhilL6AgGqRluLjQ3iUrH4Xi7hBqbX8prLsJOY3TmZLmQfpb5swxMtidiRyuCOi9PFDy4Ghttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"30F5EFFD-1F46-41F2-BD9B-9ABF690411DC"}
+2018-06-08 03:52:01 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25561,body:{"content":"i4wcPFEwDYzfp713892929899KomCvm7qLttxOkXMZi5G8URo4C2ibAseqYW9qjuQeD1IgjtqqKITpudeEIiiMUZrU4k3uLzhpHWMrXGabeIhXGdOxWf8Zpejolck7siXLEp8MoLmbHJXNQ4lOT8b7URyrjp36Sh7dhttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"D3FD9C45-D1BF-422F-84D4-66AC349050D1"}
+2018-06-08 03:52:01 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25562,body:{"content":"uTVfczR7aXXZbpi681cF6UxKqUyz13892929899EtiLrkEeW3emEZKUwWIRwMIcwBuwFfWaA6T567yvr9I7pvX6I144fPX5EtFcJcpNsv5il2mLCUvdgUXAuMLFI9bSB6yIzQgilkujVPIKJqZrmQ1E7ofyhttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"0FA60B94-3AE6-4957-AC83-10230F8FD60A"}
+2018-06-08 03:52:01 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25563,body:{"content":"G8IaidmujePUChrYuVtdM7wH1389292989995ZNI3rCPtXRnx0Rmi5IeffMiZnZ1gc0ezhOQBrDL6OFcE3ytJCOKArdemKA4R7D95keWtR3gscIRB5oRc6VyWhttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"966BD3E7-5ACB-47F6-BB65-56EA9A1675F0"}
+2018-06-08 03:52:01 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25564,body:{"content":"Iw9vzCcCC0kt3tK1E13892929899mC8m736o0OCvyYlSwMaRGmnbSGV7p9cwqaqJFcKhY9rhttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"7411D0DC-3633-42FA-8CA4-D158120D2720"}
+2018-06-08 03:52:01 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25565,body:{"content":"Q5FrPuSWS213892929899apnsG4qrJ6wFgpj1kKhT8lQJ3AOkzpCm6aXO0Xu2A3gaKLxpHhcJ4ZvBYsT4zZSvj6npt15f1H0whVEagvvWFKo2fjWDLQ0ORcTgnAhhExdIqaSYpeooyEEkDshttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"F495FB50-95C1-4071-9B04-86069FCC8426"}
+2018-06-08 03:52:01 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528401028,msgId:25566,body:{"content":"OHkypxsD8c4gR813892929899h5U7kCfxvdk7XNkkG6wPFx7ScwUyTiSHsBEzpL8An0mv5O8QpQl73ozj4ARKgLEqG22kvTikARYMN8O8vo3fScYWgR2BSWuRAfxomwya14RGGetPYwJrjlJHsdD6A0aeYi40OfaX4http:\/\/www.baidu.com","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"3862E298-9332-447E-A4A2-23318659DD47"}
+2018-06-08 03:52:01 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528401093,msgId:25567,body:{"content":"Lklkl","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"6B72E672-AE8E-4337-98DA-541CE6864534"}
+2018-06-08 03:52:13 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:read tcp 192.168.31.74:62310->192.168.31.41:56356: read: connection reset by peer
+2018-06-08 03:52:13 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 03:52:13 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 03:52:25 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56370]
+2018-06-08 03:52:25 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 12
+2018-06-08 03:52:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528399144,msgId:25555,body:{"content":"mgyIkw2q5JkpZJ13892929899hLH1RoY2wcFVeqv8VZN73J6HNtxkoCvQIu3vkWKdPlSEtd9byUpfMtky8kiLfqWHDiQl3wFwpz5YX3PIDllBNXwQWptARBEzc98YxJwsezMZATykPAdSi5vPze3O2o23ACBbIiE6Thttp:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"451FF0EB-760D-4323-84B6-C0CCE472D842"}
+2018-06-08 03:52:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528399164,msgId:25556,body:{"content":"OOcuVW3GqUh8gYGn5J0GzWDxuCgT13892929899MDmpXhJpFe5CcEWAWa1QV5HtXW64pJ2ZkVJtJfM53PcibeCgtl7mUmHKSUY6gTKcLR6eedU5OoIUrFCrGZDI7FNZNjPFP0h1fxRPDQdjm7HwNvdu7uP0http:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"F1AEE421-28B3-46B7-BD85-5AA4671A214B"}
+2018-06-08 03:52:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528399256,msgId:25558,body:{"content":"tdC6SrRA1L8L4v13892929899WrOskhj768Xfs5Jv7ZsgGwzD6hGzxEhEBacRsadPoEvZYZJtvbbyaGyxbxrX7FnAST21SWfpSZTIXr8AJOIGpPeggp1MVPkhWr6H1AshaBkljX3HyTZMyvifVzsTo7P1ThIkyKeN9http:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"E8D7B2F2-7F34-4731-9A37-199C52538A8D"}
+2018-06-08 03:52:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528399369,msgId:25559,body:{"content":"HwVoaj0CF17aXDLJnwzlZu3ErqpK138929298993EIHj7u8mgB7xeiFsWyzfMhW6JwXHqhNoxrsVMK5DfAHWJQDdAqK3ZKkQzLPZ63C8EB9DTV5Rftq4Km3Ylz8NZeUB3scmwQWjHbkJvp9xkFUJS1zplD9http:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"621E9A48-B36D-4C86-8795-B2B4C54C2728"}
+2018-06-08 03:52:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400231,msgId:25560,body:{"content":"zW3zKbWOkVuqwH13892929899t3MU44wo8Ra5Bfg1CTPz1UPImGLr6STUXYMDNZGHOefJddIYLw7R7iaOtBnV7lcqUNuNhilL6AgGqRluLjQ3iUrH4Xi7hBqbX8prLsJOY3TmZLmQfpb5swxMtidiRyuCOi9PFDy4Ghttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"30F5EFFD-1F46-41F2-BD9B-9ABF690411DC"}
+2018-06-08 03:52:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25561,body:{"content":"i4wcPFEwDYzfp713892929899KomCvm7qLttxOkXMZi5G8URo4C2ibAseqYW9qjuQeD1IgjtqqKITpudeEIiiMUZrU4k3uLzhpHWMrXGabeIhXGdOxWf8Zpejolck7siXLEp8MoLmbHJXNQ4lOT8b7URyrjp36Sh7dhttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"D3FD9C45-D1BF-422F-84D4-66AC349050D1"}
+2018-06-08 03:52:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25562,body:{"content":"uTVfczR7aXXZbpi681cF6UxKqUyz13892929899EtiLrkEeW3emEZKUwWIRwMIcwBuwFfWaA6T567yvr9I7pvX6I144fPX5EtFcJcpNsv5il2mLCUvdgUXAuMLFI9bSB6yIzQgilkujVPIKJqZrmQ1E7ofyhttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"0FA60B94-3AE6-4957-AC83-10230F8FD60A"}
+2018-06-08 03:52:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25563,body:{"content":"G8IaidmujePUChrYuVtdM7wH1389292989995ZNI3rCPtXRnx0Rmi5IeffMiZnZ1gc0ezhOQBrDL6OFcE3ytJCOKArdemKA4R7D95keWtR3gscIRB5oRc6VyWhttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"966BD3E7-5ACB-47F6-BB65-56EA9A1675F0"}
+2018-06-08 03:52:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25564,body:{"content":"Iw9vzCcCC0kt3tK1E13892929899mC8m736o0OCvyYlSwMaRGmnbSGV7p9cwqaqJFcKhY9rhttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"7411D0DC-3633-42FA-8CA4-D158120D2720"}
+2018-06-08 03:52:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25565,body:{"content":"Q5FrPuSWS213892929899apnsG4qrJ6wFgpj1kKhT8lQJ3AOkzpCm6aXO0Xu2A3gaKLxpHhcJ4ZvBYsT4zZSvj6npt15f1H0whVEagvvWFKo2fjWDLQ0ORcTgnAhhExdIqaSYpeooyEEkDshttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"F495FB50-95C1-4071-9B04-86069FCC8426"}
+2018-06-08 03:52:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528401028,msgId:25566,body:{"content":"OHkypxsD8c4gR813892929899h5U7kCfxvdk7XNkkG6wPFx7ScwUyTiSHsBEzpL8An0mv5O8QpQl73ozj4ARKgLEqG22kvTikARYMN8O8vo3fScYWgR2BSWuRAfxomwya14RGGetPYwJrjlJHsdD6A0aeYi40OfaX4http:\/\/www.baidu.com","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"3862E298-9332-447E-A4A2-23318659DD47"}
+2018-06-08 03:52:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528401093,msgId:25567,body:{"content":"Lklkl","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"6B72E672-AE8E-4337-98DA-541CE6864534"}
+2018-06-08 03:52:31 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:52:31 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:52:31 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 03:52:31 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 03:53:07 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56400]
+2018-06-08 03:53:07 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 12
+2018-06-08 03:53:07 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528399144,msgId:25555,body:{"content":"mgyIkw2q5JkpZJ13892929899hLH1RoY2wcFVeqv8VZN73J6HNtxkoCvQIu3vkWKdPlSEtd9byUpfMtky8kiLfqWHDiQl3wFwpz5YX3PIDllBNXwQWptARBEzc98YxJwsezMZATykPAdSi5vPze3O2o23ACBbIiE6Thttp:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"451FF0EB-760D-4323-84B6-C0CCE472D842"}
+2018-06-08 03:53:07 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528399164,msgId:25556,body:{"content":"OOcuVW3GqUh8gYGn5J0GzWDxuCgT13892929899MDmpXhJpFe5CcEWAWa1QV5HtXW64pJ2ZkVJtJfM53PcibeCgtl7mUmHKSUY6gTKcLR6eedU5OoIUrFCrGZDI7FNZNjPFP0h1fxRPDQdjm7HwNvdu7uP0http:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"F1AEE421-28B3-46B7-BD85-5AA4671A214B"}
+2018-06-08 03:53:07 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528399256,msgId:25558,body:{"content":"tdC6SrRA1L8L4v13892929899WrOskhj768Xfs5Jv7ZsgGwzD6hGzxEhEBacRsadPoEvZYZJtvbbyaGyxbxrX7FnAST21SWfpSZTIXr8AJOIGpPeggp1MVPkhWr6H1AshaBkljX3HyTZMyvifVzsTo7P1ThIkyKeN9http:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"E8D7B2F2-7F34-4731-9A37-199C52538A8D"}
+2018-06-08 03:53:07 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528399369,msgId:25559,body:{"content":"HwVoaj0CF17aXDLJnwzlZu3ErqpK138929298993EIHj7u8mgB7xeiFsWyzfMhW6JwXHqhNoxrsVMK5DfAHWJQDdAqK3ZKkQzLPZ63C8EB9DTV5Rftq4Km3Ylz8NZeUB3scmwQWjHbkJvp9xkFUJS1zplD9http:\/\/www.baidu.com","type":1,"userId":"d5f75fbc-4f64-4f78-b320-2ca770847800","uuid":"621E9A48-B36D-4C86-8795-B2B4C54C2728"}
+2018-06-08 03:53:07 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400231,msgId:25560,body:{"content":"zW3zKbWOkVuqwH13892929899t3MU44wo8Ra5Bfg1CTPz1UPImGLr6STUXYMDNZGHOefJddIYLw7R7iaOtBnV7lcqUNuNhilL6AgGqRluLjQ3iUrH4Xi7hBqbX8prLsJOY3TmZLmQfpb5swxMtidiRyuCOi9PFDy4Ghttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"30F5EFFD-1F46-41F2-BD9B-9ABF690411DC"}
+2018-06-08 03:53:07 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25561,body:{"content":"i4wcPFEwDYzfp713892929899KomCvm7qLttxOkXMZi5G8URo4C2ibAseqYW9qjuQeD1IgjtqqKITpudeEIiiMUZrU4k3uLzhpHWMrXGabeIhXGdOxWf8Zpejolck7siXLEp8MoLmbHJXNQ4lOT8b7URyrjp36Sh7dhttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"D3FD9C45-D1BF-422F-84D4-66AC349050D1"}
+2018-06-08 03:53:07 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25562,body:{"content":"uTVfczR7aXXZbpi681cF6UxKqUyz13892929899EtiLrkEeW3emEZKUwWIRwMIcwBuwFfWaA6T567yvr9I7pvX6I144fPX5EtFcJcpNsv5il2mLCUvdgUXAuMLFI9bSB6yIzQgilkujVPIKJqZrmQ1E7ofyhttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"0FA60B94-3AE6-4957-AC83-10230F8FD60A"}
+2018-06-08 03:53:07 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25563,body:{"content":"G8IaidmujePUChrYuVtdM7wH1389292989995ZNI3rCPtXRnx0Rmi5IeffMiZnZ1gc0ezhOQBrDL6OFcE3ytJCOKArdemKA4R7D95keWtR3gscIRB5oRc6VyWhttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"966BD3E7-5ACB-47F6-BB65-56EA9A1675F0"}
+2018-06-08 03:53:07 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25564,body:{"content":"Iw9vzCcCC0kt3tK1E13892929899mC8m736o0OCvyYlSwMaRGmnbSGV7p9cwqaqJFcKhY9rhttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"7411D0DC-3633-42FA-8CA4-D158120D2720"}
+2018-06-08 03:53:07 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528400254,msgId:25565,body:{"content":"Q5FrPuSWS213892929899apnsG4qrJ6wFgpj1kKhT8lQJ3AOkzpCm6aXO0Xu2A3gaKLxpHhcJ4ZvBYsT4zZSvj6npt15f1H0whVEagvvWFKo2fjWDLQ0ORcTgnAhhExdIqaSYpeooyEEkDshttp:\/\/www.baidu.com","sender_user_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"F495FB50-95C1-4071-9B04-86069FCC8426"}
+2018-06-08 03:53:07 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528401028,msgId:25566,body:{"content":"OHkypxsD8c4gR813892929899h5U7kCfxvdk7XNkkG6wPFx7ScwUyTiSHsBEzpL8An0mv5O8QpQl73ozj4ARKgLEqG22kvTikARYMN8O8vo3fScYWgR2BSWuRAfxomwya14RGGetPYwJrjlJHsdD6A0aeYi40OfaX4http:\/\/www.baidu.com","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"3862E298-9332-447E-A4A2-23318659DD47"}
+2018-06-08 03:53:07 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528401093,msgId:25567,body:{"content":"Lklkl","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"6B72E672-AE8E-4337-98DA-541CE6864534"}
+2018-06-08 03:53:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:53:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:53:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:53:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:53:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:53:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:53:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:53:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:53:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:53:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:53:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:53:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:53:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:53:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:53:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:53:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:53:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:53:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:53:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:53:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:53:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:53:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:53:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:53:08 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set%!(EXTRA string=(null))
+2018-06-08 03:53:11 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:53:11 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:53:11 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 03:53:11 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 03:53:11 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56401]
+2018-06-08 03:53:11 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:53:15 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:53:15 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:53:15 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 03:53:15 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 03:53:25 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54930]
+2018-06-08 03:53:25 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 12
+2018-06-08 03:53:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401187,msgId:25568,body:{"ack_msgId":25556,"ack_uuid":"F1AEE421-28B3-46B7-BD85-5AA4671A214B","receiver_id":"","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sequeneceId":0,"status":2,"type":20,"uuid":"07B3BB81-97D6-49C1-8A92-A499407A68AE"}
+2018-06-08 03:53:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401187,msgId:25569,body:{"ack_msgId":25555,"ack_uuid":"451FF0EB-760D-4323-84B6-C0CCE472D842","receiver_id":"","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sequeneceId":0,"status":2,"type":20,"uuid":"17EBC167-D866-4B9F-93DC-31F0BA0CF80F"}
+2018-06-08 03:53:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401187,msgId:25570,body:{"ack_msgId":25558,"ack_uuid":"E8D7B2F2-7F34-4731-9A37-199C52538A8D","receiver_id":"","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sequeneceId":0,"status":2,"type":20,"uuid":"4BBDCE49-78B4-4F2D-B531-A1186947CCB0"}
+2018-06-08 03:53:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401187,msgId:25571,body:{"ack_msgId":25559,"ack_uuid":"621E9A48-B36D-4C86-8795-B2B4C54C2728","receiver_id":"","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sequeneceId":0,"status":2,"type":20,"uuid":"50737461-ABC6-4FC4-974C-25719D6A044C"}
+2018-06-08 03:53:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401187,msgId:25572,body:{"ack_msgId":25560,"ack_uuid":"30F5EFFD-1F46-41F2-BD9B-9ABF690411DC","receiver_id":"","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sequeneceId":0,"status":2,"type":20,"uuid":"F5C237C0-6F74-43ED-9BB5-6AF6EE10E9BA"}
+2018-06-08 03:53:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401187,msgId:25573,body:{"ack_msgId":25561,"ack_uuid":"D3FD9C45-D1BF-422F-84D4-66AC349050D1","receiver_id":"","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sequeneceId":0,"status":2,"type":20,"uuid":"D835F07D-5538-4C5E-B3A3-5C9D1DC61260"}
+2018-06-08 03:53:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401187,msgId:25574,body:{"ack_msgId":25562,"ack_uuid":"0FA60B94-3AE6-4957-AC83-10230F8FD60A","receiver_id":"","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sequeneceId":0,"status":2,"type":20,"uuid":"DD247973-E1A1-4393-896A-49C65AC3ED4E"}
+2018-06-08 03:53:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401187,msgId:25575,body:{"ack_msgId":25563,"ack_uuid":"966BD3E7-5ACB-47F6-BB65-56EA9A1675F0","receiver_id":"","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sequeneceId":0,"status":2,"type":20,"uuid":"AFD4ECF5-CA98-497E-B975-C830765E7935"}
+2018-06-08 03:53:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401187,msgId:25576,body:{"ack_msgId":25564,"ack_uuid":"7411D0DC-3633-42FA-8CA4-D158120D2720","receiver_id":"","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sequeneceId":0,"status":2,"type":20,"uuid":"D097DD5D-5117-4443-8AA0-2D6DCF97BC29"}
+2018-06-08 03:53:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401187,msgId:25577,body:{"ack_msgId":25565,"ack_uuid":"F495FB50-95C1-4071-9B04-86069FCC8426","receiver_id":"","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sequeneceId":0,"status":2,"type":20,"uuid":"AEA403EE-02A0-4A1E-8CB1-0219496D38CA"}
+2018-06-08 03:53:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401187,msgId:25578,body:{"ack_msgId":25566,"ack_uuid":"3862E298-9332-447E-A4A2-23318659DD47","receiver_id":"","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sequeneceId":0,"status":2,"type":20,"uuid":"4D2A0D4C-3037-4F9C-9ADE-92937A8C51FF"}
+2018-06-08 03:53:25 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401187,msgId:25579,body:{"ack_msgId":25567,"ack_uuid":"6B72E672-AE8E-4337-98DA-541CE6864534","receiver_id":"","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sequeneceId":0,"status":2,"type":20,"uuid":"2DF88290-FD35-4624-A8AF-BED7638F481D"}
+2018-06-08 03:53:38 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56419]
+2018-06-08 03:53:38 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:53:40 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:53:40 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:53:40 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:53:40 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:53:47 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54947]
+2018-06-08 03:53:48 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 1
+2018-06-08 03:53:48 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401220,msgId:25580,body:{"content":"7dPmBvjZXBEbxR138929298993y3uX0JvFwlxl9dDp8J9jZK0VRs8jhyKDPkgcsCpXu7UVTqY05pXI9oHSR06TCGLLGJi8rfRWgd3YMMTqVXRprhZvPfpErCvtkTI5OoKzwxWOW7mBbKZX2ayXHM6zxmp4hKuCXFoYhttp:\/\/www.baidu.com","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"1188E385-C0DF-488B-B6DE-3E0747711409"}
+2018-06-08 03:53:48 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:53:48 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:53:48 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:53:48 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:53:53 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:53:53 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:53:53 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 03:53:53 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 03:53:54 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56420]
+2018-06-08 03:53:54 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:53:56 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:53:56 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-08 03:54:10 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54956]
+2018-06-08 03:54:10 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 3
+2018-06-08 03:54:10 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401220,msgId:25580,body:{"content":"7dPmBvjZXBEbxR138929298993y3uX0JvFwlxl9dDp8J9jZK0VRs8jhyKDPkgcsCpXu7UVTqY05pXI9oHSR06TCGLLGJi8rfRWgd3YMMTqVXRprhZvPfpErCvtkTI5OoKzwxWOW7mBbKZX2ayXHM6zxmp4hKuCXFoYhttp:\/\/www.baidu.com","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"1188E385-C0DF-488B-B6DE-3E0747711409"}
+2018-06-08 03:54:10 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401236,msgId:25581,body:{"content":"RdGU0WtaSRUDVv13892929899GJ3h21h20QRMRujzrbal3mhskmvQNZ90SBfMmLAjVIWMoZISLRuNecm5NzDy3wTXYsS9NTo1QoFDlZgum34AsPKiXMH4QmyVOfAR6MxECRYYw3FddxKSNG9SHPkmHOyysnCNUScrUhttp:\/\/www.baidu.com","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"6C1AA3E4-68EC-47C9-B6E4-D6CB021CC605"}
+2018-06-08 03:54:10 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401236,msgId:25582,body:{"content":"MbHvkifmF750NEfoUbK3tCcgEUND13892929899WEaawq7ahNcIrVyzUEfTPWd4o6glZwumIkvFZw3YIvq8MlmoA7WvzMUhV7jSak4StSQSLSHD1mtabrOAE6MXnW1qeAcMNBlvx3cI1NeDwX24guqwlVCEhttp:\/\/www.baidu.com","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"2AB919AB-2ACF-4285-9EA0-EAD258F40B82"}
+2018-06-08 03:54:46 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:54:46 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:54:46 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:54:46 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:54:54 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:54964]
+2018-06-08 03:54:54 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 3
+2018-06-08 03:54:54 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401220,msgId:25580,body:{"content":"7dPmBvjZXBEbxR138929298993y3uX0JvFwlxl9dDp8J9jZK0VRs8jhyKDPkgcsCpXu7UVTqY05pXI9oHSR06TCGLLGJi8rfRWgd3YMMTqVXRprhZvPfpErCvtkTI5OoKzwxWOW7mBbKZX2ayXHM6zxmp4hKuCXFoYhttp:\/\/www.baidu.com","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"1188E385-C0DF-488B-B6DE-3E0747711409"}
+2018-06-08 03:54:54 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401236,msgId:25581,body:{"content":"RdGU0WtaSRUDVv13892929899GJ3h21h20QRMRujzrbal3mhskmvQNZ90SBfMmLAjVIWMoZISLRuNecm5NzDy3wTXYsS9NTo1QoFDlZgum34AsPKiXMH4QmyVOfAR6MxECRYYw3FddxKSNG9SHPkmHOyysnCNUScrUhttp:\/\/www.baidu.com","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"6C1AA3E4-68EC-47C9-B6E4-D6CB021CC605"}
+2018-06-08 03:54:54 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401236,msgId:25582,body:{"content":"MbHvkifmF750NEfoUbK3tCcgEUND13892929899WEaawq7ahNcIrVyzUEfTPWd4o6glZwumIkvFZw3YIvq8MlmoA7WvzMUhV7jSak4StSQSLSHD1mtabrOAE6MXnW1qeAcMNBlvx3cI1NeDwX24guqwlVCEhttp:\/\/www.baidu.com","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"2AB919AB-2ACF-4285-9EA0-EAD258F40B82"}
+2018-06-08 03:54:57 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:54:57 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:54:57 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 03:54:57 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 03:55:22 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:55:22 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:55:22 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:55:22 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:55:28 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56421]
+2018-06-08 03:55:28 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:56:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 03:56:04 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:55002]
+2018-06-08 03:56:05 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:56:33 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:56:33 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:56:33 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 03:56:33 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 03:58:06 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 03:58:52 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:58:52 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:58:52 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:58:52 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 03:59:01 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:55054]
+2018-06-08 03:59:01 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 03:59:07 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 03:59:31 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56429]
+2018-06-08 03:59:31 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 1
+2018-06-08 03:59:31 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528401547,msgId:3,body:{"content":"xbnP6phCwAd4bE13892929899EjeFdc1dm00bSrN8BZ8NBykJuVeg0K9j5fyAaDj1Omjf15XQB0UANJ3gxOEWKbW3fIbpPpgRvAwCreJclwBaWZrBNJZTdg1oDILDtsp0kUFLOQEhVK12ijtN48MqlL3i1u1H8W7Kmhttp:\/\/www.baidu.com","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"70EAC789-A69E-431B-B1BF-93D41ACEC9C5"}
+2018-06-08 03:59:57 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 03:59:57 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 03:59:57 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 03:59:57 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 04:00:06 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:55094]
+2018-06-08 04:00:06 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 1
+2018-06-08 04:00:06 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401589,msgId:11,body:{"content":"紧密的合作组织","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"367BE911-ADE5-4442-A191-93B2BE3DB98E"}
+2018-06-08 04:00:28 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 04:00:50 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 04:00:50 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 04:00:50 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 04:00:50 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 04:01:22 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 04:01:22 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 04:01:22 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 04:01:22 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 04:01:32 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:55136]
+2018-06-08 04:01:32 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 1
+2018-06-08 04:01:32 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528401589,msgId:11,body:{"content":"紧密的合作组织","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"367BE911-ADE5-4442-A191-93B2BE3DB98E"}
+2018-06-08 04:01:32 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 04:02:31 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 04:02:31 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 04:02:31 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 04:02:31 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 04:02:40 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:55152]
+2018-06-08 04:02:40 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 04:02:44 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 04:02:44 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 04:02:45 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 04:02:45 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 04:02:49 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56437]
+2018-06-08 04:02:49 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 5
+2018-06-08 04:02:49 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528401692,msgId:12,body:{"ack_msgId":11,"ack_uuid":"367BE911-ADE5-4442-A191-93B2BE3DB98E","receiver_id":"","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sequeneceId":0,"status":2,"type":20,"uuid":"015C605E-20C6-4A31-A852-037B809B7DE3"}
+2018-06-08 04:02:49 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528401764,msgId:13,body:{"content":"ZooKIcvyDJk3QQ13892929899zillqTZ9gP3RAmawhzOktVe3orGuRcTtkB3CCnj8FsO2tqTQSqWGCIwGMtZsLSf12EWLP5OLrgUhMTS5txopTImny99YFsv0vnckCsx0XX0ChZGDaZXm4ZSESGMGsnjurf8WBcBHuhttp:\/\/www.baidu.com","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"06C52010-3F98-41C9-BBC4-5082933FCED4"}
+2018-06-08 04:02:49 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528401764,msgId:14,body:{"content":"61jDFo7VfQBJ3vb2tm6CeZ466BIe13892929899Hk00XnMEUDRSFAtxm8vnV4cYgZc1zVhj52M3SKfJirnIKorPQmplhG0q9zM7WZMyvA5f38N63ocKKVQBSOhE1f8k17f8KjGesqVwSXiNOBg4Ucg8eNAchttp:\/\/www.baidu.com","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"E9869FDB-BEA6-46A6-96EC-27595E614354"}
+2018-06-08 04:02:49 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528401765,msgId:15,body:{"content":"DLsnUilqtvXvTm1iEACYVsyO13892929899SnG1qzQDSlYCt473QX6yIL20wvFfbfUAO2tTueKkUtGFNJUdSQald3qy9t2hp4DQ2MzHESdzRxzTYNSMJiHuJhhttp:\/\/www.baidu.com","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"79FE71D2-9FB5-4D97-821D-50D60AC3B218"}
+2018-06-08 04:02:49 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528401765,msgId:16,body:{"content":"Tco6QTBsiaquPV3YL13892929899mRNcGS1Ev7Nh5sF6DmhkvCw48vlvgEVRYUu58fCa21Jhttp:\/\/www.baidu.com","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"749E46D3-30DD-4532-95F3-6DB1DB1A49F1"}
+2018-06-08 04:02:49 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 04:02:49 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 04:02:49 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 04:02:49 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 04:02:54 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:55154]
+2018-06-08 04:02:54 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 04:03:08 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 04:03:08 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 04:03:08 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 04:03:08 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 04:03:47 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56539]
+2018-06-08 04:03:47 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 04:04:24 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 04:04:24 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 04:04:24 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 04:04:24 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 04:04:40 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:56595]
+2018-06-08 04:04:40 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 04:04:54 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 04:05:04 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 04:05:04 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 04:05:04 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-08 04:05:04 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-08 04:06:55 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet

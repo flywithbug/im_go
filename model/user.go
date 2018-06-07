@@ -78,7 +78,7 @@ func GetUserByUserId(userId string) (*User, error) {
 	row := Database.QueryRow("select id, app_id, user_id, nick, status, sign, avatar, create_at, update_at from im_user where user_id = ?", userId)
 	err := row.Scan(&user.Uid,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
 	if err != nil {
-		log.Error(err.Error())
+		log.Error(err.Error(),userId)
 		return nil, &DatabaseError{"根据ID查询用户-将结果映射至对象错误"}
 	}
 	return &user, err
