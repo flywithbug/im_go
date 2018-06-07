@@ -2,53 +2,65 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	log "github.com/flywithbug/log4go"
 	"strings"
+	"im_go/model"
+	"net/http"
+	"im_go/config"
 	"fmt"
 )
 
+var whithList []string
 
 func TokenAuthMiddleware() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		urlPath := ctx.Request.URL.Path
 		if strings.EqualFold(urlPath,KeyLoginPath){
-			userAg := ""
-			if c, ok := ctx.Request.Header[KeyUserAgent]; ok && len(c) > 0{
-				userAg = strings.Join(c, "; ")
-			}
+			userAg := ctx.GetHeader(KeyUserAgent)
 			if len(userAg)> 0 {
 				ctx.Set(KeyUserAgent,userAg)
 			}
 			return
 		}
-		cookieStr := ""
-		if c, ok := ctx.Request.Header["Cookie"]; ok && len(c) > 0{
-			cookieStr = strings.Join(c, "; ")
+
+		for _,v := range config.Conf().AuthFilterWhite {
+			fmt.Println(v,urlPath)
+			if strings.HasSuffix(urlPath,v) {
+				return
+			}
 		}
-		token := CookieToMap(cookieStr)[KeyUserToken]
+
+		aResp := NewResponse()
+		token,_ := ctx.Cookie(KeyUserToken)
+		var aUser *model.User
 		if len(token) > 0 {
-
+			aUser, _ = model.GetUserByToken(token)
+		}else {
+			aResp.SetErrorInfo(http.StatusUnauthorized,"no token found")
+			ctx.JSON(http.StatusOK,aResp)
+			ctx.Abort()
+			return
 		}
-
-
-
-		println("====> Path:", urlPath, "Cookie:", cookieStr,)
-		fmt.Println(CookieToMap(cookieStr))
-		log.Info("%s ",ctx.Request.Header)
-
-		//ctx.Next()
+		if aUser == nil {
+			aResp.SetErrorInfo(http.StatusUnauthorized,"auth token invalid")
+			ctx.JSON(http.StatusOK,aResp)
+			ctx.Abort()
+			return
+		}
+		ctx.Set(KeyContextUser,aUser)
 	}
 
 }
 
-func CookieToMap(Cookie string) map[string]string {
-	keyValues := strings.Split(Cookie, ";")
-	m := make(map[string]string)
-	for _,v:= range keyValues{
-		kvs := strings.Split(v,"=")
-		if len(kvs) == 2{
-			m[kvs[0]]=kvs[1]
+func WhitePathList()[]string  {
+	if whithList == nil{
+		whithList = make([]string,0,len(config.Conf().AuthFilterWhite)*len(config.Conf().RouterPrefix))
+
+		for i,v := range config.Conf().AuthFilterWhite {
+			for _,vk := range config.Conf().RouterPrefix {
+
+				whithList[i]= fmt.Sprintf("/%s%s",vk,v)
+			}
 		}
 	}
-	return m
+	return whithList
 }

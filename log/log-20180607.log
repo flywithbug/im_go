@@ -1144,3 +1144,77 @@
 2018-06-07 19:19:36 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50466]
 2018-06-07 19:19:36 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
 2018-06-07 19:19:36 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-07 19:20:11 	 [ INFO] 	 <auth_middleware.go:37>  	 map[Content-Type:[application/json] Connection:[keep-alive] Accept-Language:[en;q=1] Content-Length:[48] Accept-Encoding:[gzip, deflate] Accept:[*/*] Cookie:[api_token=f292cf9e-340e-4da2-b351-bdbffbdf5aa8] User-Agent:[IMClient/1.0 (iPhone; iOS 11.4; Scale/3.00)]] 
+2018-06-07 19:20:11 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-07 19:20:11 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-07 19:20:11 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-07 19:20:11 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-07 21:07:25 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50751]
+2018-06-07 21:07:25 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-07 21:07:25 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-07 21:07:26 	 [ INFO] 	 <auth_middleware.go:40>  	 map[Accept:[*/*] Connection:[keep-alive] Content-Length:[48] Cookie:[api_token=14aa9152-0dbc-4c76-b1f1-86068ad1461d] User-Agent:[IMClient/1.0 (iPhone; iOS 11.4; Scale/3.00)] Accept-Language:[en;q=1] Accept-Encoding:[gzip, deflate] Content-Type:[application/json]] 
+2018-06-07 21:07:26 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-07 21:07:26 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-07 21:07:26 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-07 21:07:26 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-07 21:09:50 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50763]
+2018-06-07 21:09:50 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-07 21:09:50 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-07 21:09:53 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-07 21:09:53 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-07 21:09:53 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-07 21:09:53 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-07 21:19:08 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50895]
+2018-06-07 21:19:08 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-07 21:19:08 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-07 21:19:20 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-07 21:19:20 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-07 21:19:20 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-07 21:19:20 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-07 21:26:20 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51013]
+2018-06-07 21:26:20 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-07 21:26:20 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-07 21:26:23 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-07 21:26:23 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-07 21:26:23 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-07 21:26:23 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-07 21:27:27 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51020]
+2018-06-07 21:27:27 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-07 21:27:27 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-07 21:27:28 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-07 21:27:28 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-07 21:27:28 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-07 21:27:28 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-07 21:28:07 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51027]
+2018-06-07 21:28:07 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-07 21:28:08 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-07 21:28:08 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-07 21:28:08 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-07 21:28:08 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-07 21:29:21 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51034]
+2018-06-07 21:29:21 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-07 21:29:21 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-07 21:29:22 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-07 21:29:22 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-07 21:29:22 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-07 21:29:22 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-07 21:29:45 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51040]
+2018-06-07 21:29:45 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-07 21:29:47 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-07 21:29:47 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-07 21:29:47 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-07 21:29:47 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-07 21:30:04 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51043]
+2018-06-07 21:30:04 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-07 21:30:08 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-07 21:30:08 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-07 21:30:08 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-07 21:30:08 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-07 21:31:24 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51070]
+2018-06-07 21:31:24 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-07 21:31:24 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-07 21:31:26 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-07 21:31:26 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-07 21:31:26 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-07 21:31:26 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-07 21:33:19 	 [ERROR] 	 <user.go:108>  	 sql: no rows in result set
