@@ -6,10 +6,8 @@ import (
 	"im_go/model"
 	"net/http"
 	"im_go/config"
-	"fmt"
 )
 
-var whithList []string
 
 func TokenAuthMiddleware() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
@@ -23,7 +21,6 @@ func TokenAuthMiddleware() gin.HandlerFunc {
 		}
 
 		for _,v := range config.Conf().AuthFilterWhite {
-			fmt.Println(v,urlPath)
 			if strings.HasSuffix(urlPath,v) {
 				return
 			}
@@ -31,6 +28,7 @@ func TokenAuthMiddleware() gin.HandlerFunc {
 
 		aResp := NewResponse()
 		token,_ := ctx.Cookie(KeyUserToken)
+		//log4go.Info("TokenAuthMiddleware",token,ctx.Request.Header)
 		var aUser *model.User
 		if len(token) > 0 {
 			aUser, _ = model.GetUserByToken(token)
@@ -49,18 +47,4 @@ func TokenAuthMiddleware() gin.HandlerFunc {
 		ctx.Set(KeyContextUser,aUser)
 	}
 
-}
-
-func WhitePathList()[]string  {
-	if whithList == nil{
-		whithList = make([]string,0,len(config.Conf().AuthFilterWhite)*len(config.Conf().RouterPrefix))
-
-		for i,v := range config.Conf().AuthFilterWhite {
-			for _,vk := range config.Conf().RouterPrefix {
-
-				whithList[i]= fmt.Sprintf("/%s%s",vk,v)
-			}
-		}
-	}
-	return whithList
 }

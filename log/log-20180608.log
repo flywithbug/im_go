@@ -1,0 +1,76 @@
+2018-06-08 00:01:49 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 00:02:10 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 00:02:10 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 00:02:10 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 00:02:10 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 00:02:17 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52502]
+2018-06-08 00:02:17 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 00:02:29 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:02:29 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 00:02:38 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 00:02:38 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 00:02:38 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 00:02:38 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 00:02:45 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52506]
+2018-06-08 00:02:45 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 00:02:50 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:03:02 	 [ERROR] 	 <user.go:81>  	 sql: no rows in result set
+2018-06-08 00:03:20 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52525]
+2018-06-08 00:03:20 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 00:03:22 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:03:28 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:03:30 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:03:30 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:03:30 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:03:35 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 00:03:35 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 00:03:35 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 00:03:35 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 00:04:20 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52553]
+2018-06-08 00:04:20 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 00:04:25 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:04:25 	 [ERROR] 	 <user.go:108>  	 sql: no rows in result set(null)
+2018-06-08 00:04:38 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:04:38 	 [ERROR] 	 <user.go:108>  	 sql: no rows in result set(null)
+2018-06-08 00:06:01 	 [ INFO] 	 <auth_middleware.go:35>  	 TokenAuthMiddleware%!(EXTRA string=(null), http.Header=map[User-Agent:[IMClient/1.0 (iPhone; iOS 11.4; Scale/3.00)] Accept-Language:[en;q=1] Accept-Encoding:[gzip, deflate] Connection:[keep-alive] Accept:[*/*] Cookie:[api_token=(null)]])
+2018-06-08 00:06:01 	 [ERROR] 	 <user.go:108>  	 sql: no rows in result set(null)
+2018-06-08 00:06:25 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52564]
+2018-06-08 00:06:25 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 00:06:56 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:06:56 	 [ INFO] 	 <auth_middleware.go:35>  	 TokenAuthMiddleware%!(EXTRA string=(null), http.Header=map[Accept:[*/*] Cookie:[api_token=(null)] User-Agent:[IMClient/1.0 (iPhone; iOS 11.4; Scale/3.00)] Accept-Language:[en;q=1] Accept-Encoding:[gzip, deflate] Connection:[keep-alive]])
+2018-06-08 00:06:56 	 [ERROR] 	 <user.go:108>  	 sql: no rows in result set(null)
+2018-06-08 00:07:43 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 00:07:43 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 00:07:43 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 00:07:43 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 00:07:50 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52576]
+2018-06-08 00:07:50 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 00:07:57 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:08:01 	 [ INFO] 	 <auth_middleware.go:35>  	 TokenAuthMiddleware%!(EXTRA string=44625d6b-9dd4-4e9f-b145-2812891f5280, http.Header=map[Accept-Language:[en;q=1] Accept-Encoding:[gzip, deflate] Connection:[keep-alive] Accept:[*/*] Cookie:[api_token=44625d6b-9dd4-4e9f-b145-2812891f5280] User-Agent:[IMClient/1.0 (iPhone; iOS 11.4; Scale/3.00)]])
+2018-06-08 00:09:50 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 00:11:50 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 00:12:24 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 00:12:24 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 00:12:24 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 00:12:24 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 00:12:31 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52597]
+2018-06-08 00:12:32 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 00:12:37 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 00:12:37 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 00:12:37 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 00:12:37 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 00:12:37 	 [ INFO] 	 <auth_middleware.go:35>  	 TokenAuthMiddleware%!(EXTRA string=44625d6b-9dd4-4e9f-b145-2812891f5280, http.Header=map[Accept:[*/*] Cookie:[api_token=44625d6b-9dd4-4e9f-b145-2812891f5280] User-Agent:[IMClient/1.0 (iPhone; iOS 11.4; Scale/3.00)] Content-Length:[48] Accept-Encoding:[gzip, deflate] Content-Type:[application/json] Connection:[keep-alive] Accept-Language:[en;q=1]])
+2018-06-08 00:12:52 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52602]
+2018-06-08 00:12:52 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 00:12:53 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:12:53 	 [ INFO] 	 <auth_middleware.go:35>  	 TokenAuthMiddleware%!(EXTRA string=92df89a7-8a8c-4a39-b91f-4ac25991b3f1, http.Header=map[Accept:[*/*] Cookie:[api_token=92df89a7-8a8c-4a39-b91f-4ac25991b3f1] User-Agent:[IMClient/1.0 (iPhone; iOS 11.4; Scale/3.00)] Accept-Language:[en;q=1] Accept-Encoding:[gzip, deflate] Connection:[keep-alive]])
+2018-06-08 00:12:53 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:12:53 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-08 00:13:23 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52609]
+2018-06-08 00:13:23 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-08 00:13:23 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 00:13:23 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 00:13:23 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 00:13:23 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-08 00:13:25 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:52611]
+2018-06-08 00:13:25 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
