@@ -28,6 +28,7 @@ func StartHttpServer(address string,rPrefix []string)  {
 		Credentials:     true,
 		ValidateHeaders: false,
 	}))
+	r.Use(handler.TokenAuthMiddleware())
 	handler.RegisterRouters(r,rPrefix)
 	err := r.Run(address)
 	if  err != nil {

@@ -72,6 +72,7 @@ func handleLogin(c *gin.Context) {
 	defer func() {
 		c.JSON(aRes.Code,aRes)
 	}()
+
 	login := loginoutModel{}
 	err := c.BindJSON(&login)
 	if err != nil {
@@ -101,7 +102,11 @@ func handleLogin(c *gin.Context) {
 		if !strings.EqualFold(user.UserId, "") {
 			token := uuid.New()
 			ip := common.GetIp(c.Request)
-			if err := model.SaveLogin(user.GetAppId(),user.Uid,user.UserId, token, ip,user.Forbidden); err != nil {
+			userAgent ,ok := c.Get(KeyUserAgent)
+			if !ok {
+				userAgent = ""
+			}
+			if err := model.SaveLogin(user.GetAppId(),user.Uid,user.UserId, token, ip,user.Forbidden,userAgent.(string)); err != nil {
 				aRes.SetErrorInfo(http.StatusInternalServerError ,err.Error())
 				return
 			}
@@ -133,8 +138,8 @@ func handleLogout(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"token can not be nil")
 		return
 	}
-	num ,err := model.Logout(login.Token)
-	if num <= 0 || err != nil{
+	_ ,err = model.Logout(login.Token)
+	if err != nil{
 		errStr := err.Error()
 		aRes.SetErrorInfo(http.StatusInternalServerError ,errStr)
 		return

@@ -17,16 +17,19 @@ type loginoutModel struct {
 
 	//logout
 	Token      string	`json:"token"`
-	UserId    string    `json:"user_id"`    // 用户ID
+	UserId     string    `json:"user_id"`    // 用户ID
+
+
+	UserAgent string    `json:"user_agent"`
 }
 
-type relationShipModel struct {
-	UId 		int			`json:"u_id"`
-	FriendId	int			`json:"friend_id"`
-	Status 		int			`json:"status"`
-	RelationId 	string		`json:"relation_id"`
-	Remark		string		`json:"remark"`
-	Method 		string		`json:"method"`  //add delete
-}
+//type relationShipModel struct {
+//	UId 		int			`json:"u_id"`
+//	FriendId	int			`json:"friend_id"`
+//	Status 		int			`json:"status"`
+//	RelationId 	string		`json:"relation_id"`
+//	Remark		string		`json:"remark"`
+//	Method 		string		`json:"method"`  //add delete
+//}
 
 

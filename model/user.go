@@ -18,6 +18,7 @@ type SimpleUser struct {
 	Avatar   	string    	`json:"avatar"`    //头像
 	Forbidden 	int32		`json:"forbidden"`
 
+
 }
 
 /*
@@ -28,6 +29,7 @@ type User struct {
 	createAt 	time.Time 	`json:"create_at"` //注册日期
 	updateAt 	time.Time 	`json:"update_at"` //更新日期
 	Token    	string    	`json:"token"`
+	userAgent   string		`json:"user_agent"` //用户登录时的ua
 }
 
 func (use *User)GetAppId()int64  {

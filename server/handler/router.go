@@ -6,11 +6,13 @@ import (
 	"im_go/im"
 )
 
+const  LoginPATH  =  "/login"
+
 var routers = map[string]gin.HandlerFunc{
 	"GET   		/system": 		handleSystem, //系统状态
 	"GET		/summary":		im.GinSummary,
 	"POST 		/register": 	handleRegister, //注册
-	"POST  		/login": 		handleLogin,
+	"POST  		"+LoginPATH: 		handleLogin,
 	"POST		/logout":		handleLogout,  //退出登录
 	"POST 		/query": 		handleQuery,   //根据昵称查询用户列表
 	"GET 		/user/:id": 	handleGetUserInfo,   //根据用户user_id获取用户信息
