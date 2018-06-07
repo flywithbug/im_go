@@ -1,7 +1,7 @@
 
 //项目说明：存储部分使用的mysql, 暂未增加redis支持
 ##流程图
-![流程图](http://7xsdes.com1.z0.glb.clouddn.com/1526641708662.jpg)
+
 
 ## 安装说明
 
