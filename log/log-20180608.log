@@ -911,3 +911,7 @@
 2018-06-08 04:05:04 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
 2018-06-08 04:05:04 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
 2018-06-08 04:06:55 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-08 04:07:29 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-08 04:07:29 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-08 04:07:29 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-08 04:07:29 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
