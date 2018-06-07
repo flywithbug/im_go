@@ -1123,3 +1123,24 @@
 2018-06-07 18:51:39 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50035]
 2018-06-07 18:51:39 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
 2018-06-07 18:51:39 	 [ INFO] 	 <auth_handle.go:28>  	 repeat login
+2018-06-07 18:53:34 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-07 18:55:34 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-07 18:57:34 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-07 18:58:59 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50293]
+2018-06-07 18:59:00 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-07 18:59:00 	 [ INFO] 	 <auth_middleware.go:28>  	 map[User-Agent:[IMClient/1.0 (iPhone; iOS 11.4; Scale/3.00)] Accept-Language:[en;q=1] Cookie:[api_token=92f9f72a-7243-44de-912c-4aaf9430aae6] Content-Length:[48] Accept-Encoding:[gzip, deflate] Content-Type:[application/json] Accept:[*/*] Connection:[keep-alive]]
+2018-06-07 18:59:00 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-07 18:59:00 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-07 18:59:00 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-07 18:59:00 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-07 18:59:52 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50303]
+2018-06-07 18:59:52 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-07 18:59:52 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-07 18:59:53 	 [ INFO] 	 <auth_middleware.go:30>  	 map[Cookie:[api_token=65075269-2223-4161-96fd-3b854cb019d2] User-Agent:[IMClient/1.0 (iPhone; iOS 11.4; Scale/3.00)] Content-Length:[48] Content-Type:[application/json] Connection:[keep-alive] Accept-Language:[en;q=1] Accept-Encoding:[gzip, deflate] Accept:[*/*]] 
+2018-06-07 18:59:53 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-07 18:59:53 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-07 18:59:53 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-07 18:59:53 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-07 19:19:36 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:50466]
+2018-06-07 19:19:36 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-07 19:19:36 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet

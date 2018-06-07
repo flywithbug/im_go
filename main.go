@@ -17,14 +17,14 @@ const (
 )
 
 
-func SetLog(conf *config.IMConfig) {
+func SetLog() {
 	w := log.NewFileWriter()
 	w.SetPathPattern("./log/log-%Y%M%D.log")
 	c := log.NewConsoleWriter()
 	c.SetColor(true)
 	log.Register(w)
 	log.Register(c)
-	log.SetLevel(conf.LogLevel%4)
+	log.SetLevel(config.Conf().LogLevel%4)
 	log.SetLayout("2006-01-02 15:04:05")
 }
 
@@ -32,15 +32,15 @@ func main() {
 	configPath := flag.String("config", "config.json", "Configuration file to use")
 	flag.Parse()
 	//加载配置文件
-	conf, err := config.ReadConfig(*configPath)
+	err := config.ReadConfig(*configPath)
 	if err != nil {
 		log.Fatal("读取配置文件错误:", err.Error())
 	}
-	SetLog(conf)
+	SetLog()
 	defer log.Close()
 
 	//连接数据库
-	model.Database, err= conf.DBConfig.Connect()
+	model.Database, err= config.Conf().DBConfig.Connect()
 	if err != nil {
 		log.Fatal(err.Error())
 	}
@@ -48,12 +48,12 @@ func main() {
 
 	go func() {
 		//启动用户管理服务
-		server.StartHttpServer(conf.ServerPort,conf.RouterPrefix)
+		server.StartHttpServer(config.Conf().ServerPort,config.Conf().RouterPrefix)
 	}()
 
 	//启动系统监控
-	perf.Init(conf.PprofBind)
+	perf.Init(config.Conf().PprofBind)
 
 	//启用im服务
-	im.StartIMServer(conf.IMPort,conf.HttpPort)
+	im.StartIMServer(config.Conf().IMPort,config.Conf().HttpPort)
 }

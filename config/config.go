@@ -8,6 +8,12 @@ import (
 	"io/ioutil"
 )
 
+var config *IMConfig
+
+func Conf() *IMConfig {
+	return config
+}
+
 /*
 IM配置结构体
 */
@@ -19,6 +25,7 @@ type IMConfig struct {
 	PprofBind		string	 	`json:"pprof_bind"`		//机器监控
 	DBConfig   		DBConfig 	`json:"db_config"`   	//数据库配置
 	RouterPrefix 	[]string 	`json:"router_prefix"` //api前缀
+	AuthFilterWhite []string 	`json:"auth_filter_white"` //api前缀
 }
 
 /*
@@ -36,14 +43,12 @@ type DBConfig struct {
 /*
 读取配置文件
 */
-func ReadConfig(path string) (*IMConfig, error) {
-	config := new(IMConfig)
+func ReadConfig(path string) error {
+	config = new(IMConfig)
 	err := config.Parse(path)
-	if err != nil {
-		return nil, err
-	}
-	return config, nil
+	return err
 }
+
 
 /*
 解析配置文件

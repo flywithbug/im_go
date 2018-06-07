@@ -14,5 +14,11 @@
   },
   "router_prefix":[
     "api"
+  ],
+
+  "auth_filter_white":[
+    "/login",
+    "/register"
   ]
+
 }
