@@ -127,7 +127,7 @@ func SendMessage(conn io.Writer, pro *Proto) error {
 	return nil
 }
 
-func ReceiveLimitMessage(conn io.Reader, limitSize int) (pro *Proto, err error) {
+func ReceiveLimitMessage(conn io.Reader, limitSize int32) (pro *Proto, err error) {
 	buff := make([]byte, RawHeaderSize)
 	_, err = io.ReadFull(conn, buff)
 	if err != nil {
@@ -139,7 +139,7 @@ func ReceiveLimitMessage(conn io.Reader, limitSize int) (pro *Proto, err error) 
 		log.Info("buff read error:%s", err.Error())
 		return nil, err
 	}
-	if ph.bodyLen < 0 || int(ph.bodyLen) > limitSize {
+	if ph.bodyLen < 0 || int32(ph.bodyLen) > limitSize {
 		log.Info("invalid len:%d", ph.bodyLen)
 		return nil, err
 	}
@@ -158,7 +158,7 @@ func ReceiveLimitMessage(conn io.Reader, limitSize int) (pro *Proto, err error) 
 }
 
 func ReceiveMessage(conn io.Reader) (pro *Proto, err error) {
-	return ReceiveLimitMessage(conn, 32*1024)
+	return ReceiveLimitMessage(conn, MaxBodySize)
 }
 
 //消息大小限制在1M
