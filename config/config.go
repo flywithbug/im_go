@@ -46,6 +46,7 @@ type AppConfig struct {
 	IMSocketHost	string		`json:"im_socket_host"` //IM通讯host
 	IMSocketPort    int			`json:"im_socket_port"` //IM通讯 port
 	DomainName		string		`json:"domain_name"`  //域名
+	Version			string		`json:"version"`	//版本
 }
 
 

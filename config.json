@@ -16,7 +16,8 @@
     "api_host":"http://192.168.31.74:9002",
     "im_socket_host":"192.168.31.74",
     "im_socket_port":62310,
-    "domain_name":""
+    "domain_name":"",
+    "version":"1.0"
   },
 
   "router_prefix":[
