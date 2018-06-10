@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.21)
 # Database: gim
-# Generation Time: 2018-06-10 08:50:28 +0000
+# Generation Time: 2018-06-10 15:27:12 +0000
 # ************************************************************
 
 
@@ -30,9 +30,9 @@ CREATE TABLE `im_device` (
   `user_id` varchar(40) NOT NULL,
   `device_token` varchar(64) NOT NULL DEFAULT '' COMMENT '设备token',
   `device_id` varchar(64) NOT NULL DEFAULT '' COMMENT '设备uuid',
-  `platform` tinyint(1) NOT NULL DEFAULT '1' COMMENT '设备类型(iphone android,web)',
-  `description` varchar(64) NOT NULL DEFAULT '' COMMENT '设备描述',
-  `status` tinyint(1) NOT NULL,
+  `description` varchar(64) DEFAULT '' COMMENT '设备描述',
+  `platform` tinyint(1) NOT NULL DEFAULT '0' COMMENT '设备类型(iphone android,web),1/2/3',
+  `status` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_id` (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -70,12 +70,12 @@ CREATE TABLE `im_message` (
   `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增',
   `sender` int(10) NOT NULL COMMENT '发送人(用户ID)',
   `receiver` int(10) NOT NULL COMMENT '接收人(可以是用户，群，讨论组)',
-  `content` text NOT NULL COMMENT '保存为二进制流',
+  `content` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '保存为二进制流',
   `time_stamp` int(10) NOT NULL COMMENT '发送日期',
   `status` tinyint(2) NOT NULL DEFAULT '0' COMMENT '1发送成功',
   `update_at` int(10) DEFAULT NULL COMMENT '状态修改时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
 
