@@ -359,3 +359,4 @@
 2018-06-10 18:08:37 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
 2018-06-10 18:08:54 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58610]
 2018-06-10 18:08:54 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-10 18:10:16 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet

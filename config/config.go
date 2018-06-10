@@ -22,7 +22,7 @@ type IMConfig struct {
 	HttpPort   		int      	`json:"http_port"`   	//IM服务外部调研接口
 	LogLevel        int			`json:"log_level"`    // 0:release  1:debug
 	ServerPort 		string		`json:"server_port"`	//用户关系相关服务
-	PprofBind		string	 	`json:"pprof_bind"`		//机器监控
+	ProfBind		string	 	`json:"prof_bind"`		//机器监控
 	DBConfig   		DBConfig 	`json:"db_config"`   	//数据库配置
 	RouterPrefix 	[]string 	`json:"router_prefix"` //api前缀
 	AuthFilterWhite []string 	`json:"auth_filter_white"` //api前缀
