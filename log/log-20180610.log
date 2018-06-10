@@ -317,3 +317,7 @@
 2018-06-10 00:36:54 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
 2018-06-10 15:04:31 	 [ERROR] 	 <upload_handle.go:30>  	 open ./uploadFile/avatar.png: no such file or directory
 2018-06-10 15:09:34 	 [ERROR] 	 <upload_handle.go:33>  	 open public/806dcd5d-a533-4e20-abb6-087eadc28048.png: no such file or directory
+2018-06-10 17:40:33 	 [ WARN] 	 <device.go:21>  	 Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'device_id,device_token=?,platform=?,description=?' at line 1
+2018-06-10 17:42:13 	 [ WARN] 	 <device.go:21>  	 Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'device_id=?,device_token=?,platform=?,description=?' at line 1
+2018-06-10 17:42:51 	 [ WARN] 	 <device.go:28>  	 Error 1364: Field 'description' doesn't have a default value
+2018-06-10 17:44:31 	 [ WARN] 	 <device.go:30>  	 Error 1364: Field 'description' doesn't have a default value

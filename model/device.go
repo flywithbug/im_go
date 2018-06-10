@@ -4,6 +4,7 @@ import (
 	_ "database/sql"
 	log "github.com/flywithbug/log4go"
 	"errors"
+	"fmt"
 )
 
 type Device struct {
@@ -16,17 +17,17 @@ type Device struct {
 }
 
 func SaveDeviceInfo(deviceToken ,deviceId,description string,platformType int,userId string)error  {
-	stmt,err :=Database.Prepare("INSERT into im_device SET user_id=? ON DUPLICATE key UPDATE ,device_id,device_token=?,platform=?,description=?")
+	stmt,err :=Database.Prepare("INSERT into im_device SET user_id=? ,device_id=?,device_token=?,platform=?,description=? ON DUPLICATE key UPDATE device_id=?,device_token=?,platform=?,description=?")
 	if err != nil{
 		log.Warn(err.Error())
 		err = errors.New("服务错误")
 		return err
 	}
+	fmt.Println()
 	defer stmt.Close()
-	_,err = stmt.Exec(userId,deviceId,deviceToken,platformType,description)
+	_,err = stmt.Exec(userId,deviceId,deviceToken,platformType,description,deviceId,deviceToken,platformType,description)
 	if err!= nil {
 		log.Warn(err.Error())
-		err = errors.New("device_id not found")
 		return err
 	}
 	return nil

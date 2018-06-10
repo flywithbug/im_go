@@ -6,7 +6,6 @@ import (
 	"im_go/model"
 	"net/http"
 	"im_go/config"
-	"github.com/thinkboy/log4go"
 )
 
 
@@ -28,7 +27,7 @@ func TokenAuthMiddleware() gin.HandlerFunc {
 				}
 			}
 		}
-		log4go.Info(urlPath)
+		//log4go.Info(urlPath)
 		aResp := NewResponse()
 		token,_ := ctx.Cookie(KeyUserToken)
 		//log4go.Info("TokenAuthMiddleware",token,ctx.Request.Header)
