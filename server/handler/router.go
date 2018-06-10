@@ -4,13 +4,17 @@ import (
 	"github.com/gin-gonic/gin"
 	"regexp"
 	"im_go/im"
+	"strings"
 )
 
 const  LoginPATH  =  "/login"
 
+
+
 var routers = map[string]gin.HandlerFunc{
 	"GET   		/system": 			handleSystem, //系统状态
 	"GET		/summary":			im.GinSummary,
+	"GET		/appConfig":		AppConfigHandler, //请求网络接口下发，（最好使用使用域名请求）
 	"POST 		/register": 		handleRegister, //注册
 	"POST  		/login": 			handleLogin,
 	"POST		/logout":			handleLogout,  //退出登录
@@ -33,7 +37,7 @@ func RegisterRouters(r *gin.Engine, prefixs []string){
 	for router, handler := range routers {
 		method ,path := regexpRouters(router)
 		for  k := range dup {
-			funcDoRouteRegister(method,k+path,handler,r)
+			funcDoRouteRegister(method,strings.ToLower(k+path),handler,r)//path 全小写
 		}
 	}
 }
