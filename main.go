@@ -52,7 +52,7 @@ func main() {
 	}()
 
 	//启动系统监控
-	perf.Init(config.Conf().PprofBind)
+	perf.Init(config.Conf().ProfBind)
 
 	//启用im服务
 	im.StartIMServer(config.Conf().IMPort,config.Conf().HttpPort)
