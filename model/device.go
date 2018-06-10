@@ -15,7 +15,7 @@ type Device struct {
 	UserId 			string		`json:"user_id"`  //绑定的用户UserId
 }
 
-func SaveDeviceInfo(token ,deviceId,description string,platformType int,userId string)error  {
+func SaveDeviceInfo(deviceToken ,deviceId,description string,platformType int,userId string)error  {
 	stmt,err :=Database.Prepare("INSERT into im_device SET user_id=? ON DUPLICATE key UPDATE ,device_id,device_token=?,platform=?,description=?")
 	if err != nil{
 		log.Warn(err.Error())
@@ -23,13 +23,17 @@ func SaveDeviceInfo(token ,deviceId,description string,platformType int,userId s
 		return err
 	}
 	defer stmt.Close()
-	_,err = stmt.Exec(userId,deviceId,token,platformType,description)
+	_,err = stmt.Exec(userId,deviceId,deviceToken,platformType,description)
 	if err!= nil {
 		log.Warn(err.Error())
 		err = errors.New("device_id not found")
 		return err
 	}
 	return nil
+}
+
+func (model *Device)SaveToDb()error  {
+	return SaveDeviceInfo(model.DeviceToken,model.DeviceId,model.Description,model.Platform,model.UserId)
 }
 
 func GetDeviceByUserId(userId string)(*Device,error)  {
