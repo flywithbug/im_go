@@ -34,8 +34,10 @@ func (s *Response) SetSuccessInfo(code int, msg string) {
 	s.Data["msg"] = msg
 }
 
+func (s *Response) SetResponseDataInfo(key string, value string) {
+	s.Data[key] = value
+}
+
 func (s *Response) AddResponseInfo(key string, val interface{}) {
 	s.Data[key] = val
 }
-
-

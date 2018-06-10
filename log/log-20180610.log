@@ -315,3 +315,5 @@
 2018-06-10 00:36:54 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
 2018-06-10 00:36:54 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
 2018-06-10 00:36:54 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-10 15:04:31 	 [ERROR] 	 <upload_handle.go:30>  	 open ./uploadFile/avatar.png: no such file or directory
+2018-06-10 15:09:34 	 [ERROR] 	 <upload_handle.go:33>  	 open public/806dcd5d-a533-4e20-abb6-087eadc28048.png: no such file or directory

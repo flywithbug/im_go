@@ -18,7 +18,8 @@
 
   "auth_filter_white":[
     "/login",
-    "/register"
+    "/register",
+    "/upload"
   ]
 
 }

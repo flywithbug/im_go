@@ -1,6 +1,6 @@
 
 //项目说明：存储部分使用的mysql, 暂未增加redis支持
-//TODO: 消息分表
+//TODO: 消息分表,Redis 支持。
 
 
 ##流程图
@@ -13,6 +13,7 @@ CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build main.go
 
 
 系统需要安装Go和MySQL。
+
 
 打开配置文件 config.json，修改相关配置。
 
