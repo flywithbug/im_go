@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.21)
 # Database: gim
-# Generation Time: 2018-06-09 16:39:37 +0000
+# Generation Time: 2018-06-10 08:50:28 +0000
 # ************************************************************
 
 
@@ -27,14 +27,14 @@ DROP TABLE IF EXISTS `im_device`;
 
 CREATE TABLE `im_device` (
   `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'id',
-  `u_id` int(10) NOT NULL,
+  `user_id` varchar(40) NOT NULL,
   `device_token` varchar(64) NOT NULL DEFAULT '' COMMENT '设备token',
   `device_id` varchar(64) NOT NULL DEFAULT '' COMMENT '设备uuid',
   `platform` tinyint(1) NOT NULL DEFAULT '1' COMMENT '设备类型(iphone android,web)',
   `description` varchar(64) NOT NULL DEFAULT '' COMMENT '设备描述',
   `status` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `device_id` (`device_id`)
+  UNIQUE KEY `user_id` (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 

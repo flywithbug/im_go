@@ -49,5 +49,4 @@ func TokenAuthMiddleware() gin.HandlerFunc {
 		}
 		ctx.Set(KeyContextUser,aUser)
 	}
-
 }
