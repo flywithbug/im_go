@@ -17,10 +17,12 @@
   ],
 
   "auth_filter_white":[
+    "/favicon.ico",
     "/login",
     "/register",
-    "/upload",
-    "/file"
+    "/upload/avatar",
+    "/image/avatar",
+    "/push"
   ]
 
 }

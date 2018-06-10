@@ -11,9 +11,9 @@ import (
 	"github.com/flywithbug/file"
 )
 
-const  localFilePath  =  "./file/"
+const  localFilePath  =  "./image/"
 
-func UploadFileHandler(c *gin.Context)  {
+func UploadImageHandler(c *gin.Context)  {
 	aRes := NewResponse()
 	defer func() {
 		c.JSON(aRes.Code,aRes)
@@ -44,7 +44,7 @@ func UploadFileHandler(c *gin.Context)  {
 	aRes.SetResponseDataInfo("filepath",filename)
 }
 
-func DownloadFileHandler(c *gin.Context)  {
+func DownloadImageHandler(c *gin.Context)  {
 	id := c.Param("id")
 	filename :=  localFilePath + id
 	if !file.FileExists(filename) {
@@ -53,3 +53,5 @@ func DownloadFileHandler(c *gin.Context)  {
 	}
 	http.ServeFile(c.Writer,c.Request,filename)
 }
+
+
