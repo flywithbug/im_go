@@ -16,7 +16,8 @@ var routers = map[string]gin.HandlerFunc{
 	"POST		/logout":		handleLogout,  //退出登录
 	"POST 		/query": 		handleQuery,   //根据昵称查询用户列表
 	"GET 		/user/:id": 	handleGetUserInfo,   //根据用户user_id获取用户信息
-	"POST		/upload":		UploadFile,			//文件上传
+	"POST		/upload":		UploadFileHandler,			//文件上传
+	"GET	    /file/:id":		DownloadFileHandler,      //文件下载
 
 }
 
@@ -31,7 +32,7 @@ func RegisterRouters(r *gin.Engine, prefixs []string){
 	for router, handler := range routers {
 		method ,path := regexpRouters(router)
 		for  k := range dup {
-			funcDoRouteRegister(method,"/"+k+path,handler,r)
+			funcDoRouteRegister(method,k+path,handler,r)
 		}
 	}
 }

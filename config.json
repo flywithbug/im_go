@@ -13,13 +13,14 @@
     "max_open_conns": 200
   },
   "router_prefix":[
-    "api"
+    "/api"
   ],
 
   "auth_filter_white":[
     "/login",
     "/register",
-    "/upload"
+    "/upload",
+    "/file"
   ]
 
 }

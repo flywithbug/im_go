@@ -8,10 +8,12 @@ import (
 	"os"
 	"io"
 	"github.com/pborman/uuid"
+	"github.com/flywithbug/file"
 )
 
+const  localFilePath  =  "./file/"
 
-func UploadFile(c *gin.Context)  {
+func UploadFileHandler(c *gin.Context)  {
 	aRes := NewResponse()
 	defer func() {
 		c.JSON(aRes.Code,aRes)
@@ -28,7 +30,7 @@ func UploadFile(c *gin.Context)  {
 	name:= uuid.New()
 	filename := name + ext
 	//写入文件
-	out, err := os.Create("./file/" + filename)
+	out, err := os.Create(localFilePath + filename)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusBadRequest,fmt.Sprintf("get file err : %s", err.Error()))
 		return
@@ -40,5 +42,14 @@ func UploadFile(c *gin.Context)  {
 		return
 	}
 	aRes.SetResponseDataInfo("filepath",filename)
+}
 
+func DownloadFileHandler(c *gin.Context)  {
+	id := c.Param("id")
+	filename :=  localFilePath + id
+	if !file.FileExists(filename) {
+		c.Writer.Write([]byte("Error: Image Not found."))
+		return
+	}
+	http.ServeFile(c.Writer,c.Request,filename)
 }
