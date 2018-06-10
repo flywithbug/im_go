@@ -12,17 +12,24 @@
     "max_idle_conns": 40,
     "max_open_conns": 200
   },
+  "app_config":{
+    "api_host":"http://192.168.31.74:9002",
+    "im_socket_host":"192.168.31.74",
+    "im_socket_port":62310,
+    "domain_name":""
+  },
+
   "router_prefix":[
     "/api"
   ],
 
   "auth_filter_white":[
-    "/favicon.ico",
     "/login",
     "/register",
     "/upload/avatar",
     "/image/avatar",
-    "/push"
+    "/push",
+    "/config"
   ]
 
 }

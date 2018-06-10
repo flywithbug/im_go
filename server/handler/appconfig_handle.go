@@ -2,14 +2,21 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	"net/http"
+	"im_go/config"
 )
 
-type AppConfigModel struct {
-	AppId 			int			`json:"app_id"`
-	Platform		int			`json:"platform"`   //1.iOS, 2.android
-}
+//type AppConfigModel struct {
+//	AppId 			int			`json:"app_id"`
+//	Platform		int			`json:"platform"`   //1.iOS, 2.android
+//}
 
+
+//type AppConfigResponse struct {
+//	ApiHost 		string  	`json:"api_host"`    //api请求host
+//	IMSocketHost	string		`json:"im_socket_host"` //IM通讯host
+//	IMSocketPort    int			`json:"im_socket_port"` //IM通讯 port
+//	DomainName		string		`json:"domain_name"`  //域名
+//}
 
 
 func AppConfigHandler(c *gin.Context)  {
@@ -17,12 +24,5 @@ func AppConfigHandler(c *gin.Context)  {
 	defer func() {
 		c.JSON(aRes.Code,aRes)
 	}()
-	app := AppConfigModel{}
-	err := c.BindJSON(&app)
-	if err != nil {
-		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid"+err.Error())
-		return
-	}
-
-
+	aRes.AddResponseInfo("app_config",config.Conf().AppConfig)
 }

@@ -321,3 +321,41 @@
 2018-06-10 17:42:13 	 [ WARN] 	 <device.go:21>  	 Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'device_id=?,device_token=?,platform=?,description=?' at line 1
 2018-06-10 17:42:51 	 [ WARN] 	 <device.go:28>  	 Error 1364: Field 'description' doesn't have a default value
 2018-06-10 17:44:31 	 [ WARN] 	 <device.go:30>  	 Error 1364: Field 'description' doesn't have a default value
+2018-06-10 18:00:52 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58429]
+2018-06-10 18:00:52 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-10 18:01:45 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-10 18:01:46 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-10 18:02:41 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-10 18:02:41 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-10 18:02:41 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-10 18:02:41 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-10 18:04:16 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58497]
+2018-06-10 18:04:16 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-10 18:04:18 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-10 18:04:18 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-10 18:04:18 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-10 18:04:18 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-10 18:04:19 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58499]
+2018-06-10 18:04:19 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 2
+2018-06-10 18:04:19 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528624905,msgId:610,body:{"content":"Aaa","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"ECC30186-9856-41B7-BF34-B0269FA88A86"}
+2018-06-10 18:04:19 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10001,receiver:10002,timestamp:1528624906,msgId:611,body:{"content":"A","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"7F88951E-3434-48D3-B006-388AB85791F3"}
+2018-06-10 18:04:19 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-10 18:04:19 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-10 18:04:22 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-10 18:04:22 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-10 18:04:22 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-10 18:04:22 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-10 18:04:37 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58503]
+2018-06-10 18:04:37 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 2
+2018-06-10 18:04:37 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528625059,msgId:612,body:{"ack_msgId":610,"ack_uuid":"ECC30186-9856-41B7-BF34-B0269FA88A86","receiver_id":"","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sequeneceId":0,"status":2,"type":20,"uuid":"D31950C6-F573-4C91-9E23-64FBF85856A0"}
+2018-06-10 18:04:37 	 [DEBUG] 	 <client_im.go:102>  	 offline msg :sender:10002,receiver:10001,timestamp:1528625059,msgId:613,body:{"ack_msgId":611,"ack_uuid":"7F88951E-3434-48D3-B006-388AB85791F3","receiver_id":"","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sequeneceId":0,"status":2,"type":20,"uuid":"5C2C181F-1829-4BFE-8AE2-97CC602F7CBD"}
+2018-06-10 18:06:16 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-10 18:07:21 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58542]
+2018-06-10 18:07:21 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-10 18:07:56 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58550]
+2018-06-10 18:07:56 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-10 18:08:16 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-10 18:08:37 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58594]
+2018-06-10 18:08:37 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0
+2018-06-10 18:08:54 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:58610]
+2018-06-10 18:08:54 	 [DEBUG] 	 <client_im.go:88>  	 offlineMsg count 0

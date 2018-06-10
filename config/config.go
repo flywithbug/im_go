@@ -26,6 +26,7 @@ type IMConfig struct {
 	DBConfig   		DBConfig 	`json:"db_config"`   	//数据库配置
 	RouterPrefix 	[]string 	`json:"router_prefix"` //api前缀
 	AuthFilterWhite []string 	`json:"auth_filter_white"` //api前缀
+	AppConfig		AppConfig	`json:"app_config"`
 }
 
 /*
@@ -39,6 +40,14 @@ type DBConfig struct {
 	MaxIdleConns int    `json:"max_idle_conns"` //连接池最大空闲连接数
 	MaxOpenConns int    `json:"max_open_conns"` //连接池最大连接数
 }
+
+type AppConfig struct {
+	ApiHost 		string  	`json:"api_host"`    //api请求host
+	IMSocketHost	string		`json:"im_socket_host"` //IM通讯host
+	IMSocketPort    int			`json:"im_socket_port"` //IM通讯 port
+	DomainName		string		`json:"domain_name"`  //域名
+}
+
 
 /*
 读取配置文件
