@@ -45,6 +45,10 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 		log.Warn(err.Error() + "消息存储服务出错")
 		return
 	}
+
+	//消息回执，使用seqId为标记，返回给客户端服务器存储的msgId,
+	client.sendMessageACK(msgId, client.version, pro.SeqId)
+
 	msg.msgId = msgId
 	pro.Body = msg.ToData()
 
@@ -58,8 +62,6 @@ func (client *ClientIM) HandleIMMessage(pro *Proto) {
 	pro.Operation = OP_MSG_SYNC
 	client.SendMessage(client.uid,pro)
 
-	//消息回执，使用seqId为标记，返回给客户端服务器存储的msgId,
-	client.sendMessageACK(msgId, client.version, pro.SeqId)
 
 	atomic.AddInt64(&serverSummary.in_message_count, 1)
 
