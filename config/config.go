@@ -11,6 +11,9 @@ import (
 var config *IMConfig
 
 func Conf() *IMConfig {
+	if config == nil{
+		config = new(IMConfig)
+	}
 	return config
 }
 
