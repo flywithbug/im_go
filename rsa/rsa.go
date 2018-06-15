@@ -5,20 +5,12 @@ import (
 	"crypto/x509"
 	"crypto/rsa"
 	"crypto/rand"
-	"im_go/config"
 	"errors"
-	"io/ioutil"
-	"fmt"
 )
 
 // 加密
-func RsaEncrypt(origData []byte) ([]byte, error) {
-	b := config.Conf().RSAConfig.Public
-	if b == nil {
-		b, _ = ioutil.ReadFile("./public.pem")
-	}
-	fmt.Println(string(b))
-	block, _ := pem.Decode(b) //将密钥解析成公钥实例
+func RsaEncrypt(origData []byte, private []byte) ([]byte, error) {
+	block, _ := pem.Decode(private) //将密钥解析成公钥实例
 	if block == nil {
 		return nil, errors.New("public key error")
 	}
@@ -32,13 +24,8 @@ func RsaEncrypt(origData []byte) ([]byte, error) {
 
 
 // 解密
-func RsaDecrypt(ciphertext []byte) ([]byte, error) {
-	b := config.Conf().RSAConfig.Public
-	if b == nil {
-		b, _ = ioutil.ReadFile("./private.pem")
-	}
-	fmt.Println(string(b))
-	block, _ := pem.Decode(b) //将密钥解析成私钥实例
+func RsaDecrypt(ciphertext []byte,public []byte) ([]byte, error) {
+	block, _ := pem.Decode(public) //将密钥解析成私钥实例
 	if block == nil {
 		return nil, errors.New("private key error!")
 	}
