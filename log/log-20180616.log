@@ -340,3 +340,4 @@ nMrwrqKPMjC1HBtF
 2018-06-16 00:50:58 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
 2018-06-16 00:52:39 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:51244]
 2018-06-16 00:52:39 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-16 00:54:39 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet

@@ -24,7 +24,7 @@ func RsaEncrypt(origData []byte, public []byte) ([]byte, error) {
 }
 
 
-// 解密
+// 解密 如果解密源之前进行了base64 encode 需要decode之后再处理
 func RsaDecrypt(ciphertext []byte,private []byte) ([]byte, error) {
 	block, _ := pem.Decode(private) //将密钥解析成私钥实例
 	if block == nil {
