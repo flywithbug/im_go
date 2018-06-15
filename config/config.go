@@ -31,6 +31,7 @@ type IMConfig struct {
 	AuthFilterWhite []string 	`json:"auth_filter_white"` //api前缀
 	AppConfig		AppConfig	`json:"app_config"`
 	RSAConfig		RSAConfig								//加密解密
+	PrivateName		string		`json:"private_name"`
 }
 
 /*
@@ -83,6 +84,8 @@ func (this *IMConfig) Parse(path string) error {
 	if err != nil {
 		return err
 	}
+	b, _ := ioutil.ReadFile(this.PrivateName)
+	this.RSAConfig.Private = b
 	return nil
 }
 

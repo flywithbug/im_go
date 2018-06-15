@@ -10,8 +10,8 @@ import (
 
 
 // 加密
-func RsaEncrypt(origData []byte, private []byte) ([]byte, error) {
-	block, _ := pem.Decode(private) //将密钥解析成公钥实例
+func RsaEncrypt(origData []byte, public []byte) ([]byte, error) {
+	block, _ := pem.Decode(public) //将密钥解析成公钥实例
 	if block == nil {
 		return nil, errors.New("public key error")
 	}
@@ -25,8 +25,8 @@ func RsaEncrypt(origData []byte, private []byte) ([]byte, error) {
 
 
 // 解密
-func RsaDecrypt(ciphertext []byte,public []byte) ([]byte, error) {
-	block, _ := pem.Decode(public) //将密钥解析成私钥实例
+func RsaDecrypt(ciphertext []byte,private []byte) ([]byte, error) {
+	block, _ := pem.Decode(private) //将密钥解析成私钥实例
 	if block == nil {
 		return nil, errors.New("private key error!")
 	}

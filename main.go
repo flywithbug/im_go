@@ -38,6 +38,7 @@ func main() {
 	}
 	SetLog()
 	defer log.Close()
+	//fmt.Println(string(config.Conf().RSAConfig.Private))
 	//连接数据库
 	model.Database, err= config.Conf().DBConfig.Connect()
 	if err != nil {
