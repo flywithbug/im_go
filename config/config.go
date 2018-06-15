@@ -65,13 +65,6 @@ type RSAConfig struct {
 func ReadConfig(path string) error {
 	config = new(IMConfig)
 	err := config.Parse(path)
-	if err == nil {
-		b, _ := ioutil.ReadFile("public.pem")
-		config.RSAConfig.Public = b
-		b, _ = ioutil.ReadFile("private.pem")
-		config.RSAConfig.Private = b
-
-	}
 	return err
 }
 
