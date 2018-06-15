@@ -27,6 +27,7 @@ type IMConfig struct {
 	RouterPrefix 	[]string 	`json:"router_prefix"` //api前缀
 	AuthFilterWhite []string 	`json:"auth_filter_white"` //api前缀
 	AppConfig		AppConfig	`json:"app_config"`
+	RSAConfig		RSAConfig								//加密解密
 }
 
 /*
@@ -49,6 +50,11 @@ type AppConfig struct {
 	Version			string		`json:"version"`	//版本
 }
 
+type RSAConfig struct {
+	Public			[]byte
+	Private			[]byte
+}
+
 
 /*
 读取配置文件
@@ -56,8 +62,17 @@ type AppConfig struct {
 func ReadConfig(path string) error {
 	config = new(IMConfig)
 	err := config.Parse(path)
+	if err == nil {
+		b, _ := ioutil.ReadFile("public.pem")
+		config.RSAConfig.Public = b
+		b, _ = ioutil.ReadFile("private.pem")
+		config.RSAConfig.Private = b
+
+	}
 	return err
 }
+
+
 
 
 /*

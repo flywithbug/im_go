@@ -38,7 +38,6 @@ func main() {
 	}
 	SetLog()
 	defer log.Close()
-
 	//连接数据库
 	model.Database, err= config.Conf().DBConfig.Connect()
 	if err != nil {
@@ -56,4 +55,7 @@ func main() {
 
 	//启用im服务
 	im.StartIMServer(config.Conf().IMPort,config.Conf().HttpPort)
+
+
+
 }
