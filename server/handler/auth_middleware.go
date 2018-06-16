@@ -8,7 +8,7 @@ import (
 	"im_go/config"
 )
 
-
+//todo  添加签名进行客户端请求安全校验
 func TokenAuthMiddleware() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		urlPath := ctx.Request.URL.Path

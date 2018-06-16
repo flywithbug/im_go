@@ -376,3 +376,37 @@ nMrwrqKPMjC1HBtF
 2018-06-16 12:29:17 	 [ERROR] 	 <user_handle.go:107>  	 asn1: structure error: tags don't match (2 vs {class:0 tag:16 length:13 isCompound:true}) {optional:false explicit:false application:false defaultValue:<nil> tag:<nil> stringType:0 timeType:0 set:false omitEmpty:false}  @5
 2018-06-16 12:29:17 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:59818]
 2018-06-16 12:29:17 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-16 12:33:19 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:59886]
+2018-06-16 12:33:19 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-16 12:33:35 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-16 12:33:37 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-16 12:33:37 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-16 12:33:37 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-16 12:33:37 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-16 12:33:40 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:59887]
+2018-06-16 12:33:40 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 1
+2018-06-16 12:33:40 	 [DEBUG] 	 <client_im.go:104>  	 offline msg :sender:10002,receiver:10001,timestamp:1529123615,msgId:489,body:{"content":"🙃🙃","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"F6CCE357-F05F-4F07-BF81-577A74D0A350"}
+2018-06-16 12:33:40 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-16 12:33:46 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10002 cmd:4
+2018-06-16 12:33:48 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-16 12:33:48 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-16 12:33:48 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-16 12:33:48 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-16 12:33:50 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:59888]
+2018-06-16 12:33:50 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-16 12:33:54 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-16 12:33:54 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-16 12:33:54 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-16 12:33:54 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-16 12:33:55 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:59889]
+2018-06-16 12:33:55 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 2
+2018-06-16 12:33:55 	 [DEBUG] 	 <client_im.go:104>  	 offline msg :sender:10001,receiver:10002,timestamp:1529123620,msgId:490,body:{"ack_msgId":489,"ack_uuid":"F6CCE357-F05F-4F07-BF81-577A74D0A350","receiver_id":"","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sequeneceId":0,"status":2,"type":20,"uuid":"4E05D5C3-350C-418E-AE67-1BE2FBA06DD7"}
+2018-06-16 12:33:55 	 [DEBUG] 	 <client_im.go:104>  	 offline msg :sender:10001,receiver:10002,timestamp:1529123626,msgId:491,body:{"content":"rsaEncryptString","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"FDECEBBB-16B3-48B1-9E4E-35278A32E120"}
+2018-06-16 12:33:55 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-16 12:34:00 	 [DEBUG] 	 <connection.go:106>  	 TODO(need offline push )can't send message, appid:10 uid:10001 cmd:4
+2018-06-16 12:34:56 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-16 12:36:56 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-16 12:38:26 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-16 12:38:26 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-16 12:38:26 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-16 12:38:26 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
