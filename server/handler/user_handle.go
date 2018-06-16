@@ -98,14 +98,14 @@ func handleLogin(c *gin.Context) {
 	//先decode key字符串
 	decodeBytes, err := base64.StdEncoding.DecodeString(login.Signature)
 	if err != nil {
-		aRes.SetErrorInfo(http.StatusBadRequest ,"Signature verification failure base64")
+		aRes.SetErrorInfo(http.StatusBadRequest ,"base64 DecodeString failure "+err.Error())
 		return
 	}
 	//获取原始key
     b ,err:= rsa.RsaDecrypt(decodeBytes,config.Conf().RSAConfig.Private)
 	if err != nil {
 		log.Error(err.Error())
-		aRes.SetErrorInfo(http.StatusBadRequest ,"Signature verification failure r")
+		aRes.SetErrorInfo(http.StatusBadRequest ,"Signature verification failure ")
 		return
 	}
 	signature := string(b)

@@ -364,3 +364,15 @@ nMrwrqKPMjC1HBtF
 2018-06-16 12:22:53 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
 2018-06-16 12:24:08 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:59764]
 2018-06-16 12:24:08 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-16 12:24:21 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-16 12:24:21 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-16 12:24:21 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-16 12:24:21 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-16 12:24:35 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:59814]
+2018-06-16 12:24:35 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-16 12:25:56 	 [ERROR] 	 <user_handle.go:107>  	 private key error!
+2018-06-16 12:28:42 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:59817]
+2018-06-16 12:28:42 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-16 12:29:17 	 [ERROR] 	 <user_handle.go:107>  	 asn1: structure error: tags don't match (2 vs {class:0 tag:16 length:13 isCompound:true}) {optional:false explicit:false application:false defaultValue:<nil> tag:<nil> stringType:0 timeType:0 set:false omitEmpty:false}  @5
+2018-06-16 12:29:17 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:59818]
+2018-06-16 12:29:17 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
