@@ -341,3 +341,26 @@ nMrwrqKPMjC1HBtF
 2018-06-16 00:52:39 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:51244]
 2018-06-16 00:52:39 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
 2018-06-16 00:54:39 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-16 12:20:53 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:59759]
+2018-06-16 12:20:53 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-16 12:20:59 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-16 12:20:59 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-16 12:20:59 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-16 12:20:59 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-16 12:21:00 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:59760]
+2018-06-16 12:21:00 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-16 12:21:23 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-16 12:21:23 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-16 12:21:23 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-16 12:21:23 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-16 12:21:26 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:59761]
+2018-06-16 12:21:26 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-16 12:22:13 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-16 12:22:13 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-16 12:22:13 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-16 12:22:13 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-16 12:22:40 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:59762]
+2018-06-16 12:22:40 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-16 12:22:53 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-16 12:24:08 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:59764]
+2018-06-16 12:24:08 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0

@@ -91,12 +91,12 @@ func handleLogin(c *gin.Context) {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"password can not be nil")
 		return
 	}
-	if login.Key == "" {
-		aRes.SetErrorInfo(http.StatusBadRequest ,"Key can not be nil")
+	if login.Signature == "" {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"Signature can not be nil")
 		return
 	}
 	//先decode key字符串
-	decodeBytes, err := base64.StdEncoding.DecodeString(login.Key)
+	decodeBytes, err := base64.StdEncoding.DecodeString(login.Signature)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Signature verification failure base64")
 		return
@@ -108,8 +108,8 @@ func handleLogin(c *gin.Context) {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Signature verification failure r")
 		return
 	}
-	key := string(b)
-	if  !strings.EqualFold(key,login.Account+"-"+login.Password){
+	signature := string(b)
+	if  !strings.EqualFold(signature,login.Account+"-"+login.Password){
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Signature verification failure equal")
 		return
 	}

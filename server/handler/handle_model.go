@@ -10,7 +10,7 @@ type loginoutModel struct {
 	//login
 	Account 	string 	`json:"account"`
 	Password 	string	`json:"password"`
-	Key 		string	`json:"key"`     //account 和 password 拼接之后的加密字符串 用于非对称匹配
+	Signature 	string	`json:"signature"`     //account 和 password 拼接之后的加密字符串 用于非对称匹配
 
 	//logout
 	Token      string	`json:"token"`
