@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"im_go/model"
 	"net/http"
+	"github.com/thinkboy/log4go"
 )
 
 func RegistPushService(c *gin.Context)  {
@@ -11,14 +12,12 @@ func RegistPushService(c *gin.Context)  {
 	defer func() {
 		c.JSON(aRes.Code,aRes)
 	}()
+	user ,_:= User(c)
+	log4go.Info(user)
 	device := model.Device{}
 	err := c.BindJSON(&device)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid"+err.Error())
-		return
-	}
-	if len(device.UserId) == 0 {
-		aRes.SetErrorInfo(http.StatusBadRequest ,"userId can not be nil")
 		return
 	}
 	if len(device.DeviceToken) == 0 {
@@ -29,14 +28,15 @@ func RegistPushService(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"DeviceId can not be nil")
 		return
 	}
-	if len(device.Description) == 0 {
-		aRes.SetErrorInfo(http.StatusBadRequest ,"Description can not be nil")
+	if len(device.UserAgent) == 0 {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"UserAgent can not be nil")
 		return
 	}
 	if device.Platform == 0 {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Platform must > 0,(iphone android,web),1/2/3")
 		return
 	}
+	device.UserId = user.UserId
 	err = device.SaveToDb()
 	if err != nil {
 		errStr := err.Error()
