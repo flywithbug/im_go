@@ -12,7 +12,7 @@ type Device struct {
 	DeviceToken 	string	 	`json:"device_token"`
 	DeviceId		string		`json:"device_id"`
 	Platform		int			`json:"platform"`   //1.iOS, 2.android
-	Description		string		`json:"description"`
+	UserAgent		string		`json:"user_agent"`
 	UserId 			string		`json:"user_id"`  //绑定的用户UserId
 }
 
