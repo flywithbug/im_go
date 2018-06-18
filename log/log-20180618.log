@@ -803,3 +803,27 @@
 2018-06-18 18:31:26 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
 2018-06-18 18:31:38 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:65008]
 2018-06-18 18:31:38 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-18 18:33:04 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-18 18:33:04 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-18 18:33:04 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-18 18:33:04 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-18 18:33:15 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:65031]
+2018-06-18 18:33:15 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-18 18:35:18 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-18 18:36:12 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:65057]
+2018-06-18 18:36:12 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-18 18:36:12 	 [ INFO] 	 <device_handle.go:38>  	 %!s(*model.User=<nil>)
+2018-06-18 18:38:15 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-18 18:38:58 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-18 18:38:58 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-18 18:38:58 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-18 18:38:58 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-18 18:39:09 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:65084]
+2018-06-18 18:39:09 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-18 18:39:09 	 [ INFO] 	 <device_handle.go:38>  	 %!s(*model.User=<nil>)
+2018-06-18 18:39:57 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:65105]
+2018-06-18 18:39:57 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-18 18:39:57 	 [ WARN] 	 <device.go:23>  	 Error 1054: Unknown column 'description' in 'field list'
+2018-06-18 18:42:00 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-18 18:43:19 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:65129]
+2018-06-18 18:43:19 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0

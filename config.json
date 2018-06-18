@@ -28,9 +28,6 @@
   "auth_filter_white":[
     "/login",
     "/register",
-    "/upload/avatar",
-    "/image/avatar",
-    "/push",
     "/config"
   ]
 

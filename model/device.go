@@ -17,8 +17,8 @@ type Device struct {
 	UniqueMacUuid	string		`json:"unique_mac_uuid"`
 }
 
-func SaveDeviceInfo(deviceToken ,deviceId,description string,platformType int,userId,unique_mac_uuid string)error  {
-	stmt,err :=Database.Prepare("INSERT into im_device SET user_id=? ,device_id=?,device_token=?,platform=?,description=? ,unique_mac_uuid = ? ON DUPLICATE key UPDATE device_id=?,device_token=?,platform=?,description=?")
+func SaveDeviceInfo(deviceToken ,deviceId,user_agent string,platformType int,userId,unique_mac_uuid string)error  {
+	stmt,err :=Database.Prepare("INSERT into im_device SET user_id=? ,device_id=?,device_token=?,platform=?,user_agent=? ,unique_mac_uuid = ? ON DUPLICATE key UPDATE device_id=?,device_token=?,platform=?,user_agent=?,unique_mac_uuid = ? ")
 	if err != nil{
 		log.Warn(err.Error())
 		err = errors.New("服务错误")
@@ -26,7 +26,7 @@ func SaveDeviceInfo(deviceToken ,deviceId,description string,platformType int,us
 	}
 	fmt.Println()
 	defer stmt.Close()
-	_,err = stmt.Exec(userId,deviceId,deviceToken,platformType,description,deviceId,deviceToken,platformType,description,unique_mac_uuid)
+	_,err = stmt.Exec(userId,deviceId,deviceToken,platformType,user_agent,unique_mac_uuid,deviceId,deviceToken,platformType,user_agent,unique_mac_uuid)
 	if err!= nil {
 		log.Warn(err.Error())
 		return err
