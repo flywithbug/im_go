@@ -29,7 +29,7 @@ func TokenAuthMiddleware() gin.HandlerFunc {
 		}
 		//log4go.Info(urlPath)
 		aResp := NewResponse()
-		token,_ := ctx.Cookie(KeyUserToken)
+		token,_ := UserToken(ctx)
 		//log4go.Info("TokenAuthMiddleware",token,ctx.Request.Header)
 		var aUser *model.User
 		if len(token) > 0 {

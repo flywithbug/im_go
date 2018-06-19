@@ -17,3 +17,11 @@ func User(ctx *gin.Context) (*model.User, bool) {
 	}
 	return aUser, true
 }
+
+func UserToken(ctx *gin.Context) (string, bool) {
+	token, err := ctx.Cookie(KeyUserToken)
+	if err != nil {
+		return "", false
+	}
+	return token, true
+}
