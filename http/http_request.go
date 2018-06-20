@@ -32,6 +32,10 @@ func POST(url string,v interface{},header map[string]string) ([]byte, error)  {
 		return nil,err
 	}
 	req , err := http.NewRequest("POST",url,bytes.NewBuffer(j))
+	if err !=nil {
+		log4go.Error(err.Error())
+		return nil,err
+	}
 	for k,v := range header  {
 		req.Header.Set(k,v)
 	}

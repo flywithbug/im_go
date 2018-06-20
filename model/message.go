@@ -129,6 +129,40 @@ func FindeMessagesSender(sender int32,status int)([]IMMessage,error)  {
 	return messages,nil
 }
 
+func MessageUnSendedCount(receiver int32)(int,error)  {
+	var num int
+	rows, err := Database.Query("select count(*)  FROM im_message WHERE receiver = ? AND status = ?",receiver,0)
+	if err != nil {
+		log.Error(err.Error())
+		return -1, &DatabaseError{"message 数据查询错误"}
+	}
+	defer rows.Close()
+	for rows.Next() {
+		rows.Scan(&num)
+	}
+	return num, nil
+}
+
+
+/*
+ 检查账号是否存在
+//*/
+//func CheckAccount(account string) (int, error) {
+//	var num int
+//	rows, err := Database.Query("select count(*) from im_user where account=? ", account)
+//	if err != nil {
+//		log.Error(err.Error())
+//		return -1, &DatabaseError{"根据账号查询用户错误"}
+//	}
+//	defer rows.Close()
+//	for rows.Next() {
+//		rows.Scan(&num)
+//	}
+//	return num, nil
+//}
+
+
+
 
 
 
