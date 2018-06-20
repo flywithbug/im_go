@@ -80,7 +80,5 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 		}
 		//log.Info(msg.Description() + string(b))
 	}
-
-
 }
 
