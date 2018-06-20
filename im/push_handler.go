@@ -16,5 +16,11 @@ func PushServiceHandler(uId int32, appId int64,pro *Proto)  {
 		log.Info("appId not equal")
 		return
 	}
+	if pro.Operation == OP_MSG {
+
+
+	}
+
+
 }
 
