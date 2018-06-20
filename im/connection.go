@@ -103,7 +103,7 @@ func (client *Connection) SendMessage(uid int32, pro *Proto) bool {
 	clients := route.FindClientSet(uid)
 	if len(clients) == 0 {
 		//走推送通道、
-		PushServiceHandler(uid,appid,pro)
+		PushServiceHandler(client.uid,uid,appid,pro)
 		return false
 	}
 

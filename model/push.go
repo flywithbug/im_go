@@ -12,3 +12,9 @@ type PushModel struct {
 	Sound 			string	`json:"sound"`
 	Body            string	`json:"body"` //推送时显示的内容
 }
+
+type MessageBoddy struct {
+	Content   		string		`json:"content"`
+	Type 			int			`json:"type"`
+
+}
