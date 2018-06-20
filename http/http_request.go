@@ -7,7 +7,6 @@ import (
 	"encoding/json"
 	"github.com/flywithbug/log4go"
 	"bytes"
-	"fmt"
 )
 
 
@@ -26,7 +25,7 @@ func GET(url string) ([]byte, error) {
 
 func POST(url string,v interface{},header map[string]string) ([]byte, error)  {
 	j,err := json.Marshal(v)
-	fmt.Printf(string(j))
+	//fmt.Printf(string(j))
 	if err !=nil {
 		log4go.Error(err.Error())
 		return nil,err

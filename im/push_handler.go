@@ -4,8 +4,8 @@ import (
 	"im_go/model"
 	"strconv"
 	log "github.com/flywithbug/log4go"
-	"im_go/http"
 	"encoding/json"
+	"im_go/http"
 )
 
 const POSTURLPATH  = "http://127.0.0.1:9012/api/push"
@@ -58,7 +58,6 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 			log.Info(err.Error())
 			return
 		}
-
 		push := model.PushModel{}
 		push.DeviceToken = device.DeviceToken
 		push.BadgeNumber ,err = model.MessageUnSendedCount(receiver)
@@ -74,7 +73,6 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 			return
 		}
 		push.EnvironmentType = device.Environment
-
 		_ ,err = http.POST(POSTURLPATH,push,nil)
 		if err != nil {
 			log.Error(err.Error())

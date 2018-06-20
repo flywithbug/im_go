@@ -1104,3 +1104,65 @@
 2018-06-20 19:18:41 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
 2018-06-20 19:18:41 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
 2018-06-20 19:18:41 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-20 19:20:18 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:49652]
+2018-06-20 19:20:18 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-20 19:20:18 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-20 19:20:58 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:51349]
+2018-06-20 19:20:58 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-20 19:20:58 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 5
+2018-06-20 19:20:58 	 [DEBUG] 	 <client_im.go:104>  	 offline msg :sender:10002,receiver:10001,timestamp:1529493343,msgId:728,body:{"content":"💩","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"FF2B2BCA-DB35-4B59-BE52-F47B9F302742"}
+2018-06-20 19:20:58 	 [DEBUG] 	 <client_im.go:104>  	 offline msg :sender:10002,receiver:10001,timestamp:1529493459,msgId:729,body:{"content":"😁😁","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"84EAAB5D-3A02-48C7-86B2-C5C7591112EC"}
+2018-06-20 19:20:58 	 [DEBUG] 	 <client_im.go:104>  	 offline msg :sender:10002,receiver:10001,timestamp:1529493622,msgId:730,body:{"content":"过来","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"7F0D7046-5611-44C1-9E37-1850021ECD9E"}
+2018-06-20 19:20:58 	 [DEBUG] 	 <client_im.go:104>  	 offline msg :sender:10002,receiver:10001,timestamp:1529493642,msgId:731,body:{"content":"你在干什么？","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"0FA93A66-3B27-4791-BFC8-65B01FF1D96B"}
+2018-06-20 19:20:58 	 [DEBUG] 	 <client_im.go:104>  	 offline msg :sender:10002,receiver:10001,timestamp:1529493652,msgId:732,body:{"content":"🙃","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"886AA34B-693F-4693-A7F0-C2DE83A6C1A6"}
+2018-06-20 19:21:03 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-20 19:21:03 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-20 19:21:03 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-20 19:21:03 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-20 19:21:55 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-20 19:22:11 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-20 19:22:11 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-20 19:22:11 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-20 19:22:11 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-20 19:22:28 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:49660]
+2018-06-20 19:22:28 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-20 19:23:24 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:51370]
+2018-06-20 19:23:24 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-20 19:23:24 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 2
+2018-06-20 19:23:24 	 [DEBUG] 	 <client_im.go:104>  	 offline msg :sender:10002,receiver:10001,timestamp:1529493671,msgId:738,body:{"content":"😀","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"78033995-B36A-41C3-AF5B-2BC5A287EA9A"}
+2018-06-20 19:23:24 	 [DEBUG] 	 <client_im.go:104>  	 offline msg :sender:10002,receiver:10001,timestamp:1529493751,msgId:739,body:{"content":"😁😁","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"DDB447FC-8124-4822-A622-7F2B45B3AF84"}
+2018-06-20 19:23:31 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-20 19:23:31 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-20 19:23:31 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-20 19:23:31 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-20 19:23:52 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:51372]
+2018-06-20 19:23:52 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 1
+2018-06-20 19:23:52 	 [DEBUG] 	 <client_im.go:104>  	 offline msg :sender:10002,receiver:10001,timestamp:1529493813,msgId:746,body:{"content":"😏😏😏","receiver_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","sender_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","type":1,"uuid":"EA15D977-3CC7-42B6-903D-9AC1F40CC7D6"}
+2018-06-20 19:23:54 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-20 19:23:54 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-20 19:23:54 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-20 19:23:54 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-20 19:23:54 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-20 19:24:31 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:49668]
+2018-06-20 19:24:31 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-20 19:25:36 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-20 19:25:36 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-20 19:25:36 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-20 19:25:36 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-20 19:25:54 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:49669]
+2018-06-20 19:25:54 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-20 19:26:25 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:49670]
+2018-06-20 19:26:25 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-20 19:26:56 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:49672]
+2018-06-20 19:26:56 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-20 19:26:56 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-20 19:26:56 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-20 19:26:56 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-20 19:26:56 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-20 19:26:58 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:49673]
+2018-06-20 19:26:58 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-20 19:27:20 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:49674]
+2018-06-20 19:27:20 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
+2018-06-20 19:27:56 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-20 19:28:09 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:49676]
+2018-06-20 19:28:09 	 [DEBUG] 	 <client_im.go:90>  	 offlineMsg count 0
