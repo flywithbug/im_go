@@ -102,8 +102,7 @@ func (client *Connection) SendMessage(uid int32, pro *Proto) bool {
 	}
 	clients := route.FindClientSet(uid)
 	if len(clients) == 0 {
-		//走推送通道
-		log.Debug(fmt.Sprintf("TODO(need offline push )can't send message, appid:%d uid:%d cmd:%d", appid, uid, pro.Operation))
+		//走推送通道、
 		PushServiceHandler(uid,appid,pro)
 		return false
 	}
