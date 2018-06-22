@@ -73,12 +73,12 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 			return
 		}
 		push.EnvironmentType = device.Environment
-		b ,err := http.POST(POSTURLPATH,push,nil)
+		_ ,err = http.POST(POSTURLPATH,push,nil)
 		if err != nil {
 			log.Error(err.Error())
 			return
 		}
-		log.Info(msg.Description() + string(b))
+		//log.Info(msg.Description() + string(b))
 	}
 }
 

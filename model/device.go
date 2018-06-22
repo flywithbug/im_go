@@ -34,7 +34,7 @@ func SaveDeviceInfo(deviceToken ,deviceId,user_agent ,userId,unique_mac_uuid str
 }
 
 func (model *Device)SaveToDb()error  {
-	log.Info("%s",model.Environment)
+	//log.Info("%s",model.Environment)
 	return SaveDeviceInfo(model.DeviceToken,model.DeviceId,model.UserAgent,model.UserId,model.UniqueMacUuid,model.Platform,model.Environment)
 }
 
