@@ -687,3 +687,37 @@
 2018-06-22 19:07:13 	 [DEBUG] 	 <client_im.go:107>  	 offline msg :sender:10001,receiver:10002,timestamp:1529665623,msgId:1085,body:{"content":"兔兔我我兔子","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"AB458D94-5B7B-405A-B595-E766D304A2FB"}
 2018-06-22 19:07:13 	 [DEBUG] 	 <client_im.go:107>  	 offline msg :sender:10001,receiver:10002,timestamp:1529665627,msgId:1086,body:{"content":"聚酯纤维无锡站下车了吗","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"FA7E811D-A517-4BBC-B456-114CF9E1A308"}
 2018-06-22 19:07:13 	 [DEBUG] 	 <client_im.go:107>  	 offline msg :sender:10001,receiver:10002,timestamp:1529665630,msgId:1087,body:{"content":"太快了吧？。","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"FD1A7640-72A0-431A-9F9C-997386FB809B"}
+2018-06-22 19:21:56 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:53903]
+2018-06-22 19:21:56 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-06-22 19:21:57 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:53681]
+2018-06-22 19:21:57 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-06-22 19:22:01 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-22 19:22:01 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-22 19:22:01 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-22 19:22:01 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-22 19:22:04 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:53682]
+2018-06-22 19:22:04 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-06-22 19:22:20 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:58759]
+2018-06-22 19:22:20 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-22 19:22:20 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-06-22 19:22:24 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-22 19:22:27 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-22 19:22:27 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-22 19:22:27 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-22 19:22:27 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-22 19:22:45 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-22 19:22:45 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-22 19:22:45 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-22 19:22:45 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-22 19:22:56 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-22 19:22:56 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-22 19:22:56 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-22 19:22:56 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-22 19:22:57 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:53683]
+2018-06-22 19:22:57 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 6
+2018-06-22 19:22:57 	 [DEBUG] 	 <client_im.go:107>  	 offline msg :sender:10001,receiver:10002,timestamp:1529666549,msgId:1591,body:{"content":"万俟卨","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"35517975-A023-4392-A928-EC3E5E2CD8E5"}
+2018-06-22 19:22:57 	 [DEBUG] 	 <client_im.go:107>  	 offline msg :sender:10001,receiver:10002,timestamp:1529666553,msgId:1592,body:{"content":"opopow","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"6B877765-D6A8-4A86-B497-DE366FBA3BE4"}
+2018-06-22 19:22:57 	 [DEBUG] 	 <client_im.go:107>  	 offline msg :sender:10001,receiver:10002,timestamp:1529666554,msgId:1593,body:{"content":"tx","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"0FE43C80-09D1-4E84-88E6-95C8727DB8BB"}
+2018-06-22 19:22:57 	 [DEBUG] 	 <client_im.go:107>  	 offline msg :sender:10001,receiver:10002,timestamp:1529666568,msgId:1594,body:{"content":"我破相了","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"7EBFF47B-B2B6-4B35-B4C1-631DB3D758D0"}
+2018-06-22 19:22:57 	 [DEBUG] 	 <client_im.go:107>  	 offline msg :sender:10001,receiver:10002,timestamp:1529666570,msgId:1595,body:{"content":"欧诺","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"DB9447B2-1964-4B5D-870F-CD6B7A4FA296"}
+2018-06-22 19:22:57 	 [DEBUG] 	 <client_im.go:107>  	 offline msg :sender:10001,receiver:10002,timestamp:1529666574,msgId:1596,body:{"content":"无锡站","receiver_id":"80d07eb7-09d5-4332-aa4d-01990a291dfd","sender_id":"d5f75fbc-4f64-4f78-b320-2ca770847800","type":1,"uuid":"A07E3BBB-9CC2-4CE9-AB15-14D72530EBFE"}

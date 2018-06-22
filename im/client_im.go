@@ -90,9 +90,9 @@ func (client *ClientIM)sendOffLineMessage()  {
 	}
 	log.Debug("offlineMsg count %d",len(ms))
 	p := Proto{}
-	var rageLimiter = time.Tick(10*time.Millisecond)
+	//var rageLimiter = time.Tick(10*time.Millisecond)
 	for _,imMsg := range ms{
-		<- rageLimiter
+		//<- rageLimiter
 		p.Operation = OP_MSG
 		p.Ver = client.version
 		p.Body = FromIMMessage(imMsg).ToData()
