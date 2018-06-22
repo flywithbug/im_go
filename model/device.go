@@ -4,7 +4,6 @@ import (
 	_ "database/sql"
 	log "github.com/flywithbug/log4go"
 	"errors"
-	"fmt"
 )
 
 type Device struct {
@@ -18,14 +17,13 @@ type Device struct {
 	Environment     int			`json:"environment"`  //客户端开发环境 默认production:0, development:1 环境
 }
 
-func SaveDeviceInfo(deviceToken ,deviceId,user_agent string,platformType,environment int,userId,unique_mac_uuid string)error  {
+func SaveDeviceInfo(deviceToken ,deviceId,user_agent ,userId,unique_mac_uuid string,platformType,environment int)error  {
 	stmt,err :=Database.Prepare("INSERT into im_device SET user_id=? ,device_id=?,device_token=?,platform=?,user_agent=? ,unique_mac_uuid = ?,environment= ? ON DUPLICATE key UPDATE device_id=?,device_token=?,platform=?,user_agent=?,unique_mac_uuid = ?,environment=? ")
 	if err != nil{
 		log.Warn(err.Error())
 		err = errors.New("服务错误")
 		return err
 	}
-	fmt.Println()
 	defer stmt.Close()
 	_,err = stmt.Exec(userId,deviceId,deviceToken,platformType,user_agent,unique_mac_uuid,environment,deviceId,deviceToken,platformType,user_agent,unique_mac_uuid,environment)
 	if err!= nil {
@@ -36,7 +34,8 @@ func SaveDeviceInfo(deviceToken ,deviceId,user_agent string,platformType,environ
 }
 
 func (model *Device)SaveToDb()error  {
-	return SaveDeviceInfo(model.DeviceToken,model.DeviceId,model.UserAgent,model.Platform,model.Environment,model.UserId,model.UniqueMacUuid)
+	log.Info("%s",model.Environment)
+	return SaveDeviceInfo(model.DeviceToken,model.DeviceId,model.UserAgent,model.UserId,model.UniqueMacUuid,model.Platform,model.Environment)
 }
 
 func GetDeviceByUserId(userId string)(*Device,error)  {
