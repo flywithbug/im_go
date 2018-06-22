@@ -44,41 +44,50 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 		return
 	}
 	if pro.Operation == OP_MSG {
-		device ,err := model.GetDeviceByUserId(user.UserId)
-		if err != nil {
-			log.Info(err.Error())
-			return
-		}
-		msg := new(Message)
-		msg.FromData(pro.Body)
+		//device ,err := model.GetDeviceByUserId(user.UserId)
 
-		var msgBody = model.MessageBoddy{}
-		err = json.Unmarshal(msg.body,&msgBody)
+		devices ,err := model.GetDevicesByUserId(user.UserId)
 		if err != nil {
 			log.Info(err.Error())
 			return
 		}
-		push := model.PushModel{}
-		push.DeviceToken = device.DeviceToken
-		push.BadgeNumber ,err = model.MessageUnSendedCount(receiver)
-		push.Title = sUser.Nick
-		if len(msgBody.Content) > 0 {
-			push.Body = msgBody.Content
-		}else {
-			push.Body = "新消息"
+
+		for _,device := range devices{
+			msg := new(Message)
+			msg.FromData(pro.Body)
+
+			var msgBody = model.MessageBoddy{}
+			err = json.Unmarshal(msg.body,&msgBody)
+			if err != nil {
+				log.Info(err.Error())
+				return
+			}
+			push := model.PushModel{}
+			push.DeviceToken = device.DeviceToken
+			push.BadgeNumber ,err = model.MessageUnSendedCount(receiver)
+			push.Title = sUser.Nick
+			if len(msgBody.Content) > 0 {
+				push.Body = msgBody.Content
+			}else {
+				push.Body = "新消息"
+			}
+			push.AppId = int(appId)
+			if err != nil {
+				log.Info(err.Error())
+				return
+			}
+			push.EnvironmentType = device.Environment
+			_ ,err = http.POST(POSTURLPATH,push,nil)
+			if err != nil {
+				log.Error(err.Error())
+				return
+			}
 		}
-		push.AppId = int(appId)
-		if err != nil {
-			log.Info(err.Error())
-			return
-		}
-		push.EnvironmentType = device.Environment
-		_ ,err = http.POST(POSTURLPATH,push,nil)
-		if err != nil {
-			log.Error(err.Error())
-			return
-		}
+
+
+
 		//log.Info(msg.Description() + string(b))
 	}
 }
+
 
