@@ -69,7 +69,7 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 			if len(msgBody.Content) > 0 {
 				push.Body = msgBody.Content
 			}else {
-				push.Body = "新消息"
+				return
 			}
 			push.AppId = int(appId)
 			if err != nil {
