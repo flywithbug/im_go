@@ -18,14 +18,14 @@ type Device struct {
 }
 
 func SaveDeviceInfo(deviceToken ,deviceId,user_agent ,userId,unique_mac_uuid string,platformType,environment int)error  {
-	stmt,err :=Database.Prepare("INSERT into im_device SET user_id=? ,device_id=?,device_token=?,platform=?,user_agent=? ,unique_mac_uuid = ?,environment= ? ON DUPLICATE key UPDATE device_id=?,user_id=?,platform=?,user_agent=?,unique_mac_uuid = ?,environment=? ")
+	stmt,err :=Database.Prepare("INSERT into im_device SET user_id=? ,device_id=?,device_token=?,platform=?,user_agent=? ,unique_mac_uuid = ?,environment= ? ON DUPLICATE key UPDATE device_token=?,user_id=?,platform=?,user_agent=?,unique_mac_uuid = ?,environment=? ")
 	if err != nil{
 		log.Warn(err.Error())
 		err = errors.New("服务错误")
 		return err
 	}
 	defer stmt.Close()
-	_,err = stmt.Exec(userId,deviceId,deviceToken,platformType,user_agent,unique_mac_uuid,environment,deviceId,userId,platformType,user_agent,unique_mac_uuid,environment)
+	_,err = stmt.Exec(userId,deviceId,deviceToken,platformType,user_agent,unique_mac_uuid,environment,deviceToken,userId,platformType,user_agent,unique_mac_uuid,environment)
 	if err!= nil {
 		log.Warn(err.Error())
 		return err
