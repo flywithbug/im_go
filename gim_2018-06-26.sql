@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.21)
 # Database: gim
-# Generation Time: 2018-06-25 16:30:18 +0000
+# Generation Time: 2018-06-25 18:07:50 +0000
 # ************************************************************
 
 
@@ -36,7 +36,7 @@ CREATE TABLE `im_device` (
   `unique_mac_uuid` varchar(40) DEFAULT '',
   `environment` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `device_token` (`device_token`)
+  UNIQUE KEY `device_id` (`device_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
