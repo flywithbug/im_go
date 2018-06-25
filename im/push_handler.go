@@ -43,7 +43,7 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 		log.Info("appId not equal")
 		return
 	}
-	if pro.Operation == OP_MSG {
+	if pro.Operation == OP_MSG || pro.Operation == OP_MSG_SYNC {
 		//device ,err := model.GetDeviceByUserId(user.UserId)
 
 		devices ,err := model.GetDevicesByUserId(user.UserId)
@@ -53,6 +53,7 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 		}
 
 		for _,device := range devices{
+			log.Info("%s",device)
 			msg := new(Message)
 			msg.FromData(pro.Body)
 
@@ -77,16 +78,13 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 				return
 			}
 			push.EnvironmentType = device.Environment
-			_ ,err = http.POST(POSTURLPATH,push,nil)
+			res ,err := http.POST(POSTURLPATH,push,nil)
 			if err != nil {
 				log.Error(err.Error())
 				return
 			}
+			log.Info( string(res))
 		}
-
-
-
-		//log.Info(msg.Description() + string(b))
 	}
 }
 
