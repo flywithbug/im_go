@@ -104,7 +104,7 @@ func (client *ClientIM)sendOffLineMessage()  {
 
 
 func FromIMMessage(imMsg model.IMMessage)(msg *Message)  {
-	log.Debug("offline msg :%s",imMsg.Description())
+	//log.Debug("offline msg :%s",imMsg.Description())
 	msg = new(Message)
 	msg.sender = imMsg.Sender
 	msg.receiver = imMsg.Receiver
