@@ -12,17 +12,18 @@ const  LoginPATH  =  "/login"
 
 
 var routers = map[string]gin.HandlerFunc{
-	"GET   		/system": 			handleSystem, //系统状态
-	"GET		/summary":			im.GinSummary,
-	"GET		/config":			AppConfigHandler, //请求网络接口下发，（最好使用使用域名请求）
-	"POST 		/register": 		handleRegister, //注册
-	"POST  		/login": 			handleLogin,
-	"POST		/logout":			handleLogout,  //退出登录
-	"POST 		/query": 			handleQuery,   //根据昵称查询用户列表
-	"GET 		/user/:id": 		handleGetUserInfo,   //根据用户user_id获取用户信息
-	"POST		/upload/avatar":	UploadImageHandler,			//avatar图片上传
-	"GET	    /image/avatar/:id":	DownloadImageHandler,      //avatar图片下载
-	"POST		/push":				RegistPushService,
+	"GET   		/system": 				handleSystem, //系统状态
+	"GET		/summary":				im.GinSummary,
+	"GET		/config":				AppConfigHandler, //请求网络接口下发，（最好使用使用域名请求）
+	"POST 		/register": 			handleRegister, //注册
+	"POST  		/login": 				handleLogin,
+	"POST		/logout":				handleLogout,  //退出登录
+	"POST 		/query": 				handleQuery,   //根据昵称查询用户列表
+	"GET 		/user/:id": 			handleGetUserInfo,   //根据用户user_id获取用户信息
+	"POST		/upload/avatar":		UploadImageHandler,			//avatar图片上传
+	"GET	    /image/avatar/:id":		DownloadImageHandler,      //avatar图片下载
+	"POST		/push":					RegistPushService,
+	"POST       /push/authorization": 	UpdatePushStatusService,  //更新推送权限
 
 }
 

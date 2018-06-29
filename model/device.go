@@ -15,6 +15,7 @@ type Device struct {
 	UserId 			string		`json:"user_id"`  //绑定的用户UserId
 	UniqueMacUuid	string		`json:"unique_mac_uuid"`
 	Environment     int			`json:"environment"`  //客户端开发环境 默认production:0, development:1 环境
+	Status 			int			`json:"status"`    //推送状态，默认1 推送，0 不推送
 }
 
 func SaveDeviceInfo(deviceToken ,deviceId,user_agent ,userId,unique_mac_uuid string,platformType,environment int)error  {
@@ -33,10 +34,30 @@ func SaveDeviceInfo(deviceToken ,deviceId,user_agent ,userId,unique_mac_uuid str
 	return nil
 }
 
-func (model *Device)SaveToDb()error  {
+func (model *Device)SaveOrUpdateToDb()error  {
 	//log.Info("%s",model.Environment)
 	return SaveDeviceInfo(model.DeviceToken,model.DeviceId,model.UserAgent,model.UserId,model.UniqueMacUuid,model.Platform,model.Environment)
 }
+
+func UpdateDeviceInfo(deviceId string, status int)(int64,error)   {
+	updateStmt, err := Database.Prepare("UPDATE im_device SET `status` = ? where device_id = ?")
+	if err != nil {
+		log.Error(err.Error())
+		return -1, &DatabaseError{"服务出错"}
+	}
+	defer updateStmt.Close()
+	res, err := updateStmt.Exec(deviceId,status)
+	if err != nil {
+		log.Error(err.Error())
+		return -1, &DatabaseError{"服务出错"}
+	}
+	num, err := res.RowsAffected()
+	if err != nil || num <= 0{
+		return -1, &DatabaseError{"token已失效"}
+	}
+	return num,nil
+}
+
 
 func GetDeviceByUserId(userId string)(*Device,error)  {
 	//log.Info(userId)

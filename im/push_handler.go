@@ -53,7 +53,10 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 		}
 
 		for _,device := range devices{
-			log.Info("%s",device)
+			//log.Info("%s",device)
+			//if device. {
+
+			//}
 			msg := new(Message)
 			msg.FromData(pro.Body)
 

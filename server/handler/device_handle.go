@@ -38,7 +38,7 @@ func RegistPushService(c *gin.Context)  {
 	if user != nil {
 		device.UserId = user.UserId
 	}
-	err = device.SaveToDb()
+	err = device.SaveOrUpdateToDb()
 	if err != nil {
 		errStr := err.Error()
 		aRes.SetErrorInfo(http.StatusInternalServerError ,errStr)
@@ -46,3 +46,32 @@ func RegistPushService(c *gin.Context)  {
 	}
 	aRes.SetSuccessInfo(http.StatusOK,"success")
 }
+
+
+func UpdatePushStatusService(c *gin.Context) {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(aRes.Code,aRes)
+	}()
+
+	device := model.Device{}
+	err := c.BindJSON(&device)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid"+err.Error())
+		return
+	}
+	if len(device.DeviceId) == 0 {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"DeviceId can not be nil")
+		return
+	}
+	_, err = model.UpdateDeviceInfo(device.DeviceId,device.Status)
+	if err != nil {
+		errStr := err.Error()
+		aRes.SetErrorInfo(http.StatusInternalServerError ,errStr)
+		return
+	}
+
+	aRes.SetSuccessInfo(http.StatusOK,"success")
+}
+
+
