@@ -54,9 +54,9 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 
 		for _,device := range devices{
 			//log.Info("%s",device)
-			//if device. {
-
-			//}
+			if device.Status != 1 {
+				continue
+			}
 			msg := new(Message)
 			msg.FromData(pro.Body)
 
@@ -64,7 +64,7 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 			err = json.Unmarshal(msg.body,&msgBody)
 			if err != nil {
 				log.Info(err.Error())
-				return
+				continue
 			}
 			push := model.PushModel{}
 			push.DeviceToken = device.DeviceToken
@@ -73,18 +73,18 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 			if len(msgBody.Content) > 0 {
 				push.Body = msgBody.Content
 			}else {
-				return
+				continue
 			}
 			push.AppId = int(appId)
 			if err != nil {
 				log.Info(err.Error())
-				return
+				continue
 			}
 			push.EnvironmentType = device.Environment
 			_ ,err = http.POST(POSTURLPATH,push,nil)
 			if err != nil {
 				log.Error(err.Error())
-				return
+				continue
 			}
 			//log.Info( string(res))
 		}
