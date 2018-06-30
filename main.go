@@ -29,7 +29,7 @@ func SetLog() {
 }
 
 func main() {
-	configPath := flag.String("config", "config.json", "Configuration file to use")
+	configPath := flag.String("config", "source/config.json", "Configuration file to use")
 	flag.Parse()
 	//加载配置文件
 	err := config.ReadConfig(*configPath)
