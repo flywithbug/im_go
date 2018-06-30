@@ -1,0 +1,21 @@
+2018-07-01 02:41:57 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:57550]
+2018-07-01 02:41:57 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-01 02:42:13 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-01 02:42:13 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-01 02:42:13 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-01 02:42:13 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-01 02:42:37 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:57642]
+2018-07-01 02:42:37 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-01 02:42:49 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-01 02:42:49 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-01 02:42:49 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-01 02:42:49 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-01 02:42:58 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:57693]
+2018-07-01 02:42:59 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-01 02:44:59 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-01 02:45:06 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-01 02:45:06 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-01 02:45:06 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-01 02:45:06 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-01 02:45:20 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:57753]
+2018-07-01 02:45:20 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0

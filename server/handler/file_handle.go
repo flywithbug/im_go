@@ -25,6 +25,12 @@ func UploadImageHandler(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusBadRequest,fmt.Sprintf("get file err : %s", err.Error()))
 		return
 	}
+
+	if header.Size > 1024*170 {
+		aRes.SetErrorInfo(http.StatusRequestEntityTooLarge,fmt.Sprintf(" file to big no more than 150kb "))
+		return
+	}
+
 	//获取文件名
 	ext := filepath.Ext(header.Filename)
 	name:= uuid.New()
