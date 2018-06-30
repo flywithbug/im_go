@@ -1,2 +1,3 @@
 *.json
 *.pem
+autobuild.sh
