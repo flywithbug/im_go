@@ -1,0 +1,32 @@
+{
+  "im_port": 23,
+  "http_port": 23,
+  "server_port": ":323",
+  "prof_bind":"localhost:111",
+  "log_level":0,
+  "private_name":".path",
+  "db_config": {
+    "host": "1****,
+    "username": "uname",
+    "password": "pas",
+    "name": "dbname",
+    "max_idle_conns": 40,
+    "max_open_conns": 200
+  },
+  "app_config":{
+    "api_host":"http://*****",
+    "im_socket_host":"*****",
+    "im_socket_port":000,
+    "domain_name":"",
+    "version":"1.0"
+  },
+
+  "router_prefix":[
+
+  ],
+
+  "auth_filter_white":[
+
+  ]
+
+}
