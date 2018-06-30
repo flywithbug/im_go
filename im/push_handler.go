@@ -53,7 +53,7 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 		}
 
 		for _,device := range devices{
-			//log.Info("%s",device)
+			//log.Info("%s",device.Status)
 			if device.Status != 1 {
 				continue
 			}
@@ -80,13 +80,14 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 				log.Info(err.Error())
 				continue
 			}
+			//log.Info( "%s",push)
+
 			push.EnvironmentType = device.Environment
 			_ ,err = http.POST(POSTURLPATH,push,nil)
 			if err != nil {
 				log.Error(err.Error())
 				continue
 			}
-			//log.Info( string(res))
 		}
 	}
 }

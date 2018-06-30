@@ -62,8 +62,8 @@ func UpdateDeviceInfo(deviceId string, status int)(int64,error)   {
 func GetDeviceByUserId(userId string)(*Device,error)  {
 	//log.Info(userId)
 	var device Device
-	row := Database.QueryRow("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment FROM im_device WHERE user_id = ?",userId)
-	err := row.Scan(&userId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment)
+	row := Database.QueryRow("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status FROM im_device WHERE user_id = ?",userId)
+	err := row.Scan(&userId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status)
 	if err != nil {
 		return nil,&DatabaseError{"未查询到该设备"}
 	}
@@ -72,7 +72,7 @@ func GetDeviceByUserId(userId string)(*Device,error)  {
 
 func GetDevicesByUserId(userId string)([]Device,error)  {
 	var devices  []Device
-	rows, err := Database.Query("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment FROM im_device WHERE user_id = ?",userId)
+	rows, err := Database.Query("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status FROM im_device WHERE user_id = ?",userId)
 	defer  rows.Close()
 	if err != nil {
 		log.Error(err.Error())
@@ -80,7 +80,7 @@ func GetDevicesByUserId(userId string)([]Device,error)  {
 	}
 	for rows.Next()  {
 		var device Device
-		rows.Scan(&userId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment)
+		rows.Scan(&userId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status)
 		devices = append(devices,device)
 	}
 	return devices,nil

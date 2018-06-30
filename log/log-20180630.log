@@ -1,0 +1,44 @@
+2018-06-30 22:12:40 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:51690]
+2018-06-30 22:12:40 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-30 22:12:40 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-06-30 22:12:57 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:55496]
+2018-06-30 22:12:57 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 1
+2018-06-30 22:13:01 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-30 22:13:01 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-30 22:13:01 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-30 22:13:01 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-30 22:14:26 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:51719]
+2018-06-30 22:14:26 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-30 22:14:26 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 2
+2018-06-30 22:14:40 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:55498]
+2018-06-30 22:14:40 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 4
+2018-06-30 22:14:47 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-30 22:14:47 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-30 22:14:47 	 [DEBUG] 	 <client.go:148>  	 close client:10001, d5f75fbc-4f64-4f78-b320-2ca770847800
+2018-06-30 22:14:47 	 [DEBUG] 	 <client.go:112>  	 client: d5f75fbc-4f64-4f78-b320-2ca770847800 10001 socket closed
+2018-06-30 22:15:56 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-30 22:16:20 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:51792]
+2018-06-30 22:16:20 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-06-30 22:16:31 	 [ INFO] 	 <push_handler.go:56>  	 {%!s(int64=0) 1d3ce3f2fbf1010673ba4b70c5bed93d7ceb7f58c9911b8204857f8979cd2329 062EC2BC-EB23-4962-9B50-EBE804FED336 %!s(int=1) Traveling/1.0 (iPhone; iOS 11.4; Scale/2.00)  0f607264fc6318a92b9e13c65db7cd3c %!s(int=1) %!s(int=0)}
+2018-06-30 22:17:31 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-30 22:17:31 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-30 22:17:31 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-30 22:17:31 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-06-30 22:17:48 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:51801]
+2018-06-30 22:17:48 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-06-30 22:17:50 	 [ INFO] 	 <push_handler.go:56>  	 {%!s(int64=0) 1d3ce3f2fbf1010673ba4b70c5bed93d7ceb7f58c9911b8204857f8979cd2329 062EC2BC-EB23-4962-9B50-EBE804FED336 %!s(int=1) Traveling/1.0 (iPhone; iOS 11.4; Scale/2.00)  0f607264fc6318a92b9e13c65db7cd3c %!s(int=1) %!s(int=0)}
+2018-06-30 22:17:56 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-30 22:18:24 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:51802]
+2018-06-30 22:18:24 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-06-30 22:18:51 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:51803]
+2018-06-30 22:18:51 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-06-30 22:18:52 	 [ INFO] 	 <push_handler.go:56>  	 %!s(int=0)
+2018-06-30 22:19:41 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:51804]
+2018-06-30 22:19:41 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-06-30 22:19:51 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:51806]
+2018-06-30 22:19:51 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-06-30 22:19:56 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-06-30 22:20:52 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-06-30 22:20:52 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-06-30 22:20:52 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-06-30 22:20:52 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
