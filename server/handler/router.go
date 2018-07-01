@@ -21,7 +21,7 @@ var routers = map[string]gin.HandlerFunc{
 	"POST 		/query": 				handleQuery,   //根据昵称查询用户列表
 	"GET 		/user/:id": 			handleGetUserInfo,   //根据用户user_id获取用户信息
 	"POST		/upload/avatar":		UploadImageHandler,			//avatar图片上传
-	"GET	    /image/avatar/:id":		DownloadImageHandler,      //avatar图片下载
+	"GET	    /image/avatar/":		DownloadImageHandler,      //avatar图片下载
 	"POST		/push":					RegistPushService,
 	"POST       /push/authorization": 	UpdatePushStatusService,  //更新推送权限
 

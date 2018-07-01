@@ -1,3 +1,6 @@
 *.json
 *.pem
 autobuild.sh
+image/2018-07-01
+image
+image/*/*
