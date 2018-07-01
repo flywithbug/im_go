@@ -68,6 +68,7 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 			}
 			push := model.PushModel{}
 			push.DeviceToken = device.DeviceToken
+			push.ContentAvailable = true
 			push.BadgeNumber ,err = model.MessageUnSendedCount(receiver)
 			push.Title = sUser.Nick
 			if len(msgBody.Content) > 0 {
