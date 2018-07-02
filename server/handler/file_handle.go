@@ -30,11 +30,10 @@ func UploadImageHandler(c *gin.Context)  {
 		return
 	}
 
-	if header.Size > 1024*170 {
-		log4go.Info(err.Error())
-		aRes.SetErrorInfo(http.StatusRequestEntityTooLarge,fmt.Sprintf(" file to big no more than 150kb "))
-		return
-	}
+	//if header.Size > 1024*170 {
+	//	aRes.SetErrorInfo(http.StatusRequestEntityTooLarge,fmt.Sprintf(" file to big no more than 150kb "))
+	//	return
+	//}
 	today := time.Now().Format("2006-01-02")
 	localpath := localFilePath+today+"/"
 	//获取文件名
@@ -49,7 +48,7 @@ func UploadImageHandler(c *gin.Context)  {
 		return
 	}
 	if !bexit {
-		err = os.Mkdir(localpath, os.ModeDir)
+		err = os.Mkdir(localpath, os.ModePerm)
 		if err != nil {
 			log4go.Info(err.Error())
 			aRes.SetErrorInfo(http.StatusBadRequest,fmt.Sprintf("get file err : %s", err.Error()))

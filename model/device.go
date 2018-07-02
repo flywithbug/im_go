@@ -16,6 +16,7 @@ type Device struct {
 	UniqueMacUuid	string		`json:"unique_mac_uuid"`
 	Environment     int			`json:"environment"`  //客户端开发环境 默认production:0, development:1 环境
 	Status 			int			`json:"status"`    //推送状态，默认1 推送，0 不推送
+	Sound			int			`json:"sound"`     //推送是否有声音，1默认剩余，0 没有剩余，其他值待定
 }
 
 func SaveDeviceInfo(deviceToken ,deviceId,user_agent ,userId,unique_mac_uuid string,platformType,environment int)error  {
@@ -62,7 +63,7 @@ func UpdateDeviceInfo(deviceId string, status int)(int64,error)   {
 
 func GetDevicesByUserId(userId string)([]Device,error)  {
 	var devices  []Device
-	rows, err := Database.Query("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status FROM im_device WHERE user_id = ?",userId)
+	rows, err := Database.Query("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status,Sound FROM im_device WHERE user_id = ?",userId)
 	defer  rows.Close()
 	if err != nil {
 		log.Error(err.Error())
@@ -70,7 +71,7 @@ func GetDevicesByUserId(userId string)([]Device,error)  {
 	}
 	for rows.Next()  {
 		var device Device
-		rows.Scan(&device.UserId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status)
+		rows.Scan(&device.UserId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status,&device.Sound)
 		devices = append(devices,device)
 	}
 	return devices,nil
@@ -79,8 +80,8 @@ func GetDevicesByUserId(userId string)([]Device,error)  {
 
 func GetDevicesByDeviceId(deviceId string)(*Device,error)  {
 	var device Device
-	row := Database.QueryRow("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status FROM im_device WHERE device_id = ?",deviceId)
-	err := row.Scan(&device.UserId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status)
+	row := Database.QueryRow("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status ,Sound FROM im_device WHERE device_id = ?",deviceId)
+	err := row.Scan(&device.UserId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status,&device.Sound)
 		if err != nil {
 			log.Error(err.Error()+deviceId)
 			return nil, &DatabaseError{"未查询到对应的数据"}

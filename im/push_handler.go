@@ -70,6 +70,10 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 			push.DeviceToken = device.DeviceToken
 			push.ContentAvailable = true
 			push.BadgeNumber ,err = model.MessageUnSendedCount(receiver)
+			//if device. {
+
+			//}
+			push.Sound = "default"
 			push.Title = sUser.Nick
 			if len(msgBody.Content) > 0 {
 				push.Body = msgBody.Content
