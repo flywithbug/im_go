@@ -46,6 +46,7 @@ func TokenAuthMiddleware() gin.HandlerFunc {
 			ctx.Abort()
 			return
 		}
+
 		ctx.Set(KeyContextUser,aUser)
 	}
 }

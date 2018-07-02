@@ -74,4 +74,25 @@ func UpdatePushStatusService(c *gin.Context) {
 	aRes.SetSuccessInfo(http.StatusOK,"success")
 }
 
+func GetPushStatusHandler(c *gin.Context)  {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(aRes.Code,aRes)
+	}()
+
+	deviceId := c.Param("id")
+	if len(deviceId) < 10 {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"deviceId invalid")
+		return
+	}
+	d, err := model.GetDevicesByDeviceId(deviceId)
+	if err != nil {
+		errStr := err.Error()
+		aRes.SetErrorInfo(http.StatusNotFound ,errStr)
+		return
+	}
+
+	aRes.AddResponseInfo("device",d)
+
+}
 

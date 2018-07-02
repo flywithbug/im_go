@@ -24,6 +24,7 @@ var routers = map[string]gin.HandlerFunc{
 	"GET	    /image/avatar/":		DownloadImageHandler,      //avatar图片下载
 	"POST		/push":					RegistPushService,
 	"POST       /push/authorization": 	UpdatePushStatusService,  //更新推送权限
+	"GET    	/push/status/:id":		GetPushStatusHandler,    //当前推送状态获取
 
 }
 
