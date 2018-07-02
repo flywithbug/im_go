@@ -59,16 +59,6 @@ func UpdateDeviceInfo(deviceId string, status int)(int64,error)   {
 }
 
 
-func GetDeviceByUserId(userId string)(*Device,error)  {
-	//log.Info(userId)
-	var device Device
-	row := Database.QueryRow("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status FROM im_device WHERE user_id = ?",userId)
-	err := row.Scan(&userId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status)
-	if err != nil {
-		return nil,&DatabaseError{"未查询到该设备"}
-	}
-	return &device,nil
-}
 
 func GetDevicesByUserId(userId string)([]Device,error)  {
 	var devices  []Device
@@ -80,28 +70,35 @@ func GetDevicesByUserId(userId string)([]Device,error)  {
 	}
 	for rows.Next()  {
 		var device Device
-		rows.Scan(&userId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status)
+		rows.Scan(&device.UserId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status)
 		devices = append(devices,device)
 	}
 	return devices,nil
 
 }
 
+func GetDevicesByDeviceId(deviceId string)(*Device,error)  {
+	var device Device
+	row := Database.QueryRow("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status FROM im_device WHERE device_id = ?",deviceId)
+	err := row.Scan(&device.UserId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status)
+		if err != nil {
+			log.Error(err.Error()+deviceId)
+			return nil, &DatabaseError{"未查询到对应的数据"}
+		}
+	return &device,nil
+}
 
 
-////查找发送人消息
-//func FindeMessagesSender(sender int32,status int)([]IMMessage,error)  {
-//	var messages []IMMessage
-//	rows ,err := Database.Query("SELECT id,sender,receiver,content,time_stamp,status,update_at FROM im_message WHERE sender = ? AND status = ?",sender,status)
-//	defer rows.Close()
+/*
+ 根据ID获取用户
+//*/
+//func GetUserByUId(uId string) (*User, error) {
+//	var user User
+//	row := Database.QueryRow("select id, app_id, user_id, nick, status, sign, avatar, create_at, update_at from im_user where id = ?", uId)
+//	err := row.Scan(&user.Uid,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
 //	if err != nil {
-//		log.Error(err.Error())
-//		return messages, &DatabaseError{"服务出错"}
+//		log.Error(err.Error()+uId)
+//		return nil, &DatabaseError{"根据ID查询用户-将结果映射至对象错误"}
 //	}
-//	for rows.Next(){
-//		var msg IMMessage
-//		rows.Scan(&msg.Id,&msg.Sender,&msg.Receiver,&msg.Content,&msg.TimeStamp,&msg.Status,&msg.UpdateAt)
-//		messages = append(messages, msg)
-//	}
-//	return messages,nil
+//	return &user, err
 //}
