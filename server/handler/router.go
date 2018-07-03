@@ -24,8 +24,8 @@ var routers = map[string]gin.HandlerFunc{
 	"POST		/upload/avatar":		UploadUserAvatarHandler,			//avatar图片上传
 	"GET	    /image/avatar/":		DownloadImageHandler,      //avatar图片下载
 	"POST		/push":					RegistPushService,
-	"POST       /push/authorization": 	UpdatePushStatusService,  //更新推送权限
-	"GET    	/push/status/:id":		GetPushStatusHandler,    //当前推送状态获取
+	"POST       /update/push/auth": 	UpdatePushStatusService,  //更新推送权限
+	"GET    	/push/status/:id":		GetPushStatusHandler,    //当前推送状态获取 (根据deviceId 获取推送状态设置)
 
 }
 

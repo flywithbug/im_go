@@ -241,3 +241,48 @@
 2018-07-03 17:26:44 	 [ERROR] 	 <user.go:208>  	 Error 1366: Incorrect string value: '\xF0\x93\x86\x9F\xF0\x93...' for column 'nick' at row 1
 2018-07-03 17:26:44 	 [ INFO] 	 <user_handle.go:248>  	 服务出错Error 1366: Incorrect string value: '\xF0\x93\x86\x9F\xF0\x93...' for column 'nick' at row 1
 2018-07-03 17:28:34 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-03 17:29:32 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:29:32 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:29:32 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-03 17:29:32 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-03 17:29:55 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55330]
+2018-07-03 17:29:55 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 17:31:56 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-03 17:32:26 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:32:26 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:32:26 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-03 17:32:26 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-03 17:41:15 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55696]
+2018-07-03 17:41:15 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 17:41:52 	 [ INFO] 	 <file_handle.go:83>  	 2018-07-03%!(EXTRA string=bdcb2541-cac5-4226-8fe7-e352479b792b.png)
+2018-07-03 17:42:03 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:42:03 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:42:03 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-03 17:42:03 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-03 17:42:04 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55721]
+2018-07-03 17:42:04 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 17:43:17 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-03 17:45:17 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-03 17:47:17 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-03 17:49:17 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-03 17:51:17 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-03 17:53:17 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-03 17:55:15 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-03 17:57:15 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-03 17:59:17 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-03 17:59:33 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:59:33 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:59:33 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-03 17:59:33 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-03 18:00:05 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55768]
+2018-07-03 18:00:05 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 18:01:37 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 18:01:37 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 18:01:37 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-03 18:01:37 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-03 18:01:41 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55848]
+2018-07-03 18:01:41 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 18:02:07 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 18:02:07 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 18:02:07 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-03 18:02:07 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
