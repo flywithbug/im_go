@@ -14,6 +14,10 @@ const (
 
 	OP_MSG_SYNC = int32(6)    //消息发送者，发送消息给其他登录端
 
+	OP_MSG_OFFLINE     = int32(7)  //离线消息
+
+	OP_MSG_ROOM     = int32(10)  //离线消息
+
 
 	// auth user
 	OP_AUTH     = int32(18)

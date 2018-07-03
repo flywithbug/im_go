@@ -93,7 +93,7 @@ func (client *ClientIM)sendOffLineMessage()  {
 	//var rageLimiter = time.Tick(10*time.Millisecond)
 	for _,imMsg := range ms{
 		//<- rageLimiter
-		p.Operation = OP_MSG
+		p.Operation = OP_MSG_OFFLINE
 		p.Ver = client.version
 		p.Body = FromIMMessage(imMsg).ToData()
 		p.SeqId = -1  //offlineMsg
