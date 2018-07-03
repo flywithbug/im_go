@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"im_go/model"
 	"net/http"
+	"github.com/flywithbug/log4go"
 )
 
 func RegistPushService(c *gin.Context)  {
@@ -15,10 +16,12 @@ func RegistPushService(c *gin.Context)  {
 	device := model.Device{}
 	err := c.BindJSON(&device)
 	if err != nil {
+		log4go.Info(err.Error())
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid"+err.Error())
 		return
 	}
 	if len(device.DeviceToken) == 0 {
+
 		aRes.SetErrorInfo(http.StatusBadRequest ,"DeviceToken can not be nil")
 		return
 	}
@@ -47,32 +50,6 @@ func RegistPushService(c *gin.Context)  {
 	aRes.SetSuccessInfo(http.StatusOK,"success")
 }
 
-
-func UpdatePushStatusService(c *gin.Context) {
-	aRes := NewResponse()
-	defer func() {
-		c.JSON(aRes.Code,aRes)
-	}()
-
-	device := model.Device{}
-	err := c.BindJSON(&device)
-	if err != nil {
-		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid"+err.Error())
-		return
-	}
-	if len(device.DeviceId) == 0 {
-		aRes.SetErrorInfo(http.StatusBadRequest ,"DeviceId can not be nil")
-		return
-	}
-	_, err = model.UpdateDeviceInfo(device.DeviceId,device.Status)
-	if err != nil {
-		errStr := err.Error()
-		aRes.SetErrorInfo(http.StatusInternalServerError ,errStr)
-		return
-	}
-
-	aRes.SetSuccessInfo(http.StatusOK,"success")
-}
 
 func GetPushStatusHandler(c *gin.Context)  {
 	aRes := NewResponse()

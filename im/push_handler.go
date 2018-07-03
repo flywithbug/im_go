@@ -54,7 +54,7 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 
 		for _,device := range devices{
 			//log.Info("%s",device.Status)
-			if device.Status != 1 {
+			if device.Status != true{
 				continue
 			}
 			push := model.PushModel{}

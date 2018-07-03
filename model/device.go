@@ -15,20 +15,33 @@ type Device struct {
 	UserId 			string		`json:"user_id"`  //绑定的用户UserId
 	UniqueMacUuid	string		`json:"unique_mac_uuid"`
 	Environment     int			`json:"environment"`  //客户端开发环境 默认production:0, development:1 环境
-	Status 			int			`json:"status"`    //推送状态，默认1 推送，0 不推送
+	Status 			bool		`json:"status"`    //推送状态，默认1 推送，0 不推送
 	Sound			int			`json:"sound"`     //推送是否有声音，1默认声音，0 没有声音，其他值待定
 	ShowDetail		bool		`json:"show_detail"` //是否显示推送消息详情
 }
 
-func SaveDeviceInfo(deviceToken ,deviceId,user_agent ,userId,unique_mac_uuid string,platformType,environment int)error  {
-	stmt,err :=Database.Prepare("INSERT into im_device SET user_id=? ,device_id=?,device_token=?,platform=?,user_agent=? ,unique_mac_uuid = ?,environment= ? ON DUPLICATE key UPDATE device_token=?,user_id=?,platform=?,user_agent=?,unique_mac_uuid = ?,environment=? ")
+
+func (model *Device)SaveOrUpdateToDb()error  {
+	dev,_ := GetDevicesByDeviceId(model.DeviceId)
+	if dev != nil {
+		_,err := model.UpdateDeviceInfo()
+		if err != nil {
+			log.Info(err.Error())
+		}
+		return err
+	}
+	return SaveDeviceInfo(model.DeviceToken,model.DeviceId,model.Platform,model.UserAgent,model.UserId,model.UniqueMacUuid,model.Environment,model.Status,model.Sound,model.ShowDetail)
+}
+
+func SaveDeviceInfo(device_token,device_id string,platform int,user_agent,user_id,unique_mac_uuid string, environment int,status bool,sound int, show_detail bool)error  {
+	stmt,err :=Database.Prepare("INSERT into im_device  (device_token,device_id,platform,user_agent,user_id,unique_mac_uuid,environment,status,sound , show_detail ) VALUES (?,?,?,?,?,?,?,?,?,?)")
 	if err != nil{
 		log.Warn(err.Error())
 		err = errors.New("服务错误")
 		return err
 	}
 	defer stmt.Close()
-	_,err = stmt.Exec(userId,deviceId,deviceToken,platformType,user_agent,unique_mac_uuid,environment,deviceToken,userId,platformType,user_agent,unique_mac_uuid,environment)
+	_,err = stmt.Exec(device_token,device_id,platform,user_agent,user_id,unique_mac_uuid,environment,status,sound,show_detail)
 	if err!= nil {
 		log.Warn(err.Error())
 		return err
@@ -36,29 +49,28 @@ func SaveDeviceInfo(deviceToken ,deviceId,user_agent ,userId,unique_mac_uuid str
 	return nil
 }
 
-func (model *Device)SaveOrUpdateToDb()error  {
-	//log.Info("%s",model.Environment)
-	return SaveDeviceInfo(model.DeviceToken,model.DeviceId,model.UserAgent,model.UserId,model.UniqueMacUuid,model.Platform,model.Environment)
-}
 
-func UpdateDeviceInfo(deviceId string, status int)(int64,error)   {
-	updateStmt, err := Database.Prepare("UPDATE im_device SET `status` = ? where device_id = ?")
+func (devicd *Device)UpdateDeviceInfo()(int64,error)  {
+	updateStmt, err := Database.Prepare("UPDATE im_device SET user_id=? ,device_token=?,platform=?,user_agent=? ,unique_mac_uuid = ?,environment= ?,status = ? ,sound =?, show_detail=? where device_id = ?")
 	if err != nil {
 		log.Error(err.Error())
 		return -1, &DatabaseError{"服务出错"}
 	}
 	defer updateStmt.Close()
-	res, err := updateStmt.Exec(deviceId,status)
+	res, err := updateStmt.Exec(devicd.UserId,devicd.DeviceToken,devicd.Platform,devicd.UserAgent,devicd.UniqueMacUuid,devicd.Environment,devicd.Status,devicd.Sound,devicd.ShowDetail,devicd.DeviceId)
 	if err != nil {
 		log.Error(err.Error())
 		return -1, &DatabaseError{"服务出错"}
 	}
 	num, err := res.RowsAffected()
-	if err != nil || num <= 0{
-		return -1, &DatabaseError{"token已失效"}
+	if err != nil {
+		log.Info(err.Error())
+		return -1, &DatabaseError{"更新失败"}
 	}
 	return num,nil
+
 }
+
 
 
 
@@ -83,24 +95,10 @@ func GetDevicesByDeviceId(deviceId string)(*Device,error)  {
 	var device Device
 	row := Database.QueryRow("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status ,sound FROM im_device WHERE device_id = ?",deviceId)
 	err := row.Scan(&device.UserId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status,&device.Sound)
-		if err != nil {
-			log.Error(err.Error()+deviceId)
-			return nil, &DatabaseError{"未查询到对应的数据"}
-		}
+	if err != nil {
+		log.Error(err.Error()+deviceId)
+		return nil, &DatabaseError{"未查询到对应的数据"}
+	}
 	return &device,nil
 }
 
-
-/*
- 根据ID获取用户
-//*/
-//func GetUserByUId(uId string) (*User, error) {
-//	var user User
-//	row := Database.QueryRow("select id, app_id, user_id, nick, status, sign, avatar, create_at, update_at from im_user where id = ?", uId)
-//	err := row.Scan(&user.Uid,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
-//	if err != nil {
-//		log.Error(err.Error()+uId)
-//		return nil, &DatabaseError{"根据ID查询用户-将结果映射至对象错误"}
-//	}
-//	return &user, err
-//}
