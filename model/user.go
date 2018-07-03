@@ -196,23 +196,25 @@ func UpdateUserAvatar(avatar , userId string)error  {
 
 }
 
-/*
-	退出登录  status 1 登录状态，0 是退出 -1 被其他登录用户踢出
-*/
-//func Logout(token string)(int64,error) {
-//	updateStmt,err := Database.Prepare("UPDATE im_login SET `status` = ?,logout_at=? WHERE token=? AND status = 1")
-//	if err != nil {
-//		log.Error(err.Error())
-//		return -1, &DatabaseError{"服务出错"}
-//	}
-//	defer updateStmt.Close()
-//	res ,err := updateStmt.Exec(0,time.Now().Format("2006-01-02 15:04:05"),token)
-//	if err != nil {
-//		return -1, &DatabaseError{"服务出错"}
-//	}
-//	num, err := res.RowsAffected()
-//	if err != nil || num <= 0{
-//		return -1, &DatabaseError{"token已失效"}
-//	}
-//	return num,nil
-//}
+func UpdateUserNickName(nick , userId string)error  {
+	updateStmt,err := Database.Prepare("UPDATE im_user SET `nick` = ? WHERE user_id=?")
+	if err != nil {
+		log.Error(err.Error())
+		return  &DatabaseError{"服务出错"}
+	}
+	defer updateStmt.Close()
+	res ,err := updateStmt.Exec(nick,userId)
+	if err != nil {
+		return &DatabaseError{"服务出错"}
+	}
+	num, err := res.RowsAffected()
+	if err != nil || num <= 0{
+		return  &DatabaseError{"未查询到该用户"}
+	}
+	return nil
+
+}
+
+
+
+

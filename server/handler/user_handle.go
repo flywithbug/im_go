@@ -222,3 +222,36 @@ func handleGetUserInfo(c *gin.Context)  {
 	aRes.AddResponseInfo("user",user)
 }
 
+func UpdateUserNickHandler(c *gin.Context)  {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(aRes.Code,aRes)
+	}()
+	para := loginoutModel{}
+	err := c.BindJSON(&para)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid"+err.Error())
+		return
+	}
+
+	if para.Nick == "" {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"nick can not be nil")
+		return
+	}
+	user , _ := User(c)
+	if user == nil {
+		aRes.SetErrorInfo(http.StatusInternalServerError ,err.Error())
+		return
+	}
+	err = model.UpdateUserNickName(para.Nick,user.UserId)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusInternalServerError ,"server error")
+		return
+	}
+	aRes.SetSuccessInfo(http.StatusOK,"success")
+
+
+}
+
+
+

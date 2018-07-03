@@ -16,7 +16,7 @@ import (
 
 const  localFilePath  =  "./image/"
 
-func UploadImageHandler(c *gin.Context)  {
+func UploadUserAvatarHandler(c *gin.Context)  {
 	aRes := NewResponse()
 	defer func() {
 		c.JSON(aRes.Code,aRes)
