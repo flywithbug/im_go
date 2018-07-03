@@ -16,7 +16,8 @@ type Device struct {
 	UniqueMacUuid	string		`json:"unique_mac_uuid"`
 	Environment     int			`json:"environment"`  //客户端开发环境 默认production:0, development:1 环境
 	Status 			int			`json:"status"`    //推送状态，默认1 推送，0 不推送
-	Sound			int			`json:"sound"`     //推送是否有声音，1默认剩余，0 没有剩余，其他值待定
+	Sound			int			`json:"sound"`     //推送是否有声音，1默认声音，0 没有声音，其他值待定
+	ShowDetail		bool		`json:"show_detail"` //是否显示推送消息详情
 }
 
 func SaveDeviceInfo(deviceToken ,deviceId,user_agent ,userId,unique_mac_uuid string,platformType,environment int)error  {

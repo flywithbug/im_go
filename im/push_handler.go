@@ -57,35 +57,37 @@ func PushServiceHandler(sender,receiver int32, appId int64,pro *Proto)  {
 			if device.Status != 1 {
 				continue
 			}
-			msg := new(Message)
-			msg.FromData(pro.Body)
-
-			var msgBody = model.MessageBoddy{}
-			err = json.Unmarshal(msg.body,&msgBody)
-			if err != nil {
-				log.Info(err.Error())
-				continue
-			}
 			push := model.PushModel{}
+			if device.ShowDetail {
+				msg := new(Message)
+				msg.FromData(pro.Body)
+
+				var msgBody = model.MessageBoddy{}
+				err = json.Unmarshal(msg.body,&msgBody)
+				if err != nil {
+					log.Info(err.Error())
+					continue
+				}
+				if len(msgBody.Content) > 0 {
+					push.Body = msgBody.Content
+				}else {
+					continue
+				}
+			}else {
+				push.Body = "您收到了一条新消息"
+			}
 			push.DeviceToken = device.DeviceToken
 			push.ContentAvailable = true
 			push.BadgeNumber ,err = model.MessageUnSendedCount(receiver)
-			//if device. {
-
-			//}
-			push.Sound = "default"
-			push.Title = sUser.Nick
-			if len(msgBody.Content) > 0 {
-				push.Body = msgBody.Content
-			}else {
-				continue
+			if device.Sound == 1 {
+				push.Sound = "default"
 			}
+			push.Title = sUser.Nick
 			push.AppId = int(appId)
 			if err != nil {
 				log.Info(err.Error())
 				continue
 			}
-			//log.Info( "%s",push)
 
 			push.EnvironmentType = device.Environment
 			_ ,err = http.POST(POSTURLPATH,push,nil)
