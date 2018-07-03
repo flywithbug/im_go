@@ -76,7 +76,7 @@ func (devicd *Device)UpdateDeviceInfo()(int64,error)  {
 
 func GetDevicesByUserId(userId string)([]Device,error)  {
 	var devices  []Device
-	rows, err := Database.Query("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status,sound, show_detailFROM im_device WHERE user_id = ?",userId)
+	rows, err := Database.Query("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status,sound, show_detail FROM im_device WHERE user_id = ?",userId)
 	defer  rows.Close()
 	if err != nil {
 		log.Error(err.Error())
