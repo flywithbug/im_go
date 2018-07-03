@@ -76,7 +76,7 @@ func (devicd *Device)UpdateDeviceInfo()(int64,error)  {
 
 func GetDevicesByUserId(userId string)([]Device,error)  {
 	var devices  []Device
-	rows, err := Database.Query("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status,sound FROM im_device WHERE user_id = ?",userId)
+	rows, err := Database.Query("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status,sound, show_detailFROM im_device WHERE user_id = ?",userId)
 	defer  rows.Close()
 	if err != nil {
 		log.Error(err.Error())
@@ -84,7 +84,7 @@ func GetDevicesByUserId(userId string)([]Device,error)  {
 	}
 	for rows.Next()  {
 		var device Device
-		rows.Scan(&device.UserId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status,&device.Sound)
+		rows.Scan(&device.UserId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status,&device.Sound,&device.ShowDetail)
 		devices = append(devices,device)
 	}
 	return devices,nil
@@ -93,8 +93,8 @@ func GetDevicesByUserId(userId string)([]Device,error)  {
 
 func GetDevicesByDeviceId(deviceId string)(*Device,error)  {
 	var device Device
-	row := Database.QueryRow("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status ,sound FROM im_device WHERE device_id = ?",deviceId)
-	err := row.Scan(&device.UserId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status,&device.Sound)
+	row := Database.QueryRow("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status ,sound ,show_detail FROM im_device WHERE device_id = ?",deviceId)
+	err := row.Scan(&device.UserId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status,&device.Sound,&device.ShowDetail)
 	if err != nil {
 		log.Error(err.Error()+deviceId)
 		return nil, &DatabaseError{"未查询到对应的数据"}
