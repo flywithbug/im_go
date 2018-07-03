@@ -63,7 +63,7 @@ func UpdateDeviceInfo(deviceId string, status int)(int64,error)   {
 
 func GetDevicesByUserId(userId string)([]Device,error)  {
 	var devices  []Device
-	rows, err := Database.Query("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status,Sound FROM im_device WHERE user_id = ?",userId)
+	rows, err := Database.Query("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status,sound FROM im_device WHERE user_id = ?",userId)
 	defer  rows.Close()
 	if err != nil {
 		log.Error(err.Error())
@@ -80,7 +80,7 @@ func GetDevicesByUserId(userId string)([]Device,error)  {
 
 func GetDevicesByDeviceId(deviceId string)(*Device,error)  {
 	var device Device
-	row := Database.QueryRow("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status ,Sound FROM im_device WHERE device_id = ?",deviceId)
+	row := Database.QueryRow("SELECT user_id,device_id,device_token,platform,user_agent,unique_mac_uuid,environment,status ,sound FROM im_device WHERE device_id = ?",deviceId)
 	err := row.Scan(&device.UserId,&device.DeviceId,&device.DeviceToken,&device.Platform,&device.UserAgent,&device.UniqueMacUuid,&device.Environment,&device.Status,&device.Sound)
 		if err != nil {
 			log.Error(err.Error()+deviceId)

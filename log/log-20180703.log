@@ -1,0 +1,37 @@
+2018-07-03 01:55:12 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:62245]
+2018-07-03 01:55:12 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 01:55:12 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b737430f-9be3-47cb-8097-5608941a8272,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 01:55:12 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 01:55:14 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb737430f-9be3-47cb-8097-5608941a8272
+2018-07-03 01:55:18 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 01:55:18 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 01:55:18 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 01:55:18 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 01:56:04 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:62294]
+2018-07-03 01:56:04 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 01:56:04 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b737430f-9be3-47cb-8097-5608941a8272,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 01:56:04 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 01:56:05 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb737430f-9be3-47cb-8097-5608941a8272
+2018-07-03 01:56:11 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb737430f-9be3-47cb-8097-5608941a8272
+2018-07-03 01:56:11 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 01:56:11 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 01:56:11 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 01:56:11 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 01:56:12 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:62306]
+2018-07-03 01:56:12 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 01:56:14 	 [ERROR] 	 <http_request.go:44>  	 Post http://127.0.0.1:9012/api/push: dial tcp 127.0.0.1:9012: connect: connection refused
+2018-07-03 01:56:14 	 [ERROR] 	 <push_handler.go:93>  	 Post http://127.0.0.1:9012/api/push: dial tcp 127.0.0.1:9012: connect: connection refused
+2018-07-03 01:56:14 	 [ERROR] 	 <http_request.go:44>  	 Post http://127.0.0.1:9012/api/push: dial tcp 127.0.0.1:9012: connect: connection refused
+2018-07-03 01:56:14 	 [ERROR] 	 <push_handler.go:93>  	 Post http://127.0.0.1:9012/api/push: dial tcp 127.0.0.1:9012: connect: connection refused
+2018-07-03 01:56:19 	 [ERROR] 	 <http_request.go:44>  	 Post http://127.0.0.1:9012/api/push: dial tcp 127.0.0.1:9012: connect: connection refused
+2018-07-03 01:56:19 	 [ERROR] 	 <push_handler.go:93>  	 Post http://127.0.0.1:9012/api/push: dial tcp 127.0.0.1:9012: connect: connection refused
+2018-07-03 01:57:18 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 01:57:18 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 01:57:18 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-03 01:57:18 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-03 01:57:27 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:62323]
+2018-07-03 01:57:27 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 01:57:35 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 01:57:35 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 01:57:35 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-03 01:57:35 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
