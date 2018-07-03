@@ -35,3 +35,209 @@
 2018-07-03 01:57:35 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
 2018-07-03 01:57:35 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
 2018-07-03 01:57:35 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-03 16:47:34 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:54544]
+2018-07-03 16:47:34 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 16:47:34 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:6afb387f-4162-40c6-87c5-7f563f0e698b,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 16:47:34 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 16:47:35 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result set6afb387f-4162-40c6-87c5-7f563f0e698b
+2018-07-03 16:47:41 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 16:47:41 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 16:47:41 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 16:47:41 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 16:47:41 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result set6afb387f-4162-40c6-87c5-7f563f0e698b
+2018-07-03 16:47:42 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:54551]
+2018-07-03 16:47:42 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 16:47:51 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 16:47:51 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 16:47:51 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-03 16:47:51 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-03 16:47:54 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:54594]
+2018-07-03 16:47:54 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 16:49:05 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 16:49:05 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 16:49:05 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-03 16:49:05 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-03 16:49:07 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:54622]
+2018-07-03 16:49:07 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 16:49:10 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 16:49:10 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 16:49:10 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-03 16:49:10 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-03 16:49:11 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:54625]
+2018-07-03 16:49:11 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 16:49:18 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 16:49:18 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 16:49:18 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-03 16:49:18 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-03 16:50:15 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:54632]
+2018-07-03 16:50:15 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 16:50:16 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 16:50:16 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 16:50:16 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-03 16:50:16 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-03 16:50:36 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:54639]
+2018-07-03 16:50:36 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 16:50:40 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 16:50:40 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 16:50:40 	 [DEBUG] 	 <client.go:148>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-03 16:50:40 	 [DEBUG] 	 <client.go:112>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-03 16:53:43 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:54698]
+2018-07-03 16:53:43 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 16:53:43 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 16:53:43 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 16:53:45 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f
+2018-07-03 16:55:40 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 16:55:40 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 16:55:40 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 16:55:40 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 16:55:52 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:54723]
+2018-07-03 16:55:52 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 16:55:52 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 16:55:52 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 16:55:53 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f
+2018-07-03 16:56:25 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:54746]
+2018-07-03 16:56:25 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 16:56:25 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 16:56:25 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 16:58:05 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 16:58:05 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 16:58:05 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 16:58:05 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 16:58:18 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:54769]
+2018-07-03 16:58:18 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 16:58:18 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 16:58:18 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 16:58:34 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f
+2018-07-03 17:00:21 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-03 17:01:46 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:01:46 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:01:46 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 17:01:46 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 17:02:06 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:54804]
+2018-07-03 17:02:06 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 17:02:06 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 17:02:06 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 17:02:08 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f
+2018-07-03 17:02:29 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:02:29 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:02:29 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 17:02:29 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 17:02:43 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:54829]
+2018-07-03 17:02:43 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 17:02:43 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 17:02:43 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 17:02:47 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f
+2018-07-03 17:02:55 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:02:55 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:02:55 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 17:02:55 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 17:03:06 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:54854]
+2018-07-03 17:03:06 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 17:03:06 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 17:03:06 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 17:03:45 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:03:45 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:03:45 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 17:03:45 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 17:10:13 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55022]
+2018-07-03 17:10:13 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 17:10:13 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 17:10:13 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 17:10:15 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f
+2018-07-03 17:11:20 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:11:20 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:11:20 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 17:11:20 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 17:11:32 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55052]
+2018-07-03 17:11:32 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 17:11:32 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 17:11:32 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 17:11:34 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f
+2018-07-03 17:13:16 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:13:16 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:13:16 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 17:13:16 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 17:14:18 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f
+2018-07-03 17:14:18 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55098]
+2018-07-03 17:14:18 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 17:14:18 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 17:14:18 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 17:14:48 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:14:48 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:14:48 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 17:14:48 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 17:15:00 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f
+2018-07-03 17:15:00 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55123]
+2018-07-03 17:15:00 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 17:15:00 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 17:15:00 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 17:18:08 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:18:08 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:18:08 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 17:18:08 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 17:18:32 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f
+2018-07-03 17:18:32 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55148]
+2018-07-03 17:18:32 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 17:18:32 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 17:18:32 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 17:18:51 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:18:51 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:18:51 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 17:18:51 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 17:19:03 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f
+2018-07-03 17:19:03 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55177]
+2018-07-03 17:19:03 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 17:19:03 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 17:19:03 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 17:19:51 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:19:51 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:19:51 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 17:19:51 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 17:20:13 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55200]
+2018-07-03 17:20:13 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 17:20:13 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 17:20:13 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 17:20:15 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f
+2018-07-03 17:20:47 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:20:47 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:20:47 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 17:20:47 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 17:20:48 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55209]
+2018-07-03 17:20:48 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 17:20:48 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 17:20:48 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 17:20:53 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:20:53 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:20:53 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 17:20:53 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 17:20:54 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55210]
+2018-07-03 17:20:54 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 17:20:54 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 17:20:54 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 17:21:28 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:21:28 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:21:28 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 17:21:28 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 17:22:34 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55260]
+2018-07-03 17:22:34 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-03 17:22:34 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:b51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-03 17:22:34 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-03 17:22:35 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f
+2018-07-03 17:23:07 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-03 17:23:07 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
+2018-07-03 17:23:07 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
+2018-07-03 17:23:07 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
+2018-07-03 17:23:09 	 [ERROR] 	 <user.go:109>  	 sql: no rows in result setb51e0fc0-b45f-41ce-8cb7-0eed7ad4b58f
+2018-07-03 17:23:10 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55267]
+2018-07-03 17:23:10 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 17:24:53 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55272]
+2018-07-03 17:24:53 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-03 17:24:53 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 17:25:26 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55278]
+2018-07-03 17:25:26 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 17:25:42 	 [ INFO] 	 <user_handle.go:248>  	 服务出错
+2018-07-03 17:26:36 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:55283]
+2018-07-03 17:26:36 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-03 17:26:44 	 [ERROR] 	 <user.go:208>  	 Error 1366: Incorrect string value: '\xF0\x93\x86\x9F\xF0\x93...' for column 'nick' at row 1
+2018-07-03 17:26:44 	 [ INFO] 	 <user_handle.go:248>  	 服务出错Error 1366: Incorrect string value: '\xF0\x93\x86\x9F\xF0\x93...' for column 'nick' at row 1
+2018-07-03 17:28:34 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet

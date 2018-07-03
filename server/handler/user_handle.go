@@ -240,12 +240,13 @@ func UpdateUserNickHandler(c *gin.Context)  {
 	}
 	user , _ := User(c)
 	if user == nil {
-		aRes.SetErrorInfo(http.StatusInternalServerError ,err.Error())
+		aRes.SetErrorInfo(http.StatusBadRequest ,err.Error())
 		return
 	}
 	err = model.UpdateUserNickName(para.Nick,user.UserId)
 	if err != nil {
-		aRes.SetErrorInfo(http.StatusInternalServerError ,"server error")
+		log.Info(err.Error())
+		aRes.SetErrorInfo(http.StatusInternalServerError ,"server error"+err.Error())
 		return
 	}
 	aRes.SetSuccessInfo(http.StatusOK,"success")

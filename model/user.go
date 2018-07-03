@@ -163,7 +163,7 @@ func QueryUser(nick string) ([]SimpleUser, error) {
 
 	rows, err := Database.Query("SELECT id,user_id,nick,status,sign,avatar,forbidden FROM im_user WHERE nick LIKE ?",nick)
 	if err != nil {
-		return users, &DatabaseError{"根据查询用户错误"}
+		return users, &DatabaseError{"根据查询用户错误"+err.Error()}
 	}
 	for rows.Next() {
 		var user SimpleUser
@@ -186,7 +186,7 @@ func UpdateUserAvatar(avatar , userId string)error  {
 	defer updateStmt.Close()
 	res ,err := updateStmt.Exec(avatar,userId)
 	if err != nil {
-		return &DatabaseError{"服务出错"}
+		return &DatabaseError{"服务出错"+err.Error()}
 	}
 	num, err := res.RowsAffected()
 	if err != nil || num <= 0{
@@ -205,7 +205,8 @@ func UpdateUserNickName(nick , userId string)error  {
 	defer updateStmt.Close()
 	res ,err := updateStmt.Exec(nick,userId)
 	if err != nil {
-		return &DatabaseError{"服务出错"}
+		log.Error(err.Error())
+		return &DatabaseError{"服务出错"+err.Error()}
 	}
 	num, err := res.RowsAffected()
 	if err != nil || num <= 0{
