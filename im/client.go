@@ -15,7 +15,6 @@ type Client struct {
 	publicIp int32
 }
 
-
 func NewClient(conn *net.TCPConn) *Client {
 	client := new(Client)
 	client.conn = conn
@@ -30,8 +29,8 @@ func NewClient(conn *net.TCPConn) *Client {
 	client.wt = make(chan *Proto, 100)
 
 	//消息处理器
-	client.ClientIM = &ClientIM{Connection:&client.Connection}
-	client.ClientROOM = &ClientROOM{Connection:&client.Connection}
+	client.ClientIM = &ClientIM{Connection: &client.Connection}
+	client.ClientROOM = &ClientROOM{Connection: &client.Connection}
 	return client
 }
 
@@ -45,8 +44,8 @@ func (client *Client) handleMessage(pro *Proto) {
 		client.HandleHeartbeat(pro)
 	case OP_MSG: //通讯消息
 		client.ClientIM.HandleIMMessage(pro)
-	default://未处理消息
-		log.Warn("msg not handle %s",pro.Description())
+	default: //未处理消息
+		log.Warn("msg not handle %s", pro.Description())
 	}
 
 }
@@ -59,7 +58,7 @@ func (client *Client) AddClient() {
 func (client *Client) RemoveClient() {
 	route := appRoute.FindRoute(client.appId)
 	if route == nil {
-		log.Warn("can't find app route %d",client.appId)
+		log.Warn("can't find app route %d", client.appId)
 		return
 	}
 	route.RemoveClient(client)
@@ -109,7 +108,7 @@ func (client *Client) Write() {
 			if pro == nil {
 				client.close()
 				running = false
-				log.Debug("client: %s %d socket closed", client.userId,client.uid)
+				log.Debug("client: %s %d socket closed", client.userId, client.uid)
 				break
 			}
 

@@ -9,7 +9,7 @@ type Route struct {
 	appid        int64
 	mutex        sync.Mutex
 	clients      map[int32]ClientSet
-	roomClients map[int64]ClientSet
+	roomClients  map[int64]ClientSet
 }
 
 func NewRoute(appid int64) *Route {
