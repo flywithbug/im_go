@@ -18,6 +18,11 @@ type loginoutModel struct {
 
 
 	UserAgent string    `json:"user_agent"`
+
+
+	NewPassword string `json:"new_password"`
+	OldPassword	string	`json:"old_password"`
+
 }
 
 //type relationShipModel struct {

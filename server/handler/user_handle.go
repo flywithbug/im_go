@@ -41,6 +41,10 @@ func handleRegister(c *gin.Context) {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"nick can not be nil")
 		return
 	}
+	if len(login.Password) < 6 {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"password too shot")
+		return
+	}
 	num ,err := model.CheckAccount(login.Account)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusInternalServerError ,"server error"+err.Error())
@@ -53,8 +57,9 @@ func handleRegister(c *gin.Context) {
 	if login.AppId == 0{
 		login.AppId = 10
 	}
+
 	password := common.Md5(login.Password)
-	_,err = model.SaveUser(login.AppId,login.Account,password,login.Nick,login.Avatar)
+	_,err = model.SaveUser(login.AppId,login.Account,password,login.Password,login.Nick,login.Avatar)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusInternalServerError,"server error ")
 		return
@@ -250,9 +255,39 @@ func UpdateUserNickHandler(c *gin.Context)  {
 		return
 	}
 	aRes.SetSuccessInfo(http.StatusOK,"success")
-
-
 }
 
+func ChangePasswordHandler(c *gin.Context) {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(aRes.Code, aRes)
+	}()
+	para := loginoutModel{}
+	err := c.BindJSON(&para)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusBadRequest, "Param invalid"+err.Error())
+		return
+	}
+	if len(para.OldPassword) == 0 {
+		aRes.SetErrorInfo(http.StatusBadRequest, "oldpassword can not be nil")
+		return
+	}
+	if len(para.NewPassword) < 6 {
+		aRes.SetErrorInfo(http.StatusBadRequest, "passworld length less than 6")
+		return
+	}
+	user, _ := User(c)
+	if user == nil {
+		aRes.SetErrorInfo(http.StatusBadRequest, err.Error())
+		return
+	}
+	password := common.Md5(para.NewPassword)
+	err = model.UpdateuserPassWorld(para.OldPassword, password, para.NewPassword, user.UserId)
+	if err != nil {
+		log.Info(err.Error())
+		aRes.SetErrorInfo(http.StatusBadRequest, "server error"+err.Error())
+		return
+	}
+	aRes.SetSuccessInfo(http.StatusOK,"success")
 
-
+}

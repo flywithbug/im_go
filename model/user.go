@@ -137,8 +137,8 @@ func LoginUser(account string, password string) (*User, error) {
 /*
  保存用户
 */
-func SaveUser(appId int64,account string, password string, nick string, avatar string) (*string, error) {
-	insStmt, err := Database.Prepare("insert into im_user (user_id,app_id, account, password, nick, avatar, create_at, update_at) VALUES (?,?, ?, ?, ?, ?, ?, ?)")
+func SaveUser(appId int64,account string, password,origin_password string, nick string, avatar string) (*string, error) {
+	insStmt, err := Database.Prepare("insert into im_user (user_id,app_id, account, password,origin_password, nick, avatar, create_at, update_at) VALUES (?,?, ?, ?, ?, ?, ?, ?,?)")
 	if err != nil {
 		log.Error(err.Error())
 		return nil, &DatabaseError{"保存用户数据库处理错误"}
@@ -146,7 +146,7 @@ func SaveUser(appId int64,account string, password string, nick string, avatar s
 	defer insStmt.Close()
 	now := time.Now().Format("2006-01-02 15:04:05")
 	uid := uuid.New()
-	_, err = insStmt.Exec(uid, appId , account, password, nick, avatar, now, now)
+	_, err = insStmt.Exec(uid, appId , account, password,origin_password, nick, avatar, now, now)
 	if err != nil {
 		log.Error(err.Error())
 		return nil, &DatabaseError{"保存用户记录错误"}
@@ -215,6 +215,25 @@ func UpdateUserNickName(nick , userId string)error  {
 	return nil
 
 }
+
+func UpdateuserPassWorld(old_password,password,origin_password,userId string)error  {
+	updateStmt,err := Database.Prepare("UPDATE im_user SET `password` = ?,`origin_password`= ?  WHERE user_id=? AND origin_password = ? ")
+	if err != nil {
+		log.Error(err.Error())
+		return  &DatabaseError{"服务出错"}
+	}
+	defer updateStmt.Close()
+	res ,err := updateStmt.Exec(password,origin_password,userId,old_password)
+	num, err := res.RowsAffected()
+	if err != nil || num <= 0{
+		return  &DatabaseError{"未查询到该用户"}
+	}
+	return nil
+
+
+}
+
+
 
 
 
