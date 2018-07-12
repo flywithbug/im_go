@@ -19,7 +19,7 @@ const  localFilePath  =  "./image/"
 func UploadUserAvatarHandler(c *gin.Context)  {
 	aRes := NewResponse()
 	defer func() {
-		c.JSON(aRes.Code,aRes)
+		c.JSON(http.StatusOK,aRes)
 	}()
 
 	//gin将het/http包的FormFile函数封装到c.Request

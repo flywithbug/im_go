@@ -18,7 +18,8 @@ type SimpleUser struct {
 	Sign     	string    	`json:"sign"`      //个性签名
 	Avatar   	string    	`json:"avatar"`    //头像
 	Forbidden 	int32		`json:"forbidden"`
-
+	Latitude    string		`json:"latitude"`   //维度
+	Longitude   string		`json:"longitude"`   //经度
 
 }
 
@@ -118,18 +119,11 @@ func GetUserByToken(token string) (*User, error) {
 */
 func LoginUser(account string, password string) (*User, error) {
 	var user User
-	rows, err := Database.Query("select app_id, id , user_id, nick, status, sign, avatar, create_at, update_at,forbidden from im_user where account=? and password=? ", account, password)
+	row := Database.QueryRow("select app_id, id , user_id, nick, status, sign, avatar, create_at, update_at,forbidden from im_user where account=? and password=? ", account, password)
+	err := row.Scan(&user.appId,&user.Uid ,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt,&user.Forbidden)
 	if err != nil {
 		log.Error(err.Error()+account)
 		return nil, &DatabaseError{"根据账号及密码查询用户错误"}
-	}
-	defer rows.Close()
-	for rows.Next() {
-		err := rows.Scan(&user.appId,&user.Uid ,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt,&user.Forbidden)
-		if err != nil {
-			log.Error(err.Error())
-			return nil, &DatabaseError{"根据账号及密码查询结果映射至对象错误"}
-		}
 	}
 	return &user, nil
 }
@@ -216,7 +210,7 @@ func UpdateUserNickName(nick , userId string)error  {
 
 }
 
-func UpdateuserPassWorld(old_password,password,origin_password,userId string)error  {
+func UpdateuserPassWord(old_password,password,origin_password,userId string)error  {
 	updateStmt,err := Database.Prepare("UPDATE im_user SET `password` = ?,`origin_password`= ?  WHERE user_id=? AND origin_password = ? ")
 	if err != nil {
 		log.Error(err.Error())
@@ -229,8 +223,21 @@ func UpdateuserPassWorld(old_password,password,origin_password,userId string)err
 		return  &DatabaseError{"未查询到该用户"}
 	}
 	return nil
+}
 
-
+func UpdateUserLocations(longitude,latitude, userId string)error  {
+	updateStmt,err := Database.Prepare("UPDATE im_user SET `longitude` = ?,`latitude`= ?  WHERE user_id=?")
+	if err != nil {
+		log.Error(err.Error())
+		return  &DatabaseError{"服务出错"}
+	}
+	defer updateStmt.Close()
+	res ,err := updateStmt.Exec(longitude,latitude,userId)
+	num, err := res.RowsAffected()
+	if err != nil || num <= 0{
+		return  &DatabaseError{"未查询到该用户"}
+	}
+	return nil
 }
 
 

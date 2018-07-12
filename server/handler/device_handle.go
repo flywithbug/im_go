@@ -10,7 +10,7 @@ import (
 func RegistPushService(c *gin.Context)  {
 	aRes := NewResponse()
 	defer func() {
-		c.JSON(aRes.Code,aRes)
+		c.JSON(http.StatusOK,aRes)
 	}()
 
 	device := model.Device{}
@@ -54,7 +54,7 @@ func RegistPushService(c *gin.Context)  {
 func GetPushStatusHandler(c *gin.Context)  {
 	aRes := NewResponse()
 	defer func() {
-		c.JSON(aRes.Code,aRes)
+		c.JSON(http.StatusOK,aRes)
 	}()
 
 	deviceId := c.Param("id")

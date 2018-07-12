@@ -21,7 +21,7 @@ func handleRegister(c *gin.Context) {
 	aRes := NewResponse()
 
 	defer func() {
-		c.JSON(aRes.Code,aRes)
+		c.JSON(http.StatusOK,aRes)
 	}()
 	login := loginoutModel{}
 	err := c.BindJSON(&login)
@@ -79,7 +79,7 @@ func handleRegister(c *gin.Context) {
 func handleLogin(c *gin.Context) {
 	aRes := NewResponse()
 	defer func() {
-		c.JSON(aRes.Code,aRes)
+		c.JSON(http.StatusOK,aRes)
 	}()
 
 	login := loginoutModel{}
@@ -128,7 +128,7 @@ func handleLogin(c *gin.Context) {
 		password := common.Md5(login.Password)
 		user, err := model.LoginUser(login.Account, password)
 		if err != nil {
-			aRes.SetErrorInfo(http.StatusInternalServerError ,err.Error())
+			aRes.SetErrorInfo(http.StatusBadRequest ,"account or password not right")
 			return
 		}
 		if !strings.EqualFold(user.UserId, "") {
@@ -147,8 +147,9 @@ func handleLogin(c *gin.Context) {
 			aRes.AddResponseInfo("user",user)
 			return
 		}
-		aRes.SetErrorInfo(http.StatusInternalServerError ,err.Error())
-		return
+		log.Info("%s",user)
+		aRes.SetErrorInfo(http.StatusInternalServerError ,"user not found")
+
 	}else {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"account not existed"+err.Error())
 	}
@@ -158,7 +159,7 @@ func handleLogin(c *gin.Context) {
 func handleLogout(c *gin.Context)  {
 	aRes := NewResponse()
 	defer func() {
-		c.JSON(aRes.Code,aRes)
+		c.JSON(http.StatusOK,aRes)
 	}()
 	login := loginoutModel{}
 	err := c.BindJSON(&login)
@@ -189,7 +190,7 @@ func handleLogout(c *gin.Context)  {
 func handleQuery(c *gin.Context)  {
 	aRes := NewResponse()
 	defer func() {
-		c.JSON(aRes.Code,aRes)
+		c.JSON(http.StatusOK,aRes)
 	}()
 	login := loginoutModel{}
 	err := c.BindJSON(&login)
@@ -230,7 +231,7 @@ func handleGetUserInfo(c *gin.Context)  {
 func UpdateUserNickHandler(c *gin.Context)  {
 	aRes := NewResponse()
 	defer func() {
-		c.JSON(aRes.Code,aRes)
+		c.JSON(http.StatusOK,aRes)
 	}()
 	para := loginoutModel{}
 	err := c.BindJSON(&para)
@@ -260,7 +261,7 @@ func UpdateUserNickHandler(c *gin.Context)  {
 func ChangePasswordHandler(c *gin.Context) {
 	aRes := NewResponse()
 	defer func() {
-		c.JSON(aRes.Code, aRes)
+		c.JSON(http.StatusOK, aRes)
 	}()
 	para := loginoutModel{}
 	err := c.BindJSON(&para)
@@ -282,12 +283,41 @@ func ChangePasswordHandler(c *gin.Context) {
 		return
 	}
 	password := common.Md5(para.NewPassword)
-	err = model.UpdateuserPassWorld(para.OldPassword, password, para.NewPassword, user.UserId)
+	err = model.UpdateuserPassWord(para.OldPassword, password, para.NewPassword, user.UserId)
 	if err != nil {
 		log.Info(err.Error())
 		aRes.SetErrorInfo(http.StatusBadRequest, "server error"+err.Error())
 		return
 	}
 	aRes.SetSuccessInfo(http.StatusOK,"success")
+}
 
+func UpdateUserCurrentLocation(c *gin.Context)  {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(http.StatusOK, aRes)
+	}()
+	para := loginoutModel{}
+	err := c.BindJSON(&para)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusBadRequest, "Param invalid"+err.Error())
+		return
+	}
+
+	if len(para.Latitude) == 0 || len(para.Longitude) == 0{
+		aRes.SetErrorInfo(http.StatusBadRequest, "Longitude Latitude can not be nil")
+		return
+	}
+	user, _ := User(c)
+	if user == nil {
+		aRes.SetErrorInfo(http.StatusBadRequest, err.Error())
+		return
+	}
+	err = model.UpdateUserLocations(para.Longitude,para.Latitude,user.UserId)
+	if err != nil {
+		log.Info(err.Error())
+		aRes.SetErrorInfo(http.StatusBadRequest, "server error"+err.Error())
+		return
+	}
+	aRes.SetSuccessInfo(http.StatusOK,"success")
 }

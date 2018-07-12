@@ -23,6 +23,9 @@ type loginoutModel struct {
 	NewPassword string `json:"new_password"`
 	OldPassword	string	`json:"old_password"`
 
+
+	Latitude    string		`json:"latitude"`   //维度
+	Longitude   string		`json:"longitude"`   //经度
 }
 
 //type relationShipModel struct {
