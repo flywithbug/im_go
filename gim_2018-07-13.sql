@@ -7,7 +7,7 @@
 #
 # Host: 118.89.108.25 (MySQL 5.7.22)
 # Database: gim
-# Generation Time: 2018-07-13 07:15:48 +0000
+# Generation Time: 2018-07-13 08:32:24 +0000
 # ************************************************************
 
 
@@ -131,9 +131,9 @@ CREATE TABLE `im_user` (
   `app_id` int(6) NOT NULL COMMENT '所属应用编号',
   `forbidden` int(1) DEFAULT '0',
   `origin_password` varchar(32) CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
-  `longitude` varchar(11) CHARACTER SET utf8mb4 DEFAULT NULL COMMENT '经度',
-  `latitude` varchar(11) CHARACTER SET utf8mb4 DEFAULT NULL COMMENT '维度',
-  `l_time_stamp` varchar(11) CHARACTER SET utf8mb4 DEFAULT NULL COMMENT '定位时间',
+  `longitude` varchar(14) CHARACTER SET utf8mb4 DEFAULT NULL COMMENT '经度',
+  `latitude` varchar(14) CHARACTER SET utf8mb4 DEFAULT NULL COMMENT '维度',
+  `l_time_stamp` varchar(14) CHARACTER SET utf8mb4 DEFAULT NULL COMMENT '定位时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `account` (`account`),
   UNIQUE KEY `user_id` (`user_id`)
@@ -150,9 +150,9 @@ CREATE TABLE `im_user_location_path` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `p_identifier` varchar(64) NOT NULL DEFAULT '',
   `user_id` varchar(40) NOT NULL DEFAULT '',
-  `l_time_stamp` varchar(11) NOT NULL DEFAULT '',
-  `latitude` varchar(11) NOT NULL DEFAULT '',
-  `longitude` varchar(11) NOT NULL DEFAULT '',
+  `l_time_stamp` varchar(14) NOT NULL DEFAULT '',
+  `latitude` varchar(14) NOT NULL DEFAULT '',
+  `longitude` varchar(14) NOT NULL DEFAULT '',
   `l_type` tinyint(2) DEFAULT '0' COMMENT '0 gps 1 图片gps',
   PRIMARY KEY (`id`),
   UNIQUE KEY `p_identifier` (`p_identifier`)

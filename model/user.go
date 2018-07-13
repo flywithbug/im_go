@@ -233,8 +233,16 @@ func UpdateUserLocations(longitude,latitude,l_time_stamp, userId string)error  {
 	}
 	defer updateStmt.Close()
 	res ,err := updateStmt.Exec(longitude,latitude,l_time_stamp,userId)
+	if err != nil {
+		log.Info(err.Error())
+		return  &DatabaseError{"未查询到该用户"+ err.Error()}
+	}
 	num, err := res.RowsAffected()
-	if err != nil || num <= 0{
+	if err != nil {
+		log.Info(err.Error())
+		return  &DatabaseError{"未查询到该用户"+ err.Error()}
+	}
+	if num <= 0{
 		return  &DatabaseError{"未查询到该用户"}
 	}
 	return nil

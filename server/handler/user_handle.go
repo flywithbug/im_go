@@ -315,7 +315,7 @@ func UpdateUserCurrentLocation(c *gin.Context)  {
 	}
 	err = model.UpdateUserLocations(para.Longitude,para.Latitude,para.LTimeStamp,user.UserId)
 	if err != nil {
-		log.Info(err.Error())
+		log.Info(err.Error()+para.Latitude + " " +para.Longitude)
 		aRes.SetErrorInfo(http.StatusBadRequest, "server error"+err.Error())
 		return
 	}

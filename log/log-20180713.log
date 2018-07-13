@@ -1,0 +1,30 @@
+2018-07-13 16:27:03 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.74:52354]
+2018-07-13 16:27:03 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-13 16:27:09 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-13 16:27:09 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-07-13 16:27:09 	 [DEBUG] 	 <client.go:147>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-13 16:27:09 	 [DEBUG] 	 <client.go:111>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-13 16:27:15 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.74:52362]
+2018-07-13 16:27:15 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-13 16:29:10 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.74:52386]
+2018-07-13 16:29:10 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-13 16:29:10 	 [ INFO] 	 <user.go:237>  	 Error 1406: Data too long for column 'longitude' at row 1
+2018-07-13 16:29:10 	 [ INFO] 	 <user_handle.go:318>  	 未查询到该用户Error 1406: Data too long for column 'longitude' at row 1
+2018-07-13 16:29:47 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-13 16:29:47 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-07-13 16:29:47 	 [DEBUG] 	 <client.go:147>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-13 16:29:47 	 [DEBUG] 	 <client.go:111>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-13 16:29:53 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.74:52400]
+2018-07-13 16:29:53 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-13 16:29:53 	 [ INFO] 	 <user.go:237>  	 Error 1406: Data too long for column 'longitude' at row 1
+2018-07-13 16:29:53 	 [ INFO] 	 <user_handle.go:318>  	 未查询到该用户Error 1406: Data too long for column 'longitude' at row 1
+2018-07-13 16:30:44 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.74:52416]
+2018-07-13 16:30:44 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-13 16:30:45 	 [ INFO] 	 <user.go:237>  	 Error 1406: Data too long for column 'longitude' at row 1
+2018-07-13 16:30:45 	 [ INFO] 	 <user_handle.go:318>  	 未查询到该用户Error 1406: Data too long for column 'longitude' at row 137.7858340 -122.4064170
+2018-07-13 16:31:47 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-13 16:31:47 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-07-13 16:31:47 	 [DEBUG] 	 <client.go:147>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-13 16:31:47 	 [DEBUG] 	 <client.go:111>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-13 16:31:54 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.74:52433]
+2018-07-13 16:31:54 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
