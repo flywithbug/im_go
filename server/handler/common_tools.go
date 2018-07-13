@@ -25,3 +25,15 @@ func UserToken(ctx *gin.Context) (string, bool) {
 	}
 	return token, true
 }
+
+func UserDeviceId(ctx *gin.Context) (string, bool)   {
+	o, ok := ctx.Get(KeyContextDeviceId)
+	if !ok {
+		return "", false
+	}
+	deviceId, ok := o.(string)
+	if !ok {
+		return "", false
+	}
+	return deviceId, true
+}

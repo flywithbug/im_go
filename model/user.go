@@ -25,7 +25,7 @@ type SimpleUser struct {
 }
 
 /*
-用户对象
+用户对象im_user_location_path
 */
 type User struct {
 	SimpleUser

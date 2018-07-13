@@ -57,7 +57,6 @@ func handleRegister(c *gin.Context) {
 	if login.AppId == 0{
 		login.AppId = 10
 	}
-
 	password := common.Md5(login.Password)
 	_,err = model.SaveUser(login.AppId,login.Account,password,login.Password,login.Nick,login.Avatar)
 	if err != nil {
@@ -131,6 +130,7 @@ func handleLogin(c *gin.Context) {
 			aRes.SetErrorInfo(http.StatusBadRequest ,"account or password not right")
 			return
 		}
+
 		if !strings.EqualFold(user.UserId, "") {
 			token := uuid.New()
 			ip := common.GetIp(c.Request)
@@ -138,7 +138,9 @@ func handleLogin(c *gin.Context) {
 			if !ok {
 				userAgent = ""
 			}
-			if err := model.SaveLogin(user.GetAppId(),user.Uid,user.UserId, token, ip,user.Forbidden,userAgent.(string),user.DeviceId); err != nil {
+			deviceId ,_ := UserDeviceId(c)
+			log.Info(deviceId)
+			if err := model.SaveLogin(user.GetAppId(),user.Uid,user.UserId, token, ip,user.Forbidden,userAgent.(string),deviceId); err != nil {
 				aRes.SetErrorInfo(http.StatusInternalServerError ,err.Error())
 				return
 			}
@@ -177,7 +179,8 @@ func handleLogout(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusInternalServerError ,errStr)
 		return
 	}
-	model.DeviceUniteByUserId(logout.DeviceId)
+	deviceId ,_ := UserDeviceId(c)
+	model.DeviceUniteByUserId(deviceId)
 	aRes.SetSuccessInfo(http.StatusOK,"success")
 }
 
@@ -322,7 +325,8 @@ func UpdateUserCurrentLocation(c *gin.Context)  {
 	if len(para.PIdentifier) == 0 {
 		para.PIdentifier = uuid.NewUUID().String()
 	}
-	err = model.SaveLocationsPath(user.UserId,para.Longitude,para.Latitude,para.LTimeStamp,para.PIdentifier,para.LType)
+	deviceId ,_ := UserDeviceId(c)
+	err = model.SaveLocationsPath(user.UserId,para.Longitude,para.Latitude,para.LTimeStamp,para.PIdentifier,deviceId,para.LType)
 	if err != nil {
 		log.Info(err.Error())
 	}
@@ -346,10 +350,10 @@ func UpdateUserBatchLocations(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusBadRequest, err.Error())
 		return
 	}
-
+	deviceId ,_ := UserDeviceId(c)
 	for _,location := range para.List {
 		if len(location.PIdentifier) > 0 {
-			model.SaveLocationsPath(user.UserId,location.Longitude,location.Latitude,location.LTimeStamp,location.PIdentifier,location.LType)
+			model.SaveLocationsPath(user.UserId,location.Longitude,location.Latitude,location.LTimeStamp,location.PIdentifier,deviceId,location.LType)
 		}
 	}
 

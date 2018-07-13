@@ -11,6 +11,10 @@ import (
 //todo  添加签名进行客户端请求安全校验
 func TokenAuthMiddleware() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
+		deviceId := ctx.GetHeader(KeyDeviceId)
+		if len(deviceId)> 0 {
+			ctx.Set(KeyContextDeviceId,deviceId)
+		}
 		urlPath := ctx.Request.URL.Path
 		if strings.EqualFold(urlPath,KeyLoginPath){
 			userAg := ctx.GetHeader(KeyUserAgent)
