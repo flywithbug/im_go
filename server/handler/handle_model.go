@@ -26,6 +26,8 @@ type loginoutModel struct {
 
 	Latitude    string		`json:"latitude"`   //维度
 	Longitude   string		`json:"longitude"`   //经度
+	LTimeStamp  string		`json:"l_time_stamp"`
+	LType 		int			`json:"l_type"`
 }
 
 //type relationShipModel struct {

@@ -55,3 +55,12 @@
 2018-07-12 20:47:10 	 [DEBUG] 	 <client.go:147>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
 2018-07-12 20:47:10 	 [DEBUG] 	 <client.go:111>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
 2018-07-12 20:47:13 	 [ERROR] 	 <user.go:125>  	 sql: no rows in result setori1
+2018-07-12 20:48:13 	 [ERROR] 	 <user.go:125>  	 sql: no rows in result setori1
+2018-07-12 20:48:36 	 [ERROR] 	 <user.go:125>  	 sql: no rows in result setori1
+2018-07-12 20:49:28 	 [ERROR] 	 <user.go:125>  	 sql: no rows in result setori1
+2018-07-12 20:49:32 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:52283]
+2018-07-12 20:49:32 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-12 20:50:08 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-12 20:50:08 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-07-12 20:50:08 	 [DEBUG] 	 <client.go:147>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-12 20:50:08 	 [DEBUG] 	 <client.go:111>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed

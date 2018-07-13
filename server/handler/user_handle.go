@@ -313,11 +313,16 @@ func UpdateUserCurrentLocation(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusBadRequest, err.Error())
 		return
 	}
-	err = model.UpdateUserLocations(para.Longitude,para.Latitude,user.UserId)
+	err = model.UpdateUserLocations(para.Longitude,para.Latitude,para.LTimeStamp,user.UserId)
 	if err != nil {
 		log.Info(err.Error())
 		aRes.SetErrorInfo(http.StatusBadRequest, "server error"+err.Error())
 		return
 	}
+	err = model.SaveLocationsPath(user.UserId,para.Longitude,para.Latitude,para.LTimeStamp,para.LType)
+	if err != nil {
+		log.Info(err.Error())
+	}
+
 	aRes.SetSuccessInfo(http.StatusOK,"success")
 }

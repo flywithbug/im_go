@@ -20,7 +20,7 @@ type SimpleUser struct {
 	Forbidden 	int32		`json:"forbidden"`
 	Latitude    string		`json:"latitude"`   //维度
 	Longitude   string		`json:"longitude"`   //经度
-
+	LTimeStamp   string		`json:"l_time_stamp"`
 }
 
 /*
@@ -225,14 +225,14 @@ func UpdateuserPassWord(old_password,password,origin_password,userId string)erro
 	return nil
 }
 
-func UpdateUserLocations(longitude,latitude, userId string)error  {
-	updateStmt,err := Database.Prepare("UPDATE im_user SET `longitude` = ?,`latitude`= ?  WHERE user_id=?")
+func UpdateUserLocations(longitude,latitude,l_time_stamp, userId string)error  {
+	updateStmt,err := Database.Prepare("UPDATE im_user SET `longitude` = ?,`latitude`= ? ,`l_time_stamp`= ?  WHERE user_id=?")
 	if err != nil {
 		log.Error(err.Error())
 		return  &DatabaseError{"服务出错"}
 	}
 	defer updateStmt.Close()
-	res ,err := updateStmt.Exec(longitude,latitude,userId)
+	res ,err := updateStmt.Exec(longitude,latitude,l_time_stamp,userId)
 	num, err := res.RowsAffected()
 	if err != nil || num <= 0{
 		return  &DatabaseError{"未查询到该用户"}
