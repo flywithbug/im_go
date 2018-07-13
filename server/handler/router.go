@@ -27,6 +27,7 @@ var routers = map[string]gin.HandlerFunc{
 	"GET    	/push/status/:id":		GetPushStatusHandler,    //当前推送状态获取 (根据deviceId 获取推送状态设置)
 	"POST       /user/password":		ChangePasswordHandler,
 	"POST 		/user/location":        UpdateUserCurrentLocation,
+	"POST       /user/location/batch":  UpdateUserBatchLocations,
 
 }
 

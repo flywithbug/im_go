@@ -1,7 +1,7 @@
 package handler
 
 type loginoutModel struct {
-
+	LocationModel
 	//register
 	AppId      int64	`json:"app_id"`
 	Nick		string	`json:"nick"`
@@ -24,11 +24,20 @@ type loginoutModel struct {
 	OldPassword	string	`json:"old_password"`
 
 
+}
+
+type LocationModel struct {
 	Latitude    string		`json:"latitude"`   //维度
 	Longitude   string		`json:"longitude"`   //经度
 	LTimeStamp  string		`json:"l_time_stamp"`
 	LType 		int			`json:"l_type"`
 }
+
+type PhotoLocationsModel struct {
+	List   []LocationModel   `json:"list"`
+}
+
+
 
 //type relationShipModel struct {
 //	UId 		int			`json:"u_id"`

@@ -326,3 +326,36 @@ func UpdateUserCurrentLocation(c *gin.Context)  {
 
 	aRes.SetSuccessInfo(http.StatusOK,"success")
 }
+
+func UpdateUserBatchLocations(c *gin.Context)  {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(http.StatusOK, aRes)
+	}()
+	para := PhotoLocationsModel{}
+	err := c.BindJSON(&para)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusBadRequest, "Param invalid"+err.Error())
+		return
+	}
+	user, _ := User(c)
+	if user == nil {
+		aRes.SetErrorInfo(http.StatusBadRequest, err.Error())
+		return
+	}
+
+	for _,location := range para.List {
+		err = model.SaveLocationsPath(user.UserId,location.Longitude,location.Latitude,location.LTimeStamp,location.LType)
+		if err != nil {
+			log.Info(err.Error())
+			break
+		}
+	}
+
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusInternalServerError, err.Error())
+		return
+	}
+	aRes.SetSuccessInfo(http.StatusOK,"success")
+
+}
