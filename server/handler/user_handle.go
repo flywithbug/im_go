@@ -349,16 +349,8 @@ func UpdateUserBatchLocations(c *gin.Context)  {
 			continue
 		}
 		err = model.SaveLocationsPath(user.UserId,location.Longitude,location.Latitude,location.LTimeStamp,location.PIdentifier,location.LType)
-		if err != nil {
-			log.Info(err.Error())
-			break
-		}
 	}
 
-	if err != nil {
-		aRes.SetErrorInfo(http.StatusInternalServerError, err.Error())
-		return
-	}
 	aRes.SetSuccessInfo(http.StatusOK,"success")
 
 }
