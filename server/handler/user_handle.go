@@ -319,7 +319,7 @@ func UpdateUserCurrentLocation(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusBadRequest, "server error"+err.Error())
 		return
 	}
-	err = model.SaveLocationsPath(user.UserId,para.Longitude,para.Latitude,para.LTimeStamp,para.LType)
+	err = model.SaveLocationsPath(user.UserId,para.Longitude,para.Latitude,para.LTimeStamp,para.PIdentifier,para.LType)
 	if err != nil {
 		log.Info(err.Error())
 	}
@@ -345,7 +345,10 @@ func UpdateUserBatchLocations(c *gin.Context)  {
 	}
 
 	for _,location := range para.List {
-		err = model.SaveLocationsPath(user.UserId,location.Longitude,location.Latitude,location.LTimeStamp,location.LType)
+		if len(location.PIdentifier) == 0 {
+			continue
+		}
+		err = model.SaveLocationsPath(user.UserId,location.Longitude,location.Latitude,location.LTimeStamp,location.PIdentifier,location.LType)
 		if err != nil {
 			log.Info(err.Error())
 			break

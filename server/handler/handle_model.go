@@ -20,7 +20,7 @@ type loginoutModel struct {
 	UserAgent string    `json:"user_agent"`
 
 
-	NewPassword string `json:"new_password"`
+	NewPassword string  `json:"new_password"`
 	OldPassword	string	`json:"old_password"`
 
 
@@ -31,6 +31,7 @@ type LocationModel struct {
 	Longitude   string		`json:"longitude"`   //经度
 	LTimeStamp  string		`json:"l_time_stamp"`
 	LType 		int			`json:"l_type"`
+	PIdentifier	string		`json:"p_identifier"`
 }
 
 type PhotoLocationsModel struct {

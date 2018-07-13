@@ -15,13 +15,13 @@ type Location struct {
 /*
  保存登录状态
  */
-func SaveLocationsPath(userId, longitude,latitude ,time_stamp string,lType int) error {
-	insStmt, err := Database.Prepare("INSERT into im_user_location_path (user_id, longitude,latitude ,l_time_stamp ,l_type) VALUES (?, ?, ?, ?, ?)")
+func SaveLocationsPath(userId, longitude,latitude ,time_stamp,p_identifier string,lType int) error {
+	insStmt, err := Database.Prepare("INSERT into im_user_location_path (user_id, longitude,latitude ,l_time_stamp,p_identifier ,l_type) VALUES (?, ?, ?, ?, ?,?)")
 	if err != nil {
 		return &DatabaseError{"服务错误:"+err.Error()}
 	}
 	defer insStmt.Close()
-	_, err = insStmt.Exec(userId,longitude,latitude,time_stamp,lType)
+	_, err = insStmt.Exec(userId,longitude,latitude,time_stamp,p_identifier,lType)
 	if err != nil {
 		return &DatabaseError{"服务错误:"+err.Error()}
 	}

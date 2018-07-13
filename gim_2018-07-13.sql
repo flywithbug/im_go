@@ -7,7 +7,7 @@
 #
 # Host: 118.89.108.25 (MySQL 5.7.22)
 # Database: gim
-# Generation Time: 2018-07-13 00:24:05 +0000
+# Generation Time: 2018-07-13 07:15:48 +0000
 # ************************************************************
 
 
@@ -148,12 +148,14 @@ DROP TABLE IF EXISTS `im_user_location_path`;
 
 CREATE TABLE `im_user_location_path` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `p_identifier` varchar(64) NOT NULL DEFAULT '',
   `user_id` varchar(40) NOT NULL DEFAULT '',
   `l_time_stamp` varchar(11) NOT NULL DEFAULT '',
   `latitude` varchar(11) NOT NULL DEFAULT '',
   `longitude` varchar(11) NOT NULL DEFAULT '',
   `l_type` tinyint(2) DEFAULT '0' COMMENT '0 gps 1 图片gps',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `p_identifier` (`p_identifier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
