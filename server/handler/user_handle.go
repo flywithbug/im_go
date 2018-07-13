@@ -138,7 +138,7 @@ func handleLogin(c *gin.Context) {
 			if !ok {
 				userAgent = ""
 			}
-			if err := model.SaveLogin(user.GetAppId(),user.Uid,user.UserId, token, ip,user.Forbidden,userAgent.(string)); err != nil {
+			if err := model.SaveLogin(user.GetAppId(),user.Uid,user.UserId, token, ip,user.Forbidden,userAgent.(string),user.DeviceId); err != nil {
 				aRes.SetErrorInfo(http.StatusInternalServerError ,err.Error())
 				return
 			}
@@ -161,24 +161,24 @@ func handleLogout(c *gin.Context)  {
 	defer func() {
 		c.JSON(http.StatusOK,aRes)
 	}()
-	login := loginoutModel{}
-	err := c.BindJSON(&login)
+	logout := loginoutModel{}
+	err := c.BindJSON(&logout)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid"+err.Error())
 		return
 	}
-	if login.Token == "" {
+	if logout.Token == "" {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"token can not be nil")
 		return
 	}
-	_ ,err = model.Logout(login.Token)
+	_ ,err = model.Logout(logout.Token)
 	if err != nil{
 		errStr := err.Error()
 		aRes.SetErrorInfo(http.StatusInternalServerError ,errStr)
 		return
 	}
+	model.DeviceUniteByUserId(logout.DeviceId)
 	aRes.SetSuccessInfo(http.StatusOK,"success")
-
 }
 
 

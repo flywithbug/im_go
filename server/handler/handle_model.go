@@ -16,6 +16,7 @@ type loginoutModel struct {
 	Token      string	`json:"token"`
 	UserId     string    `json:"user_id"`    // 用户ID
 
+	DeviceId  string	`json:"device_id"`
 
 	UserAgent string    `json:"user_agent"`
 

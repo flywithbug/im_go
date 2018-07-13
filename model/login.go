@@ -50,14 +50,14 @@ func GetLoginByToken(token string) (*Login, error) {
 /*
  保存登录状态
  */
-func SaveLogin(appId int64,uId int64 ,userId string, token string, ip string,forbidden int32,userAgent string) error {
-	insStmt, errStmt := Database.Prepare("insert into im_login (app_id,u_id, user_id, token, login_at, login_ip, status,forbidden,user_Agent) VALUES (?, ?, ?, ?, ?, ?, ?,?,?)")
+func SaveLogin(appId int64,uId int64 ,userId string, token string, ip string,forbidden int32,userAgent string,deviceId string) error {
+	insStmt, errStmt := Database.Prepare("insert into im_login (app_id,u_id, user_id, token, login_at, login_ip, status,forbidden,user_Agent,device_id) VALUES (?, ?, ?, ?, ?, ?, ?,?,?,?)")
 	if errStmt != nil {
 		return &DatabaseError{"服务错误"}
 	}
 	defer insStmt.Close()
 	status := 1
-	_, err := insStmt.Exec(appId,uId, userId, token, time.Now().Format("2006-01-02 15:04:05"), ip,status,forbidden,userAgent)
+	_, err := insStmt.Exec(appId,uId, userId, token, time.Now().Format("2006-01-02 15:04:05"), ip,status,forbidden,userAgent,deviceId)
 	if err != nil {
 		return &DatabaseError{"服务错误"}
 	}

@@ -88,7 +88,6 @@ func GetDevicesByUserId(userId string)([]Device,error)  {
 		devices = append(devices,device)
 	}
 	return devices,nil
-
 }
 
 func GetDevicesByDeviceId(deviceId string)(*Device,error)  {
@@ -101,4 +100,27 @@ func GetDevicesByDeviceId(deviceId string)(*Device,error)  {
 	}
 	return &device,nil
 }
+
+
+func DeviceUniteByUserId(deviceId string)(int64,error)   {
+	updateStmt, err := Database.Prepare("UPDATE im_device SET user_id=? where device_id = ?")
+	if err != nil {
+		log.Error(err.Error())
+		return -1, &DatabaseError{"服务出错"}
+	}
+	defer updateStmt.Close()
+	res, err := updateStmt.Exec("",deviceId)
+	if err != nil {
+		log.Error(err.Error())
+		return -1, &DatabaseError{"服务出错"}
+	}
+	num, err := res.RowsAffected()
+	if err != nil {
+		log.Info(err.Error())
+		return -1, &DatabaseError{"更新失败"}
+	}
+	return num,nil
+
+}
+
 

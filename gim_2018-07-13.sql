@@ -7,7 +7,7 @@
 #
 # Host: 118.89.108.25 (MySQL 5.7.22)
 # Database: gim
-# Generation Time: 2018-07-13 08:32:24 +0000
+# Generation Time: 2018-07-13 09:19:00 +0000
 # ************************************************************
 
 
@@ -73,6 +73,7 @@ CREATE TABLE `im_login` (
   `logout_at` datetime DEFAULT NULL,
   `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '登录态：-1 被踢出 ，0登出，1使用中,',
   `forbidden` char(1) NOT NULL DEFAULT '0',
+  `device_id` varchar(80) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 

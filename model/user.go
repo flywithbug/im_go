@@ -21,6 +21,7 @@ type SimpleUser struct {
 	Latitude    string		`json:"latitude"`   //维度
 	Longitude   string		`json:"longitude"`   //经度
 	LTimeStamp   string		`json:"l_time_stamp"`
+	DeviceId    string		`json:"device_id"`
 }
 
 /*
