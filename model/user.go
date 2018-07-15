@@ -33,6 +33,7 @@ type User struct {
 	updateAt 	time.Time 	`json:"update_at"` //更新日期
 	Token    	string    	`json:"token"`
 	userAgent   string		`json:"user_agent"` //用户登录时的ua
+
 }
 
 func (use *User)GetAppId()int64  {
@@ -86,6 +87,22 @@ func GetUserByUserId(userId string) (*User, error) {
 	}
 	return &user, err
 }
+
+
+/*
+ 根据ID获取用户
+*/
+func GetUserByAccount(account string) (*User, error) {
+	var user User
+	row := Database.QueryRow("select id, app_id, user_id, nick, status, sign, avatar, create_at, update_at from im_user where account = ?", account)
+	err := row.Scan(&user.Uid,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
+	if err != nil {
+		log.Error(err.Error(),account)
+		return nil, &DatabaseError{"根据ID查询用户-将结果映射至对象错误"}
+	}
+	return &user, err
+}
+
 /*
  根据ID获取用户
 */
@@ -99,6 +116,22 @@ func GetUserByUId(uId string) (*User, error) {
 	}
 	return &user, err
 }
+
+
+/*
+ 根据ID获取用户
+*/
+func GetUserWithLocationByUserId(userId string) (*User, error) {
+	var user User
+	row := Database.QueryRow("SELECT id, app_id, user_id, nick, status, sign, avatar, create_at, update_at,latitude,longitude,l_time_stamp from im_user where user_id = ?", userId)
+	err := row.Scan(&user.Uid,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt,&user.Latitude,&user.Longitude,&user.LTimeStamp)
+	if err != nil {
+		log.Error(err.Error()+userId)
+		return nil, &DatabaseError{"根据ID查询用户-将结果映射至对象错误"}
+	}
+	return &user, err
+}
+
 
 /*
  根据token获取用户
@@ -153,7 +186,7 @@ func SaveUser(appId int64,account string, password,origin_password string, nick 
 /*
  根据条件查询获取好友列表
 */
-func QueryUser(nick string) ([]SimpleUser, error) {
+func QueryUserByNick(nick string) ([]SimpleUser, error) {
 	var users []SimpleUser
 
 	rows, err := Database.Query("SELECT id,user_id,nick,status,sign,avatar,forbidden FROM im_user WHERE nick LIKE ?",nick)
@@ -171,6 +204,10 @@ func QueryUser(nick string) ([]SimpleUser, error) {
 	}
 	return users, nil
 }
+
+
+
+
 
 func UpdateUserAvatar(avatar , userId string)error  {
 	updateStmt,err := Database.Prepare("UPDATE im_user SET `avatar` = ? WHERE user_id=?")

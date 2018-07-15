@@ -190,7 +190,7 @@ func handleLogout(c *gin.Context)  {
 /**
 查询请求处理方法
 */
-func handleQuery(c *gin.Context)  {
+func handleQueryNick(c *gin.Context)  {
 	aRes := NewResponse()
 	defer func() {
 		c.JSON(http.StatusOK,aRes)
@@ -205,7 +205,32 @@ func handleQuery(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"nick can not be nil")
 		return
 	}
-	users,err := model.QueryUser(login.Nick)
+	users,err := model.QueryUserByNick(login.Nick)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusInternalServerError ,"server error")
+		return
+	}
+	aRes.AddResponseInfo("users",users)
+}
+/**
+查询请求处理方法
+*/
+func handleQueryAccount(c *gin.Context)  {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(http.StatusOK,aRes)
+	}()
+	login := loginoutModel{}
+	err := c.BindJSON(&login)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid"+err.Error())
+		return
+	}
+	if login.Account == "" {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"nick can not be nil")
+		return
+	}
+	users,err := model.GetUserByAccount(login.Account)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusInternalServerError ,"server error")
 		return
@@ -213,10 +238,15 @@ func handleQuery(c *gin.Context)  {
 	aRes.AddResponseInfo("users",users)
 }
 
+
+
+
+
+
 func handleGetUserInfo(c *gin.Context)  {
 	aRes := NewResponse()
 	defer func() {
-		c.JSON(aRes.Code,aRes)
+		c.JSON(http.StatusOK,aRes)
 	}()
 	userId := c.Param("id")
 	if len(userId) == 0{
@@ -356,7 +386,5 @@ func UpdateUserBatchLocations(c *gin.Context)  {
 			model.SaveLocationsPath(user.UserId,location.Longitude,location.Latitude,location.LTimeStamp,location.PIdentifier,deviceId,location.LType)
 		}
 	}
-
 	aRes.SetSuccessInfo(http.StatusOK,"success")
-
 }

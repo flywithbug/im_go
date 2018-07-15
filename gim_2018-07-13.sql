@@ -7,7 +7,7 @@
 #
 # Host: 118.89.108.25 (MySQL 5.7.22)
 # Database: gim
-# Generation Time: 2018-07-13 09:19:00 +0000
+# Generation Time: 2018-07-13 09:49:16 +0000
 # ************************************************************
 
 
@@ -155,6 +155,7 @@ CREATE TABLE `im_user_location_path` (
   `latitude` varchar(14) NOT NULL DEFAULT '',
   `longitude` varchar(14) NOT NULL DEFAULT '',
   `l_type` tinyint(2) DEFAULT '0' COMMENT '0 gps 1 图片gps',
+  `device_id` varchar(80) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `p_identifier` (`p_identifier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

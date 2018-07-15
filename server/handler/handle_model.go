@@ -40,14 +40,12 @@ type PhotoLocationsModel struct {
 }
 
 
+type UserRelationShip struct {
+	UserId   	string			`json:"user_id"`
+	Status 		int				`json:"status"`  //-2拉黑，-1 拒绝，0 申请，1 接受
+}
 
-//type relationShipModel struct {
-//	UId 		int			`json:"u_id"`
-//	FriendId	int			`json:"friend_id"`
-//	Status 		int			`json:"status"`
-//	RelationId 	string		`json:"relation_id"`
-//	Remark		string		`json:"remark"`
-//	Method 		string		`json:"method"`  //add delete
-//}
+
+
 
 

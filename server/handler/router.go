@@ -18,7 +18,8 @@ var routers = map[string]gin.HandlerFunc{
 	"POST 		/register": 			handleRegister, //注册
 	"POST  		/login": 				handleLogin,
 	"POST		/logout":				handleLogout,  //退出登录
-	"POST 		/query": 				handleQuery,   //根据昵称查询用户列表
+	"POST 		/query/nick": 			handleQueryNick,   //根据昵称查询用户列表
+	"POST 		/query/account": 		handleQueryAccount,   //根据账号查询用户
 	"POST		/update/nick":			UpdateUserNickHandler, //更新用户昵称
 	"GET 		/user/:id": 			handleGetUserInfo,   //根据用户user_id获取用户信息
 	"POST		/upload/avatar":		UploadUserAvatarHandler,			//avatar图片上传
@@ -29,6 +30,8 @@ var routers = map[string]gin.HandlerFunc{
 	"POST 		/user/location":        UpdateUserCurrentLocation,
 	"POST       /user/location/batch":  UpdateUserBatchLocations,
 
+	"POST       /user/relation/apply":  ApplyUserRelation, //申请好友
+	"POST       /user/relation/update": UpdateUserRelation, //更新好友关系
 }
 
 func RegisterRouters(r *gin.Engine, prefixs []string){
