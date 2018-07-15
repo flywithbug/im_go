@@ -188,7 +188,6 @@ func SaveUser(appId int64,account string, password,origin_password string, nick 
 */
 func QueryUserByNick(nick string) ([]SimpleUser, error) {
 	var users []SimpleUser
-
 	rows, err := Database.Query("SELECT id,user_id,nick,status,sign,avatar,forbidden FROM im_user WHERE nick LIKE ?",nick)
 	if err != nil {
 		return users, &DatabaseError{"根据查询用户错误"+err.Error()}
