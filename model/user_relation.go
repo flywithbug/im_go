@@ -81,5 +81,3 @@ func UpdateUserRelation(userId,friendId string,status int)error  {
 	}
 	return nil
 }
-
-

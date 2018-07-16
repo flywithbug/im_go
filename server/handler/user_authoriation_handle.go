@@ -1,5 +1,6 @@
 package handler
 
+import "github.com/gin-gonic/gin"
 
 //CREATE TABLE `im_user_authorization` (
 //`host_id` varchar(40) NOT NULL DEFAULT '',
@@ -10,4 +11,11 @@ package handler
 //PRIMARY KEY (`host_id`,`guest_id`)
 //) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+func UpdateAuthorization(c *gin.Context)  {
+
+
+
+
+
+}
 

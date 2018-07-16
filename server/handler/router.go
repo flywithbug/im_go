@@ -12,26 +12,28 @@ const  LoginPATH  =  "/login"
 
 
 var routers = map[string]gin.HandlerFunc{
-	"GET   		/system": 				handleSystem, //系统状态
-	"GET		/summary":				im.GinSummary,
-	"GET		/config":				AppConfigHandler, //请求网络接口下发，（最好使用使用域名请求）
-	"POST 		/register": 			handleRegister, //注册
-	"POST  		/login": 				handleLogin,
-	"POST		/logout":				handleLogout,  //退出登录
-	"POST 		/query/nick": 			handleQueryNick,   //根据昵称查询用户列表
-	"POST 		/query/account": 		handleQueryAccount,   //根据账号查询用户
-	"POST		/update/nick":			UpdateUserNickHandler, //更新用户昵称
-	"GET 		/user/:id": 			handleGetUserInfo,   //根据用户user_id获取用户信息
-	"POST		/upload/avatar":		UploadUserAvatarHandler,			//avatar图片上传
-	"GET	    /image/avatar/":		DownloadImageHandler,      //avatar图片下载
-	"POST		/push/update":			RegistPushService,
-	"GET    	/push/status/:id":		GetPushStatusHandler,    //当前推送状态获取 (根据deviceId 获取推送状态设置)
-	"POST       /user/password":		ChangePasswordHandler,
-	"POST 		/user/location":        UpdateUserCurrentLocation,
-	"POST       /user/location/batch":  UpdateUserBatchLocations,
+	"GET   		/system": 						handleSystem, //系统状态
+	"GET		/summary":						im.GinSummary,
+	"GET		/config":						AppConfigHandler, //请求网络接口下发，（最好使用使用域名请求）
+	"POST 		/register": 					handleRegister, //注册
+	"POST  		/login": 						handleLogin,
+	"POST		/logout":						handleLogout,  //退出登录
+	"POST 		/query/nick": 					handleQueryNick,   //根据昵称查询用户列表
+	"POST 		/query/account": 				handleQueryAccount,   //根据账号查询用户
+	"POST		/update/nick":					UpdateUserNickHandler, //更新用户昵称
+	"GET 		/user/:id": 					handleGetUserInfo,   //根据用户user_id获取用户信息
+	"POST		/upload/avatar":				UploadUserAvatarHandler,			//avatar图片上传
+	"GET	    /image/avatar/":				DownloadImageHandler,      //avatar图片下载
+	"POST		/push/update":					RegistPushService,
+	"GET    	/push/status/:id":				GetPushStatusHandler,    //当前推送状态获取 (根据deviceId 获取推送状态设置)
+	"POST       /user/password":				ChangePasswordHandler,
+	"POST 		/user/location":        		UpdateUserCurrentLocation,
+	"POST       /user/location/batch":  		UpdateUserBatchLocations,
 
-	"POST       /user/relation/apply":  ApplyUserRelation, //申请好友
-	"POST       /user/relation/update": UpdateUserRelation, //更新好友关系
+	"POST       /user/relation/apply":  		ApplyUserRelation, //申请好友
+	"POST       /user/relation/update": 		UpdateUserRelation, //更新好友关系
+	"POST       /user/authorization/update":	UpdateAuthorization, //更新用户权限
+
 }
 
 func RegisterRouters(r *gin.Engine, prefixs []string){
