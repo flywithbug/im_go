@@ -14,6 +14,11 @@ import (
 //`validity_time_stamp` varchar(12) NOT NULL DEFAULT '' COMMENT '有效期',
 //PRIMARY KEY (`host_id`,`guest_id`)
 //) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+type paraAuthorizationM struct {
+	UserId 				string 		`json:"user_id"`
+	AType        		int			`json:"a_type"`
+}
+
 
 func UpdateAuthorization(c *gin.Context) {
 	aRes := NewResponse()
@@ -32,5 +37,33 @@ func UpdateAuthorization(c *gin.Context) {
 		return
 	}
 	aRes.SetSuccessInfo(http.StatusOK,"success")
+}
+
+func GetAuthorizationStatus(c *gin.Context)  {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(http.StatusOK, aRes)
+	}()
+	para := paraAuthorizationM{}
+	err := c.BindJSON(&para)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusBadRequest, "Param invalid "+err.Error())
+		return
+	}
+	if len(para.UserId) == 0{
+		aRes.SetErrorInfo(http.StatusBadRequest, "userId can not be nil")
+		return
+	}
+	user , _ := User(c)
+	if user == nil {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"no user")
+		return
+	}
+	auth,err := model.GetAuthorization(para.UserId,user.UserId,para.AType)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusInternalServerError ,"server error 未授权"+err.Error())
+		return
+	}
+	aRes.AddResponseInfo("auth",auth)
 }
 

@@ -239,10 +239,6 @@ func handleQueryAccount(c *gin.Context)  {
 }
 
 
-
-
-
-
 func handleGetUserInfo(c *gin.Context)  {
 	aRes := NewResponse()
 	defer func() {

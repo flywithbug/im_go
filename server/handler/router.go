@@ -34,7 +34,7 @@ var routers = map[string]gin.HandlerFunc{
 	"POST       /user/relation/update": 		UpdateUserRelation, //更新好友关系
 	"GET		/user/friend/list":				FriendsListHandle,  //好友列表
 	"POST       /user/authorization/update":	UpdateAuthorization, //更新用户权限
-
+	"POST       /user/authorization/status":    GetAuthorizationStatus,//获取授权状态
 }
 
 func RegisterRouters(r *gin.Engine, prefixs []string){
