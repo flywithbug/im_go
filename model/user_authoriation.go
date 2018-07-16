@@ -37,7 +37,7 @@ func InsertAuthorization(hostId,guestId string,status,aType int)error  {
 
 func GetAuthorization(hostId,guestId string,aType int)(*UserAuthorization,error) {
 	var authorization UserAuthorization
-	row := Database.QueryRow("SELECT host_id,guest_id,statas, a_type  from im_user_authorization where host_id=? and guest_id=? AND a_type=?",hostId,guestId,aType)
+	row := Database.QueryRow("SELECT host_id,guest_id,status, a_type  from im_user_authorization where host_id=? and guest_id=? AND a_type=?",hostId,guestId,aType)
 	err := row.Scan(&authorization.HostId,&authorization.GuestId,&authorization.Status,&authorization.AType)
 	if err != nil {
 		log.Error(err.Error()+hostId+guestId)

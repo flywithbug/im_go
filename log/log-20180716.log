@@ -1,0 +1,56 @@
+2018-07-16 14:50:53 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:64743]
+2018-07-16 14:50:53 	 [ WARN] 	 <login.go:36>  	 sql: no rows in result set
+2018-07-16 14:50:53 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:f3eedd56-c7c7-4b50-bfc2-d53bab481030,PlatformType:1,DeviceId:CDCF5578-1E0E-4563-BEA6-AB6F06CBF8E0
+2018-07-16 14:50:53 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
+2018-07-16 14:50:54 	 [ERROR] 	 <user.go:147>  	 sql: no rows in result setf3eedd56-c7c7-4b50-bfc2-d53bab481030
+2018-07-16 14:51:11 	 [ERROR] 	 <user.go:147>  	 sql: no rows in result setf3eedd56-c7c7-4b50-bfc2-d53bab481030
+2018-07-16 14:51:11 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-16 14:51:11 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-07-16 14:51:11 	 [DEBUG] 	 <client.go:147>  	 close client:0, 
+2018-07-16 14:51:11 	 [DEBUG] 	 <client.go:111>  	 client:  0 socket closed
+2018-07-16 14:51:14 	 [ INFO] 	 <user_handle.go:142>  	 B3475C74-5F9D-443D-B654-0AA611350555
+2018-07-16 14:51:14 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:64745]
+2018-07-16 14:51:14 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-16 14:52:17 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-16 14:52:17 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-07-16 14:52:17 	 [DEBUG] 	 <client.go:147>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-16 14:52:17 	 [DEBUG] 	 <client.go:111>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-16 14:52:19 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:64757]
+2018-07-16 14:52:19 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-16 14:52:26 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-16 14:52:26 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-07-16 14:52:26 	 [DEBUG] 	 <client.go:147>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-16 14:52:26 	 [DEBUG] 	 <client.go:111>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-16 15:00:53 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:64796]
+2018-07-16 15:00:53 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-16 15:02:39 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-16 15:02:39 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-07-16 15:02:39 	 [DEBUG] 	 <client.go:147>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-16 15:02:39 	 [DEBUG] 	 <client.go:111>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-16 15:19:24 	 [ERROR] 	 <user_authoriation.go:43>  	 Error 1054: Unknown column 'statas' in 'field list'd5f75fbc-4f64-4f78-b320-2ca77084780080d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-16 15:20:05 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:64805]
+2018-07-16 15:20:05 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-16 15:20:05 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-16 15:20:10 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-16 15:20:10 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-07-16 15:20:10 	 [DEBUG] 	 <client.go:147>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-16 15:20:10 	 [DEBUG] 	 <client.go:111>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-16 15:20:11 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:64812]
+2018-07-16 15:20:11 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-16 15:20:11 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:read tcp 192.168.31.74:62310->192.168.31.82:64812: read: connection reset by peer
+2018-07-16 15:20:11 	 [DEBUG] 	 <client.go:147>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-16 15:20:11 	 [DEBUG] 	 <client.go:111>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-16 15:20:13 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:64813]
+2018-07-16 15:20:13 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-16 15:20:13 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-16 15:20:13 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-07-16 15:20:13 	 [DEBUG] 	 <client.go:147>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-16 15:20:13 	 [DEBUG] 	 <client.go:111>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-07-16 15:32:01 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.82:64834]
+2018-07-16 15:32:01 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-16 15:32:01 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-07-16 15:32:56 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-07-16 15:33:00 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-07-16 15:33:00 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-07-16 15:33:00 	 [DEBUG] 	 <client.go:147>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-07-16 15:33:00 	 [DEBUG] 	 <client.go:111>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
