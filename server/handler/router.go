@@ -27,8 +27,9 @@ var routers = map[string]gin.HandlerFunc{
 	"POST		/push/update":					RegistPushService,
 	"GET    	/push/status/:id":				GetPushStatusHandler,    //当前推送状态获取 (根据deviceId 获取推送状态设置)
 	"POST       /user/password":				ChangePasswordHandler,
-	"POST 		/user/location":        		UpdateUserCurrentLocation,
-	"POST       /user/location/batch":  		UpdateUserBatchLocations,
+	"POST 		/user/location":        		UpdateUserCurrentLocation, //更新当前位置信息
+	"POST       /user/location/batch":  		UpdateUserBatchLocations,//批量更新定位信息
+	"POST       /user/location/current":        GetUserCurrentLocations,
 
 	"POST       /user/relation/apply":  		ApplyUserRelation, //申请好友
 	"POST       /user/relation/update": 		UpdateUserRelation, //更新好友关系
