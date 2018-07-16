@@ -4,6 +4,7 @@ import (
 	_ "database/sql"
 
 	log "github.com/flywithbug/log4go"
+	"strings"
 )
 
 type UserRelationShip struct {
@@ -81,3 +82,38 @@ func UpdateUserRelation(userId,friendId string,status int)error  {
 	}
 	return nil
 }
+
+func GetFriendRelations(userId string)([]UserRelationShip,error)  {
+	var relations []UserRelationShip
+	rows , err := Database.Query("SELECT user_id f_user_id WHERE  user_id = ? OR f_user_id=?",userId,userId)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	for rows.Next() {
+		var re UserRelationShip
+		rows.Scan(&re.UserId,&re.FUserId)
+		relations = append(relations, re)
+	}
+	return relations,nil
+}
+
+func GetFriendsList(userId string)([]SimpleUser,error)  {
+	relations ,err := GetFriendRelations(userId)
+	if err != nil {
+		return nil, err
+	}
+	var users []SimpleUser
+	for _, re := range relations {
+		tempId := re.UserId
+		if strings.EqualFold(re.UserId,userId) {
+			tempId = re.FUserId
+		}
+		su,_ := GetUserWithLocationByUserId(tempId)
+		if err == nil {
+			users = append(users, *su)
+		}
+	}
+	return users,nil
+}
+

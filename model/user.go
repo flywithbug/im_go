@@ -103,6 +103,8 @@ func GetUserByAccount(account string) (*User, error) {
 	return &user, err
 }
 
+
+
 /*
  根据ID获取用户
 */
@@ -121,16 +123,17 @@ func GetUserByUId(uId string) (*User, error) {
 /*
  根据ID获取用户
 */
-func GetUserWithLocationByUserId(userId string) (*User, error) {
-	var user User
-	row := Database.QueryRow("SELECT id, app_id, user_id, nick, status, sign, avatar, create_at, update_at,latitude,longitude,l_time_stamp from im_user where user_id = ?", userId)
-	err := row.Scan(&user.Uid,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt,&user.Latitude,&user.Longitude,&user.LTimeStamp)
+func GetUserWithLocationByUserId(userId string) (*SimpleUser, error) {
+	var user SimpleUser
+	row := Database.QueryRow("SELECT id, app_id, user_id, nick, status, sign, avatar,latitude,longitude,l_time_stamp from im_user where user_id = ?", userId)
+	err := row.Scan(&user.Uid,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar,&user.Latitude,&user.Longitude,&user.LTimeStamp)
 	if err != nil {
 		log.Error(err.Error()+userId)
 		return nil, &DatabaseError{"根据ID查询用户-将结果映射至对象错误"}
 	}
 	return &user, err
 }
+
 
 
 /*

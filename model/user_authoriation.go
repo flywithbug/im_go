@@ -64,6 +64,4 @@ func UpdateAuthorization(hostId,guestId string,aType,status int)error  {
 		return  &DatabaseError{"未查询到该用户"}
 	}
 	return nil
-
-
 }
