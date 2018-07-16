@@ -1,6 +1,10 @@
 package handler
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"net/http"
+	"im_go/model"
+)
 
 //CREATE TABLE `im_user_authorization` (
 //`host_id` varchar(40) NOT NULL DEFAULT '',
@@ -11,11 +15,22 @@ import "github.com/gin-gonic/gin"
 //PRIMARY KEY (`host_id`,`guest_id`)
 //) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-func UpdateAuthorization(c *gin.Context)  {
-
-
-
-
-
+func UpdateAuthorization(c *gin.Context) {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(http.StatusOK, aRes)
+	}()
+	auth := model.UserAuthorization{}
+	err := c.BindJSON(&auth)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusBadRequest, "Param invalid"+err.Error())
+		return
+	}
+	err = model.UpdateAuthorization(auth.HostId,auth.GuestId,auth.AType,auth.Status)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusInternalServerError, "server error"+err.Error())
+		return
+	}
+	aRes.SetSuccessInfo(http.StatusOK,"success")
 }
 
