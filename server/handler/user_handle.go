@@ -279,7 +279,7 @@ func UpdateUserNickHandler(c *gin.Context)  {
 	}
 	user , _ := User(c)
 	if user == nil {
-		aRes.SetErrorInfo(http.StatusBadRequest ,err.Error())
+		aRes.SetErrorInfo(http.StatusBadRequest ,"no user")
 		return
 	}
 	err = model.UpdateUserNickName(para.Nick,user.UserId)
@@ -312,7 +312,7 @@ func ChangePasswordHandler(c *gin.Context) {
 	}
 	user, _ := User(c)
 	if user == nil {
-		aRes.SetErrorInfo(http.StatusBadRequest, err.Error())
+		aRes.SetErrorInfo(http.StatusBadRequest, "no user")
 		return
 	}
 	password := common.Md5(para.NewPassword)
@@ -343,7 +343,7 @@ func UpdateUserCurrentLocation(c *gin.Context)  {
 	}
 	user, _ := User(c)
 	if user == nil {
-		aRes.SetErrorInfo(http.StatusBadRequest, err.Error())
+		aRes.SetErrorInfo(http.StatusBadRequest, "no user")
 		return
 	}
 	err = model.UpdateUserLocations(para.Longitude,para.Latitude,para.LTimeStamp,user.UserId)
@@ -377,7 +377,7 @@ func UpdateUserBatchLocations(c *gin.Context)  {
 	}
 	user, _ := User(c)
 	if user == nil {
-		aRes.SetErrorInfo(http.StatusBadRequest, err.Error())
+		aRes.SetErrorInfo(http.StatusBadRequest, "no user")
 		return
 	}
 	deviceId ,_ := UserDeviceId(c)

@@ -25,7 +25,7 @@ func ApplyUserRelation(c *gin.Context)  {
 
 	user , _ := User(c)
 	if user == nil {
-		aRes.SetErrorInfo(http.StatusBadRequest ,err.Error())
+		aRes.SetErrorInfo(http.StatusBadRequest ,"no user")
 		return
 	}
 
@@ -60,7 +60,7 @@ func UpdateUserRelation(c *gin.Context)  {
 	}
 	user , _ := User(c)
 	if user == nil {
-		aRes.SetErrorInfo(http.StatusBadRequest ,err.Error())
+		aRes.SetErrorInfo(http.StatusBadRequest ,"no user")
 		return
 	}
 
@@ -75,4 +75,20 @@ func UpdateUserRelation(c *gin.Context)  {
 		return
 	}
 	aRes.SetSuccessInfo(http.StatusOK,"success")
+}
+
+func FriendsListHandle(c *gin.Context)  {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(http.StatusOK,aRes)
+	}()
+	user , _ := User(c)
+	if user == nil {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"no user")
+		return
+	}
+
+
+
+
 }
