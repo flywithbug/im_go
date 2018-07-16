@@ -87,8 +87,10 @@ func FriendsListHandle(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"no user")
 		return
 	}
-
-
-
-
+	list,err := model.GetFriendsList(user.UserId)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusInternalServerError ,err.Error())
+		return
+	}
+	aRes.AddResponseInfo("list",list)
 }

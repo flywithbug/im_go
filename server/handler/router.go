@@ -21,7 +21,7 @@ var routers = map[string]gin.HandlerFunc{
 	"POST 		/query/nick": 					handleQueryNick,   //根据昵称查询用户列表
 	"POST 		/query/account": 				handleQueryAccount,   //根据账号查询用户
 	"POST		/update/nick":					UpdateUserNickHandler, //更新用户昵称
-	"GET 		/user/:id": 					handleGetUserInfo,   //根据用户user_id获取用户信息
+	"GET 		/user/info": 					handleGetUserInfo,   //根据用户user_id获取用户信息
 	"POST		/upload/avatar":				UploadUserAvatarHandler,			//avatar图片上传
 	"GET	    /image/avatar/":				DownloadImageHandler,      //avatar图片下载
 	"POST		/push/update":					RegistPushService,
@@ -32,6 +32,7 @@ var routers = map[string]gin.HandlerFunc{
 
 	"POST       /user/relation/apply":  		ApplyUserRelation, //申请好友
 	"POST       /user/relation/update": 		UpdateUserRelation, //更新好友关系
+	"GET		/user/friend/list":				FriendsListHandle,  //好友列表
 	"POST       /user/authorization/update":	UpdateAuthorization, //更新用户权限
 
 }
@@ -64,6 +65,8 @@ func funcDoRouteRegister(method, route string, handler gin.HandlerFunc, r *gin.E
 		r.DELETE(route, handler)
 	case "OPTIONS":
 		r.OPTIONS(route, handler)
+	case "GET":
+		r.GET(route, handler)
 	default:
 		r.GET(route, handler)
 	}

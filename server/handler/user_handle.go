@@ -248,7 +248,7 @@ func handleGetUserInfo(c *gin.Context)  {
 	defer func() {
 		c.JSON(http.StatusOK,aRes)
 	}()
-	userId := c.Param("id")
+	userId := c.Query("id")
 	if len(userId) == 0{
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid")
 		return
