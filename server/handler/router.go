@@ -16,6 +16,8 @@ var routers = map[string]gin.HandlerFunc{
 	"GET		/summary":						im.GinSummary,
 	"GET		/config":						AppConfigHandler, //请求网络接口下发，（最好使用使用域名请求）
 	"POST 		/register": 					handleRegister, //注册
+	"GET        /verify/generate": 				GenerateCaptchaHandler, //生成验证码
+
 	"POST  		/login": 						handleLogin,
 	"POST		/logout":						handleLogout,  //退出登录
 	"POST 		/query/nick": 					handleQueryNick,   //根据昵称查询用户列表

@@ -7,9 +7,16 @@ type loginoutModel struct {
 	Nick		string	`json:"nick"`
 	Avatar      string	`json:"avatar"`
 
+
+
+
 	//login
-	Account 	string 	`json:"account"`
-	Password 	string	`json:"password"`
+	Account 		string 	`json:"account"`
+	Password 		string	`json:"password"`
+	IdKey	    	string	`json:"id_key"` //验证码IdKey
+	VerifyString 	string	`json:"verify_string"` //验证码结果
+
+
 	Signature 	string	`json:"signature"`     //account 和 password 拼接之后的加密字符串 用于非对称匹配
 
 	//logout

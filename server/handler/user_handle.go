@@ -23,29 +23,36 @@ func handleRegister(c *gin.Context) {
 	defer func() {
 		c.JSON(http.StatusOK,aRes)
 	}()
-	login := loginoutModel{}
-	err := c.BindJSON(&login)
+	register := loginoutModel{}
+	err := c.BindJSON(&register)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid"+err.Error())
 		return
 	}
-	if login.Account == "" {
-		aRes.SetErrorInfo(http.StatusBadRequest ,"account can not be nil")
+	if len(register.IdKey) == 0 || len(register.VerifyString) == 0{
+		aRes.SetErrorInfo(http.StatusBadRequest ,"Verify Code can not be nil")
 		return
 	}
-	if login.Password == "" {
-		aRes.SetErrorInfo(http.StatusBadRequest ,"password can not be nil")
+
+	if !VerfiyCaptcha(register.IdKey,register.VerifyString) {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"Verify Code not right")
 		return
 	}
-	if login.Nick == "" {
-		aRes.SetErrorInfo(http.StatusBadRequest ,"nick can not be nil")
+
+	if len(register.Account) < 4{
+		aRes.SetErrorInfo(http.StatusBadRequest ,"account to short")
 		return
 	}
-	if len(login.Password) < 6 {
+	if len(register.Password) < 6 {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"password too shot")
 		return
 	}
-	num ,err := model.CheckAccount(login.Account)
+	if register.Nick == "" {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"nick can not be nil")
+		return
+	}
+
+	num ,err := model.CheckAccount(register.Account)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusInternalServerError ,"server error"+err.Error())
 		return
@@ -54,16 +61,16 @@ func handleRegister(c *gin.Context) {
 		aRes.SetErrorInfo(http.StatusBadRequest,"Account already existed ")
 		return
 	}
-	if login.AppId == 0{
-		login.AppId = 10
+	if register.AppId == 0{
+		register.AppId = 10
 	}
-	password := common.Md5(login.Password)
-	_,err = model.SaveUser(login.AppId,login.Account,password,login.Password,login.Nick,login.Avatar)
+	password := common.Md5(register.Password)
+	_,err = model.SaveUser(register.AppId,register.Account,password,register.Password,register.Nick,register.Avatar)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusInternalServerError,"server error ")
 		return
 	}
-	num ,_ = model.CheckAccount(login.Account)
+	num ,_ = model.CheckAccount(register.Account)
 	if num > 0 {
 		aRes.SetSuccessInfo(http.StatusOK,"register success")
 		 return
