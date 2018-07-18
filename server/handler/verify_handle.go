@@ -13,12 +13,12 @@ func GenerateCaptchaHandler(c *gin.Context)  {
 	defer func() {
 		c.JSON(http.StatusOK,aRes)
 	}()
-	idKey,base64Png := codeCaptchaCreate()
+	verifyKey,base64Png := codeCaptchaCreate()
 	aRes.AddResponseInfo("base64",base64Png)
-	aRes.AddResponseInfo("idKey",idKey)
+	aRes.AddResponseInfo("verifyKey",verifyKey)
 }
 
-func codeCaptchaCreate()(idkey, base64Png string)  {
+func codeCaptchaCreate()(verifyKey, base64Png string)  {
 	//var configD = base64Captcha.ConfigDigit{
 	//	Height:     40,
 	//	Width:      120,
@@ -48,6 +48,6 @@ func codeCaptchaCreate()(idkey, base64Png string)  {
 	return idKeyD,base64stringD
 }
 
-func VerfiyCaptcha(idkey,verifyValue string) bool{
-	return base64Captcha.VerifyCaptcha(idkey, verifyValue)
+func VerfiyCaptcha(verifyKey,verifyValue string) bool{
+	return base64Captcha.VerifyCaptcha(verifyKey, verifyValue)
 }
