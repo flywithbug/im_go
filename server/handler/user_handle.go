@@ -29,12 +29,12 @@ func handleRegister(c *gin.Context) {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid"+err.Error())
 		return
 	}
-	if len(register.IdKey) == 0 || len(register.VerifyString) == 0{
+	if len(register.VerifyKey) == 0 || len(register.Verify) == 0{
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Verify Code can not be nil")
 		return
 	}
 
-	if !VerfiyCaptcha(register.IdKey,register.VerifyString) {
+	if !VerfiyCaptcha(register.VerifyKey,register.Verify) {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Verify Code not right")
 		return
 	}

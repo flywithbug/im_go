@@ -28,7 +28,7 @@ func codeCaptchaCreate()(idkey, base64Png string)  {
 	//}
 	//字符,公式,验证码配置
 	var configC = base64Captcha.ConfigCharacter{
-		Height:             60,
+		Height:             120,
 		Width:              240,
 		//const CaptchaModeNumber:数字,CaptchaModeAlphabet:字母,CaptchaModeArithmetic:算术,CaptchaModeNumberAlphabet:数字字母混合.
 		Mode:               base64Captcha.CaptchaModeNumber,
