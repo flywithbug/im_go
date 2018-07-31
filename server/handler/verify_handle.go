@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/mojocn/base64Captcha"
 	"net/http"
+	"github.com/pborman/uuid"
 )
 
 
@@ -43,7 +44,8 @@ func codeCaptchaCreate()(verifyKey, base64Png string)  {
 	}
 
 	//GenerateCaptcha 第一个参数为空字符串,包会自动在服务器一个随机种子给你产生随机uiid.
-	idKeyD, capD := base64Captcha.GenerateCaptcha("", configC)
+	uuIDS := uuid.NewUUID().String()
+	idKeyD, capD := base64Captcha.GenerateCaptcha(uuIDS, configC)
 	base64stringD := base64Captcha.CaptchaWriteToBase64Encoding(capD)
 	return idKeyD,base64stringD
 }

@@ -147,8 +147,9 @@ func handleLogin(c *gin.Context) {
 				userAgent = ""
 			}
 			deviceId ,_ := UserDeviceId(c)
-			log.Info(deviceId)
+			//log.Info(deviceId)
 			if err := model.SaveLogin(user.GetAppId(),user.Uid,user.UserId, token, ip,user.Forbidden,userAgent.(string),deviceId); err != nil {
+				log.Info(err.Error())
 				aRes.SetErrorInfo(http.StatusInternalServerError ,err.Error())
 				return
 			}

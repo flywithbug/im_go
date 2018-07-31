@@ -125,11 +125,12 @@ func GetUserByUId(uId string) (*User, error) {
 */
 func GetUserWithLocationByUserId(userId string) (*SimpleUser, error) {
 	var user SimpleUser
+	log.Info(userId)
 	row := Database.QueryRow("SELECT id, app_id, user_id, nick, status, sign, avatar,latitude,longitude,l_time_stamp from im_user where user_id = ?", userId)
 	err := row.Scan(&user.Uid,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar,&user.Latitude,&user.Longitude,&user.LTimeStamp)
 	if err != nil {
 		log.Error(err.Error()+userId)
-		return nil, &DatabaseError{"根据ID查询用户-将结果映射至对象错误"}
+		return nil, &DatabaseError{"未查询到该用户当前位置"}
 	}
 	return &user, err
 }
