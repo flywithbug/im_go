@@ -11,7 +11,7 @@ type Verify struct {
 	Verify  	string		`json:"verify"`
 	Vld         int			`json:"vld"` //有效期
 	VType       int			`json:"v_type"` //验证码类型
-	UserId      string      `json:"user_id"`
+	Account     string      `json:"account"`
 }
 
 
@@ -26,7 +26,7 @@ func GeneryVerifyData(verify,userId string,vld ,VType  int) (string,error) {
 	}
 	defer insStmt.Close()
 	uuId := uuid.NewUUID().String()
-	_, err := insStmt.Exec(uuId,verify,userId,vld,VType,userId)
+	_, err := insStmt.Exec(uuId,verify,vld,VType,userId)
 	if err != nil {
 		log4go.Info(err.Error())
 		return "",&DatabaseError{"服务错误"}
@@ -34,15 +34,14 @@ func GeneryVerifyData(verify,userId string,vld ,VType  int) (string,error) {
 	return uuId,nil
 }
 
-func CheckVerify(uuid ,vType int) (userId string, err error)  {
+func CheckVerify(uuid string ,vType string) (user_id string, err error)  {
 	row := Database.QueryRow("select user_id from im_verify_code where uuid=? and v_type=? ", uuid, vType)
-	err = row.Scan(&userId)
+	err = row.Scan(&user_id)
 	if err != nil {
-		log4go.Error(err.Error()+userId)
-		return userId, &DatabaseError{"未查询到该验证信息"}
+		log4go.Error(err.Error()+user_id)
+		return user_id, &DatabaseError{"未查询到该验证信息"}
 	}
-
-	return userId, nil
+	return user_id, nil
 }
 
 
