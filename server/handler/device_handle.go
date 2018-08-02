@@ -68,7 +68,6 @@ func GetPushStatusHandler(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusNotFound ,errStr)
 		return
 	}
-
 	aRes.AddResponseInfo("device",d)
 
 }

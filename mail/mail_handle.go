@@ -6,6 +6,7 @@ import (
 	"errors"
 	"regexp"
 	"strings"
+	"fmt"
 )
 
 var(
@@ -26,7 +27,7 @@ func sendMail(to ,title ,subject string,mType int,body string) error  {
 }
 
 func SendVerifyMail(uuid,mail string) error {
-	verifyStr := "http://www.flywithme.top/im?uuid=" + uuid
+	verifyStr := fmt.Sprintf("http://www.flywithme.top/im/mail/check?uuid=%s&type=0",uuid)
 	return sendMail(mail,"足迹","邮箱验证",0,verifyStr)
 }
 

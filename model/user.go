@@ -307,8 +307,6 @@ func UpdateUserMailVerifyChecked(userId string)error  {
 	if err != nil || num <= 0{
 		return  &DatabaseError{"未查询到该用户"}
 	}
+	return nil
 }
-
-
-
 
