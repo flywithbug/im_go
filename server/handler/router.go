@@ -17,6 +17,8 @@ var routers = map[string]gin.HandlerFunc{
 	"GET		/config":						AppConfigHandler, //请求网络接口下发，（最好使用使用域名请求）
 	"POST 		/register": 					handleRegister, //注册
 	"GET        /verify/generate": 				GenerateCaptchaHandler, //生成验证码
+	"POST       /verify/mail":                  SendVerifyMailHandle,//发送邮箱校验
+	"GET 		/verify/mail/check":    		VerifyMailHandle, //邮箱校验
 
 	"POST  		/login": 						handleLogin,
 	"POST		/logout":						handleLogout,  //退出登录

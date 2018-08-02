@@ -6,7 +6,7 @@ type loginoutModel struct {
 	AppId      int64	`json:"app_id"`
 	Nick		string	`json:"nick"`
 	Avatar      string	`json:"avatar"`
-
+	Mail        string  `json:"mail"`
 
 
 

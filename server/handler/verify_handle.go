@@ -7,9 +7,14 @@ import (
 	"github.com/pborman/uuid"
 	"im_go/model"
 	log "github.com/flywithbug/log4go"
+	"im_go/mail"
 )
 
-
+type VerifyModel struct {
+	Mail     string  `json:"mail"`
+	UserId  string	 `json:"user_id"`
+	UUID     string  `json:"uuid"`
+}
 
 func GenerateCaptchaHandler(c *gin.Context)  {
 	aRes := NewResponse()
@@ -56,21 +61,64 @@ func VerifyCaptcha(verifyKey,verifyValue string) bool{
 	return base64Captcha.VerifyCaptcha(verifyKey, verifyValue)
 }
 
-func SendVerifyMail(mail,verify, userId string) error {
-	uuId, err := model.GeneryVerifyData(verify,userId,0,0)
+//
+func SendVerifyMail(Mail, userId string) error {
+	uuId, err := model.GeneryVerifyData("",userId,0,0)
 	if err != nil {
 		log.Info(err.Error())
 		return err
 	}
-
-	//mail.s
-
-
-	return nil
+	return mail.SendVerifyMail(uuId,Mail)
 }
 
-func VerifyMail(c *gin.Context)  {
+func SendVerifyMailHandle(c *gin.Context)  {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(http.StatusOK,aRes)
+	}()
+	verify := VerifyModel{}
+	err := c.BindJSON(&verify)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid"+err.Error())
+		return
+	}
 
+	if len(verify.Mail) == 0 {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"mail invalid")
+		return
+	}
+	if len(verify.UserId) == 0 {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"UserId invalid")
+		return
+	}
+ 	err = mail.SendVerifyMail(verify.Mail,verify.UserId)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusInternalServerError ,"mail server error"+err.Error())
+		return
+	}
+	aRes.SetSuccessInfo(http.StatusOK,"success")
+}
 
-
+func VerifyMailHandle(c *gin.Context)  {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(http.StatusOK,aRes)
+	}()
+	uuId := c.Query("uuid")
+	vType := c.Query("type")
+	if len(uuId) < 10 {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"uuid invalid")
+		return
+	}
+	userId, err := model.CheckVerify(uuId,vType)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusInternalServerError ,"no user found"+err.Error())
+		return
+	}
+	err = model.UpdateUserMailVerifyChecked(userId)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusInternalServerError ,"no user found"+err.Error())
+		return
+	}
+	aRes.SetSuccessInfo(http.StatusOK,"success")
 }

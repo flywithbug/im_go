@@ -11,12 +11,16 @@ import (
 	"im_go/config"
 	log "github.com/flywithbug/log4go"
 	"encoding/base64"
+	"im_go/mail"
 )
 
 // 注册请求
 /*
 	Para:appId,account,password,Nick，头像地址。
 */
+
+
+
 func handleRegister(c *gin.Context) {
 	aRes := NewResponse()
 
@@ -66,17 +70,22 @@ func handleRegister(c *gin.Context) {
 		register.AppId = 10
 	}
 	password := common.Md5(register.Password)
-	_,err = model.SaveUser(register.AppId,register.Account,password,register.Password,register.Nick,register.Avatar)
+	userId,err := model.SaveUser(register.AppId,register.Account,password,register.Password,register.Nick,register.Avatar,register.Mail)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusInternalServerError,"server error ")
 		return
 	}
-	num ,_ = model.CheckAccount(register.Account)
-	if num > 0 {
-		aRes.SetSuccessInfo(http.StatusOK,"register success")
-		 return
+	aRes.SetSuccessInfo(http.StatusOK,"register success")
+	if len(register.Mail) != 0 && mail.MailStringVerify(register.Mail) {
+		SendVerifyMail(register.Mail,*userId)
 	}
-	aRes.SetErrorInfo(http.StatusInternalServerError,"server error")
+	//num ,_ = model.CheckAccount(register.Account)
+	//if num > 0 {
+	//	aRes.SetSuccessInfo(http.StatusOK,"register success")
+	//	 return
+	//}
+
+	//aRes.SetErrorInfo(http.StatusInternalServerError,"server error")
 }
 
 
