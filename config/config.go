@@ -54,6 +54,15 @@ type AppConfig struct {
 	Version			string		`json:"version"`	//版本
 }
 
+type MailConfig struct {
+	Host      string 	`json:"host"`
+	Port      int		`json:"port"`
+	Username  string	`json:"username"`
+	Password  string	`json:"password"`
+}
+
+
+
 type RSAConfig struct {
 	Public			[]byte
 	Private			[]byte
