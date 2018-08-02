@@ -9,6 +9,7 @@ import (
 
 	log "github.com/flywithbug/log4go"
 	"im_go/im"
+	"im_go/mail"
 )
 
 const (
@@ -46,6 +47,10 @@ func main() {
 	}
 	defer model.Database.Close()
 
+	mail.Mail , err = config.Conf().MailConfig.Dialer()
+	if err != nil{
+		log.Fatal(err.Error())
+	}
 	go func() {
 		//启动用户管理服务
 		server.StartHttpServer(config.Conf().ServerPort,config.Conf().RouterPrefix)

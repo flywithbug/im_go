@@ -6,7 +6,8 @@ import (
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"io/ioutil"
-)
+	"gopkg.in/gomail.v2"
+	)
 
 var config *IMConfig
 
@@ -32,6 +33,7 @@ type IMConfig struct {
 	AppConfig		AppConfig	`json:"app_config"`
 	RSAConfig		RSAConfig								//加密解密
 	PrivateName		string		`json:"private_name"`
+	MailConfig      MailConfig	`json:"mail_config"`  //邮箱
 }
 
 /*
@@ -115,3 +117,9 @@ func (this *DBConfig) Connect() (*sql.DB, error) {
 	}
 	return db, nil
 }
+
+func (this *MailConfig)Dialer()(*gomail.Dialer,error)  {
+	d := gomail.NewDialer(this.Host,this.Port,this.Username,this.Password)
+	return d,nil
+}
+
