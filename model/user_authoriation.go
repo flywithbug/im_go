@@ -65,3 +65,7 @@ func UpdateAuthorization(hostId,guestId string,aType,status int)error  {
 	}
 	return nil
 }
+
+
+
+

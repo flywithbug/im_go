@@ -21,6 +21,9 @@ func SendMail(to ,title ,from string,mType int,body string) error  {
 		return errors.New("mail is nil")
 	}
 	return Mail.DialAndSend(m)
+}
 
+func SendVerifyMail(uuid,mail string)  {
+	//verifyStr := "www.flywithme.top:"
 }
 

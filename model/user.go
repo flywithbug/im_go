@@ -22,6 +22,8 @@ type SimpleUser struct {
 	Longitude   string		`json:"longitude"`   //经度
 	LTimeStamp   string		`json:"l_time_stamp"`
 	DeviceId    string		`json:"device_id"`
+	Mail        string		`json:"mail"`        //邮箱
+	VerifyM		string		`json:"verify_m"`    //是否验证过
 }
 
 /*

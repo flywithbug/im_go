@@ -34,7 +34,7 @@ func handleRegister(c *gin.Context) {
 		return
 	}
 
-	if !VerfiyCaptcha(register.VerifyKey,register.Verify) {
+	if !VerifyCaptcha(register.VerifyKey,register.Verify) {
 		log.Info("%s",register.Verify,register.VerifyKey)
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Verify Code not right")
 		return

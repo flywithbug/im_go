@@ -5,6 +5,8 @@ import (
 	"github.com/mojocn/base64Captcha"
 	"net/http"
 	"github.com/pborman/uuid"
+	"im_go/model"
+	log "github.com/flywithbug/log4go"
 )
 
 
@@ -50,6 +52,25 @@ func codeCaptchaCreate()(verifyKey, base64Png string)  {
 	return idKeyD,base64stringD
 }
 
-func VerfiyCaptcha(verifyKey,verifyValue string) bool{
+func VerifyCaptcha(verifyKey,verifyValue string) bool{
 	return base64Captcha.VerifyCaptcha(verifyKey, verifyValue)
+}
+
+func SendVerifyMail(mail,verify, userId string) error {
+	uuId, err := model.GeneryVerifyData(verify,userId,0,0)
+	if err != nil {
+		log.Info(err.Error())
+		return err
+	}
+
+	//mail.s
+
+
+	return nil
+}
+
+func VerifyMail(c *gin.Context)  {
+
+
+
 }
