@@ -144,8 +144,9 @@ func GetUserWithLocationByUserId(userId string) (*SimpleUser, error) {
 */
 func GetUserByToken(token string) (*User, error) {
 	var user User
-	row := Database.QueryRow("select u.id, u.app_id,u.user_id,u.nick, u.status, u.sign, u.avatar, u.create_at, u.update_at from  im_user u left join im_login l on u.user_id=l.user_id where l.token=? AND l.status=1", token)
-	err := row.Scan(&user.Uid,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt)
+	row := Database.QueryRow("select u.id, u.app_id,u.user_id,u.nick, u.status, u.sign, u.avatar, u.create_at, u.update_at,u.mail,u.verify_m from  im_user u left join im_login l on u.user_id=l.user_id where l.token=? AND l.status=1", token)
+	err := row.Scan(&user.Uid,&user.appId,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt,&user.Mail,&user.VerifyM)
+	user.Token = token
 	if err != nil {
 		log.Error(err.Error()+token)
 		return nil, &DatabaseError{"根据Token查询用户-将结果映射至对象错误"}
@@ -159,8 +160,8 @@ func GetUserByToken(token string) (*User, error) {
 */
 func LoginUser(account string, password string) (*User, error) {
 	var user User
-	row := Database.QueryRow("select app_id, id , user_id, nick, status, sign, avatar, create_at, update_at,forbidden from im_user where account=? and password=? ", account, password)
-	err := row.Scan(&user.appId,&user.Uid ,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt,&user.Forbidden)
+	row := Database.QueryRow("select app_id, id , user_id, nick, status, sign, avatar, create_at, update_at,forbidden,mail,verify_m from im_user where account=? and password=? ", account, password)
+	err := row.Scan(&user.appId,&user.Uid ,&user.UserId, &user.Nick, &user.Status, &user.Sign, &user.Avatar, &user.createAt, &user.updateAt,&user.Forbidden,&user.Mail,&user.VerifyM)
 	if err != nil {
 		log.Error(err.Error()+account)
 		return nil, &DatabaseError{"根据账号及密码查询用户错误"}
