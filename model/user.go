@@ -253,7 +253,7 @@ func UpdateUserNickName(nick , userId string)error  {
 
 }
 
-func UpdateuserPassWord(old_password,password,origin_password,userId string)error  {
+func UpdateuserPassWordByOld(old_password,password,origin_password,userId string)error  {
 	updateStmt,err := Database.Prepare("UPDATE im_user SET `password` = ?,`origin_password`= ?  WHERE user_id=? AND origin_password = ? ")
 	if err != nil {
 		log.Error(err.Error())
@@ -268,14 +268,16 @@ func UpdateuserPassWord(old_password,password,origin_password,userId string)erro
 	return nil
 }
 
-func UpdateuserPassWordByAccount(old_password,password,origin_password,account string)error  {
-	updateStmt,err := Database.Prepare("UPDATE im_user SET `password` = ?,`origin_password`= ?  WHERE account=? AND origin_password = ? ")
+
+//验证码修改密码
+func UpdateuserPassWordByAccount(password,origin_password,account string)error  {
+	updateStmt,err := Database.Prepare("UPDATE im_user SET `password` = ?,`origin_password`= ?  WHERE account=?")
 	if err != nil {
 		log.Error(err.Error())
 		return  &DatabaseError{"服务出错"}
 	}
 	defer updateStmt.Close()
-	res ,err := updateStmt.Exec(password,origin_password,account,old_password)
+	res ,err := updateStmt.Exec(password,origin_password,account)
 	num, err := res.RowsAffected()
 	if err != nil || num <= 0{
 		return  &DatabaseError{"修改失败"}

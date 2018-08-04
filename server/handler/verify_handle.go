@@ -122,6 +122,7 @@ func SendVerifyMailHandle(c *gin.Context)  {
 }
 
 
+
 func VerifyMailHandle(c *gin.Context)  {
 	aRes := NewResponse()
 	defer func() {

@@ -336,7 +336,7 @@ func ChangePasswordHandler(c *gin.Context) {
 		return
 	}
 	password := common.Md5(para.NewPassword)
-	err = model.UpdateuserPassWord(para.OldPassword, password, para.NewPassword, user.UserId)
+	err = model.UpdateuserPassWordByOld(para.OldPassword, password, para.NewPassword, user.UserId)
 	if err != nil {
 		log.Info(err.Error())
 		aRes.SetErrorInfo(http.StatusBadRequest, "server error"+err.Error())
@@ -346,7 +346,7 @@ func ChangePasswordHandler(c *gin.Context) {
 }
 
 
-func FindPasswordHandler(c *gin.Context) {
+func ChangePasswordByVerifyCodeHandler(c *gin.Context) {
 	aRes := NewResponse()
 	defer func() {
 		c.JSON(http.StatusOK, aRes)
@@ -369,9 +369,13 @@ func FindPasswordHandler(c *gin.Context) {
 		aRes.SetErrorInfo(http.StatusBadRequest, "passworld length less than 6")
 		return
 	}
-
+	_ ,err =  model.CheckVerifyByAccount(para.Account,para.Verify,1)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusBadRequest, "Verify invalid"+err.Error())
+		return
+	}
 	password := common.Md5(para.NewPassword)
-	err = model.UpdateuserPassWordByAccount(para.OldPassword, password, para.NewPassword, para.Account)
+	err = model.UpdateuserPassWordByAccount(password, para.NewPassword, para.Account)
 	if err != nil {
 		log.Info(err.Error())
 		aRes.SetErrorInfo(http.StatusBadRequest, "server error"+err.Error())
