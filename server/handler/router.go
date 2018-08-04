@@ -21,7 +21,7 @@ var routers = map[string]gin.HandlerFunc{
 	"GET 		/mail/check":    		        VerifyMailHandle, //邮箱校验
 	"GET        /account/mail":                 GetMailByAccountHandle,//获取验证邮箱
 	"POST       /user/password":				ChangePasswordHandler, //使用旧密码修改密码
-	"POST       /user/change/password":         ChangePasswordByVerifyCodeHandler, // 通过邮箱验证码修改密码
+	"POST       /user/verify/password":         ChangePasswordByVerifyCodeHandler, // 通过邮箱验证码修改密码
 
 	"POST  		/login": 						handleLogin,
 	"POST		/logout":						handleLogout,  //退出登录

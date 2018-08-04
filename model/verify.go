@@ -43,7 +43,7 @@ func CheckVerify(uuid string ,vType string) (userId,uuId string, err error)  {
 	row := Database.QueryRow("select user_id ,uuid from im_verify_code where uuid=? and v_type=? and status= 0 ", uuid, vType)
 	err = row.Scan(&userId,&uuid)
 	if err != nil {
-		log4go.Error(err.Error()+userId)
+		log4go.Info(err.Error()+userId)
 		return userId,uuId, &DatabaseError{"未查询到该验证信息"}
 	}
 	updateVerifyCodeStatus(uuId,1)
@@ -58,7 +58,7 @@ func CheckVerifyByAccount(account ,verify string,VType int) (useId,uuId string, 
 	//	return "",&DatabaseError{"验证码超时未使用"}
 	//}
 	if err != nil {
-		log4go.Error(err.Error()+account)
+		log4go.Info(err.Error()+account)
 		return useId,uuId, &DatabaseError{"验证码不正确"}
 	}
 	updateVerifyCodeStatus(uuId,1)
