@@ -59,7 +59,7 @@ func CheckVerifyByAccount(account ,verify string,VType int) (useId,uuId string, 
 	//}
 	if err != nil {
 		log4go.Error(err.Error()+account)
-		return useId,uuId, &DatabaseError{"未查询到该验证信息"}
+		return useId,uuId, &DatabaseError{"验证码不正确"}
 	}
 	updateVerifyCodeStatus(uuId,1)
 	return useId,uuId,nil
