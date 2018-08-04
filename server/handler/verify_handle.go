@@ -9,6 +9,7 @@ import (
 	log "github.com/flywithbug/log4go"
 	"im_go/mail"
 	"strings"
+	"time"
 )
 
 type VerifyModel struct {
@@ -64,15 +65,18 @@ func VerifyCaptcha(verifyKey,verifyValue string) bool{
 	return base64Captcha.VerifyCaptcha(verifyKey, verifyValue)
 }
 
-//
 func sendVerifyMail(Mail, userId, account string, vType int) error {
-	uuId,vCode, err := model.GeneryVerifyData(userId,account,0,vType)
+	var vld int
+	if vType == 1 {
+		vld = int(time.Now().Unix() + 60*10)
+	}
+	uuId,vCode, err := model.GeneryVerifyData(userId,account,vld,vType)
 	if err != nil {
 		log.Info(err.Error())
 		return err
 	}
 	if vType == 1 {
-		mail.SendVerifyCode(vCode,Mail)
+		return mail.SendVerifyCode(vCode,Mail)
 	}
 	return mail.SendVerifyMail(uuId,Mail)
 }

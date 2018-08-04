@@ -50,8 +50,12 @@ func CheckVerify(uuid string ,vType string) (user_id string, err error)  {
 }
 
 func CheckVerifyByAccount(account ,verify string,VType int) (user_id string, err error)  {
-	row := Database.QueryRow("select user_id from im_verify_code where account=? and v_type=? and verify = ?", account, VType,verify)
-	err = row.Scan(&user_id)
+	var  vld int
+	row := Database.QueryRow("select user_id ,vld from im_verify_code where account=? and v_type=? and verify = ?", account, VType,verify)
+	err = row.Scan(&user_id,&vld)
+	//if vld <  int(time.Now().Unix()){
+	//	return "",&DatabaseError{"验证码超时未使用"}
+	//}
 	if err != nil {
 		log4go.Error(err.Error()+account)
 		return user_id, &DatabaseError{"未查询到该验证信息"}

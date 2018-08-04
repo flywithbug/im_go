@@ -268,6 +268,21 @@ func UpdateuserPassWord(old_password,password,origin_password,userId string)erro
 	return nil
 }
 
+func UpdateuserPassWordByAccount(old_password,password,origin_password,account string)error  {
+	updateStmt,err := Database.Prepare("UPDATE im_user SET `password` = ?,`origin_password`= ?  WHERE account=? AND origin_password = ? ")
+	if err != nil {
+		log.Error(err.Error())
+		return  &DatabaseError{"服务出错"}
+	}
+	defer updateStmt.Close()
+	res ,err := updateStmt.Exec(password,origin_password,account,old_password)
+	num, err := res.RowsAffected()
+	if err != nil || num <= 0{
+		return  &DatabaseError{"修改失败"}
+	}
+	return nil
+}
+
 func UpdateUserLocations(longitude,latitude,l_time_stamp, userId string)error  {
 	updateStmt,err := Database.Prepare("UPDATE im_user SET `longitude` = ?,`latitude`= ? ,`l_time_stamp`= ?  WHERE user_id=?")
 	if err != nil {

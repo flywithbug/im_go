@@ -320,7 +320,9 @@ func ChangePasswordHandler(c *gin.Context) {
 		aRes.SetErrorInfo(http.StatusBadRequest, "Param invalid"+err.Error())
 		return
 	}
-	if len(para.OldPassword) == 0 {
+
+
+	if len(para.OldPassword) == 0  {
 		aRes.SetErrorInfo(http.StatusBadRequest, "oldpassword can not be nil")
 		return
 	}
@@ -342,6 +344,42 @@ func ChangePasswordHandler(c *gin.Context) {
 	}
 	aRes.SetSuccessInfo(http.StatusOK,"success")
 }
+
+
+func FindPasswordHandler(c *gin.Context) {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(http.StatusOK, aRes)
+	}()
+	para := loginoutModel{}
+	err := c.BindJSON(&para)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusBadRequest, "Param invalid"+err.Error())
+		return
+	}
+	if len(para.Verify) == 0 {
+		aRes.SetErrorInfo(http.StatusBadRequest, "verify code can not be nil")
+		return
+	}
+	if len(para.Account) == 0 {
+		aRes.SetErrorInfo(http.StatusBadRequest, "Account can not be nill")
+		return
+	}
+	if len(para.NewPassword) < 6 {
+		aRes.SetErrorInfo(http.StatusBadRequest, "passworld length less than 6")
+		return
+	}
+
+	password := common.Md5(para.NewPassword)
+	err = model.UpdateuserPassWordByAccount(para.OldPassword, password, para.NewPassword, para.Account)
+	if err != nil {
+		log.Info(err.Error())
+		aRes.SetErrorInfo(http.StatusBadRequest, "server error"+err.Error())
+		return
+	}
+	aRes.SetSuccessInfo(http.StatusOK,"success")
+}
+
 
 func UpdateUserCurrentLocation(c *gin.Context)  {
 	aRes := NewResponse()
