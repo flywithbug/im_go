@@ -291,6 +291,7 @@ func UpdateUserLocations(longitude,latitude,l_time_stamp, userId string)error  {
 	return nil
 }
 
+
 func UpdateUserMailVerifyChecked(userId string)error  {
 	updateStmt,err := Database.Prepare("UPDATE im_user SET `verify_m` = ? WHERE user_id=?")
 	if err != nil {
@@ -298,15 +299,29 @@ func UpdateUserMailVerifyChecked(userId string)error  {
 		return  &DatabaseError{"服务出错"}
 	}
 	defer updateStmt.Close()
-	res ,err := updateStmt.Exec(1)
+	_ ,err = updateStmt.Exec(1,userId)
 	if err != nil {
 		log.Error(err.Error())
 		return &DatabaseError{"服务出错"+err.Error()}
 	}
-	num, err := res.RowsAffected()
-	if err != nil || num <= 0{
-		return  &DatabaseError{"未查询到该用户"}
-	}
+	//num, err := res.RowsAffected()
+	//if err != nil || num <= 0{
+	//	return  &DatabaseError{"未修改"}
+	//}
 	return nil
 }
 
+
+/*
+ 根据条件查询获取好友列表
+*/
+func GetMailByAccount(account string) ( *SimpleUser, error) {
+	var user SimpleUser
+	row := Database.QueryRow("select user_id, mail,verify_m from im_user where account=?", account)
+	err := row.Scan(&user.UserId, &user.Mail, &user.VerifyM)
+	if err != nil {
+		log.Error(err.Error()+account)
+		return nil, &DatabaseError{"未查询到账号，或者未绑定邮箱"}
+	}
+	return &user, nil
+}

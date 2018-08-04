@@ -6,7 +6,7 @@ import (
 	"im_go/model"
 	"net/http"
 	"im_go/config"
-)
+	)
 
 //todo  添加签名进行客户端请求安全校验
 func TokenAuthMiddleware() gin.HandlerFunc {
@@ -26,6 +26,7 @@ func TokenAuthMiddleware() gin.HandlerFunc {
 
 		for _,v := range config.Conf().AuthFilterWhite {
 			for _, pr := range config.Conf().RouterPrefix{
+				//logs.Info(pr+v)
 				if strings.HasPrefix(urlPath,pr + v) {
 					return
 				}

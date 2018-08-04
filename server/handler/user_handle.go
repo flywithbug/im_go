@@ -39,7 +39,7 @@ func handleRegister(c *gin.Context) {
 	}
 
 	if !VerifyCaptcha(register.VerifyKey,register.Verify) {
-		log.Info("%s",register.Verify,register.VerifyKey)
+		log.Info("%s %s",register.Verify,register.VerifyKey)
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Verify Code not right")
 		return
 	}
@@ -54,6 +54,10 @@ func handleRegister(c *gin.Context) {
 	}
 	if register.Nick == "" {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"nick can not be nil")
+		return
+	}
+	if len(register.Mail) == 0{
+		aRes.SetErrorInfo(http.StatusBadRequest,"Mail not right ")
 		return
 	}
 
@@ -77,7 +81,7 @@ func handleRegister(c *gin.Context) {
 	}
 	aRes.SetSuccessInfo(http.StatusOK,"register success")
 	if len(register.Mail) != 0 && mail.MailStringVerify(register.Mail) {
-		SendVerifyMail(register.Mail,*userId)
+		sendVerifyMail(register.Mail,*userId,register.Account,0)
 	}
 	//num ,_ = model.CheckAccount(register.Account)
 	//if num > 0 {

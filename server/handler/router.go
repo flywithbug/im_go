@@ -19,6 +19,7 @@ var routers = map[string]gin.HandlerFunc{
 	"GET        /verify/generate": 				GenerateCaptchaHandler, //生成验证码
 	"POST       /verify/mail":                  SendVerifyMailHandle,//发送邮箱校验
 	"GET 		/mail/check":    		        VerifyMailHandle, //邮箱校验
+	"GET        /account/mail":                 GetMailByAccountHandle,//获取验证邮箱
 
 	"POST  		/login": 						handleLogin,
 	"POST		/logout":						handleLogout,  //退出登录

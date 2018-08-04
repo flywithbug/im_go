@@ -8,12 +8,15 @@ import (
 	"im_go/model"
 	log "github.com/flywithbug/log4go"
 	"im_go/mail"
+	"strings"
 )
 
 type VerifyModel struct {
 	Mail     string  `json:"mail"`
-	UserId  string	 `json:"user_id"`
+	UserId   string	 `json:"user_id"`
 	UUID     string  `json:"uuid"`
+	VType    int     `json:"v_type"`
+	Account  string  `json:"account"`
 }
 
 func GenerateCaptchaHandler(c *gin.Context)  {
@@ -62,14 +65,18 @@ func VerifyCaptcha(verifyKey,verifyValue string) bool{
 }
 
 //
-func SendVerifyMail(Mail, userId string) error {
-	uuId, err := model.GeneryVerifyData("",userId,0,0)
+func sendVerifyMail(Mail, userId, account string, vType int) error {
+	uuId,vCode, err := model.GeneryVerifyData(userId,account,0,vType)
 	if err != nil {
 		log.Info(err.Error())
 		return err
 	}
+	if vType == 1 {
+		mail.SendVerifyCode(vCode,Mail)
+	}
 	return mail.SendVerifyMail(uuId,Mail)
 }
+
 
 func SendVerifyMailHandle(c *gin.Context)  {
 	aRes := NewResponse()
@@ -79,6 +86,7 @@ func SendVerifyMailHandle(c *gin.Context)  {
 	verify := VerifyModel{}
 	err := c.BindJSON(&verify)
 	if err != nil {
+		log.Info(err.Error())
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid"+err.Error())
 		return
 	}
@@ -87,17 +95,21 @@ func SendVerifyMailHandle(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"mail invalid")
 		return
 	}
+
 	if len(verify.UserId) == 0 {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"UserId invalid")
 		return
 	}
- 	err = mail.SendVerifyMail(verify.Mail,verify.UserId)
+	err = sendVerifyMail(verify.Mail,verify.UserId,verify.Account,verify.VType)
 	if err != nil {
-		aRes.SetErrorInfo(http.StatusInternalServerError ,"mail server error"+err.Error())
+		aRes.SetErrorInfo(http.StatusInternalServerError ,"mail server error "+err.Error())
 		return
 	}
 	aRes.SetSuccessInfo(http.StatusOK,"success")
+
+
 }
+
 
 func VerifyMailHandle(c *gin.Context)  {
 	aRes := NewResponse()
@@ -121,4 +133,59 @@ func VerifyMailHandle(c *gin.Context)  {
 		return
 	}
 	aRes.SetSuccessInfo(http.StatusOK,"success")
+}
+
+func GetMailByAccountHandle(c *gin.Context)  {
+	aRes := NewResponse()
+	defer func() {
+		c.JSON(http.StatusOK,aRes)
+	}()
+	account := c.Query("account")
+	if len(account) == 0 {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"account invalid")
+		return
+	}
+	user ,err := model.GetMailByAccount(account)
+	if err != nil {
+		aRes.SetErrorInfo(http.StatusInternalServerError ,err.Error())
+		return
+	}
+	mails := strings.Split(user.Mail,"@")
+	if len(mails) == 2 {
+		aRes.SetResponseDataInfo("mail",Substr(mails[0],0,3) + "*****" + "@" + mails[1])
+	}else {
+		aRes.SetErrorInfo(http.StatusBadRequest ,"mail invalid")
+		return
+	}
+}
+
+//截取字符串 start 起点下标 length 需要截取的长度
+func Substr(str string, start int, length int) string {
+	rs := []rune(str)
+	rl := len(rs)
+	end := 0
+
+	if start < 0 {
+		start = rl - 1 + start
+	}
+	end = start + length
+
+	if start > end {
+		start, end = end, start
+	}
+
+	if start < 0 {
+		start = 0
+	}
+	if start > rl {
+		start = rl
+	}
+	if end < 0 {
+		end = 0
+	}
+	if end > rl {
+		end = rl
+	}
+
+	return string(rs[start:end])
 }
