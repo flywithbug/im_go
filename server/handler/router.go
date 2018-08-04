@@ -20,6 +20,8 @@ var routers = map[string]gin.HandlerFunc{
 	"POST       /verify/mail":                  SendVerifyMailHandle,//发送邮箱校验
 	"GET 		/mail/check":    		        VerifyMailHandle, //邮箱校验
 	"GET        /account/mail":                 GetMailByAccountHandle,//获取验证邮箱
+	"POST       /user/password":				ChangePasswordHandler, //使用旧密码修改密码
+	"POST       /user/change/password":         ChangePasswordByVerifyCodeHandler, // 通过邮箱验证码修改密码
 
 	"POST  		/login": 						handleLogin,
 	"POST		/logout":						handleLogout,  //退出登录
@@ -31,8 +33,8 @@ var routers = map[string]gin.HandlerFunc{
 	"GET	    /image/avatar/":				DownloadImageHandler,      //avatar图片下载
 	"POST		/push/update":					RegistPushService,
 	"GET    	/push/status/:id":				GetPushStatusHandler,    //当前推送状态获取 (根据deviceId 获取推送状态设置)
-	"POST       /user/password":				ChangePasswordHandler, //使用旧密码修改密码
-	"POST       /user/change/password":         ChangePasswordByVerifyCodeHandler, // 通过邮箱验证码修改密码
+
+
 	"POST 		/user/location":        		UpdateUserCurrentLocation, //更新当前位置信息
 	"POST       /user/location/batch":  		UpdateUserBatchLocations,//批量更新定位信息
 	"POST       /user/location/current":        GetUserCurrentLocations,
