@@ -39,31 +39,41 @@ func GeneryVerifyData(userId,account string,vld ,VType  int) (string,string,erro
 	return uuId,vCode,nil
 }
 
-func CheckVerify(uuid string ,vType string) (user_id string, err error)  {
-	row := Database.QueryRow("select user_id from im_verify_code where uuid=? and v_type=? ", uuid, vType)
-	err = row.Scan(&user_id)
+func CheckVerify(uuid string ,vType string) (userId,uuId string, err error)  {
+	row := Database.QueryRow("select user_id ,uuid from im_verify_code where uuid=? and v_type=? and status= 0 ", uuid, vType)
+	err = row.Scan(&userId,&uuid)
 	if err != nil {
-		log4go.Error(err.Error()+user_id)
-		return user_id, &DatabaseError{"未查询到该验证信息"}
+		log4go.Error(err.Error()+userId)
+		return userId,uuId, &DatabaseError{"未查询到该验证信息"}
 	}
-	return user_id, nil
+	updateVerifyCodeStatus(uuId)
+	return userId,uuId, nil
 }
 
-func CheckVerifyByAccount(account ,verify string,VType int) (user_id string, err error)  {
+func CheckVerifyByAccount(account ,verify string,VType int) (useId,uuId string, err error)  {
 	var  vld int
-	row := Database.QueryRow("select user_id ,vld from im_verify_code where account=? and v_type=? and verify = ?", account, VType,verify)
-	err = row.Scan(&user_id,&vld)
+	row := Database.QueryRow("select user_id ,vld,uuid from im_verify_code where account=? and v_type=? and verify = ? and status= 0", account, VType,verify)
+	err = row.Scan(&useId,&vld,&uuId)
 	//if vld <  int(time.Now().Unix()){
 	//	return "",&DatabaseError{"验证码超时未使用"}
 	//}
 	if err != nil {
 		log4go.Error(err.Error()+account)
-		return user_id, &DatabaseError{"未查询到该验证信息"}
+		return useId,uuId, &DatabaseError{"未查询到该验证信息"}
 	}
-	return user_id, nil
+	updateVerifyCodeStatus(uuId)
+	return useId,uuId,nil
 }
 
-
+func updateVerifyCodeStatus(uuId string)  {
+		updateStmt,err := Database.Prepare("UPDATE im_verify_code SET `status` = 0  WHERE uuid=?")
+		if err != nil {
+			log4go.Info(err.Error())
+			return
+		}
+		defer updateStmt.Close()
+		updateStmt.Exec(uuId)
+}
 
 
 

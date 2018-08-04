@@ -369,7 +369,7 @@ func ChangePasswordByVerifyCodeHandler(c *gin.Context) {
 		aRes.SetErrorInfo(http.StatusBadRequest, "passworld length less than 6")
 		return
 	}
-	_ ,err =  model.CheckVerifyByAccount(para.Account,para.Verify,1)
+	_,_ ,err =  model.CheckVerifyByAccount(para.Account,para.Verify,1)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusBadRequest, "Verify invalid"+err.Error())
 		return

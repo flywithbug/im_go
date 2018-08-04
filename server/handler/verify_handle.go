@@ -134,7 +134,7 @@ func VerifyMailHandle(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"uuid invalid")
 		return
 	}
-	userId, err := model.CheckVerify(uuId,vType)
+	userId,_, err := model.CheckVerify(uuId,vType)
 	if err != nil {
 		aRes.SetErrorInfo(http.StatusInternalServerError ,"no user found"+err.Error())
 		return
