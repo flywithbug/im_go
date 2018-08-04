@@ -378,7 +378,7 @@ func ChangePasswordByVerifyCodeHandler(c *gin.Context) {
 	err = model.UpdateuserPassWordByAccount(password, para.NewPassword, para.Account)
 	if err != nil {
 		log.Info(err.Error())
-		aRes.SetErrorInfo(http.StatusBadRequest, "server error"+err.Error())
+		aRes.SetErrorInfo(http.StatusBadRequest, "server error "+err.Error())
 		return
 	}
 	aRes.SetSuccessInfo(http.StatusOK,"success")

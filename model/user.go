@@ -277,9 +277,10 @@ func UpdateuserPassWordByAccount(password,origin_password,account string)error  
 		return  &DatabaseError{"服务出错"}
 	}
 	defer updateStmt.Close()
-	res ,err := updateStmt.Exec(password,origin_password,account)
-	num, err := res.RowsAffected()
-	if err != nil || num <= 0{
+	_ ,err = updateStmt.Exec(password,origin_password,account)
+	//num, err := res.RowsAffected()
+	if err != nil{
+		log.Info(err.Error())
 		return  &DatabaseError{"修改失败"}
 	}
 	return nil

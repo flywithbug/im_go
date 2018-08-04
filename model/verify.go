@@ -46,7 +46,7 @@ func CheckVerify(uuid string ,vType string) (userId,uuId string, err error)  {
 		log4go.Error(err.Error()+userId)
 		return userId,uuId, &DatabaseError{"未查询到该验证信息"}
 	}
-	updateVerifyCodeStatus(uuId)
+	updateVerifyCodeStatus(uuId,1)
 	return userId,uuId, nil
 }
 
@@ -61,18 +61,18 @@ func CheckVerifyByAccount(account ,verify string,VType int) (useId,uuId string, 
 		log4go.Error(err.Error()+account)
 		return useId,uuId, &DatabaseError{"未查询到该验证信息"}
 	}
-	updateVerifyCodeStatus(uuId)
+	updateVerifyCodeStatus(uuId,1)
 	return useId,uuId,nil
 }
 
-func updateVerifyCodeStatus(uuId string)  {
-		updateStmt,err := Database.Prepare("UPDATE im_verify_code SET `status` = 0  WHERE uuid=?")
-		if err != nil {
-			log4go.Info(err.Error())
-			return
-		}
-		defer updateStmt.Close()
-		updateStmt.Exec(uuId)
+func updateVerifyCodeStatus(uuId string, status int)  {
+	updateStmt,err := Database.Prepare("UPDATE im_verify_code SET `status` = ?  WHERE uuid=?")
+	if err != nil {
+		log4go.Info(err.Error())
+		return
+	}
+	defer updateStmt.Close()
+	updateStmt.Exec(status,uuId)
 }
 
 
