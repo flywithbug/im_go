@@ -65,3 +65,5 @@ func CheckVerifyByAccount(account ,verify string,VType int) (user_id string, err
 
 
 
+
+

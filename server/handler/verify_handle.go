@@ -94,6 +94,15 @@ func SendVerifyMailHandle(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Param invalid"+err.Error())
 		return
 	}
+	if len(verify.Account) != 0 {
+		user,err := model.GetMailByAccount(verify.Account)
+		if err != nil {
+			aRes.SetErrorInfo(http.StatusBadRequest ,"no user found "+err.Error())
+			return
+		}
+		verify.Mail = user.Mail
+		verify.UserId = user.UserId
+	}
 
 	if len(verify.Mail) == 0 {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"mail invalid")
@@ -110,8 +119,6 @@ func SendVerifyMailHandle(c *gin.Context)  {
 		return
 	}
 	aRes.SetSuccessInfo(http.StatusOK,"success")
-
-
 }
 
 
