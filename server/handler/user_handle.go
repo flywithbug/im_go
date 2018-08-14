@@ -138,9 +138,9 @@ func handleLogin(c *gin.Context) {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"Signature verification failure equal")
 		return
 	}
-
 	num, err := model.CheckAccount(login.Account)
 	if err != nil {
+		log.Info(err.Error())
 		aRes.SetErrorInfo(http.StatusInternalServerError ,err.Error())
 		return
 	}
@@ -175,7 +175,7 @@ func handleLogin(c *gin.Context) {
 		aRes.SetErrorInfo(http.StatusInternalServerError ,"user not found")
 
 	}else {
-		aRes.SetErrorInfo(http.StatusBadRequest ,"account not existed"+err.Error())
+		aRes.SetErrorInfo(http.StatusBadRequest ,"account not existed")
 	}
 }
 

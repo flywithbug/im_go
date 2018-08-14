@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"time"
 	log "github.com/flywithbug/log4go"
+	"strings"
 )
 
 type SimpleUser struct {
@@ -64,6 +65,7 @@ func (this *User) Decode(data []byte) error {
 */
 func CheckAccount(account string) (int, error) {
 	var num int
+	account = strings.ToLower(account)
 	rows, err := Database.Query("select count(*) from im_user where account=? ", account)
 	if err != nil {
 		log.Error(err.Error())
