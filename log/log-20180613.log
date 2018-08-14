@@ -1,8 +1,0 @@
-2018-06-13 21:50:27 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.41:63172]
-2018-06-13 21:50:27 	 [ WARN] 	 <login.go:36>  	 invalid connection
-2018-06-13 21:50:27 	 [ WARN] 	 <auth_handle.go:37>  	 get login by token error, auth:Token:79ba58d5-2ab9-4a32-a7dd-110e252ed7a5,PlatformType:1,DeviceId:84EB7EE2-92A6-46F5-994D-C1D782F5F382
-2018-06-13 21:50:27 	 [ WARN] 	 <auth_handle.go:38>  	 根据Token获取用户登录错误
-2018-06-13 21:50:42 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
-2018-06-13 21:50:42 	 [DEBUG] 	 <client.go:83>  	 EOFconnect offline
-2018-06-13 21:50:42 	 [DEBUG] 	 <client.go:148>  	 close client:0, 
-2018-06-13 21:50:42 	 [DEBUG] 	 <client.go:112>  	 client:  0 socket closed
