@@ -94,7 +94,7 @@ func (client *Client) Read() {
 
 		client.handleMessage(msg)
 		t3 := time.Now().Unix()
-		if t3-t2 > 2 {
+		if t3-t2 > 10 {
 			log.Info("client:%d handle message is too slow:%d %d", client.uid, t2, t3)
 		}
 	}
