@@ -1,0 +1,32 @@
+2018-08-19 20:22:21 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[192.168.31.74:50986]
+2018-08-19 20:22:56 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-08-19 20:22:56 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-08-19 20:22:56 	 [DEBUG] 	 <client.go:147>  	 close client:0, 
+2018-08-19 20:22:56 	 [DEBUG] 	 <client.go:111>  	 client:  0 socket closed
+2018-08-19 20:26:01 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51278]
+2018-08-19 20:26:01 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-08-19 20:26:08 	 [DEBUG] 	 <protocol.go:134>  	 sock read error:EOF
+2018-08-19 20:26:08 	 [DEBUG] 	 <client.go:82>  	 EOFconnect offline
+2018-08-19 20:26:08 	 [DEBUG] 	 <client.go:147>  	 close client:10002, 80d07eb7-09d5-4332-aa4d-01990a291dfd
+2018-08-19 20:26:08 	 [DEBUG] 	 <client.go:111>  	 client: 80d07eb7-09d5-4332-aa4d-01990a291dfd 10002 socket closed
+2018-08-19 20:26:09 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51290]
+2018-08-19 20:26:09 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-08-19 20:27:45 	 [ INFO] 	 <file_handle.go:94>  	 2018-08-14%!(EXTRA string=3d68d9e3-f1c1-4e99-b5b8-808f98bd9f3e.png)
+2018-08-19 20:27:54 	 [ INFO] 	 <file_handle.go:94>  	 2018-08-14%!(EXTRA string=058551dd-cd8d-42ac-9445-8ffdf63223f9.png)
+2018-08-19 20:27:57 	 [ INFO] 	 <file_handle.go:94>  	 2018-08-14%!(EXTRA string=058551dd-cd8d-42ac-9445-8ffdf63223f9.png)
+2018-08-19 20:27:59 	 [ INFO] 	 <file_handle.go:94>  	 058551dd-cd8d-42ac-9445-8ffdf63223f9.png
+2018-08-19 20:28:02 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-08-19 20:28:14 	 [ INFO] 	 <file_handle.go:94>  	 2018-08-19%!(EXTRA string=058551dd-cd8d-42ac-9445-8ffdf63223f9.png)
+2018-08-19 20:28:14 	 [ INFO] 	 <file_handle.go:108>  	 invalid argument
+2018-08-19 20:29:58 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51589]
+2018-08-19 20:29:58 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-08-19 20:30:00 	 [ INFO] 	 <file_handle.go:102>  	 ./image/2018-08-19/058551dd-cd8d-42ac-9445-8ffdf63223f9.png
+2018-08-19 20:30:03 	 [DEBUG] 	 <client_heartbeat.go:9>  	 heartBeet
+2018-08-19 20:31:01 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51661]
+2018-08-19 20:31:01 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-08-19 20:31:02 	 [ INFO] 	 <file_handle.go:102>  	 ./image/2018-08-19/058551dd-cd8d-42ac-9445-8ffdf63223f9.png
+2018-08-19 20:31:02 	 [ INFO] 	 <file_handle.go:105>  	 ./image/2018-08-19/120058551dd-cd8d-42ac-9445-8ffdf63223f9.png
+2018-08-19 20:31:28 	 [DEBUG] 	 <tcp.go:32>  	 新连接地址为:[127.0.0.1:51699]
+2018-08-19 20:31:28 	 [DEBUG] 	 <client_im.go:91>  	 offlineMsg count 0
+2018-08-19 20:31:29 	 [ INFO] 	 <file_handle.go:102>  	 ./image/2018-08-19/058551dd-cd8d-42ac-9445-8ffdf63223f9.png
+2018-08-19 20:31:29 	 [ INFO] 	 <file_handle.go:105>  	 ./image/2018-08-19/120-058551dd-cd8d-42ac-9445-8ffdf63223f9.png

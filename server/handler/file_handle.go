@@ -12,7 +12,14 @@ import (
 	"github.com/flywithbug/log4go"
 	"time"
 	"im_go/model"
-)
+	"image"
+	"image/jpeg"
+	"image/png"
+	"image/gif"
+	"golang.org/x/image/bmp"
+	"errors"
+	"github.com/nfnt/resize"
+	)
 
 const  localFilePath  =  "./image/"
 
@@ -80,11 +87,29 @@ func UploadUserAvatarHandler(c *gin.Context)  {
 func DownloadImageHandler(c *gin.Context)  {
 	filepath := c.Query("filepath")
 	dir := c.Query("dir")
-	log4go.Info(dir,filepath)
-	filename :=  localFilePath + dir +"/"+filepath
-	if !file.FileExists(filename) {
-		c.Writer.Write([]byte("Error: Image Not found."))
-		return
+	size := c.Query("size")
+	if len(size) == 0 {
+		size = "120"
+	}
+	filename :=  localFilePath + dir +"/" +size +"-"+filepath
+	fileOrigin :=  localFilePath + dir +"/" +filepath
+	if !file.FileExists(filename)  {
+		if !file.FileExists(fileOrigin) {
+			c.Writer.Write([]byte("Error: Image Not found."))
+			return
+		}
+		fIn, _ := os.Open(fileOrigin)
+		log4go.Info(fileOrigin)
+		defer fIn.Close()
+		fOut, _ := os.Create(filename)
+		log4go.Info(filename)
+		defer fOut.Close()
+		err := scale(fIn, fOut, 120, 120, 100)
+		if err != nil {
+			log4go.Info(err.Error())
+			http.ServeFile(c.Writer,c.Request,fileOrigin)
+			return
+		}
 	}
 	http.ServeFile(c.Writer,c.Request,filename)
 }
@@ -102,3 +127,35 @@ func PathExists(path string) (bool, error) {
 	return false, err
 }
 
+
+
+func scale(in io.Reader, out io.Writer, width, height, quality int) error {
+	origin, fm, err := image.Decode(in)
+	if err != nil {
+		return err
+	}
+	if width == 0 || height == 0 {
+		width = origin.Bounds().Max.X
+		height = origin.Bounds().Max.Y
+	}
+	if quality == 0 {
+		quality = 100
+	}
+	canvas := resize.Thumbnail(uint(width), uint(height), origin, resize.Lanczos3)
+
+	//return jpeg.Encode(out, canvas, &jpeg.Options{quality})
+
+	switch fm {
+	case "jpeg":
+		return jpeg.Encode(out, canvas, &jpeg.Options{quality})
+	case "png":
+		return png.Encode(out, canvas)
+	case "gif":
+		return gif.Encode(out, canvas, &gif.Options{})
+	case "bmp":
+		return bmp.Encode(out, canvas)
+	default:
+		return errors.New("ERROR FORMAT")
+	}
+	return nil
+}
