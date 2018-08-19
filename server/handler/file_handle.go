@@ -41,8 +41,8 @@ func UploadUserAvatarHandler(c *gin.Context)  {
 	//	aRes.SetErrorInfo(http.StatusRequestEntityTooLarge,fmt.Sprintf(" file to big no more than 150kb "))
 	//	return
 	//}
-	today := time.Now().Format("2006-01-02")
-	localpath := localFilePath+today+"/"
+	month := time.Now().Format("2006-01")
+	localpath := localFilePath+month+"/"
 	//获取文件名
 	ext := filepath.Ext(header.Filename)
 	name:= uuid.New()
@@ -76,7 +76,7 @@ func UploadUserAvatarHandler(c *gin.Context)  {
 		aRes.SetErrorInfo(http.StatusBadRequest,fmt.Sprintf("get file err : %s", err.Error()))
 		return
 	}
-	avatarpath  := fmt.Sprintf("filepath=%s&dir=%s",filename,today)
+	avatarpath  := fmt.Sprintf("filepath=%s&dir=%s",filename,month)
 	user , _ := User(c)
 	if user != nil{
 		model.UpdateUserAvatar(avatarpath,user.UserId)
