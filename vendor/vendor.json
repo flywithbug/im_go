@@ -51,6 +51,24 @@
 			"revisionTime": "2018-04-13T18:15:57Z"
 		},
 		{
+			"checksumSHA1": "w01kP96jx5UAf+uWB8m0w8Xghas=",
+			"path": "github.com/golang/freetype",
+			"revision": "e2365dfdc4a05e4b8299a783240d4a7d5a65d4e4",
+			"revisionTime": "2017-06-09T00:35:04Z"
+		},
+		{
+			"checksumSHA1": "aJ/kX/eCUlrCJBZ26Hwh/RXzAIw=",
+			"path": "github.com/golang/freetype/raster",
+			"revision": "e2365dfdc4a05e4b8299a783240d4a7d5a65d4e4",
+			"revisionTime": "2017-06-09T00:35:04Z"
+		},
+		{
+			"checksumSHA1": "I3u9Uh9thka1gsgch6QEiPkaAr0=",
+			"path": "github.com/golang/freetype/truetype",
+			"revision": "e2365dfdc4a05e4b8299a783240d4a7d5a65d4e4",
+			"revisionTime": "2017-06-09T00:35:04Z"
+		},
+		{
 			"checksumSHA1": "HmbftipkadrLlCfzzVQ+iFHbl6g=",
 			"path": "github.com/golang/glog",
 			"revision": "23def4e6c14b4da8ac2ed8007337bc5eb5007998",
@@ -79,6 +97,18 @@
 			"path": "github.com/mattn/go-isatty",
 			"revision": "6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c",
 			"revisionTime": "2017-11-07T05:05:31Z"
+		},
+		{
+			"checksumSHA1": "eoTHVbeNnK73X+ea48ORUIaQtpY=",
+			"path": "github.com/mojocn/base64Captcha",
+			"revision": "0a5e2cf02dab3510d804807a135ee6f2f920a317",
+			"revisionTime": "2018-06-13T04:09:02Z"
+		},
+		{
+			"checksumSHA1": "6z9MgcvNbdVGsAIvv6BHA1uALQA=",
+			"path": "github.com/nfnt/resize",
+			"revision": "83c6a9932646f83e3267f353373d47347b6036b2",
+			"revisionTime": "2018-02-21T19:10:11Z"
 		},
 		{
 			"checksumSHA1": "As1PSFJop3xi3W8tAYSm/8YesAQ=",
@@ -117,6 +147,24 @@
 			"revisionTime": "2018-04-07T10:30:00Z"
 		},
 		{
+			"checksumSHA1": "fxb3DNsxWefntdMn2I98U5ZpTXU=",
+			"path": "golang.org/x/image/bmp",
+			"revision": "c73c2afc3b812cdd6385de5a50616511c4a3d458",
+			"revisionTime": "2018-07-06T05:06:37Z"
+		},
+		{
+			"checksumSHA1": "+U1IB5N4LDS74y4fXjARb4/S4IE=",
+			"path": "golang.org/x/image/font",
+			"revision": "c73c2afc3b812cdd6385de5a50616511c4a3d458",
+			"revisionTime": "2018-07-06T05:06:37Z"
+		},
+		{
+			"checksumSHA1": "euzvwlMLxyD0hwc+raoVsDLv6j4=",
+			"path": "golang.org/x/image/math/fixed",
+			"revision": "c73c2afc3b812cdd6385de5a50616511c4a3d458",
+			"revisionTime": "2018-07-06T05:06:37Z"
+		},
+		{
 			"checksumSHA1": "pKXJRU/9qHCRo+GYpqW87E2djHE=",
 			"path": "golang.org/x/sys/unix",
 			"revision": "378d26f46672a356c46195c28f61bdb4c0a781dd",
@@ -133,6 +181,12 @@
 			"path": "gopkg.in/go-playground/validator.v8",
 			"revision": "5f1438d3fca68893a817e4a66806cea46a9e4ebf",
 			"revisionTime": "2017-07-30T05:02:35Z"
+		},
+		{
+			"checksumSHA1": "iq5WdjScmTU+LfNoerLuwcnXpdM=",
+			"path": "gopkg.in/gomail.v2",
+			"revision": "81ebce5c23dfd25c6c67194b37d3dd3f338c98b1",
+			"revisionTime": "2016-04-11T21:29:32Z"
 		},
 		{
 			"checksumSHA1": "ZSWoOPUNRr5+3dhkLK3C4cZAQPk=",

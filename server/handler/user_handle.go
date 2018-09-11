@@ -16,10 +16,8 @@ import (
 
 // 注册请求
 /*
-	Para:appId,account,password,Nick，头像地址。
+	Para:appId,account,password，头像地址。
 */
-
-
 
 func handleRegister(c *gin.Context) {
 	aRes := NewResponse()

@@ -163,7 +163,7 @@ func GetMailByAccountHandle(c *gin.Context)  {
 		return
 	}
 	mails := strings.Split(user.Mail,"@")
-	if len(mails) == 2 {
+	if len(mails) <= 2 {
 		aRes.SetResponseDataInfo("mail",Substr(mails[0],0,3) + "*****" + "@" + mails[1])
 	}else {
 		aRes.SetErrorInfo(http.StatusBadRequest ,"mail invalid")

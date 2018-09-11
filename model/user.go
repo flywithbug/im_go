@@ -12,7 +12,7 @@ import (
 type SimpleUser struct {
 	Uid       	int64     	`json:"u_id"`        //id 就是Uid
 	appId    	int64	   	`json:"app_id"`
-
+	Account 	string 		`json:"account"`	//账号
 	UserId 	 	string	   	`json:"user_id"`   //uuid生成
 	Nick     	string    	`json:"nick"`      //昵称
 	Status   	int    		`json:"status"`    //状态 0离线,1在线
