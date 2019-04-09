@@ -1,6 +1,6 @@
 
-//项目说明：存储部分使用的mysql, 暂未增加redis支持
-//TODO: Redis 支持。
+//项目说明：存储部分使用的mysql
+服务重构 => https://github.com/flywithbug/badger
 
 
 ##流程图
